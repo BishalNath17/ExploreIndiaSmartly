@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Shield, Phone, ChevronDown, ChevronUp } from 'lucide-react';
-import SectionHeader from '../components/SectionHeader';
-import ScrollReveal from '../components/ScrollReveal';
+import SectionHeader from '../components/layout/SectionHeader';
+import ScrollReveal from '../components/ui/ScrollReveal';
 import safetyTips from '../data/safetyTips';
-import PageHero from '../components/PageHero';
+import PageHero from '../components/layout/PageHero';
 
 
 /* ═══════════════════════════════════════════════════════

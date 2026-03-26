@@ -23,8 +23,8 @@ import {
   formatINR,
 } from '../services/api';
 import states from '../data/states';
-import SectionHeader from '../components/SectionHeader';
-import ScrollReveal from '../components/ScrollReveal';
+import SectionHeader from '../components/layout/SectionHeader';
+import ScrollReveal from '../components/ui/ScrollReveal';
 
 /* ── Icon map for categories ────────────────── */
 const CATEGORY_ICONS = {

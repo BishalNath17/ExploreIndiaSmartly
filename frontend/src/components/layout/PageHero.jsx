@@ -1,4 +1,4 @@
-import ScrollReveal from './ScrollReveal';
+import ScrollReveal from '../ui/ScrollReveal';
 
 /**
  * Reusable gradient hero banner with badge, title, highlighted word, and subtitle.

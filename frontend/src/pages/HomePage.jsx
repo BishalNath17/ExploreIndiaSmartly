@@ -13,13 +13,13 @@ import destinations from '../data/destinations';
 import states from '../data/states';
 import hiddenGems from '../data/hiddenGems';
 import safetyTips from '../data/safetyTips';
-import DestinationCard from '../components/DestinationCard';
-import StateCard from '../components/StateCard';
-import HiddenGemCard from '../components/HiddenGemCard';
-import SectionHeader from '../components/SectionHeader';
-import Newsletter from '../components/Newsletter';
-import ScrollReveal from '../components/ScrollReveal';
-import SearchBar from '../components/SearchBar';
+import DestinationCard from '../components/cards/DestinationCard';
+import StateCard from '../components/cards/StateCard';
+import HiddenGemCard from '../components/cards/HiddenGemCard';
+import SectionHeader from '../components/layout/SectionHeader';
+import Newsletter from '../components/features/Newsletter';
+import ScrollReveal from '../components/ui/ScrollReveal';
+import SearchBar from '../components/features/SearchBar';
 
 /* ═══════════════════════════════════════════════════════
    1. HERO
@@ -152,10 +152,8 @@ const FeaturedStates = () => {
         />
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {featured.map((state, i) => (
-            <ScrollReveal key={state.slug} delay={i * 0.06}>
-              <StateCard state={state} variant="image" />
-            </ScrollReveal>
+          {featured.map((state) => (
+            <StateCard key={state.slug} state={state} variant="image" />
           ))}
         </div>
 
@@ -184,10 +182,8 @@ const PopularDestinations = () => (
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        {destinations.map((dest, i) => (
-          <ScrollReveal key={dest.id} delay={i * 0.1}>
-            <DestinationCard destination={dest} />
-          </ScrollReveal>
+        {destinations.map((dest) => (
+          <DestinationCard key={dest.id} destination={dest} />
         ))}
       </div>
     </div>
@@ -209,10 +205,8 @@ const HiddenGemsPreview = () => {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {preview.map((gem, i) => (
-            <ScrollReveal key={gem.slug} delay={i * 0.08}>
-              <HiddenGemCard gem={gem} />
-            </ScrollReveal>
+          {preview.map((gem) => (
+            <HiddenGemCard key={gem.slug} gem={gem} />
           ))}
         </div>
 
@@ -245,20 +239,18 @@ const SafetyTipsPreview = () => {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {preview.map((tip, i) => {
+          {preview.map((tip) => {
             const TipIcon = tip.icon;
             return (
-              <ScrollReveal key={tip.title} delay={i * 0.08}>
-                <div className="glass rounded-2xl p-6 h-full flex flex-col items-start">
-                  <div className="w-10 h-10 rounded-xl bg-india-orange/15 flex items-center justify-center mb-4">
-                    <TipIcon size={20} className="text-india-orange" />
-                  </div>
-                  <h3 className="text-base font-bold mb-2">{tip.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed flex-1">
-                    {tip.text}
-                  </p>
+              <div key={tip.title} className="glass rounded-2xl p-6 h-full flex flex-col items-start">
+                <div className="w-10 h-10 rounded-xl bg-india-orange/15 flex items-center justify-center mb-4">
+                  <TipIcon size={20} className="text-india-orange" />
                 </div>
-              </ScrollReveal>
+                <h3 className="text-base font-bold mb-2">{tip.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                  {tip.text}
+                </p>
+              </div>
             )
           })}
         </div>

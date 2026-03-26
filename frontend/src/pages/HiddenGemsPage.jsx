@@ -1,13 +1,13 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Gem, MapPin, Filter, Search, ArrowRight } from 'lucide-react';
-import SectionHeader from '../components/SectionHeader';
-import ScrollReveal from '../components/ScrollReveal';
+import SectionHeader from '../components/layout/SectionHeader';
+import ScrollReveal from '../components/ui/ScrollReveal';
 import hiddenGems from '../data/hiddenGems';
 import states from '../data/states';
-import PageHero from '../components/PageHero';
-import HiddenGemCard from '../components/HiddenGemCard';
-import EmptyState from '../components/EmptyState';
+import PageHero from '../components/layout/PageHero';
+import HiddenGemCard from '../components/cards/HiddenGemCard';
+import EmptyState from '../components/ui/EmptyState';
 
 
 /* ═══════════════════════════════════════════════════════
@@ -131,10 +131,8 @@ const HiddenGemsPage = () => {
           {/* Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredGems.length > 0 ? (
-              filteredGems.map((gem, i) => (
-                <ScrollReveal key={gem.slug} delay={i * 0.05}>
-                  <HiddenGemCard gem={gem} linkToState showExplore />
-                </ScrollReveal>
+              filteredGems.map((gem) => (
+                <HiddenGemCard key={gem.slug} gem={gem} linkToState showExplore />
               ))
             ) : (
               <EmptyState icon={Gem} message="No hidden gems match your search. Try a different region or keyword." />

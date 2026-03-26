@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { Search, X, Loader2 } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
-import states from '../data/states';
-import destinations from '../data/destinations';
-import hiddenGems from '../data/hiddenGems';
+import states from '../../data/states';
+import destinations from '../../data/destinations';
+import hiddenGems from '../../data/hiddenGems';
 
 /* ═══════════════════════════════════════════════════════
    CUSTOM HOOK: DEBOUNCE

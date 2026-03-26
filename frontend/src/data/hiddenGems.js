@@ -20,7 +20,7 @@ const hiddenGems = [
     state: 'himachal-pradesh',
     description:
       'A cold desert mountain valley with ancient monasteries, surreal landscapes, and star-filled skies.',
-    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3c?q=80&w=600',
   },
   {
     slug: 'chopta',
@@ -38,7 +38,7 @@ const hiddenGems = [
     state: 'ladakh',
     description:
       'India\'s last village on the LoC — a Balti settlement with apricot orchards and an untouched way of life.',
-    image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1583309219338-a582f1f9ca6c?q=80&w=600',
   },
   {
     slug: 'munsiyari',
@@ -47,7 +47,7 @@ const hiddenGems = [
     state: 'uttarakhand',
     description:
       'A remote Himalayan hamlet with views of the Panchachuli peaks, glaciers, and rich Bhotia culture.',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1455156218388-5e61b526818b?q=80&w=600',
   },
 
   /* ── North-East India ───────────────────────── */
@@ -76,7 +76,7 @@ const hiddenGems = [
     state: 'meghalaya',
     description:
       'Asia\'s cleanest village, with living root bridges, bamboo sky-walks, and community eco-tourism.',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600',
   },
   {
     slug: 'dzukou-valley',
@@ -85,7 +85,7 @@ const hiddenGems = [
     state: 'nagaland',
     description:
       'A high-altitude valley of seasonal wildflowers on the Nagaland–Manipur border, often called the "Valley of Flowers of the North-East".',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1504567961739-b832ff46adb5?q=80&w=600',
   },
   {
     slug: 'loktak-lake',
@@ -94,7 +94,7 @@ const hiddenGems = [
     state: 'manipur',
     description:
       'A freshwater lake famous for floating islands (phumdis) and the endangered Sangai deer.',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1470165301023-58dab8118cc9?q=80&w=600',
   },
 
   /* ── South India ────────────────────────────── */
@@ -123,7 +123,7 @@ const hiddenGems = [
     state: 'tamil-nadu',
     description:
       'A serene hill station on the Anamalai Hills, surrounded by tea and coffee estates and rich biodiversity.',
-    image: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1587133561455-bc0c31cc23e4?q=80&w=600',
   },
   {
     slug: 'wayanad',
@@ -132,7 +132,7 @@ const hiddenGems = [
     state: 'kerala',
     description:
       'Prehistoric Edakkal caves, bamboo forests, and misty peaks — a lesser-known alternative to Munnar.',
-    image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65e?q=80&w=600',
   },
 
   /* ── West India ─────────────────────────────── */
@@ -172,7 +172,7 @@ const hiddenGems = [
     state: 'tripura',
     description:
       'Mysterious 7th-century rock carvings of Hindu deities etched into a forested hillside.',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1609766934480-11c0e67c1c79?q=80&w=600',
   },
 
   /* ── Central India ──────────────────────────── */
@@ -183,7 +183,7 @@ const hiddenGems = [
     state: 'madhya-pradesh',
     description:
       'A forgotten Bundela-dynasty town with riverside cenotaphs, painted palaces, and vulture conservation.',
-    image: 'https://images.unsplash.com/photo-1590050752117-238cb4c23786?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1585413720247-c3bf2f0e7c0c?q=80&w=600',
   },
 
   /* ── Islands ────────────────────────────────── */
@@ -194,7 +194,7 @@ const hiddenGems = [
     state: 'andaman-nicobar',
     description:
       'Pristine coral reefs, the natural rock formation "Howrah Bridge", and a laid-back island vibe.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1559128010-7c1ad6e1b6a5?q=80&w=600',
   },
   {
     slug: 'agatti',
@@ -203,7 +203,7 @@ const hiddenGems = [
     state: 'lakshadweep',
     description:
       'A tiny coral island with crystal-clear lagoons, the only airstrip in Lakshadweep, and world-class snorkelling.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600',
+    image: 'https://images.unsplash.com/photo-1505881502353-a1986add3762?q=80&w=600',
   },
 ];
 

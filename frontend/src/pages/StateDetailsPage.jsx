@@ -17,13 +17,13 @@ import { fadeUp } from '../utils/animations';
 import states from '../data/states';
 import destinations from '../data/destinations';
 import hiddenGems from '../data/hiddenGems';
-import DestinationCard from '../components/DestinationCard';
-import SectionHeader from '../components/SectionHeader';
-import ScrollReveal from '../components/ScrollReveal';
-import MapboxViewer from '../components/MapboxViewer';
-import InfoCard from '../components/InfoCard';
-import HiddenGemCard from '../components/HiddenGemCard';
-import EmptyState from '../components/EmptyState';
+import DestinationCard from '../components/cards/DestinationCard';
+import SectionHeader from '../components/layout/SectionHeader';
+import ScrollReveal from '../components/ui/ScrollReveal';
+import MapboxViewer from '../components/features/MapboxViewer';
+import InfoCard from '../components/cards/InfoCard';
+import HiddenGemCard from '../components/cards/HiddenGemCard';
+import EmptyState from '../components/ui/EmptyState';
 
 /* ═══════════════════════════════════════════════════════
    STATE NOT FOUND FALLBACK
@@ -143,10 +143,8 @@ const Overview = ({ state }) => {
 
         {/* Info card grid */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {infoCards.map((card, i) => (
-            <ScrollReveal key={card.label} delay={i * 0.08}>
-              <InfoCard icon={card.icon} label={card.label} value={card.value} />
-            </ScrollReveal>
+          {infoCards.map((card) => (
+            <InfoCard key={card.label} icon={card.icon} label={card.label} value={card.value} />
           ))}
         </div>
 
@@ -190,10 +188,8 @@ const PopularDestinations = ({ stateSlug, stateName }) => {
 
         {stateDestinations.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {stateDestinations.map((dest, i) => (
-              <ScrollReveal key={dest.id} delay={i * 0.08}>
-                <DestinationCard destination={dest} />
-              </ScrollReveal>
+            {stateDestinations.map((dest) => (
+              <DestinationCard key={dest.id} destination={dest} />
             ))}
           </div>
         ) : (
@@ -223,10 +219,8 @@ const HiddenGemsSection = ({ stateSlug, stateName }) => {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {gems.map((gem, i) => (
-            <ScrollReveal key={gem.slug} delay={i * 0.08}>
-              <HiddenGemCard gem={gem} />
-            </ScrollReveal>
+          {gems.map((gem) => (
+            <HiddenGemCard key={gem.slug} gem={gem} />
           ))}
         </div>
       </div>
@@ -247,7 +241,7 @@ const MapPlaceholder = ({ state }) => (
 
       <ScrollReveal>
         <MapboxViewer 
-          coordinates={[state.coords.lng, state.coords.lat]}
+          coordinates={state.coords ? [state.coords.lng, state.coords.lat] : undefined}
           title={state.name}
           zoom={5}
           height="450px"

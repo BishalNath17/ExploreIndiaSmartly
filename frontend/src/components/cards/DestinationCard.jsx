@@ -1,12 +1,20 @@
 import { Link } from 'react-router-dom';
 import { Star, ArrowRight } from 'lucide-react';
 
+const FALLBACK_IMAGE =
+  'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=800';
+
 /**
  * Reusable destination card with image, overlay, rating, and hover effect.
  * @param {{ destination: object, className?: string }} props
  */
 const DestinationCard = ({ destination, className = '' }) => {
   const { slug, title, description, image, rating } = destination;
+
+  const handleImgError = (e) => {
+    e.currentTarget.onerror = null;
+    e.currentTarget.src = FALLBACK_IMAGE;
+  };
 
   return (
     <Link
@@ -18,9 +26,10 @@ const DestinationCard = ({ destination, className = '' }) => {
 
       {/* Image */}
       <img
-        src={image}
+        src={image || FALLBACK_IMAGE}
         alt={title}
         loading="lazy"
+        onError={handleImgError}
         className="w-full h-[420px] sm:h-[480px] object-cover group-hover:scale-110 transition-transform duration-700"
       />
 

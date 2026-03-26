@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Compass, Search } from 'lucide-react';
-import useScrollDirection from '../hooks/useScrollDirection';
-import navLinks from '../data/navLinks';
+import useScrollDirection from '../../hooks/useScrollDirection';
+import navLinks from '../../data/navLinks';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -17,10 +17,10 @@ import {
 import { fadeUp } from '../utils/animations';
 import destinations from '../data/destinations';
 import states from '../data/states';
-import ScrollReveal from '../components/ScrollReveal';
-import SectionHeader from '../components/SectionHeader';
-import MapboxViewer from '../components/MapboxViewer';
-import InfoCard from '../components/InfoCard';
+import ScrollReveal from '../components/ui/ScrollReveal';
+import SectionHeader from '../components/layout/SectionHeader';
+import MapboxViewer from '../components/features/MapboxViewer';
+import InfoCard from '../components/cards/InfoCard';
 import hiddenGems from '../data/hiddenGems';
 
 /* ═══════════════════════════════════════════════════════
@@ -117,10 +117,8 @@ const Overview = ({ dest, parentState }) => {
 
         {cards.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {cards.map((c, i) => (
-              <ScrollReveal key={c.label} delay={i * 0.08}>
-                <InfoCard icon={c.icon} label={c.label} value={c.value} />
-              </ScrollReveal>
+            {cards.map((c) => (
+              <InfoCard key={c.label} icon={c.icon} label={c.label} value={c.value} />
             ))}
           </div>
         )}
@@ -142,14 +140,12 @@ const ItineraryHints = ({ dest }) => {
         <SectionHeader title="Suggested Itinerary" subtitle="A quick plan to make the most of your visit." />
         <div className="space-y-4">
           {hints.map((hint, i) => (
-            <ScrollReveal key={i} delay={i * 0.06}>
-              <div className="glass rounded-2xl p-6 flex items-start gap-4">
+              <div key={i} className="glass rounded-2xl p-6 flex items-start gap-4">
                 <span className="shrink-0 w-8 h-8 rounded-full bg-india-orange/15 text-india-orange text-sm font-bold flex items-center justify-center">
                   {i + 1}
                 </span>
                 <p className="text-gray-300 text-sm leading-relaxed pt-1">{hint}</p>
               </div>
-            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -175,9 +171,8 @@ const NearbyPlaces = ({ dest, parentState }) => {
         <SectionHeader title="Nearby Places" subtitle={`More to explore in ${stateName}.`} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {nearby.slice(0, 3).map((place, i) => (
-            <ScrollReveal key={place.slug} delay={i * 0.08}>
-              <Link to={`/destination/${place.slug}`}
+          {nearby.slice(0, 3).map((place) => (
+              <Link key={place.slug} to={`/destination/${place.slug}`}
                 className="group glass rounded-2xl overflow-hidden block hover:bg-white/15 transition-colors">
                 <div className="relative h-48">
                   <img src={place.image} alt={place.title} loading="lazy"
@@ -189,12 +184,10 @@ const NearbyPlaces = ({ dest, parentState }) => {
                   <p className="text-gray-400 text-xs line-clamp-2">{place.description}</p>
                 </div>
               </Link>
-            </ScrollReveal>
           ))}
 
-          {nearbyGems.slice(0, 3 - nearby.slice(0, 3).length).map((gem, i) => (
-            <ScrollReveal key={gem.slug} delay={(nearby.length + i) * 0.08}>
-              <div className="glass rounded-2xl overflow-hidden hover:bg-white/15 transition-colors">
+          {nearbyGems.slice(0, 3 - nearby.slice(0, 3).length).map((gem) => (
+              <div key={gem.slug} className="glass rounded-2xl overflow-hidden hover:bg-white/15 transition-colors">
                 <div className="relative h-48">
                   <img src={gem.image} alt={gem.name} loading="lazy"
                     className="w-full h-full object-cover" />
@@ -208,7 +201,6 @@ const NearbyPlaces = ({ dest, parentState }) => {
                   <p className="text-gray-400 text-xs line-clamp-2">{gem.description}</p>
                 </div>
               </div>
-            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -231,12 +223,10 @@ const TravelTips = ({ dest, parentState }) => {
         <SectionHeader title="Travel Tips" subtitle="Know before you go." />
         <div className="space-y-4">
           {tips.map((tip, i) => (
-            <ScrollReveal key={i} delay={i * 0.06}>
-              <div className="glass rounded-2xl p-6 flex items-start gap-4">
+              <div key={i} className="glass rounded-2xl p-6 flex items-start gap-4">
                 <Compass size={18} className="text-india-orange shrink-0 mt-0.5" />
                 <p className="text-gray-300 text-sm leading-relaxed">{tip}</p>
               </div>
-            </ScrollReveal>
           ))}
 
           {stateTip && (
@@ -268,7 +258,7 @@ const MapPlaceholder = ({ dest, parentState }) => {
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <MapboxViewer 
-            coordinates={[coords.lng, coords.lat]}
+            coordinates={coords ? [coords.lng, coords.lat] : undefined}
             title={dest.title.split(',')[0]}
             zoom={8}
             height="400px"

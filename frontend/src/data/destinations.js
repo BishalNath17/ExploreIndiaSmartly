@@ -33,7 +33,7 @@ const destinations = [
     description:
       'The Jewel of the East Coast — pristine beaches, submarine museums, and the lush Araku Valley nearby.',
     image:
-      'https://images.unsplash.com/photo-1590766740023-7d2075f42cd7?q=80&w=800',
+      'https://images.unsplash.com/photo-1590579491624-f98f36d4c763?q=80&w=800',
     rating: 4.5,
   },
 
@@ -46,7 +46,7 @@ const destinations = [
     description:
       'A mist-clad Himalayan town with the second-largest Buddhist monastery in the world after Lhasa.',
     image:
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800',
+      'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=800',
     rating: 4.7,
   },
   {
@@ -57,7 +57,7 @@ const destinations = [
     description:
       'A lush, pine-clad valley home to the Apatani tribe and an epic outdoor music festival.',
     image:
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800',
+      'https://images.unsplash.com/photo-1583309219338-a582f1f9ca6b?q=80&w=800',
     rating: 4.6,
   },
 
@@ -70,7 +70,7 @@ const destinations = [
     description:
       'A UNESCO World Heritage Site protecting two-thirds of the world\'s one-horned rhinoceroses.',
     image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+      'https://images.unsplash.com/photo-1578662996442-48f60103fc97?q=80&w=800',
     rating: 4.8,
   },
   {
@@ -94,7 +94,7 @@ const destinations = [
     description:
       'The place where Siddhartha Gautama attained enlightenment — one of Buddhism\'s holiest sites.',
     image:
-      'https://images.unsplash.com/photo-1609947017136-9daf32a15c8c?q=80&w=800',
+      'https://images.unsplash.com/photo-1591018653965-c03c7d65b7e3?q=80&w=800',
     rating: 4.7,
   },
   {
@@ -105,7 +105,7 @@ const destinations = [
     description:
       'Ruins of the ancient Nalanda University, once the world\'s greatest centre of learning.',
     image:
-      'https://images.unsplash.com/photo-1609947017136-9daf32a15c8c?q=80&w=800',
+      'https://images.unsplash.com/photo-1585516482738-1e8eeb10e05d?q=80&w=800',
     rating: 4.5,
   },
 
@@ -142,7 +142,7 @@ const destinations = [
     description:
       'UNESCO-listed Portuguese churches including the Basilica of Bom Jesus and Se Cathedral.',
     image:
-      'https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?q=80&w=800',
+      'https://images.unsplash.com/photo-1516815231560-d1bbd895d499?q=80&w=800',
     rating: 4.6,
   },
 
@@ -155,7 +155,7 @@ const destinations = [
     description:
       'A vast white salt desert that transforms into a cultural wonderland during the Rann Utsav festival.',
     image:
-      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800',
+      'https://images.unsplash.com/photo-1604692396783-0d96ba0e8e6c?q=80&w=800',
     rating: 4.8,
   },
   {
@@ -166,7 +166,7 @@ const destinations = [
     description:
       'The last refuge of the Asiatic lion — a premier wildlife sanctuary in the Saurashtra region.',
     image:
-      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800',
+      'https://images.unsplash.com/photo-1474511320723-9a56873571b7?q=80&w=800',
     rating: 4.7,
   },
   {
@@ -177,7 +177,7 @@ const destinations = [
     description:
       'A 5,000-year-old Indus Valley Civilisation site in the Rann of Kutch, a UNESCO World Heritage Site.',
     image:
-      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800',
+      'https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?q=80&w=800',
     rating: 4.4,
   },
 
@@ -203,7 +203,7 @@ const destinations = [
     description:
       'The former summer capital of British India, with colonial architecture, Mall Road, and pine-clad hills.',
     image:
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800',
+      'https://images.unsplash.com/photo-1597074866923-dc0e39e4d8e5?q=80&w=800',
     rating: 4.6,
   },
   {
@@ -214,7 +214,7 @@ const destinations = [
     description:
       'A Himalayan resort town on the Beas River, gateway to adventure sports and the Rohtang Pass.',
     image:
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800',
+      'https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?q=80&w=800',
     rating: 4.7,
   },
   {
@@ -251,7 +251,7 @@ const destinations = [
     description:
       'Ruins of the Vijayanagara Empire scattered among boulder-strewn terrain — a UNESCO World Heritage Site.',
     image:
-      'https://images.unsplash.com/photo-1600100397608-da9e178e77d8?q=80&w=800',
+      'https://images.unsplash.com/photo-1600784449428-931c84b3081f?q=80&w=800',
     rating: 4.8,
   },
   {
@@ -262,7 +262,7 @@ const destinations = [
     description:
       'The "Scotland of India" — misty hills, coffee plantations, waterfalls, and Kodava culture.',
     image:
-      'https://images.unsplash.com/photo-1600100397608-da9e178e77d8?q=80&w=800',
+      'https://images.unsplash.com/photo-1506461883276-594a12b11cf3?q=80&w=800',
     rating: 4.7,
   },
   {
@@ -273,7 +273,7 @@ const destinations = [
     description:
       'The City of Palaces — Mysore Palace, Chamundi Hills, and the vibrant Dasara festival.',
     image:
-      'https://images.unsplash.com/photo-1600100397608-da9e178e77d8?q=80&w=800',
+      'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800',
     rating: 4.7,
   },
 
@@ -286,7 +286,7 @@ const destinations = [
     description:
       'Verdant tea plantations and misty hills in God\'s Own Country.',
     image:
-      'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800',
+      'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=800',
     rating: 4.7,
   },
   {
@@ -297,7 +297,7 @@ const destinations = [
     description:
       'The Venice of the East — emerald backwater canals, houseboats, and coconut-fringed waterways.',
     image:
-      'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800',
+      'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?q=80&w=800',
     rating: 4.8,
   },
   {
@@ -321,7 +321,7 @@ const destinations = [
     description:
       'Exquisite 10th-century temples with intricate erotic sculptures — a UNESCO World Heritage Site.',
     image:
-      'https://images.unsplash.com/photo-1590050752117-238cb4c23786?q=80&w=800',
+      'https://images.unsplash.com/photo-1590766322738-e5e7b5d3f1f6?q=80&w=800',
     rating: 4.7,
   },
   {
@@ -345,7 +345,7 @@ const destinations = [
     description:
       'The City of Dreams — Gateway of India, marine drives, Bollywood, street food, and endless energy.',
     image:
-      'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800',
+      'https://images.unsplash.com/photo-1570168007204-dfb528c6958e?q=80&w=800',
     rating: 4.8,
   },
   {
@@ -356,7 +356,7 @@ const destinations = [
     description:
       'Rock-cut Buddhist, Hindu, and Jain cave temples dating back to the 2nd century BCE.',
     image:
-      'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800',
+      'https://images.unsplash.com/photo-1609766418204-94d68e007e65?q=80&w=800',
     rating: 4.8,
   },
 
@@ -369,7 +369,7 @@ const destinations = [
     description:
       'The largest freshwater lake in north-east India, famous for its floating islands (phumdis).',
     image:
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800',
+      'https://images.unsplash.com/photo-1470165301023-58dab8118cc9?q=80&w=800',
     rating: 4.5,
   },
 
@@ -382,7 +382,7 @@ const destinations = [
     description:
       'One of the wettest places on Earth, with living root bridges, dramatic waterfalls, and misty valleys.',
     image:
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800',
+      'https://images.unsplash.com/photo-1598091383021-15ddea10925e?q=80&w=800',
     rating: 4.7,
   },
   {
@@ -406,7 +406,7 @@ const destinations = [
     description:
       'The capital of Nagaland and gateway to the Hornbill Festival, with WWII war cemeteries and tribal heritage.',
     image:
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800',
+      'https://images.unsplash.com/photo-1625484892362-f5c0e4d3c0f5?q=80&w=800',
     rating: 4.4,
   },
 
@@ -419,7 +419,7 @@ const destinations = [
     description:
       'A sacred seaside city home to the Jagannath Temple and the spectacular annual Rath Yatra procession.',
     image:
-      'https://images.unsplash.com/photo-1590766940554-634e2d4b02f4?q=80&w=800',
+      'https://images.unsplash.com/photo-1590766322857-0e0e1e6e4e1f?q=80&w=800',
     rating: 4.6,
   },
   {
@@ -430,7 +430,7 @@ const destinations = [
     description:
       'A 13th-century temple shaped like a giant chariot, dedicated to the Sun God — a UNESCO marvel.',
     image:
-      'https://images.unsplash.com/photo-1590766940554-634e2d4b02f4?q=80&w=800',
+      'https://images.unsplash.com/photo-1627894005979-8a829c968aea?q=80&w=800',
     rating: 4.7,
   },
 
@@ -443,7 +443,7 @@ const destinations = [
     description:
       'The Golden Temple (Harmandir Sahib), the Wagah Border ceremony, and unforgettable Punjabi cuisine.',
     image:
-      'https://images.unsplash.com/photo-1590766940554-634e2d4b02f4?q=80&w=800',
+      'https://images.unsplash.com/photo-1609947017136-9dbb5585612e?q=80&w=800',
     rating: 4.9,
   },
 
@@ -456,7 +456,7 @@ const destinations = [
     description:
       'The Pink City — majestic palaces, Amber Fort, Hawa Mahal, and rich Rajput heritage.',
     image:
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=800',
+      'https://images.unsplash.com/photo-1603766806347-54735001be7d?q=80&w=800',
     rating: 4.9,
   },
   {
@@ -467,7 +467,7 @@ const destinations = [
     description:
       'The City of Lakes — romantic palaces, shimmering lakes, and sunset boat rides.',
     image:
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=800',
+      'https://images.unsplash.com/photo-1595658658481-d53d3f999876?q=80&w=800',
     rating: 4.9,
   },
   {
@@ -478,7 +478,7 @@ const destinations = [
     description:
       'The Golden City — a living sandstone fort, camel safaris across the Thar Desert, and starlit dunes.',
     image:
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=800',
+      'https://images.unsplash.com/photo-1590766740023-7d2075f42cd8?q=80&w=800',
     rating: 4.8,
   },
   {
@@ -489,7 +489,7 @@ const destinations = [
     description:
       'The Blue City — Mehrangarh Fort towering above a sea of blue-painted houses.',
     image:
-      'https://images.unsplash.com/photo-1599661046289-e31897846e41?q=80&w=800',
+      'https://images.unsplash.com/photo-1558383817-1d82e3f4e48c?q=80&w=800',
     rating: 4.7,
   },
 
@@ -502,7 +502,7 @@ const destinations = [
     description:
       'A charming hill-station capital with panoramic views of Kanchenjunga, monasteries, and cable cars.',
     image:
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800',
+      'https://images.unsplash.com/photo-1622308644420-c39b0b3f3e1c?q=80&w=800',
     rating: 4.6,
   },
   {
@@ -513,7 +513,7 @@ const destinations = [
     description:
       'Stunning Kanchenjunga views, the glass Skywalk, ancient Pemayangtse Monastery, and the Kanchenjunga Falls.',
     image:
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800',
+      'https://images.unsplash.com/photo-1540202404-a2f29016b523?q=80&w=800',
     rating: 4.5,
   },
 
@@ -537,7 +537,7 @@ const destinations = [
     description:
       'Queen of Hill Stations — Nilgiri toy train, botanical gardens, and cool tea-estate walks.',
     image:
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800',
+      'https://images.unsplash.com/photo-1595658658481-d53d3f999875?q=80&w=800',
     rating: 4.5,
   },
   {
@@ -548,7 +548,7 @@ const destinations = [
     description:
       'The Temple City — the magnificent Meenakshi Amman Temple and centuries of Dravidian heritage.',
     image:
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800',
+      'https://images.unsplash.com/photo-1621340814329-5db018719e57?q=80&w=800',
     rating: 4.7,
   },
 
@@ -561,7 +561,7 @@ const destinations = [
     description:
       'The City of Pearls — Charminar, Golconda Fort, world-class biryani, and a booming tech scene.',
     image:
-      'https://images.unsplash.com/photo-1590766740023-7d2075f42cd7?q=80&w=800',
+      'https://images.unsplash.com/photo-1603813507806-0d857b3e15f3?q=80&w=800',
     rating: 4.7,
   },
 
@@ -574,7 +574,7 @@ const destinations = [
     description:
       'Mysterious rock carvings and sculptures of Hindu deities etched into a hillside, dating back to the 7th century.',
     image:
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800',
+      'https://images.unsplash.com/photo-1609766934480-11c0e67c1c7a?q=80&w=800',
     rating: 4.3,
   },
 
@@ -587,7 +587,7 @@ const destinations = [
     description:
       'Home to the Taj Mahal, Agra Fort, and Fatehpur Sikri — the crown jewel of Mughal architecture.',
     image:
-      'https://images.unsplash.com/photo-1585135497273-1a86d9d4e7a3?q=80&w=800',
+      'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=800',
     rating: 4.9,
   },
   {
@@ -598,7 +598,7 @@ const destinations = [
     description:
       'The spiritual heart of India — ancient ghats, evening Ganga Aarti, and timeless traditions on the banks of the Ganges.',
     image:
-      'https://images.unsplash.com/photo-1561361058-c24cecae35ca?q=80&w=800',
+      'https://images.unsplash.com/photo-1561361058-c24cecae35cb?q=80&w=800',
     rating: 4.8,
   },
   {
@@ -609,7 +609,7 @@ const destinations = [
     description:
       'The City of Nawabs — Bara Imambara, Rumi Darwaza, legendary kebabs, and refined Awadhi culture.',
     image:
-      'https://images.unsplash.com/photo-1585135497273-1a86d9d4e7a3?q=80&w=800',
+      'https://images.unsplash.com/photo-1587474260584-136574528ed6?q=80&w=800',
     rating: 4.6,
   },
 
@@ -622,7 +622,7 @@ const destinations = [
     description:
       'The Yoga Capital of the World — Ganga rapids, ashrams, the Beatles Ashram, and bungee jumping.',
     image:
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800',
+      'https://images.unsplash.com/photo-1585116938581-4b793951ef5c?q=80&w=800',
     rating: 4.8,
   },
   {
@@ -633,7 +633,7 @@ const destinations = [
     description:
       'A charming lakeside hill station surrounded by seven hills, colonial-era charm, and vibrant Mall Road.',
     image:
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800',
+      'https://images.unsplash.com/photo-1585116938581-4b793951ef5b?q=80&w=800',
     rating: 4.6,
   },
   {
@@ -644,7 +644,7 @@ const destinations = [
     description:
       'The "Mini Switzerland" of India — alpine meadows, Tungnath temple trek, and panoramic Himalayan views.',
     image:
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3c?q=80&w=800',
     rating: 4.7,
   },
 
@@ -657,7 +657,7 @@ const destinations = [
     description:
       'Tea gardens with Kanchenjunga views, the Darjeeling Himalayan Railway (toy train), and colonial charm.',
     image:
-      'https://images.unsplash.com/photo-1558431382-27e303142255?q=80&w=800',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800',
     rating: 4.7,
   },
   {
@@ -668,7 +668,7 @@ const destinations = [
     description:
       'The world\'s largest mangrove forest, home to the Royal Bengal Tiger, in the Ganges delta.',
     image:
-      'https://images.unsplash.com/photo-1558431382-27e303142255?q=80&w=800',
+      'https://images.unsplash.com/photo-1504006833117-8886a355efbf?q=80&w=800',
     rating: 4.6,
   },
 
@@ -683,7 +683,7 @@ const destinations = [
     description:
       'Radhanagar Beach (Asia\'s best beach), turquoise waters, scuba diving, and lush tropical forests.',
     image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800',
+      'https://images.unsplash.com/photo-1468413253725-0d5181091126?q=80&w=800',
     rating: 4.9,
   },
 
@@ -709,7 +709,7 @@ const destinations = [
     description:
       'Dal Lake houseboats, Mughal gardens, floating flower markets, and snow-draped Zabarwan Hills.',
     image:
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800',
+      'https://images.unsplash.com/photo-1597432066946-fa8102cf2022?q=80&w=800',
     rating: 4.8,
   },
   {
@@ -720,7 +720,7 @@ const destinations = [
     description:
       'A premier ski resort and the world\'s second-highest operating gondola, surrounded by snow-capped peaks.',
     image:
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800',
+      'https://images.unsplash.com/photo-1604753380927-58f63ace67c1?q=80&w=800',
     rating: 4.8,
   },
 
@@ -733,7 +733,7 @@ const destinations = [
     description:
       'A high-altitude town with ancient Buddhist monasteries, prayer flags, and the gateway to the world\'s highest passes.',
     image:
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800',
+      'https://images.unsplash.com/photo-1600781637288-6a8f3e7b3b1c?q=80&w=800',
     rating: 4.9,
   },
   {
@@ -744,7 +744,7 @@ const destinations = [
     description:
       'An endorheic lake at 14,000 ft altitude whose waters shift between shades of blue, green, and violet.',
     image:
-      'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?q=80&w=800',
+      'https://images.unsplash.com/photo-1589308078059-be1415eab4c4?q=80&w=800',
     rating: 4.9,
   },
 
@@ -757,7 +757,7 @@ const destinations = [
     description:
       'Pastel-coloured French Quarter, Auroville, serene promenades, and some of the best cafés in South India.',
     image:
-      'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800',
+      'https://images.unsplash.com/photo-1609766418204-94d68e007e66?q=80&w=800',
     rating: 4.6,
   },
 ];

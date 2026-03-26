@@ -16,8 +16,8 @@ import {
 import { fadeUp } from '../utils/animations';
 import states from '../data/states';
 import { generateItinerary, formatINR, STYLE_OPTIONS } from '../services/api';
-import SectionHeader from '../components/SectionHeader';
-import ScrollReveal from '../components/ScrollReveal';
+import SectionHeader from '../components/layout/SectionHeader';
+import ScrollReveal from '../components/ui/ScrollReveal';
 
 /* ═══════════════════════════════════════════════════════
    FORM: INPUT COMPONENTS

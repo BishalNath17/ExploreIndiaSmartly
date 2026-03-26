@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { fadeUp } from '../utils/animations';
+import { fadeUp } from '../../utils/animations';
 
 /**
  * Lightweight wrapper that animates children into view on scroll.

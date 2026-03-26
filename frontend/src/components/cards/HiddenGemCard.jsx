@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Gem, MapPin, ArrowRight } from 'lucide-react';
 
+const FALLBACK_IMAGE =
+  'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=600';
+
 /**
  * Reusable hidden-gem card.
  *
@@ -12,6 +15,11 @@ const HiddenGemCard = ({ gem, linkToState = false, showExplore = false }) => {
   const Wrapper = linkToState ? Link : 'div';
   const wrapperProps = linkToState ? { to: `/state/${gem.state}` } : {};
 
+  const handleImgError = (e) => {
+    e.currentTarget.onerror = null;
+    e.currentTarget.src = FALLBACK_IMAGE;
+  };
+
   return (
     <Wrapper
       {...wrapperProps}
@@ -22,9 +30,10 @@ const HiddenGemCard = ({ gem, linkToState = false, showExplore = false }) => {
 
       {/* Image */}
       <img
-        src={gem.image}
+        src={gem.image || FALLBACK_IMAGE}
         alt={gem.name}
         loading="lazy"
+        onError={handleImgError}
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />
 
