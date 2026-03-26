@@ -25,39 +25,69 @@ import SearchBar from '../components/SearchBar';
    1. HERO
    ═══════════════════════════════════════════════════════ */
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
     {/* Background image + overlay */}
     <div className="absolute inset-0 z-0">
-      <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/70 to-navy z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/70 to-slate-900/90 z-10" />
       <img
-        src="https://images.unsplash.com/photo-1524492707947-2f85aae2c0ad?q=80&w=2048"
-        alt="India landscape"
-        className="w-full h-full object-cover"
+        src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2076"
+        alt="Taj Mahal in India"
+        className="w-full h-full object-cover object-top"
       />
     </div>
 
+    {/* Floating Polaroids (Desktop Only) */}
+    <div className="hidden lg:block absolute inset-0 z-10 pointer-events-none">
+      {/* Left Polaroid (Snow) */}
+      <motion.div
+        initial={{ opacity: 0, x: -50, rotate: -20 }}
+        animate={{ opacity: 1, x: 0, rotate: -12 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="absolute left-[5%] top-[25%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400"
+          alt="Snow mountain trek"
+          className="w-64 h-48 object-cover rounded-lg"
+        />
+      </motion.div>
+
+      {/* Right Polaroid (Kerala Houseboat) */}
+      <motion.div
+        initial={{ opacity: 0, x: 50, rotate: 20 }}
+        animate={{ opacity: 1, x: 0, rotate: 12 }}
+        transition={{ duration: 1, delay: 0.7 }}
+        className="absolute right-[5%] bottom-[15%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=400"
+          alt="Kerala Houseboat"
+          className="w-64 h-48 object-cover rounded-lg"
+        />
+      </motion.div>
+    </div>
+
     {/* Content */}
-    <div className="relative z-20 text-center px-5 w-full max-w-4xl pt-24 pb-16">
-      <motion.span
+    <div className="relative z-20 text-center px-5 w-full max-w-4xl mt-16">
+      <motion.div
         variants={fadeUp}
         initial="hidden"
         animate="visible"
-        className="text-india-orange font-medium tracking-[0.2em] uppercase mb-5 block text-xs sm:text-sm"
+        className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2 mb-8"
       >
-        Discover the Soul of India
-      </motion.span>
+        <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-sky-400/90">
+          The Ultimate Travel Guide
+        </span>
+      </motion.div>
 
       <motion.h1
         variants={fadeUp}
         initial="hidden"
         animate="visible"
         custom={0.15}
-        className="text-4xl sm:text-5xl lg:text-7xl font-serif font-bold mb-6 leading-[1.1]"
+        className="text-5xl sm:text-6xl lg:text-[5rem] font-bold mb-6 leading-tight tracking-tight"
       >
-        Travel Beyond <br className="hidden sm:block" />
-        <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-india-orange to-white">
-          Ordinary Horizons
-        </span>
+        Explore India <span className="text-sky-400">Smartly</span>
       </motion.h1>
 
       <motion.p
@@ -65,52 +95,45 @@ const Hero = () => (
         initial="hidden"
         animate="visible"
         custom={0.3}
-        className="text-sm sm:text-base lg:text-lg text-gray-300 mb-10 max-w-xl mx-auto leading-relaxed"
+        className="text-sm sm:text-base lg:text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
       >
-        Curated journeys across vibrant landscapes, ancient heritage, and modern
-        marvels of the Indian subcontinent.
+        Discover famous destinations, hidden gems, budget stays, safety tips, and
+        smarter travel across every Indian state.
       </motion.p>
-
-      {/* CTAs */}
-      <motion.div
-        variants={scaleIn}
-        initial="hidden"
-        animate="visible"
-        custom={0.45}
-        className="flex flex-col sm:flex-row gap-3 justify-center mb-12"
-      >
-        <Link
-          to="/travel-planner"
-          className="btn-primary flex items-center justify-center gap-2 text-sm"
-        >
-          Start Your Journey <ArrowRight size={16} />
-        </Link>
-        <Link to="/states" className="btn-outline text-center text-sm">
-          Explore Destinations
-        </Link>
-      </motion.div>
 
       {/* Search */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
         animate="visible"
-        custom={0.6}
+        custom={0.45}
+        className="max-w-xl mx-auto mb-8 relative z-30 pointer-events-auto"
       >
         <SearchBar />
       </motion.div>
-    </div>
 
-    {/* Scroll hint */}
-    <motion.div
-      animate={{ y: [0, 8, 0] }}
-      transition={{ repeat: Infinity, duration: 2 }}
-      className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20"
-    >
-      <div className="w-5 h-9 border-2 border-white/25 rounded-full flex justify-center pt-1.5">
-        <div className="w-1 h-1.5 bg-white/50 rounded-full" />
-      </div>
-    </motion.div>
+      {/* CTAs */}
+      <motion.div
+        variants={scaleIn}
+        initial="hidden"
+        animate="visible"
+        custom={0.6}
+        className="flex flex-col sm:flex-row gap-4 justify-center relative z-30 pointer-events-auto"
+      >
+        <Link
+          to="/states"
+          className="bg-india-orange hover:bg-orange-600 text-white font-semibold py-3.5 px-8 rounded-full shadow-lg shadow-india-orange/30 transition-all text-sm sm:text-base"
+        >
+          Explore All States
+        </Link>
+        <Link
+          to="/hidden-gems"
+          className="bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white font-semibold py-3.5 px-8 rounded-full transition-all text-sm sm:text-base"
+        >
+          Hidden Places
+        </Link>
+      </motion.div>
+    </div>
   </section>
 );
 
@@ -210,7 +233,8 @@ const HiddenGemsPreview = () => {
    5. SAFETY TIPS PREVIEW
    ═══════════════════════════════════════════════════════ */
 const SafetyTipsPreview = () => {
-  const preview = safetyTips.slice(0, 3);
+  // Flatten the nested categories array into a single array of tips, then take 3
+  const preview = safetyTips.flatMap(category => category.tips).slice(0, 3);
 
   return (
     <section className="py-16 sm:py-24 section-padding">
@@ -221,19 +245,22 @@ const SafetyTipsPreview = () => {
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {preview.map((tip, i) => (
-            <ScrollReveal key={tip.title} delay={i * 0.08}>
-              <div className="glass rounded-2xl p-6 h-full flex flex-col items-start">
-                <div className="w-10 h-10 rounded-xl bg-india-orange/15 flex items-center justify-center mb-4">
-                  <tip.icon size={20} className="text-india-orange" />
+          {preview.map((tip, i) => {
+            const TipIcon = tip.icon;
+            return (
+              <ScrollReveal key={tip.title} delay={i * 0.08}>
+                <div className="glass rounded-2xl p-6 h-full flex flex-col items-start">
+                  <div className="w-10 h-10 rounded-xl bg-india-orange/15 flex items-center justify-center mb-4">
+                    <TipIcon size={20} className="text-india-orange" />
+                  </div>
+                  <h3 className="text-base font-bold mb-2">{tip.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                    {tip.text}
+                  </p>
                 </div>
-                <h3 className="text-base font-bold mb-2">{tip.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed flex-1">
-                  {tip.text}
-                </p>
-              </div>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            )
+          })}
         </div>
 
         <div className="text-center mt-10">

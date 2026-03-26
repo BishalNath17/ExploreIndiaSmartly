@@ -6,11 +6,21 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*lint*.json
+*lint*.txt
+eslint*.json
+eslint*.txt
 
+# Build Artifacts
 node_modules
 dist
 dist-ssr
 *.local
+
+# Environment Variables
+.env
+.env.*
+!.env.example
 
 # Editor directories and files
 .vscode/*
