@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* ─── Custom Theme (Tailwind v4) ─── */
+@theme {
+  --color-navy-light: #1B2A4E;
+  --color-navy: #0A192F;
+  --color-navy-dark: #020C1B;
+
+  --color-india-blue: #1E3A8A;
+  --color-india-orange: #F97316;
+  --color-india-white: #FFFFFF;
+  --color-india-gray: #F3F4F6;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+/* ─── Base Resets ─── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-navy text-india-white font-sans overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* ─── Reusable Component Classes ─── */
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 bg-india-orange text-white rounded-full font-medium
+           transition-all duration-200
+           hover:bg-orange-600 hover:scale-105
+           active:scale-95 shadow-lg cursor-pointer;
+  }
+  .btn-outline {
+    @apply px-8 py-3 rounded-full font-medium border border-white/20
+           bg-white/10 backdrop-blur-md
+           hover:bg-white/20 transition-all duration-200 cursor-pointer;
+  }
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  .section-padding {
+    @apply px-5 sm:px-8 lg:px-16;
+  }
+}
