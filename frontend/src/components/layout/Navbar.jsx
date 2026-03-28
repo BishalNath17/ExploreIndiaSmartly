@@ -4,14 +4,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Compass, Search } from 'lucide-react';
 import useScrollDirection from '../../hooks/useScrollDirection';
 import navLinks from '../../data/navLinks';
+import SearchBar from '../features/SearchBar';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const scrollDir = useScrollDirection();
 
   const close = () => setIsOpen(false);
 
   const [scrolled, setScrolled] = useState(false);
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    close();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/#contact';
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -41,8 +54,8 @@ const Navbar = () => {
         <NavLink to="/hidden-gems" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Hidden Gems</NavLink>
         <NavLink to="/budget-planner" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Budget Planner</NavLink>
         <NavLink to="/safety-tips" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Safety</NavLink>
-        <Link to="#" className="transition-colors hover:text-sky-400 text-gray-200">Contact</Link>
-        <button className="text-gray-200 hover:text-sky-400 transition-colors ml-2">
+        <a href="#contact" onClick={handleContactClick} className="transition-colors hover:text-sky-400 text-gray-200 cursor-pointer">Contact</a>
+        <button onClick={() => setIsSearchOpen(true)} className="text-gray-200 hover:text-sky-400 transition-colors ml-2 cursor-pointer">
           <Search size={18} />
         </button>
       </div>
@@ -81,6 +94,19 @@ const Navbar = () => {
                 {link.label}
               </NavLink>
             ))}
+            <a
+              href="#contact"
+              onClick={handleContactClick}
+              className="text-lg transition-colors hover:text-india-orange"
+            >
+              Contact
+            </a>
+            <button
+              onClick={() => { close(); setIsSearchOpen(true); }}
+              className="text-lg text-left transition-colors hover:text-india-orange flex items-center gap-2"
+            >
+              Search <Search size={18} />
+            </button>
             <Link
               to="/travel-planner"
               onClick={close}
@@ -88,6 +114,29 @@ const Navbar = () => {
             >
               Plan a Trip
             </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Search Overlay Modal */}
+      <AnimatePresence>
+        {isSearchOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-navy-dark/95 backdrop-blur-xl flex flex-col items-center pt-24 sm:pt-32 px-4"
+          >
+            <button
+              onClick={() => setIsSearchOpen(false)}
+              className="absolute top-6 right-6 sm:top-8 sm:right-8 p-3 text-gray-400 hover:text-white transition-colors bg-white/5 hover:bg-white/10 rounded-full cursor-pointer"
+            >
+              <X size={24} />
+            </button>
+            <div className="w-full max-w-2xl px-2" onClick={(e) => e.stopPropagation()}>
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-center mb-8 text-white">Where to next?</h2>
+              <SearchBar onClose={() => setIsSearchOpen(false)} />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

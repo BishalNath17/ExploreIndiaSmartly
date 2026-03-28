@@ -1,15 +1,14 @@
 import { Link } from 'react-router-dom';
 import { Star, ArrowRight } from 'lucide-react';
 
-const FALLBACK_IMAGE =
-  'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=800';
+const FALLBACK_IMAGE = '/images/fallback.jpg';
 
 /**
  * Reusable destination card with image, overlay, rating, and hover effect.
  * @param {{ destination: object, className?: string }} props
  */
 const DestinationCard = ({ destination, className = '' }) => {
-  const { slug, title, description, image, rating } = destination;
+  const { id, name, description, image, rating } = destination;
 
   const handleImgError = (e) => {
     e.currentTarget.onerror = null;
@@ -18,7 +17,7 @@ const DestinationCard = ({ destination, className = '' }) => {
 
   return (
     <Link
-      to={`/destination/${slug}`}
+      to={`/destination/${id}`}
       className={`group relative block overflow-hidden rounded-3xl ${className}`}
     >
       {/* Gradient overlay */}
@@ -27,7 +26,7 @@ const DestinationCard = ({ destination, className = '' }) => {
       {/* Image */}
       <img
         src={image || FALLBACK_IMAGE}
-        alt={title}
+        alt={name}
         loading="lazy"
         onError={handleImgError}
         className="w-full h-[420px] sm:h-[480px] object-cover group-hover:scale-110 transition-transform duration-700"
@@ -41,7 +40,7 @@ const DestinationCard = ({ destination, className = '' }) => {
           <span className="text-sm font-bold">{rating}</span>
         </div>
 
-        <h3 className="text-xl sm:text-2xl font-bold mb-1">{title}</h3>
+        <h3 className="text-xl sm:text-2xl font-bold mb-1">{name}</h3>
 
         <p className="text-gray-300 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           {description}

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -9,9 +10,9 @@ import {
   ChevronRight,
 } from 'lucide-react';
 import { fadeUp, scaleIn } from '../utils/animations';
-import destinations from '../data/destinations';
-import states from '../data/states';
-import hiddenGems from '../data/hiddenGems';
+import { destinationsData as destinations } from '../data/destinationsData';
+import { statesData as states } from '../data/statesData';
+import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 import safetyTips from '../data/safetyTips';
 import DestinationCard from '../components/cards/DestinationCard';
 import StateCard from '../components/cards/StateCard';
@@ -30,7 +31,7 @@ const Hero = () => (
     <div className="absolute inset-0 z-0">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/70 to-slate-900/90 z-10" />
       <img
-        src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=2076"
+        src="/images/heroes/main-hero.jpg"
         alt="Taj Mahal in India"
         className="w-full h-full object-cover object-top"
       />
@@ -46,7 +47,7 @@ const Hero = () => (
         className="absolute left-[5%] top-[25%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
       >
         <img
-          src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=400"
+          src="/images/heroes/trek-hero.jpg"
           alt="Snow mountain trek"
           className="w-64 h-48 object-cover rounded-lg"
         />
@@ -60,7 +61,7 @@ const Hero = () => (
         className="absolute right-[5%] bottom-[15%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
       >
         <img
-          src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=400"
+          src="/images/heroes/kerala-hero.jpg"
           alt="Kerala Houseboat"
           className="w-64 h-48 object-cover rounded-lg"
         />
@@ -153,7 +154,7 @@ const FeaturedStates = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           {featured.map((state) => (
-            <StateCard key={state.slug} state={state} variant="image" />
+            <StateCard key={state.id} state={state} variant="image" />
           ))}
         </div>
 
@@ -173,22 +174,46 @@ const FeaturedStates = () => {
 /* ═══════════════════════════════════════════════════════
    3. POPULAR DESTINATIONS
    ═══════════════════════════════════════════════════════ */
-const PopularDestinations = () => (
-  <section className="py-16 sm:py-24 section-padding">
-    <div className="max-w-7xl mx-auto">
-      <SectionHeader
-        title="Popular Destinations"
-        subtitle="Hand-picked locations loved by travellers from around the world."
-      />
+const PopularDestinations = () => {
+  const [showAll, setShowAll] = useState(false);
+  const displayedDestinations = showAll ? destinations : destinations.slice(0, 6);
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        {destinations.map((dest) => (
-          <DestinationCard key={dest.id} destination={dest} />
-        ))}
+  return (
+    <section className="py-16 sm:py-24 section-padding">
+      <div className="max-w-7xl mx-auto">
+        <SectionHeader
+          title="Popular Destinations"
+          subtitle="Hand-picked locations loved by travellers from around the world."
+        />
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {displayedDestinations.map((dest, idx) => (
+            <motion.div
+              key={dest.id}
+              initial={idx >= 6 ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx >= 6 ? (idx - 6) * 0.1 : 0 }}
+            >
+              <DestinationCard destination={dest} />
+            </motion.div>
+          ))}
+        </div>
+
+        {destinations.length > 6 && !showAll && (
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setShowAll(true)}
+              className="btn-outline inline-flex items-center gap-2 text-sm text-india-white group"
+            >
+              See More Destinations
+              <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </div>
+        )}
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 /* ═══════════════════════════════════════════════════════
    4. HIDDEN GEMS PREVIEW
@@ -206,7 +231,7 @@ const HiddenGemsPreview = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {preview.map((gem) => (
-            <HiddenGemCard key={gem.slug} gem={gem} />
+            <HiddenGemCard key={gem.id} gem={gem} />
           ))}
         </div>
 

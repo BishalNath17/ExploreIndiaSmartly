@@ -3,7 +3,7 @@ import navLinks from '../../data/navLinks';
 
 const Footer = () => {
   return (
-    <footer className="bg-navy-dark border-t border-white/5">
+    <footer id="contact" className="bg-navy-dark border-t border-white/5">
       <div className="max-w-7xl mx-auto section-padding py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}

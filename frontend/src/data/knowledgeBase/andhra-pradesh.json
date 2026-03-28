@@ -1,0 +1,688 @@
+{
+  "id": "andhra-pradesh",
+  "name": "Andhra Pradesh",
+  "capital": "Amaravati (Legislative) | Visakhapatnam (Executive) | Kurnool (Judicial)",
+  "region": "South India",
+  "slug": "/india/andhra-pradesh",
+  "overview": {
+    "short": "Andhra Pradesh stretches along the southeastern coast of India with a coastline of over 974 km — the second longest in the country. The state is a vibrant tapestry of ancient civilizations, Buddhist heritage, rich agricultural plains fed by the Krishna and Godavari rivers, and a rapidly emerging technology and industrial corridor.",
+    "paragraph2": "Home to the world-famous Tirupati Balaji temple — the richest and most-visited pilgrimage center on earth — Andhra Pradesh weaves spirituality into its daily fabric. The Eastern Ghats provide a dramatic highland backdrop, while the coast offers untouched beaches and fertile deltas that have sustained civilizations for millennia.",
+    "paragraph3": "With rapid infrastructure development following bifurcation, Andhra Pradesh is reinventing itself as a forward-looking destination balancing heritage tourism, eco-tourism, and spiritual tourism under the Navaratnalu development vision.",
+    "cultureHeritage": "The Telugu-speaking people have a literary tradition dating back 11 centuries — Telugu is called the 'Italian of the East' for its melodic quality. The state birthed the Vijayanagara Empire, one of South India's greatest medieval kingdoms. Kuchipudi, a classical dance-drama form originating in the Krishna district, is internationally acclaimed. The Kalamkari craft — intricate hand-painted or block-printed textiles depicting mythological scenes — thrives in Srikalahasti and Machilipatnam."
+  },
+  "topDestinations": [
+    {
+      "name": "Tirupati & Tirumala",
+      "location": "Chittoor",
+      "category": "spiritual",
+      "description": "Pilgrimage twin-city. Tirumala is the hilltop site of the famous Sri Venkateswara Temple (Vishnu), the richest and most-visited Hindu shrine (≈25 million devotees per year).",
+      "whyFamous": "World's most visited religious site",
+      "slug": "/india/andhra-pradesh/tirupati-tirumala",
+      "imageKeywords": [
+        "Tirupati Balaji temple gopuram",
+        "Tirumala hills aerial view",
+        "Tirupati pilgrims queue"
+      ]
+    },
+    {
+      "name": "Visakhapatnam (Vizag)",
+      "location": "North Andhra",
+      "category": "city",
+      "description": "Andhra's largest coastal city, known as the 'Jewel of the East Coast'. A busy port with scenic beaches (e.g. RK Beach, Rushikonda) and the Eastern Ghats hills as backdrop.",
+      "whyFamous": "Beaches and hills",
+      "slug": "/india/andhra-pradesh/visakhapatnam",
+      "imageKeywords": [
+        "Visakhapatnam beach coastline",
+        "RK Beach Vizag",
+        "Kailasagiri viewpoint Vizag"
+      ]
+    },
+    {
+      "name": "Araku Valley",
+      "location": "Visakhapatnam District",
+      "category": "nature",
+      "description": "A cool hill station 120 km northwest of Visakhapatnam. Lush forests, streams and waterfalls surround coffee plantations and tribal villages.",
+      "whyFamous": "Coffee plantations & tribal culture",
+      "slug": "/india/andhra-pradesh/araku-valley",
+      "imageKeywords": [
+        "Araku Valley coffee plantation",
+        "Borra Caves stalactites",
+        "Araku tribal village"
+      ]
+    },
+    {
+      "name": "Amaravati",
+      "location": "Guntur",
+      "category": "heritage",
+      "description": "Planned capital region on the Krishna River plains. A historic Buddhist center – site of the ancient Amaravati Stupa ruins (3rd century BCE onward).",
+      "whyFamous": "Buddhist Stupa & capital city",
+      "slug": "/india/andhra-pradesh/amaravati",
+      "imageKeywords": [
+        "Amaravati Buddhist stupa ruins",
+        "Amaravati museum sculptures",
+        "Krishna river Amaravati"
+      ]
+    },
+    {
+      "name": "Lepakshi (Veerabhadra Temple)",
+      "location": "Anantapur",
+      "category": "heritage",
+      "description": "Famed for its 16th-century Veerabhadra temple complex. Renowned for monumental carvings, notably a granite hanging pillar and huge Nandi bull, and vibrant frescoes.",
+      "whyFamous": "Vijayanagara carvings & hanging pillar",
+      "slug": "/india/andhra-pradesh/lepakshi",
+      "imageKeywords": [
+        "Lepakshi hanging pillar temple",
+        "Lepakshi Nandi monolith",
+        "Veerabhadra temple murals"
+      ]
+    },
+    {
+      "name": "Nagarjunakonda",
+      "location": "Nalgonda",
+      "category": "heritage",
+      "description": "Archaeological island in the Nagarjuna Sagar reservoir. Excavations uncovered monasteries, sculptures and stupas of the Ikshvaku dynasty. Displays ancient Buddhist relics.",
+      "whyFamous": "Submerged Buddhist city & museum",
+      "slug": "/india/andhra-pradesh/nagarjunakonda",
+      "imageKeywords": [
+        "Nagarjunakonda island museum",
+        "Nagarjuna Sagar dam",
+        "Buddhist ruins Nagarjunakonda"
+      ]
+    },
+    {
+      "name": "Srikalahasti",
+      "location": "Chittoor",
+      "category": "spiritual",
+      "description": "Home to the Srikalahasteeswara Temple – an 11th-century Shiva shrine (Vayu Lingam) and one of the Pancha Bhuta temples set amidst rocky hills.",
+      "whyFamous": "Vayu Lingam & evening rituals",
+      "slug": "/india/andhra-pradesh/srikalahasti",
+      "imageKeywords": [
+        "Srikalahasti temple gopuram",
+        "Kalamkari art making",
+        "Swarnamukhi river temple"
+      ]
+    },
+    {
+      "name": "Vijayawada",
+      "location": "NTR District",
+      "category": "city",
+      "description": "Major city on the Krishna River. A commercial and cultural hub, Vijayawada's top landmark is the Kanaka Durga Temple atop Indrakeeladri hill.",
+      "whyFamous": "Kanaka Durga & Prakasam Barrage",
+      "slug": "/india/andhra-pradesh/vijayawada",
+      "imageKeywords": [
+        "Vijayawada Kanaka Durga temple",
+        "Undavalli caves Vijayawada",
+        "Krishna river Prakasam barrage"
+      ]
+    },
+    {
+      "name": "Sri Venkateswara Temple",
+      "location": "Tirumala",
+      "category": "spiritual",
+      "description": "World-famous hilltop Vishnu temple, holiest and richest temples. The gold-plated domes and lavish ornamentation of the 9th-century shrine attract pilgrims worldwide.",
+      "whyFamous": "Richest Hindu temple"
+    },
+    {
+      "name": "Srikalahasteeswara Temple",
+      "location": "Srikalahasti",
+      "category": "spiritual",
+      "description": "Ancient Shiva temple representing wind (Vayu Lingam). The hilltop complex is celebrated for its spiritual energy and historic architecture.",
+      "whyFamous": "Pancha Bhuta shrine"
+    },
+    {
+      "name": "Kanaka Durga Temple",
+      "location": "Vijayawada",
+      "category": "spiritual",
+      "description": "Iconic Durga Devi temple on Indrakeeladri hill. The towering granite idol and annual festivals (Navaratri) draw thousands.",
+      "whyFamous": "Shakti Peetha & Navaratri"
+    },
+    {
+      "name": "Simhachalam Temple",
+      "location": "Visakhapatnam",
+      "category": "spiritual",
+      "description": "13th-century Vaishnava shrine dedicated to Varaha Lakshmi Narasimha. Houses a unique idol usually covered in sandalwood paste.",
+      "whyFamous": "Unique Lion-Man avatar idol"
+    },
+    {
+      "name": "Srisailam (Mallikarjuna)",
+      "location": "Kurnool",
+      "category": "spiritual",
+      "description": "Legendary Shaivite temple on the Nallamala Hills. One of the 12 Jyotirlingas and 18 Shakti Peethas framed by the Krishna River gorge.",
+      "whyFamous": "Jyotirlinga & Shakti Peetha"
+    },
+    {
+      "name": "Alampur Navabrahma Temples",
+      "location": "Alampuram",
+      "category": "heritage_spiritual",
+      "description": "Group of nine ancient 7th-9th century Shiva shrines. Important example of early Dravidian/Vesara architecture.",
+      "whyFamous": "Pallava-era architecture"
+    },
+    {
+      "name": "Ahobilam",
+      "location": "Nandyal",
+      "category": "spiritual_nature",
+      "description": "Sacred mountain gorge and foremost center of Narasimha worship. Includes nine cave temples along a steep valley in the Eastern Ghats.",
+      "whyFamous": "Navanarasimhulu cave temples"
+    },
+    {
+      "name": "Mukhalingam Temples",
+      "location": "Srikakulam",
+      "category": "heritage_spiritual",
+      "description": "Trio of 11th-century Shiva temples reflecting Kalinga architectural style, noted for their colossal six-faced stone lingam.",
+      "whyFamous": "Kalinga architecture"
+    },
+    {
+      "name": "Rushikonda Beach",
+      "location": "Visakhapatnam",
+      "category": "beach",
+      "description": "A golden-sand beach famous for clear waters and water sports like snorkeling, windsurfing. Backed by wooded hills and resorts.",
+      "whyFamous": "Water sports & scenic bay"
+    },
+    {
+      "name": "Ramakrishna (RK) Beach",
+      "location": "Visakhapatnam",
+      "category": "beach",
+      "description": "Main city beach known for its wide promenade, Bay of Bengal sunsets, INS Kurusura submarine museum, and beach festivals.",
+      "whyFamous": "Submarine museum & city views"
+    },
+    {
+      "name": "Bheemunipatnam (Bheemili) Beach",
+      "location": "Visakhapatnam",
+      "category": "beach",
+      "description": "Tranquil beach with golden sands and coconut groves. Features Dutch cemeteries, old lighthouse and colonial churches.",
+      "whyFamous": "Dutch heritage & calm waters"
+    },
+    {
+      "name": "Mypadu Beach",
+      "location": "Nellore",
+      "category": "beach",
+      "description": "1500–600 m curve of white sand along the Bay of Bengal, favored for weekend getaways, swimming, and water rides.",
+      "whyFamous": "White sand & sunsets"
+    },
+    {
+      "name": "Vodarevu Beach",
+      "location": "Prakasam",
+      "category": "beach",
+      "description": "Quiet fishing village beach famous for its long wooden pier, expansive sunrise views, and nearby mangroves.",
+      "whyFamous": "Sunrise views & peaceful charm"
+    },
+    {
+      "name": "Manginapudi Beach",
+      "location": "Krishna",
+      "category": "beach",
+      "description": "Sandy beach with palm groves and a lighthouse, popular for local outings, gentle waves, and backwater access.",
+      "whyFamous": "Black sands & wading"
+    },
+    {
+      "name": "Talakona Waterfall",
+      "location": "Chittoor",
+      "category": "nature",
+      "description": "Andhra Pradesh's highest waterfall (91 m) in Sri Venkateswara National Park. Plunges amidst dense deciduous forests.",
+      "whyFamous": "Highest waterfall in AP"
+    },
+    {
+      "name": "Ethipothala Falls",
+      "location": "Nalgonda",
+      "category": "nature",
+      "description": "A 70-foot cascade on the Chandravanka River flowing year-round, popular for its viewpoint overlooking a rocky gorge.",
+      "whyFamous": "Scenic rocky cascading falls"
+    },
+    {
+      "name": "Ubbalamadugu Falls (Tada Falls)",
+      "location": "Chittoor",
+      "category": "nature",
+      "description": "A 100-meter-high waterfall popular with trekkers, requiring a rugged hike through jungle in the Siddulaiah Kona forests.",
+      "whyFamous": "Trekking waterfall trails"
+    },
+    {
+      "name": "Eastern Ghats (Nallamala Range)",
+      "location": "Eastern AP",
+      "category": "nature",
+      "description": "A fragmented mountain chain of dense forests and wildlife sanctuaries spanning parallel to the coast.",
+      "whyFamous": "Red sanders & tiger reserves"
+    },
+    {
+      "name": "Horsley Hills",
+      "location": "Annamayya",
+      "category": "nature",
+      "description": "Hill resort at ~1,300m elevation known as 'Ooty of Andhra'. Evergreen forests, eucalyptus, and panoramic viewpoints.",
+      "whyFamous": "Cool hill station retreat"
+    },
+    {
+      "name": "Sri Venkateswara National Park",
+      "location": "Chittoor/Annamayya",
+      "category": "wildlife",
+      "description": "A 353 sq km moist deciduous forest reserve in Seshachalam Biosphere guarding endemic flora and wildlife.",
+      "whyFamous": "Red sandalwood & waterfalls"
+    },
+    {
+      "name": "Nagarjunasagar-Srisailam Tiger Reserve",
+      "location": "Nallamala Range",
+      "category": "wildlife",
+      "description": "India's largest tiger reserve spanning dense forests and deep gorges along the Krishna River. Home to Bengal tigers and leopards.",
+      "whyFamous": "Largest tiger reserve in India"
+    },
+    {
+      "name": "Coringa Wildlife Sanctuary",
+      "location": "Kakinada",
+      "category": "wildlife",
+      "description": "India's third-largest mangrove forest. Crucial coastal wetland ecosystem conserving endangered birds, fishing cats, and boating.",
+      "whyFamous": "Vast mangrove estauries"
+    },
+    {
+      "name": "Krishna Wildlife Sanctuary",
+      "location": "Machilipatnam",
+      "category": "wildlife",
+      "description": "Coastal mangrove reserve on the Krishna River delta harboring dense forests, migratory birds, and crocodiles.",
+      "whyFamous": "Pristine mangrove tracts"
+    },
+    {
+      "name": "Lepakshi Temple Complex",
+      "location": "Anantapur",
+      "category": "heritage",
+      "description": "16th-century Veerabhadra temple with exquisite Vijayanagara carvings, giant Nandi, and hanging pillars.",
+      "whyFamous": "Floating pillar architecture",
+      "slug": "/india/andhra-pradesh/lepakshi",
+      "imageKeywords": [
+        "Lepakshi hanging pillar temple",
+        "Lepakshi Nandi monolith",
+        "Veerabhadra temple murals"
+      ]
+    },
+    {
+      "name": "Undavalli Caves",
+      "location": "Vijayawada",
+      "category": "heritage",
+      "description": "4th-5th century rock-cut caves. Multi-storeyed sandstone halls with a colossal reclining Vishnu sculpture.",
+      "whyFamous": "Rock-cut monolithic architecture"
+    },
+    {
+      "name": "Bhavani Island",
+      "location": "Vijayawada",
+      "category": "heritage_nature",
+      "description": "Large 133-acre river island in the Krishna River featuring boat rides, water sports, and parks.",
+      "whyFamous": "Largest river island in AP"
+    },
+    {
+      "name": "Chandragiri Fort",
+      "location": "Tirupati",
+      "category": "heritage",
+      "description": "11th-century hilltop fort, later a Vijayanagara capital. Houses the Raja and Rani Mahal palaces.",
+      "whyFamous": "Vijayanagara palaces & museums"
+    },
+    {
+      "name": "Kondapalli Fort",
+      "location": "Vijayawada",
+      "category": "heritage",
+      "description": "14th-century Reddi dynasty fort on laterite hills. The village is known for its traditional wooden toys.",
+      "whyFamous": "Historic fort & traditional toys"
+    },
+    {
+      "name": "Bobbili Fort",
+      "location": "Vizianagaram",
+      "category": "heritage",
+      "description": "Mid-19th century fort featuring Indo-Saracenic entrances, a Durbar Hall, and palatial mansions.",
+      "whyFamous": "Historic battle site & palace"
+    },
+    {
+      "name": "Amaravati Stupa",
+      "location": "Guntur",
+      "category": "heritage",
+      "description": "Ancient 3rd-century BCE Buddhist Great Stupa. Foundational site of the 'Andhra' school of sculpted art.",
+      "whyFamous": "Buddhist relief carvings",
+      "slug": "/india/andhra-pradesh/amaravati",
+      "imageKeywords": [
+        "Amaravati Buddhist stupa ruins",
+        "Amaravati museum sculptures",
+        "Krishna river Amaravati"
+      ]
+    },
+    {
+      "name": "Papikondalu (Papi Hills)",
+      "location": "Godavari River",
+      "category": "adventure",
+      "description": "Dramatic meanders flanked by forested hills on the Godavari River. Multi-day boat cruises and camping.",
+      "whyFamous": "Scenic river gorge cruises"
+    },
+    {
+      "name": "Belum Caves",
+      "location": "Kurnool",
+      "category": "adventure",
+      "description": "Over 3.2 km of natural limestone passages. The second-longest cave system in India featuring stalactites and subterranean streams.",
+      "whyFamous": "Massive natural limestone caves"
+    }
+  ],
+  "religiousPlaces": [
+    {
+      "name": "Sri Venkateswara Temple (Tirupati)",
+      "location": "Tirumala Hills",
+      "significance": "World's richest temple; Lord Vishnu avatar; 10th century CE"
+    },
+    {
+      "name": "Srikalahasteeswara Temple",
+      "location": "Srikalahasti",
+      "significance": "Vayu Lingam (Wind element); Rahu-Ketu remedies"
+    },
+    {
+      "name": "Kanaka Durga Temple",
+      "location": "Vijayawada",
+      "significance": "Shakti Peetha on Indrakeeladri Hill above Krishna River"
+    },
+    {
+      "name": "Simhachalam Temple",
+      "location": "Visakhapatnam",
+      "significance": "Lord Narasimha; unique idol merged with Shivalingam form"
+    },
+    {
+      "name": "Srisailam (Mallikarjuna)",
+      "location": "Kurnool District",
+      "significance": "Jyotirlinga + Shakti Peetha combined; Nallamala forest"
+    },
+    {
+      "name": "Alampur Navabrahma Temples",
+      "location": "Jogulamba, Gadwal",
+      "significance": "7th century Chalukya temples; Shakti Peetha"
+    },
+    {
+      "name": "Ahobilam",
+      "location": "Kurnool District",
+      "significance": "9 shrines of Lord Narasimha in forest hills"
+    },
+    {
+      "name": "Mukhalingam",
+      "location": "Srikakulam",
+      "significance": "9th century Eastern Ganga dynasty Shiva temples"
+    }
+  ],
+  "naturalAttractions": {
+    "rivers": [
+      "Krishna River — 1,400 km; fertile delta; Nagarjuna Sagar dam",
+      "Godavari River — Enters AP near Rajahmundry; dramatic gorge; Papikondalu hills",
+      "Penna River — Flows through arid Rayalaseema region",
+      "Tungabhadra — Western border; Srisailam reservoir"
+    ],
+    "waterfalls": [
+      {
+        "name": "Talakona Waterfall",
+        "location": "Chittoor District",
+        "height": "270 ft",
+        "note": "Tallest in AP; inside Sri Venkateswara National Park; medicinal herbs"
+      },
+      {
+        "name": "Ethipothala Falls",
+        "location": "Guntur District",
+        "note": "3-stream waterfall on Chandravanka River; crocodile sanctuary nearby"
+      },
+      {
+        "name": "Ubbalamadugu Falls",
+        "location": "Near Kurnool",
+        "note": "Scenic rocky terrain"
+      }
+    ],
+    "mountains": [
+      "Eastern Ghats (Nallamala Range) — Spans Kurnool–Prakasam; Tiger Reserve; dense forests",
+      "Horsley Hills — 1,265m; cool retreat; 150-year-old Eucalyptus tree; Andhra's 'Ooty'",
+      "Araku Hills — Eastern Ghats spine; tribal communities; coffee estates"
+    ],
+    "nationalParks": [
+      {
+        "name": "Sri Venkateswara NP",
+        "location": "Chittoor",
+        "note": "Endemic flora; Talakona waterfall inside"
+      },
+      {
+        "name": "Nagarjunasagar-Srisailam Tiger Reserve",
+        "location": "Kurnool-Nalgonda",
+        "area": "3,500 sq km",
+        "note": "Largest tiger reserve in India"
+      },
+      {
+        "name": "Coringa Wildlife Sanctuary",
+        "location": "Near Kakinada",
+        "note": "2nd largest mangrove forest in India"
+      },
+      {
+        "name": "Krishna Wildlife Sanctuary",
+        "location": "Godavari delta",
+        "note": "Mangroves; Marine turtles"
+      }
+    ]
+  },
+  "beaches": [
+    {
+      "name": "Rushikonda Beach",
+      "location": "Visakhapatnam",
+      "highlights": "Blue Flag certified; water sports; rocky coves"
+    },
+    {
+      "name": "Ramakrishna Beach (RK Beach)",
+      "location": "Vizag city",
+      "highlights": "Urban beach; INS Kursura submarine; statue of equality"
+    },
+    {
+      "name": "Bheemunipatnam (Bhimili)",
+      "location": "24 km N of Vizag",
+      "highlights": "Oldest Dutch cemetery in India; lighthouse"
+    },
+    {
+      "name": "Mypadu Beach",
+      "location": "Nellore",
+      "highlights": "Olive Ridley turtle nesting site; Pulicat Lake nearby"
+    },
+    {
+      "name": "Vodarevu Beach",
+      "location": "Prakasam",
+      "highlights": "Pristine; uncrowded; casuarina groves"
+    },
+    {
+      "name": "Manginapudi Beach",
+      "location": "West Godavari",
+      "highlights": "Black sand; distinctive coastal landscape"
+    }
+  ],
+  "historicalSites": [
+    {
+      "name": "Lepakshi Temple Complex",
+      "period": "16th century",
+      "description": "Vijayanagara; hanging pillar; 70+ sculpted pillars; remarkable frescoes"
+    },
+    {
+      "name": "Undavalli Caves",
+      "period": "4th–5th century CE",
+      "description": "4-story rock-cut monolithic temple; reclining Vishnu"
+    },
+    {
+      "name": "Chandragiri Fort",
+      "location": "Near Tirupati",
+      "description": "Last stronghold of Vijayanagara Empire; Raja Mahal & Rani Mahal"
+    },
+    {
+      "name": "Kondapalli Fort",
+      "period": "14th century",
+      "description": "Hilltop fortress; toy-making village below"
+    },
+    {
+      "name": "Bobbili Fort",
+      "period": "17th century",
+      "description": "Vizianagaram district; historical battle of Bobbili site"
+    },
+    {
+      "name": "Amaravati Stupa",
+      "period": "2nd century BCE",
+      "description": "Buddhist art masterpiece; Great Stupa remnants"
+    },
+    {
+      "name": "Nagarjunakonda",
+      "period": "3rd century CE",
+      "description": "Ikshvaku Buddhist capital; relocated island museum"
+    }
+  ],
+  "adventure": [
+    "Rushikonda Beach Water Sports — Jet skiing, parasailing, banana boat rides, kayaking",
+    "Araku Valley Trek — Eastern Ghats tribal trails; coffee estate walks; cave exploration at Borra",
+    "Papikondalu Boat Cruise — Godavari river gorge; 2-day/1-night houseboat through dramatic hills",
+    "Nagarjuna Sagar Boat Safari — Island monastery exploration",
+    "Belum Caves Adventure — 3,229m long; 2nd largest natural cave system in Indian subcontinent",
+    "Horseback Riding at Horsley Hills — Hill station trekking and nature walks",
+    "Cycling in Amaravati — Buddhist trail by the Krishna River",
+    "Mangrove Kayaking at Coringa — Wildlife sanctuary boat tours"
+  ],
+  "foodCuisine": {
+    "famousDishes": [
+      {
+        "name": "Pesarattu (moong dosa)",
+        "description": "Green moong dal crepe, a staple breakfast served with upma and ginger chutney."
+      },
+      {
+        "name": "Gongura Chicken / Mutton",
+        "description": "Signature Andhra dish cooked with deeply tangy and spicy sour sorrel leaves."
+      },
+      {
+        "name": "Andhra Biryani",
+        "description": "Unique traditional biryani where marinated meat is cooked with spiced rice."
+      },
+      {
+        "name": "Pulihora (tamarind rice)",
+        "description": "Tangy tamarind rice, a beloved temple prasadam and festive staple."
+      },
+      {
+        "name": "Bamboo Chicken (Araku specialty)",
+        "description": "Tribal specialty from Araku; chicken marinated in herbs and cooked inside bamboo over an open flame."
+      },
+      {
+        "name": "Bobbattu (sweet dish)",
+        "description": "A sweet traditional flatbread bursting with lentil and jaggery filling."
+      },
+      {
+        "name": "Nellore Fish Curry",
+        "description": "Intensely spiced fish curry from the coastal regions of Nellore."
+      }
+    ],
+    "streetFood": [
+      {
+        "name": "Mirchi Bajji",
+        "description": "Banana peppers stuffed and deep-fried to crispy perfection in a gram flour batter."
+      },
+      {
+        "name": "Punugulu",
+        "description": "Fried dumplings from fermented rice-lentil batter, served hot with coconut chutney."
+      },
+      {
+        "name": "Jonna Rotte",
+        "description": "A healthy, hearty sorghum flatbread typical to the Rayalaseema region."
+      }
+    ]
+  },
+  "stayOptions": {
+    "luxury": [
+      "Novotel Visakhapatnam Varun Beach",
+      "The Bheemili Resort (Vizag)",
+      "Park Hyatt (Nearby major city)"
+    ],
+    "midRange": [
+      "Fortune Select Grand Ridge (Tirupati)",
+      "Haritha Resorts (Government stays)"
+    ],
+    "unique": [
+      "Jungle Bells Araku (tribal cottages)",
+      "Papikondalu Houseboats",
+      "Homestays near Araku & Srisailam"
+    ]
+  },
+  "bestTimeToVisit": [
+    {
+      "season": "Best",
+      "months": "October to February",
+      "conditions": "Cool and pleasant. Winter travel is best, especially for the Tirupati festival season."
+    },
+    {
+      "season": "Monsoon",
+      "months": "June to September",
+      "conditions": "Green landscapes and thriving waterfalls."
+    },
+    {
+      "season": "Summer",
+      "months": "March to May",
+      "conditions": "Very hot, travelers should generally avoid inland regions."
+    }
+  ],
+  "transportation": {
+    "airports": [
+      "Visakhapatnam Airport",
+      "Tirupati Airport",
+      "Vijayawada Airport"
+    ],
+    "railways": [
+      "Visakhapatnam",
+      "Vijayawada",
+      "Tirupati"
+    ],
+    "roads": [
+      "NH16 (Chennai–Kolkata highway)",
+      "Good APSRTC bus connectivity"
+    ]
+  },
+  "festivals": [
+    {
+      "name": "Brahmotsavam",
+      "period": "September–October",
+      "description": "Tirupati; 9-day grand festival; millions attend"
+    },
+    {
+      "name": "Ugadi",
+      "period": "March–April",
+      "description": "Telugu New Year; celebrated statewide"
+    },
+    {
+      "name": "Visakha Utsav",
+      "period": "January",
+      "description": "Vizag; cultural festival by the sea"
+    },
+    {
+      "name": "Deccan Festival",
+      "period": "February",
+      "description": "Cultural arts and crafts fair"
+    },
+    {
+      "name": "Maha Shivaratri at Srisailam",
+      "period": "February–March",
+      "description": "Massive temple fair; lakhs of pilgrims"
+    },
+    {
+      "name": "Karthika Deepotsavam",
+      "period": "November",
+      "description": "Lamp festival across temples"
+    },
+    {
+      "name": "Lumbini Festival",
+      "period": "November",
+      "description": "Nagarjunakonda; Buddhist cultural celebration"
+    }
+  ],
+  "travelTips": [
+    "Tirupati Darshan: Book online at tirumala.org well in advance; TTD manages slotted darshan; hair offering is voluntary but common",
+    "Spice Warning: Andhra food is among the spiciest in India; always specify 'less spicy' if needed",
+    "Best Araku Access: The Visakhapatnam–Araku Valley train (Kirandul Express) is one of India's most scenic rail journeys — book early",
+    "Papikondalu: Houseboats can be booked through AP Tourism; season is October–March",
+    "Safety: Generally safe; avoid isolated beach areas at night",
+    "Budget: Daily budget traveler ₹800–1,500; mid-range ₹2,500–5,000; luxury ₹8,000+",
+    "Local Currency: HDFC, SBI ATMs widely available; carry cash for rural/tribal areas"
+  ],
+  "uniqueFacts": [
+    "Tirupati Balaji receives approximately ₹650+ crore in donations annually, making it the world's wealthiest temple",
+    "Andhra Pradesh has India's second-longest coastline (974 km) after Gujarat",
+    "The Borra Caves (Araku) are estimated to be 150 million years old",
+    "Lepakshi's 'hanging pillar' — one of 70 carved pillars in the Veerabhadra Temple — appears to be suspended above the floor; a thin piece of paper can be passed under it",
+    "The Godavari delta in AP is one of the world's most fertile river deltas and a Ramsar wetland site",
+    "Telugu is the 3rd most spoken language in India and is listed as a classical language",
+    "Belum Caves (Kurnool) contain the longest cave system accessible to the public in the Indian subcontinent at 3,229 meters"
+  ],
+  "activities": [
+    "Rushikonda Beach — Water sports",
+    "Araku Valley — Trekking and coffee tours",
+    "Papikondalu — Boat cruise",
+    "Belum Caves — Cave exploration",
+    "Horsley Hills — Hiking",
+    "Coringa — Mangrove kayaking"
+  ]
+}

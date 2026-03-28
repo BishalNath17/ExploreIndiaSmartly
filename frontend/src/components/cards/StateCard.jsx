@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const FALLBACK_IMAGE =
-  'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=600';
+const FALLBACK_IMAGE = '/images/fallback.jpg';
 
 /**
  * Reusable state preview card.
@@ -20,7 +19,7 @@ const StateCard = ({ state, variant = 'compact' }) => {
   if (variant === 'image') {
     return (
       <Link
-        to={`/state/${state.slug}`}
+        to={`/state/${state.id}`}
         className="group relative block rounded-2xl overflow-hidden aspect-[3/4]"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent z-10 group-hover:from-navy/90 transition-all duration-300" />
@@ -46,13 +45,28 @@ const StateCard = ({ state, variant = 'compact' }) => {
   // compact (default)
   return (
     <Link
-      to={`/state/${state.slug}`}
-      className="block glass rounded-2xl p-6 hover:bg-white/15 transition-colors group"
+      to={`/state/${state.id}`}
+      className="group relative block rounded-2xl overflow-hidden h-40 sm:h-48"
     >
-      <h3 className="text-xl font-bold group-hover:text-india-orange transition-colors">
-        {state.name}
-      </h3>
-      <p className="text-gray-400 text-sm mt-1">{state.tagline}</p>
+      {/* Background Image & Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={state.image || FALLBACK_IMAGE}
+          alt={state.name}
+          loading="lazy"
+          onError={handleImgError}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 h-full p-5 sm:p-6 flex flex-col justify-end">
+        <h3 className="text-xl font-bold text-white group-hover:text-india-orange transition-colors">
+          {state.name}
+        </h3>
+        <p className="text-gray-300 text-sm mt-1 drop-shadow-md">{state.tagline}</p>
+      </div>
     </Link>
   );
 };

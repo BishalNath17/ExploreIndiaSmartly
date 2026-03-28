@@ -1,0 +1,226 @@
+{
+  "id": "kerala",
+  "name": "Kerala",
+  "capital": "Thiruvananthapuram",
+  "region": "South India (Malabar Coast)",
+  "slug": "/india/kerala",
+
+  "overview": {
+    "short": "Kerala — \"God's Own Country\" — is the world's benchmark for sustainable, responsible, and holistic tourism. This slender, 580 km-long state along India's southwestern tip has leveraged its extraordinary natural beauty (backwaters, beaches, hill stations, rainforests), rich Ayurvedic heritage, remarkable cuisine, and high human development indicators (99% literacy; highest life expectancy in India) into one of Asia's finest travel destinations.",
+    "paragraph2": "The Kerala backwaters — a 900 km network of lagoons, lakes, rivers, and canals connected by waterways — are unique on earth. Houseboat (kettuvallam) cruises through paddy fields, coconut groves, Chinese fishing nets, and village life on Vembanad Lake is Kerala's signature experience. In the hills, Munnar (tea estates), Wayanad (tribal culture), and Thekkady/Periyar (elephant sanctuary, spice estates) create a Himalayan-intensity nature experience in tropical surroundings.",
+    "paragraph3": "Kerala's cultural and spiritual traditions are equally deep: Kathakali (elaborate classical dance-drama with 6-hour face makeup), Mohiniyattam (graceful feminine dance), Kalaripayattu (world's oldest martial art), the Thrissur Pooram (100+ elephants, simultaneous fireworks — the world's grandest temple festival), and the boat race culture (Nehru Trophy snake boat race) define a state whose cultural confidence matches its natural gifts.",
+    "cultureHeritage": "Kerala's 3,000-year history of maritime trade (with Arab, Chinese, Jewish, and later European merchants) created a unique cultural synthesis. The Syrian Christian community (Kerala's 30% Christian population includes communities claiming direct conversion by St. Thomas the Apostle in 52 CE — making Kerala's Christianity older than Rome's). Kerala's Jewish community (Mattancherry, Kochi) dates to 562 BCE. Kerala's Muslim community (Malabar region; Mappila culture) has traded with Arabia for 2,000 years. This extraordinary multicultural heritage produced Kerala's unique ethos of coexistence, reflected in the dense concentration of churches, mosques, and temples that share the same streets."
+  },
+
+  "topDestinations": [
+    {
+      "name": "Kerala Backwaters",
+      "location": "Alappuzha, Kottayam, Kollam districts; Vembanad Lake system",
+      "slug": "/india/kerala/backwaters",
+      "description": "The crown jewel of Kerala tourism — 900 km of interconnected waterways, lakes, and canals forming a unique inland water ecosystem. The Alappuzha (Alleppey) houseboat experience — drifting through narrow canals lined with coconut palms, watching village life, sleeping on the water — is arguably South India's most distinctive travel experience. Kumarakom Bird Sanctuary, Kuttanad (below sea-level rice fields), and the Nehru Trophy Boat Race add layers.",
+      "whyFamous": "World's most famous houseboat experience; unique waterway ecosystem; Nehru Trophy race",
+      "imageKeywords": ["Kerala backwaters houseboat sunset", "Alappuzha canal coconut palm", "Kerala kettuvallam houseboat"]
+    },
+    {
+      "name": "Munnar",
+      "location": "Idukki District; Western Ghats; 1,600m elevation",
+      "slug": "/india/kerala/munnar",
+      "description": "The most spectacular high-altitude tea estate landscape in South Asia — 30,000+ acres of emerald tea terraces on rolling Ghats hills at 1,600–2,700m. Eravikulam National Park (Rajamalai; Nilgiri Tahr; Neelakurinji — blooms once every 12 years turning hills blue), Mattupetty Dam, Top Station (2,100m; views into Tamil Nadu), and Echo Point make Munnar one of South India's finest hill destinations.",
+      "whyFamous": "South Asia's greatest tea landscape; Eravikulam NP; Neelakurinji blue hills",
+      "imageKeywords": ["Munnar tea estates rolling hills", "Eravikulam National Park tahr", "Munnar mist Kerala hills"]
+    },
+    {
+      "name": "Fort Kochi (Cochin)",
+      "location": "Ernakulam District; Kerala coast",
+      "slug": "/india/kerala/fort-kochi",
+      "description": "India's most cosmopolitan heritage port city — a UNESCO tentative World Heritage Site where Chinese fishing nets, a Portuguese cathedral (1503; India's first European church), Jewish synagogue (1567; Mattancherry), Dutch Palace (1557), British-era buildings, Sufi shrines, and Hindu temples share a few square kilometers. The contemporary art district, café culture, and Kathakali performances make Fort Kochi one of India's most enchanting urban destinations.",
+      "whyFamous": "Chinese fishing nets; India's first European church; Jewish Paradesi Synagogue; Kathakali",
+      "imageKeywords": ["Fort Kochi Chinese fishing nets sunset", "Mattancherry Jewish synagogue Kochi", "Fort Kochi colonial streets"]
+    },
+    {
+      "name": "Thekkady (Periyar)",
+      "location": "Idukki District; Western Ghats; 900m",
+      "slug": "/india/kerala/thekkady-periyar",
+      "description": "Periyar Wildlife Sanctuary — centered on an artificial lake created by the Mullaperiyar Dam — offers one of India's most dramatic wildlife experiences: boat rides at dawn on the lake watching wild elephants, gaur, otters, and river birds come to the water. Spice plantation walks, bamboo rafting, and the village life of Kumily make Thekkady a complete destination.",
+      "whyFamous": "Periyar elephant sanctuary; boat safari; spice estate tours; trekking",
+      "imageKeywords": ["Periyar lake boat elephants", "Thekkady spice plantation Kerala", "Periyar wildlife sanctuary elephants"]
+    },
+    {
+      "name": "Wayanad",
+      "location": "Wayanad District; Western Ghats; 700–2,100m",
+      "slug": "/india/kerala/wayanad",
+      "description": "Kerala's most biodiverse district and tribal heartland, Wayanad blends coffee and spice estates, ancient tribal rock art (Edakkal Caves; Neolithic carvings), the Chembra Peak (2,100m; heart-shaped lake near summit), pristine Muthanga and Tholpetty wildlife sanctuaries, and some of Kerala's most innovative eco-resorts and tree houses.",
+      "whyFamous": "Edakkal Caves prehistoric art; Chembra Peak; tribal culture; coffee estates; wildlife",
+      "imageKeywords": ["Wayanad Edakkal Caves carvings", "Chembra Peak heart lake", "Wayanad coffee estate mist"]
+    },
+    {
+      "name": "Thiruvananthapuram (Trivandrum)",
+      "location": "Kerala's southern tip; capital",
+      "slug": "/india/kerala/thiruvananthapuram",
+      "description": "Kerala's capital is anchored by the magnificent Padmanabhaswamy Temple — the world's wealthiest temple by asset value (estimated $22 billion in gold, jewels, and artifacts in underground vaults). The Napier Museum (1880; Gothic-Kerala fusion), Shankhumugham Beach, Kuthiramalika Palace, and the nearby beaches of Kovalam make TVM a full destination rather than just a transit point.",
+      "whyFamous": "World's wealthiest temple; Kovalam beaches; colonial capital; Napier Museum",
+      "imageKeywords": ["Padmanabhaswamy Temple Trivandrum", "Kovalam beach lighthouse Kerala", "Trivandrum city Kerala"]
+    },
+    {
+      "name": "Kovalam",
+      "location": "Thiruvananthapuram District; Kerala southern coast",
+      "slug": "/india/kerala/kovalam",
+      "description": "Kerala's most iconic beach destination — three crescent beaches separated by rocky headlands. Lighthouse Beach (most busy; lighthouse walk-up), Hawa Beach, and the quieter Samudra Beach offer a range from lively to serene. Kovalam is also a major Ayurveda treatment destination with dozens of certified centers.",
+      "whyFamous": "Kerala's most famous beach; lighthouse; Ayurveda treatments",
+      "imageKeywords": ["Kovalam beach lighthouse Kerala", "Kovalam crescent beach aerial", "Kovalam Ayurveda resort"]
+    }
+  ],
+
+  "religiousPlaces": [
+    { "name": "Padmanabhaswamy Temple", "location": "Thiruvananthapuram", "significance": "World's wealthiest temple; Vishnu reclining on Ananta Shesha" },
+    { "name": "Guruvayur Temple", "location": "Thrissur District", "significance": "Most visited Vaishnava temple in Kerala; elephant sanctuary" },
+    { "name": "Sabarimala (Ayyappan)", "location": "Pathanamthitta", "significance": "Second largest annual pilgrimage in world (50 million in season)" },
+    { "name": "Thrissur Vadakkumnathan Temple", "location": "Thrissur", "significance": "Ancient; Thrissur Pooram venue; Shiva" },
+    { "name": "St. Thomas Syro-Malabar Church", "location": "Thrissur", "significance": "Ancient Syrian Christian; 52 CE Thomas tradition" },
+    { "name": "Cheraman Juma Mosque", "location": "Methala, Thrissur", "significance": "India's first mosque; 629 CE; pre-Arab trading tradition" },
+    { "name": "Paradesi Synagogue", "location": "Kochi", "significance": "India's oldest working synagogue (1568); Mattancherry" },
+    { "name": "Attukal Bhagavathy Temple", "location": "Thiruvananthapuram", "significance": "Guinness record — world's largest annual gathering of women (millions)" }
+  ],
+
+  "naturalAttractions": {
+    "rivers": [
+      "Vembanad Lake — Kerala's largest lake; 2,033 sq km; houseboat route; Kuttanad rice fields",
+      "Periyar River — Periyar NP; sacred; longest in Kerala",
+      "Pamba River — Sabarimala pilgrims cross this; Kuttanad farming delta",
+      "Chaliyar River — Wayanad-Calicut; forest river; angling"
+    ],
+    "mountains": [
+      "Anamudi — 2,695m; highest peak in South India; inside Eravikulam NP",
+      "Chembra Peak — 2,100m; Wayanad; heart-shaped lake",
+      "Agasthyamalai — 1,868m; Thiruvananthapuram; biosphere reserve; endemic species",
+      "Meesapulimala — 2,640m; Munnar area; high altitude grassland"
+    ],
+    "wildlife": [
+      { "name": "Periyar NP & Tiger Reserve", "note": "925 sq km; elephant; boat safari; spice estate buffer" },
+      { "name": "Eravikulam NP", "note": "97 sq km; Nilgiri Tahr; Anamudi peak; Neelakurinji" },
+      { "name": "Silent Valley NP", "note": "237 sq km; last undisturbed tropical rainforest in India; lion-tailed macaque" },
+      { "name": "Wayanad WLS", "note": "Part of Nilgiris biosphere; elephants, tigers, leopards" },
+      { "name": "Muthanga WLS", "note": "Wayanad; elephants; forest department jeep safaris" },
+      { "name": "Parambikulam TR", "note": "Palakkad; outstanding biodiversity; eco-tourism model" }
+    ]
+  },
+
+  "beaches": [
+    { "name": "Kovalam", "location": "Trivandrum", "highlights": "Lighthouse beach; crescent coves; Ayurveda resort belt" },
+    { "name": "Varkala Cliff", "location": "Varkala", "highlights": "15m red laterite cliff above beach; springs; spiritual atmosphere; Janardhana Temple" },
+    { "name": "Bekal", "location": "Kasaragod", "highlights": "Northernmost Kerala; fort on cliff; virtually pristine" },
+    { "name": "Cherai Beach", "location": "Near Kochi", "highlights": "River mouth; dolphins; backwater on one side, sea on other" },
+    { "name": "Marari", "location": "Alappuzha", "highlights": "Village beach; fisher community; no high-rises" },
+    { "name": "Kappad", "location": "Kozhikode", "highlights": "Vasco da Gama landing site (1498); historical landmark" },
+    { "name": "Payyambalam", "location": "Kannur", "highlights": "Curved beach; cashew forests" }
+  ],
+
+  "historicalSites": [
+    { "name": "Dutch Palace (Mattancherry)", "description": "1557; Portuguese-built; Dutch renovated; Ramayana murals; Kochi" },
+    { "name": "Bekal Fort", "description": "1650; Kasaragod; Kerala's largest fort; on cliff above sea" },
+    { "name": "Padmanabhapuram Palace", "description": "1601; Travancore royal; best traditional Kerala architecture; now in TN" },
+    { "name": "Thalassery Fort", "description": "1708; British East India Company; Kannur spice trading history" },
+    { "name": "Hill Palace, Tripunithura", "description": "Kochi; Cochin royal family museum; 49 buildings; antiquities" },
+    { "name": "St. Francis Church, Fort Kochi", "description": "1503; India's first European church; Vasco da Gama burial site" }
+  ],
+
+  "adventure": [
+    "Houseboat Stay — Alappuzha/Kumarakom; 1–3 night stay; most popular Kerala experience",
+    "Periyar Boat Safari — Dawn/dusk; lake circuit; elephant, gaur, birds",
+    "Kalaripayattu Performance/Training — Calicut, Palakkad; world's oldest martial art (Kali/Kalari)",
+    "River Tubing, Wayanad — Kabini/Chaliyar; forest river; gentle tubing",
+    "Paragliding, Vagamon — Kerala's scenic paragliding location; Idukki hills",
+    "Trekking (Munnar/Wayanad) — Chembra Peak, Anamudi, Meesapulimala circuits",
+    "Elephant Experience — Guruvayur Devaswom elephant sanctuary; Kerala elephant shows",
+    "Cooking Class — Trivandrum/Kochi; Kerala Sadya preparation; fish curry and appam"
+  ],
+
+  "foodCuisine": {
+    "famousDishes": [
+      { "name": "Kerala Fish Curry", "description": "Kodampuli (Gamboge/Kudampuli) flavored coconut fish curry; red and sour; with Kerala red rice" },
+      { "name": "Appam & Stew", "description": "Lacy fermented rice bowl crepe with vegetable or mutton coconut stew; Kerala's iconic breakfast" },
+      { "name": "Puttu & Kadala Curry", "description": "Steamed rice-coconut cylinder with black chickpea curry; traditional breakfast" },
+      { "name": "Kerala Sadya", "description": "24–32 course vegetarian feast on banana leaf; served at Onam; a culinary institution" },
+      { "name": "Karimeen Pollichathu", "description": "Pearl spot fish marinated in masala, wrapped in banana leaf, pan-roasted; backwater specialty" },
+      { "name": "Malabar Biryani", "description": "Distinct North Kerala style with Jeerakasala rice; Arab-influenced" },
+      { "name": "Kerala Prawn Curry", "description": "Coastal; coconut milk; red chili; gambooge; served with mashed tapioca" },
+      { "name": "Banana Chips", "description": "Thin, crisp, lightly salted raw banana chips in coconut oil; Kerala's ubiquitous snack" }
+    ],
+    "streetFood": [
+      { "name": "Pazham Pori", "description": "Banana fritters; evening snack; crispy outside; soft inside" },
+      { "name": "Shawarma", "description": "Kerala-adapted Arabic wrap; Kozhikode's famous beach food" },
+      { "name": "Kappa Biriyani", "description": "Tapioca mashed with fish curry; casual Kerala comfort food" }
+    ],
+    "drinks": []
+  },
+
+  "stayOptions": {
+    "luxury": [
+      "Kumarakom Lake Resort — Overwater villas on Vembanad Lake; Kerala's finest resort",
+      "Taj Bekal — Kasaragod; Fort view; infinity pool; luxury beach",
+      "Shalimar Spice Garden, Thekkady — Spice plantation; infinity pool; forest views",
+      "CGH Earth Hotels (Bangaram Island/Marari/Coconut Lagoon) — Pioneer of responsible Kerala tourism"
+    ],
+    "midRange": [
+      "Philipkutty's Farm, Kumarakom — Heritage backwater estate; heritage houseboat; organic food",
+      "Green Magic Nature Resort, Wayanad — Tree house at 25m; Kerala pioneer eco-resort"
+    ],
+    "unique": [
+      "Blue Yonder Houseboat (Community Operated) — Alappuzha; responsible tourism; village stops",
+      "Kalari Kovilakom — Palakkad; 7/14/28 day Ayurveda retreat in a palace; intense healing",
+      "Vythiri Resort, Wayanad — Stream-side tree cottages; rainforest immersion"
+    ]
+  },
+
+  "bestTimeToVisit": [
+    { "season": "Post-monsoon", "months": "Oct–Feb", "conditions": "Backwaters: water levels good; weather pleasant" },
+    { "season": "Post-monsoon green", "months": "Sep–Jan", "conditions": "Munnar: Neelakurinji in years it blooms" },
+    { "season": "Calm sea", "months": "Oct–Mar", "conditions": "Beaches: pleasant weather" },
+    { "season": "Monsoon Kerala", "months": "Jun–Aug", "conditions": "Extraordinary lush beauty; low rates; Ayurveda season" },
+    { "season": "Pre-monsoon", "months": "Mar–May", "conditions": "Wildlife (Periyar/Wayanad): animals cluster at water sources" }
+  ],
+
+  "transportation": {
+    "airports": [
+      "Kochi (Cochin) International Airport — India's first fully solar-powered airport; main Kerala hub",
+      "Thiruvananthapuram International Airport — South Kerala; international connections",
+      "Calicut (Kozhikode) International Airport — North Kerala; Gulf connections",
+      "Kannur International Airport — Far north Kerala; Gulf-bound workers"
+    ],
+    "railways": [
+      "Kerala Rail (Thiruvananthapuram to Kasaragod) — Coastal railway; 11 stops; spectacular"
+    ],
+    "roads": [
+      "NH 66 (India's longest coastal highway) runs through all of Kerala"
+    ]
+  },
+
+  "festivals": [
+    { "name": "Onam", "period": "August–September", "description": "Kerala's national festival; Sadya feast; boat races; Pookalam flower carpet; 10 days" },
+    { "name": "Thrissur Pooram", "period": "April–May", "description": "100+ caparisoned elephants; simultaneous fireworks; Vadakkumnathan temple" },
+    { "name": "Nehru Trophy Boat Race", "period": "August", "description": "Alappuzha; snake boat races; massive rowing festival" },
+    { "name": "Kerala Boat Race Season", "period": "July–August", "description": "Multiple venues: Payammal, Aranmula, Champakulam" },
+    { "name": "Theyyam", "period": "November–April", "description": "Kannur-Kasaragod; ritual deity possession dance; all-night performances" },
+    { "name": "Christmas (Kuttikrishna)", "period": "December 24–25", "description": "Large Christian community; elaborate church celebrations; Kerala-style" },
+    { "name": "Vishu", "period": "April", "description": "Kerala New Year; Vishukkani (first sight); fireworks" }
+  ],
+
+  "travelTips": [
+    "Houseboat Booking: Book through Kerala Tourism certified operators (KTDC); cheaper and safer; avoid touts",
+    "Sabarimala: Non-Hindus not permitted; strict rules on age for women (historical controversy); check current situation",
+    "Ayurveda: Only visit certified clinics with qualified Vaidyas (Kerala Ayurveda Council registered); many tourist-grade \"Ayurveda\" is not authentic",
+    "Food: Try local \"banana leaf meals\" (thali) rather than restaurants for best value and authenticity",
+    "Dress: Conservative at temples; some temples (Padmanabhaswamy) require specific traditional dress",
+    "Monsoon: June–August beautiful but some waterways may be choppy; excellent rates; Kochi flooding possible",
+    "Budget: ₹1,500–3,000 budget; ₹4,000–8,000 mid; ₹12,000–80,000 luxury (houseboats vary widely)"
+  ],
+
+  "uniqueFacts": [
+    "Padmanabhaswamy Temple's vaults are estimated to hold $22 billion in gold, jewelry, and ancient artifacts — making it the world's wealthiest place of worship by asset value",
+    "Kerala has the highest human development index (HDI) of any Indian state, with 99% literacy and life expectancy matching European countries",
+    "The Chinese Fishing Nets (Cheena Vala) in Fort Kochi — large cantilevered fishing nets — are the only ones in use outside China and believed to have been introduced by the court of Kublai Khan",
+    "Kalaripayattu (Kerala's martial art) is considered the world's oldest surviving martial art, predating Chinese martial arts, and is the direct ancestor of many Southeast Asian fighting styles",
+    "Kerala's Sabarimala pilgrimage draws 40–50 million pilgrims annually (second only to Mecca's Hajj) during the two-month Mandala-Makaravilakku season",
+    "Kerala is the birthplace of Ayurveda's most complete and intact practice tradition in the world, with over 700 Ayurvedic hospitals and treatment centers"
+  ]
+}

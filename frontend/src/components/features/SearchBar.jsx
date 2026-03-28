@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { Search, X, Loader2 } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
-import states from '../../data/states';
-import destinations from '../../data/destinations';
-import hiddenGems from '../../data/hiddenGems';
+import { statesData as states } from '../../data/statesData';
+import { destinationsData as destinations } from '../../data/destinationsData';
+import { hiddenGemsData as hiddenGems } from '../../data/hiddenGemsData';
 
 /* ═══════════════════════════════════════════════════════
    CUSTOM HOOK: DEBOUNCE
@@ -30,34 +30,31 @@ function useDebounce(value, delay) {
    PRE-PROCESS SEARCH ITEMS (Memoized via constants)
    ═══════════════════════════════════════════════════════ */
 const STATE_ITEMS = states.map((s) => ({
-  id: `state-${s.slug}`,
+  id: `state-${s.id}`,
   type: 'state',
   label: s.name,
   sub: s.tagline,
-  path: `/state/${s.slug}`,
+  path: `/state/${s.id}`,
   badgeColor: 'text-blue-400 bg-blue-400/10',
 }));
 
 const DESTINATION_ITEMS = destinations.map((d) => ({
-  id: `dest-${d.slug}`,
+  id: `dest-${d.id}`,
   type: 'destination',
-  label: d.title.split(',')[0], // Clean up title slightly
+  label: d.name,
   sub: d.description,
-  path: `/destination/${d.slug}`,
+  path: `/destination/${d.id}`,
   badgeColor: 'text-emerald-400 bg-emerald-400/10',
 }));
 
 const GEM_ITEMS = hiddenGems.map((g) => ({
-  id: `gem-${g.slug}`,
+  id: `gem-${g.id}`,
   type: 'hidden gem',
   label: g.name,
   sub: g.description,
-  // Send them to individual gem pages or parent state page depending on routing.
-  // Assuming they can be routed to exact destination or filtered state view. 
-  // Let's route to the destination page if it exists in dest array, else to state
-  path: destinations.find(d => d.slug === g.slug) 
-    ? `/destination/${g.slug}` 
-    : `/hidden-gems`, // fallback to hidden gems list
+  path: destinations.find(d => d.id === g.id) 
+    ? `/destination/${g.id}` 
+    : `/hidden-gems`,
   badgeColor: 'text-pink-400 bg-pink-400/10',
 }));
 
@@ -66,7 +63,7 @@ const ALL_SEARCH_ITEMS = [...STATE_ITEMS, ...DESTINATION_ITEMS, ...GEM_ITEMS];
 /* ═══════════════════════════════════════════════════════
    SEARCH BAR COMPONENT
    ═══════════════════════════════════════════════════════ */
-const SearchBar = () => {
+const SearchBar = ({ onClose }) => {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -179,6 +176,7 @@ const SearchBar = () => {
     setIsFocused(false);
     setActiveIndex(-1);
     navigate(path);
+    if (onClose) onClose();
   };
 
   const showDropdown = isFocused && query.trim().length > 0;

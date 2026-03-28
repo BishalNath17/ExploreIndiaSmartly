@@ -1,0 +1,236 @@
+{
+  "id": "karnataka",
+  "name": "Karnataka",
+  "capital": "Bengaluru",
+  "region": "South India",
+  "slug": "/india/karnataka",
+
+  "overview": {
+    "short": "Karnataka is South India's most diversely rewarding state — a destination where classical civilization, contemporary dynamism, pristine nature, and spiritual depth coexist in extraordinary density. From the UNESCO World Heritage ruins of Hampi (the Vijayanagara Empire's capital) to the tech corridors of Bengaluru (India's Silicon Valley); from the Western Ghats coffee and spice estates of Coorg and Chikmagalur to the Tibetan refugee town of Mundgod; from the royal Mysuru Dasara to the incense-and-silk atmosphere of Belur-Halebidu's Hoysala temples — Karnataka rewards the curious traveler at every turn.",
+    "paragraph2": "The Kannada civilization has a literary tradition of 2,500 years — older than most European literary traditions. The Chalukya, Rashtrakuta, Gangas, Hoysala, and Vijayanagara dynasties built some of India's most magnificent temples over 1,500 years. Karnataka's coast (Dakshina Kannada and Udupi districts) is the birthplace of multiple South Indian culinary traditions — masala dosa, filter coffee, idli-sambar — that now define India's breakfast globally.",
+    "paragraph3": "The state's biodiversity is staggering: the Western Ghats in Karnataka contain the largest tiger population in South India, the highest density of Asian elephants, and extraordinary endemic species. Nagarahole, Bandipur, Bhadra, and Dandeli reserves are among India's finest wildlife destinations.",
+    "cultureHeritage": "Kannada culture synthesizes multiple strands — Virashaiva (Lingayat) philosophy that challenged caste hierarchies; the Vachana movement (12th century poetry of devotion and social reform); classical Carnatic music; Bharatanatyam and Yakshagana (a unique coastal theater form combining classical dance, opera, and wrestling); Mysuru's magnificent silk and sandalwood industries; and Udupi Brahmin vegetarian cuisine that has fed the world. The Mysuru Dasara festival (10 days; illuminated palace; elephant procession) is Karnataka's crown jewel cultural event."
+  },
+
+  "topDestinations": [
+    {
+      "name": "Hampi",
+      "location": "Vijayanagara District (formerly Ballari); north Karnataka; 467m",
+      "slug": "/india/karnataka/hampi",
+      "description": "The mind-boggling ruins of Vijayanagara — capital of South India's greatest medieval empire (1336–1565 CE). A UNESCO World Heritage landscape of 500+ monuments spread over 41 sq km of dramatic granite boulder fields — the Virupaksha Temple (functioning since 7th century), Vittala Temple and its musical pillars, Queen's Bath, the Royal Enclosure, Elephant Stables, the monolithic Ugra Narasimha — set against a Mars-like landscape of volcanic orange boulders. One of India's most extraordinary destinations.",
+      "whyFamous": "UNESCO; Vijayanagara capital; 500+ medieval monuments; boulder landscape; backpacker mecca",
+      "imageKeywords": ["Hampi Virupaksha temple boulders", "Hampi Vittala temple stone chariot", "Hampi ruins UNESCO Karnataka"]
+    },
+    {
+      "name": "Mysuru (Mysore)",
+      "location": "Mysuru District; south Karnataka; 763m",
+      "slug": "/india/karnataka/mysuru",
+      "description": "India's most regal and fragrant city — the former capital of the Wodeyar kingdom, renowned for its Mysore Palace (illuminated at night by 100,000 bulbs; 4th most visited monument in India after Taj, Red Fort, Golconda), Chamundeshwari Temple, Brindavan Gardens, and the Dasara festival. Also India's sandalwood and silk capital — Mysore silk sarees and sandalwood products are globally traded.",
+      "whyFamous": "Mysore Palace; Dasara festival; sandalwood and silk; Brindavan Gardens fountains",
+      "imageKeywords": ["Mysore Palace illuminated night", "Mysore Dasara elephant procession", "Mysore palace interior"]
+    },
+    {
+      "name": "Coorg (Kodagu)",
+      "location": "Kodagu District; Western Ghats; 1,000–1,800m",
+      "slug": "/india/karnataka/coorg",
+      "description": "Karnataka's most romantic hill district — a landscape of mist-covered coffee plantations, cardamom and pepper estates, silver oak trees, and the Kaveri (Cauvery) River's origin at Talakaveri. The Kodava people — a warrior community with a distinctive culture, cuisine, language, and right to carry firearms — are among India's most unique ethnic groups. Abbey Falls, Namdroling Monastery (the \"Golden Temple\"), and outstanding trekking make Coorg extraordinary.",
+      "whyFamous": "Coffee capital of India; Kaveri origin; Kodava culture; Namdroling Golden Temple",
+      "imageKeywords": ["Coorg coffee plantation mist", "Kodagu hills Karnataka", "Abbey Falls Coorg"]
+    },
+    {
+      "name": "Chikmagalur",
+      "location": "Chikmagalur District; Western Ghats",
+      "slug": "/india/karnataka/chikmagalur",
+      "description": "India's coffee birthland — legend holds that the 17th century Sufi saint Baba Budan smuggled 7 coffee beans from Yemen and planted them in the Baba Budan Giri hills here. Mullayanagiri (1,930m; Karnataka's highest peak), Bhadra Wildlife Sanctuary, Hebbe Falls, and magnificent coffee estates make this a perfect nature and coffee tourism destination.",
+      "whyFamous": "India's coffee origin; Mullayanagiri peak; Bhadra Wildlife Sanctuary",
+      "imageKeywords": ["Chikmagalur coffee estate Western Ghats", "Mullayanagiri peak Karnataka", "Bhadra reservoir forest"]
+    },
+    {
+      "name": "Belur & Halebidu",
+      "location": "Hassan District; north Karnataka; 975m",
+      "slug": "/india/karnataka/belur-halebidu",
+      "description": "Two adjacent towns housing the finest Hoysala temple sculptures in the world. Belur's Chennakeshava Temple (1117 CE; 103-year construction; every inch covered with breathtaking sculptures) and Halebidu's Hoysaleswara Temple (unfinished despite 86 years of work; stunning freeze of elephants, horses, Ramayana scenes, erotic figures, and 240+ musicians) represent the pinnacle of medieval Indian artistic achievement.",
+      "whyFamous": "World's finest medieval temple sculptures; 900-year-old art; Hoysala civilization",
+      "imageKeywords": ["Belur Chennakeshava temple sculpture detail", "Halebidu Hoysala temple frieze", "Hoysala temple Karnataka carvings"]
+    },
+    {
+      "name": "Bandipur National Park",
+      "location": "Chamarajanagar District; Nilgiris foothills; Mysore-Ooty highway",
+      "slug": "/india/karnataka/bandipur-national-park",
+      "description": "Karnataka's premier wildlife destination — part of the Nilgiris Biosphere Reserve (the world's largest protected elephant range). Famous for large herds of wild elephants, gaur, spotted deer, tiger, and an extraordinary variety of birds. The late evening \"elephant crossing\" on the Mysore-Ooty road is one of India's most memorable wildlife encounters.",
+      "whyFamous": "Elephant herds; part of Nilgiris Biosphere; tigers; elephant crossing on highway",
+      "imageKeywords": ["Bandipur National Park elephants", "Bandipur tiger Karnataka", "Nilgiris elephant herd"]
+    },
+    {
+      "name": "Badami, Aihole & Pattadakal",
+      "location": "Bagalkote District; north Karnataka",
+      "slug": "/india/karnataka/badami-aihole-pattadakal",
+      "description": "A \"trinity of archaeology\" — three adjacent early Chalukya sites covering the evolution of temple architecture (5th–8th century CE). Badami's dramatic sandstone cave temples (carved from a red sandstone cliff above a sacred lake); Aihole's 125+ experimental temples spanning all Hindu-Buddhist-Jain styles; and Pattadakal (UNESCO) — the \"coronation city\" — complete the story of how South Indian temple architecture was invented.",
+      "whyFamous": "UNESCO (Pattadakal); Chalukya temple architecture origin; cave temples",
+      "imageKeywords": ["Badami cave temples sandstone", "Pattadakal UNESCO temples Karnataka", "Aihole Chalukya temples"]
+    },
+    {
+      "name": "Gokarna",
+      "location": "Uttara Kannada District; Karnataka coast; 12m elevation",
+      "slug": "/india/karnataka/gokarna",
+      "description": "A sacred Shaivite town on the Arabian Sea coast, Gokarna balances temple town atmosphere (Mahabaleshwar Shiva Temple with one of its most sacred Shiva Atmalinga) with some of South India's most beautiful beaches — Om Beach (shaped like the Om symbol), Kudle Beach, and Half-Moon Beach. Less crowded than Goa; more spiritual; increasingly popular backpacker alternative.",
+      "whyFamous": "Sacred Shiva temple; Om-shaped beach; Goa alternative; dolphin-watching",
+      "imageKeywords": ["Gokarna Om Beach aerial", "Gokarna Mahabaleshwara temple", "Kudle beach Karnataka coast"]
+    }
+  ],
+
+  "religiousPlaces": [
+    { "name": "Udupi Sri Krishna Temple", "location": "Udupi", "significance": "13th century; Vaishnavism center; circumambulation tradition" },
+    { "name": "Gokarna Mahabaleshwara Temple", "location": "Gokarna", "significance": "One of Atmalinga; sacred Shiva; Southern Kashi" },
+    { "name": "Dharmasthala", "location": "Dharmasthala, Dakshina Kannada", "significance": "Manjunatha temple; unique inter-faith management; free annadanam" },
+    { "name": "Murdeshwar Temple", "location": "Uttara Kannada coast", "significance": "2nd tallest Shiva statue in world (123m); oceanfront" },
+    { "name": "Horanadu Annapoorneshwari", "location": "Chikmagalur", "significance": "Goddess who grants food; free meals to all pilgrims" },
+    { "name": "Kukke Subramanya Temple", "location": "Dakshina Kannada", "significance": "Serpent deity; Naga dosha remedy; Western Ghats forest" },
+    { "name": "Namdroling Monastery", "location": "Coorg (Bylakuppe)", "significance": "Largest Tibetan temple outside Tibet; Nyingma tradition; golden" },
+    { "name": "Shringeri Sharada Peetha", "location": "Chikmagalur", "significance": "Adi Shankaracharya's first peetha; 1,300 years continuous tradition" }
+  ],
+
+  "naturalAttractions": {
+    "rivers": [
+      "Kaveri (Cauvery) — Originates at Talakaveri, Coorg; sacred; Shivanasamudra Falls",
+      "Krishna River — North Karnataka border",
+      "Tungabhadra — Hampi; Bellary; dam",
+      "Sharavathi — Jog Falls"
+    ],
+    "waterfalls": [
+      "Jog Falls — 253m; 4 cascades; Sharavathi River; highest plunge waterfall in India",
+      "Shivanasamudra Falls — Kaveri River; twin falls; Asia's first hydropower station (1902) nearby",
+      "Abbey Falls — Coorg (Kodagu); 70m; coffee plantation setting",
+      "Hebbe Falls — Chikmagalur; 168m; two-tiered; forest trek access",
+      "Magod Falls — Yellapur; wild; 200m; rainforest setting"
+    ],
+    "mountains": [
+      "Mullayanagiri — 1,930m; Karnataka's highest peak; Chikmagalur",
+      "Kudremukh — 1,892m; horse-face peak; NP; Dakshina Kannada-Chikmagalur",
+      "Kodachadri — 1,343m; Shimoga; trek; Sarvajna Peetha shrine at summit",
+      "Brahmagiri — 1,608m; Coorg-Kerala border; forest; rare birds"
+    ],
+    "wildlife": [
+      { "name": "Bandipur NP", "note": "874 sq km; Nilgiris biosphere; tigers, elephants" },
+      { "name": "Nagarahole NP (Rajiv Gandhi NP)", "note": "643 sq km; adjacent to Bandipur; best tiger density in South India" },
+      { "name": "Bhadra WLS", "note": "493 sq km; tiger reserve; Chikmagalur" },
+      { "name": "Dandeli-Anshi Tiger Reserve", "note": "1,097 sq km; sloth bear; black panther; river rafting" },
+      { "name": "Kudremukh NP", "note": "600 sq km; endemic species; Gangamula origin of Tunga, Bhadra" },
+      { "name": "BR Hills WLS", "note": "540 sq km; elephant habitat; highest density of Asiatic elephants per sq km" }
+    ]
+  },
+
+  "beaches": [
+    { "name": "Om Beach", "location": "Gokarna", "highlights": "Om-symbol shape from above; dolphin watching" },
+    { "name": "Kudle Beach", "location": "Gokarna", "highlights": "Quiet; beautiful; no motor vehicles" },
+    { "name": "Half-Moon Beach", "location": "Gokarna", "highlights": "Only by foot or boat; pristine" },
+    { "name": "Karwar Beach", "location": "Karwar", "highlights": "Naval INS Chatak decommissioned ship museum; quiet" },
+    { "name": "Murudeshwar Beach", "location": "Uttara Kannada", "highlights": "Shiva statue backdrop; temple on sea cliff" },
+    { "name": "Malpe Beach", "location": "Udupi", "highlights": "St. Mary's Island (volcanic hexagonal basalt) 5 km offshore" },
+    { "name": "Yana", "location": "Sirsi area", "highlights": "Unique volcanic rock peaks; forest trek" }
+  ],
+
+  "historicalSites": [
+    { "name": "Hampi", "description": "UNESCO; 41 sq km; 500+ monuments; Vijayanagara capital" },
+    { "name": "Pattadakal", "description": "UNESCO; 7th-8th century CE; early Chalukya; coronation site" },
+    { "name": "Badami Cave Temples", "description": "6th century CE; earliest Chalukya; red sandstone masterpieces" },
+    { "name": "Sravanabelagola", "description": "Hassan; world's tallest monolithic statue (18.3m Gommateshwara Bahubali); Jain pilgrimage; Mahamastakabhisheka every 12 years" },
+    { "name": "Mysore Palace (Amba Vilas)", "description": "1912; Indo-Saracenic; 4th most visited monument in India" },
+    { "name": "Bidar Fort", "description": "15th century Bahamani sultanate; southern Persian architecture; Bidriware craft center" }
+  ],
+
+  "adventure": [
+    "Coorg Coffee Plantation Walk — Guided walks among coffee, pepper, cardamom",
+    "Nagarahole Safari — Best tiger viewing in South India; early morning jeep",
+    "Kabini Boat Safari — Evening boat rides; elephants and gaur at river bank; Nagarahole",
+    "Dandeli White Water Rafting — Kali River; Grade II–IV; half-day to full-day; best Nov–May",
+    "Hampi Bouldering — World-class rock climbing on granite; international climbers",
+    "Coorg Trekking — Tadiyamol, Brahmagiri, Pushpagiri; forest trekking with birding",
+    "Jog Falls Trekking — Forest trail to base; dramatic views",
+    "Horsley Hills/Kudremukh — High altitude nature walks"
+  ],
+
+  "foodCuisine": {
+    "famousDishes": [
+      { "name": "Masala Dosa", "description": "Originated in Udupi; crispy rice-lentil crepe with spiced potato; world-famous" },
+      { "name": "Udupi Cuisine", "description": "Temple-town vegetarian tradition; sambar, rasam, dry curries, rice preparations" },
+      { "name": "Coorg Pandi Curry", "description": "Kodava pork curry with kachampuli (Coorg vinegar); rich and distinctive" },
+      { "name": "Bisi Bele Bath", "description": "Spiced lentil-rice-vegetable one-pot; Karnataka's comfort food" },
+      { "name": "Mysore Pak", "description": "Rich ghee-gram flour fudge; invented in Mysore royal kitchen" },
+      { "name": "Ragi Mudde", "description": "Finger millet ball; dipped in sambar or saaru; North Karnataka staple" },
+      { "name": "Neer Dosa", "description": "Lacy rice crepe; Coastal Karnataka; with coconut chutney or fish curry" },
+      { "name": "Kundapuri Fish Curry", "description": "Coastal Karnataka; bold red chili; coconut-based" }
+    ],
+    "streetFood": [],
+    "drinks": []
+  },
+
+  "stayOptions": {
+    "luxury": [
+      "Orange County, Coorg — River-side cottages; pool in coffee estate; one of India's finest resorts",
+      "The Serai, Chikmagalur — Plantation villa resort; spa; wildlife access",
+      "Kabini River Lodge (CGH Earth) — Nagarahole edge; boat safaris; heritage lodge",
+      "Evolve Back (Orange County), Hampi — Coracle-accessed boulder resort; adjacent to heritage zone"
+    ],
+    "midRange": [
+      "The Windmill Hamlet, Madikeri — Coorg; Valley views; coffee estate",
+      "Hotel Ruchi Royal, Mysuru — City center; comfortable"
+    ],
+    "unique": [
+      "Jungle Lodges and Resorts (Karnataka Tourism) — Kabini, Bhadra, Nagarahole; government eco-lodges",
+      "Tree House Hideaway, Bandipur — Tree house cottages; wildlife corridor; memorable",
+      "Koppala Estate, Coorg — Authentic Kodava homestay; family-run; traditional food"
+    ]
+  },
+
+  "bestTimeToVisit": [
+    { "season": "Winter avoids heat", "months": "Oct–Feb", "conditions": "Hampi (monsoon makes roads tricky)" },
+    { "season": "Post-monsoon coffee season", "months": "Oct–Feb", "conditions": "Coorg/Chikmagalur (Sep-Nov for waterfalls)" },
+    { "season": "Peak wildlife", "months": "Mar–May", "conditions": "Bandipur/Nagarahole (Feb-Jun is clear)" },
+    { "season": "Winter/Spring", "months": "Oct–Mar", "conditions": "Coastal Karnataka (avoid June-Sep monsoon)" },
+    { "season": "Dasara festival", "months": "Sep–Oct", "conditions": "Mysuru grandeur" }
+  ],
+
+  "transportation": {
+    "airports": [
+      "Kempegowda International Airport, Bengaluru — Major international hub",
+      "Mangaluru Airport — International; coastal Karnataka",
+      "Mysuru Airport — Limited domestic",
+      "Hubli Airport — North Karnataka"
+    ],
+    "railways": [
+      "Bengaluru, Mysuru, Hubli, Mangaluru, Kalaburagi — Major junctions",
+      "Hampi: Nearest station Hospete (12 km)"
+    ],
+    "roads": [
+      "NH 44 (India's longest highway through Karnataka); NH 75 (Bengaluru-Mangaluru)"
+    ]
+  },
+
+  "festivals": [
+    { "name": "Mysuru Dasara", "period": "September–October", "description": "10-day; illuminated palace; Chamundeshwari procession; national holiday" },
+    { "name": "Hampi Utsav", "period": "November", "description": "Cultural festival in ruins; classical arts; chariot procession" },
+    { "name": "Mahamastakabhisheka", "period": "Every 12 years", "description": "Sravanabelagola; 25,000 pots of milk poured on 18m statue" },
+    { "name": "Karaga", "period": "March–April", "description": "Bengaluru; ancient warrior tradition; cross-dressing priest; 2,000 years" },
+    { "name": "Pattadakal Dance Festival", "period": "January–February", "description": "Classical dance in UNESCO ruins; Bharatanatyam, Kuchipudi, Odissi" },
+    { "name": "Coorg Coffee Festival", "period": "September–October", "description": "Harvest season celebrations" }
+  ],
+
+  "travelTips": [
+    "Hampi Heat: Avoid March–May; carry water; start sightseeing by 7 AM; rent cycle",
+    "Wildlife Booking: Nagarahole/Bandipur safaris online at junglelodges.com or Karnataka Forest Department",
+    "Mysuru Dasara: Book accommodation 3–6 months ahead; last 2 days of the festival most spectacular",
+    "Coorg Rains: June–August is beautiful but roads can be blocked; budget for resort-based stay",
+    "Language: Kannada; English widely spoken in Bengaluru; Hindi understood but not universally spoken in South Karnataka",
+    "Budget: ₹1,000–2,500 budget; ₹3,500–8,000 mid; ₹12,000–50,000 luxury"
+  ],
+
+  "uniqueFacts": [
+    "Karnataka is home to 25% of India's elephant population (the largest state concentration) in its Nilgiris biosphere",
+    "The Hoysala temples at Belur and Halebidu used lathe-turned soft stone that hardened over centuries — the intricacy of carving is literally not reproducible today",
+    "Udupi's Brahmin vegetarian cuisine has influenced Indian restaurant culture worldwide — Udupi restaurants exist on every continent",
+    "Hampi's Vittala Temple stone chariot is so perfectly balanced that the wheels could originally rotate",
+    "Coorg/Kodagu district produces more coffee than any other district in India, contributing to 80% of Karnataka's total coffee output",
+    "The world's highest Shiva statue (123m) is at Murdeshwar on the Karnataka coast"
+  ]
+}

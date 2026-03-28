@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -14,64 +14,79 @@ import {
   Navigation,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
-import states from '../data/states';
+import { statesData as states } from '../data/statesData';
 import { generateItinerary, formatINR, STYLE_OPTIONS } from '../services/api';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import StateSelect from '../components/features/StateSelect';
 
-/* ═══════════════════════════════════════════════════════
-   FORM: INPUT COMPONENTS
-   ═══════════════════════════════════════════════════════ */
-const StateSelect = ({ value, onChange }) => (
-  <div>
-    <label htmlFor="tp-state" className="block text-sm font-medium mb-2">
-      <MapPin size={14} className="inline text-india-orange mr-1 -mt-0.5" />
-      Select State
-    </label>
-    <div className="relative">
-      <select
-        id="tp-state"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full appearance-none bg-white/5 border border-white/15 rounded-xl px-4 py-3 pr-10
-                   text-sm text-white focus:outline-none focus:border-india-orange/60 transition-colors cursor-pointer"
-      >
-        <option value="">Where to?</option>
-        {states.map((s) => (
-          <option key={s.slug} value={s.slug}>
-            {s.name}
-          </option>
-        ))}
-      </select>
-      <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
-    </div>
-  </div>
-);
 
-const DaysSelect = ({ value, onChange }) => (
-  <div>
-    <label htmlFor="tp-days" className="block text-sm font-medium mb-2">
-      <CalendarDays size={14} className="inline text-india-orange mr-1 -mt-0.5" />
-      Duration
-    </label>
-    <div className="relative">
-      <select
-        id="tp-days"
-        value={value}
-        onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full appearance-none bg-white/5 border border-white/15 rounded-xl px-4 py-3 pr-10
-                   text-sm text-white focus:outline-none focus:border-india-orange/60 transition-colors cursor-pointer"
+
+const DaysSelect = ({ value, onChange }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, []);
+
+  const options = [2, 3, 5, 7, 10, 14];
+
+  return (
+    <div ref={dropdownRef} className="relative">
+      <label className="block text-sm font-medium mb-2">
+        <CalendarDays size={14} className="inline text-india-orange mr-1 -mt-0.5" />
+        Duration
+      </label>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className={`w-full text-left bg-white/5 border rounded-xl px-4 py-3 pr-10 text-sm transition-colors flex items-center justify-between
+          ${isOpen ? 'border-india-orange/60 bg-white/10' : 'border-white/15 hover:bg-white/10'}
+          text-white`}
       >
-        {[2, 3, 5, 7, 10, 14].map((d) => (
-          <option key={d} value={d}>
-            {d} Days
-          </option>
-        ))}
-      </select>
-      <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
+        <span>{value} Days</span>
+        <ChevronDown size={16} className={`text-gray-500 shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.15 }}
+            className="absolute z-50 w-full mt-2 bg-navy border border-white/15 rounded-xl shadow-2xl overflow-hidden flex flex-col p-1"
+          >
+            <ul className="max-h-60 overflow-y-auto custom-scrollbar">
+              {options.map((d) => (
+                <li key={d}>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      onChange(d);
+                      setIsOpen(false);
+                    }}
+                    className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-colors flex items-center justify-between
+                      ${value === d ? 'bg-india-orange/20 text-india-orange font-bold' : 'text-gray-200 hover:bg-white/10 hover:text-white'}`}
+                  >
+                    {d} Days
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
-  </div>
-);
+  );
+};
 
 const StyleTabs = ({ value, onChange }) => (
   <div>
@@ -138,13 +153,13 @@ const DayCard = ({ dayData }) => {
               <div key={i} className="relative h-28 sm:h-36 rounded-xl overflow-hidden">
                 <img
                   src={loc.image}
-                  alt={loc.title || loc.name}
+                  alt={loc.name}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent" />
                 <div className="absolute bottom-2 left-2 right-2">
                   <span className="text-xs font-bold text-white truncate block">
-                    {loc.title || loc.name}
+                    {loc.name}
                   </span>
                 </div>
               </div>
@@ -184,7 +199,7 @@ const TravelPlannerPage = () => {
     return generateItinerary({ stateSlug, days, style });
   }, [stateSlug, days, style]);
 
-  const selectedStateName = states.find((s) => s.slug === stateSlug)?.name || '';
+  const selectedStateName = states.find((s) => s.id === stateSlug)?.name || '';
 
   const handleGenerate = () => {
     if (stateSlug) setShowPlan(true);
@@ -209,7 +224,7 @@ const TravelPlannerPage = () => {
           {/* ── LEFT: Sticky Form ── */}
           <div className="lg:col-span-4">
             <div className="glass rounded-3xl p-6 sm:p-8 space-y-6 sticky top-24">
-              <StateSelect value={stateSlug} onChange={(v) => { setStateSlug(v); setShowPlan(false); }} />
+              <StateSelect value={stateSlug} onChange={(v) => { setStateSlug(v); setShowPlan(false); }} label="Select State" placeholder="Where to?" />
               <DaysSelect value={days} onChange={(v) => { setDays(v); setShowPlan(false); }} />
               <StyleTabs value={style} onChange={(v) => { setStyle(v); setShowPlan(false); }} />
 

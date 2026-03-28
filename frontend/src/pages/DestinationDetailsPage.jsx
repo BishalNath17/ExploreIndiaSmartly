@@ -15,13 +15,13 @@ import {
   Gem,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
-import destinations from '../data/destinations';
-import states from '../data/states';
+import { destinationsData as destinations } from '../data/destinationsData';
+import { statesData as states } from '../data/statesData';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import SectionHeader from '../components/layout/SectionHeader';
 import MapboxViewer from '../components/features/MapboxViewer';
 import InfoCard from '../components/cards/InfoCard';
-import hiddenGems from '../data/hiddenGems';
+import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 
 /* ═══════════════════════════════════════════════════════
    DESTINATION NOT FOUND
@@ -49,7 +49,7 @@ const HeroBanner = ({ dest, parentState }) => {
 
   return (
     <section className="relative h-[50vh] sm:h-[65vh] overflow-hidden">
-      <img src={dest.image} alt={dest.title} className="absolute inset-0 w-full h-full object-cover" />
+      <img src={dest.image} alt={dest.name} className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/60 to-navy z-10" />
 
       <div className="absolute bottom-0 left-0 w-full p-6 sm:p-12 lg:p-16 z-20 max-w-5xl">
@@ -72,7 +72,7 @@ const HeroBanner = ({ dest, parentState }) => {
 
         <motion.h1 variants={fadeUp} initial="hidden" animate="visible" custom={0.15}
           className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-3">
-          {dest.title}
+          {dest.name}
         </motion.h1>
 
         <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.25}
@@ -110,7 +110,7 @@ const Overview = ({ dest, parentState }) => {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="glass rounded-3xl p-8 sm:p-12 mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">About {dest.title.split(',')[0]}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">About {dest.name}</h2>
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{dest.description}</p>
           </div>
         </ScrollReveal>
@@ -158,9 +158,9 @@ const ItineraryHints = ({ dest }) => {
    ═══════════════════════════════════════════════════════ */
 const NearbyPlaces = ({ dest, parentState }) => {
   // Show other destinations in the same state (excluding current)
-  const nearby = destinations.filter(d => d.state === dest.state && d.slug !== dest.slug);
+  const nearby = destinations.filter(d => d.state === dest.state && d.id !== dest.id);
   // Also check hidden gems
-  const nearbyGems = hiddenGems.filter(g => g.state === dest.state && g.slug !== dest.slug);
+  const nearbyGems = hiddenGems.filter(g => g.state === dest.state && g.id !== dest.id);
 
   if (nearby.length === 0 && nearbyGems.length === 0) return null;
   const stateName = parentState?.name || dest.state;
@@ -172,22 +172,22 @@ const NearbyPlaces = ({ dest, parentState }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {nearby.slice(0, 3).map((place) => (
-              <Link key={place.slug} to={`/destination/${place.slug}`}
+              <Link key={place.id} to={`/destination/${place.id}`}
                 className="group glass rounded-2xl overflow-hidden block hover:bg-white/15 transition-colors">
                 <div className="relative h-48">
-                  <img src={place.image} alt={place.title} loading="lazy"
+                  <img src={place.image} alt={place.name} loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-bold group-hover:text-india-orange transition-colors mb-1">{place.title}</h3>
+                  <h3 className="font-bold group-hover:text-india-orange transition-colors mb-1">{place.name}</h3>
                   <p className="text-gray-400 text-xs line-clamp-2">{place.description}</p>
                 </div>
               </Link>
           ))}
 
           {nearbyGems.slice(0, 3 - nearby.slice(0, 3).length).map((gem) => (
-              <div key={gem.slug} className="glass rounded-2xl overflow-hidden hover:bg-white/15 transition-colors">
+              <div key={gem.id} className="glass rounded-2xl overflow-hidden hover:bg-white/15 transition-colors">
                 <div className="relative h-48">
                   <img src={gem.image} alt={gem.name} loading="lazy"
                     className="w-full h-full object-cover" />
@@ -259,7 +259,7 @@ const MapPlaceholder = ({ dest, parentState }) => {
         <ScrollReveal>
           <MapboxViewer 
             coordinates={coords ? [coords.lng, coords.lat] : undefined}
-            title={dest.title.split(',')[0]}
+            title={dest.name}
             zoom={8}
             height="400px"
           />
@@ -282,7 +282,7 @@ const ExploreCTA = ({ parentState }) => (
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           {parentState && (
-            <Link to={`/state/${parentState.slug}`}
+            <Link to={`/state/${parentState.id}`}
               className="btn-primary inline-flex items-center justify-center gap-2 text-sm">
               More in {parentState.name} <ArrowRight size={16} />
             </Link>
@@ -301,11 +301,11 @@ const ExploreCTA = ({ parentState }) => (
    ═══════════════════════════════════════════════════════ */
 const DestinationDetailsPage = () => {
   const { destSlug } = useParams();
-  const dest = destinations.find((d) => d.slug === destSlug);
+  const dest = destinations.find((d) => d.id === destSlug);
 
   if (!dest) return <DestNotFound slug={destSlug} />;
 
-  const parentState = states.find((s) => s.slug === dest.state) || null;
+  const parentState = states.find((s) => s.id === dest.state) || null;
 
   return (
     <>

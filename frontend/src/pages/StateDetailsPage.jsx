@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
@@ -9,14 +10,21 @@ import {
   AlertTriangle,
   Gem,
   Map,
-  Star,
   ArrowRight,
   ChevronRight,
+  UtensilsCrossed,
+  PartyPopper,
+  Lightbulb,
+  Plane,
+  Sun,
+  Mountain,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
-import states from '../data/states';
-import destinations from '../data/destinations';
-import hiddenGems from '../data/hiddenGems';
+import { statesData as states } from '../data/statesData';
+import { destinationsData as destinations, destinationImages } from '../data/destinationsData';
+import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
+import { getStateKnowledge } from '../data/knowledgeBase';
+
 import DestinationCard from '../components/cards/DestinationCard';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
@@ -107,7 +115,7 @@ const HeroBanner = ({ state }) => (
 /* ═══════════════════════════════════════════════════════
    2. OVERVIEW + INFO CARDS
    ═══════════════════════════════════════════════════════ */
-const Overview = ({ state }) => {
+const Overview = ({ state, data }) => {
   const infoCards = [
     {
       icon: Calendar,
@@ -136,7 +144,7 @@ const Overview = ({ state }) => {
               About {state.name}
             </h2>
             <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-              {state.intro}
+              {data?.overview?.short || state.intro}
             </p>
           </div>
         </ScrollReveal>
@@ -167,6 +175,405 @@ const Overview = ({ state }) => {
             </div>
           </ScrollReveal>
         )}
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════
+   KB — COMPACT FOOD & CUISINE
+   ═══════════════════════════════════════════════════════ */
+const KBFood = ({ data }) => {
+  if (!data?.foodCuisine) return null;
+  const { famousDishes = [], streetFood = [] } = data.foodCuisine;
+  if (!famousDishes.length && !streetFood.length) return null;
+
+  return (
+    <section className="py-12 sm:py-16 section-padding">
+      <div className="max-w-5xl mx-auto">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-xl bg-india-orange/15 flex items-center justify-center">
+              <UtensilsCrossed size={18} className="text-india-orange" />
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold">Food & Cuisine</h3>
+          </div>
+          
+          {famousDishes.length > 0 && (
+            <div className="mb-8">
+              <h4 className="text-lg font-bold mb-4 border-b border-gray-700/50 pb-2 inline-block">Famous Dishes</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {famousDishes.map((d) => (
+                  <div key={d.name} className="glass rounded-xl p-4">
+                    <h4 className="font-bold text-sm text-india-orange mb-1">{d.name}</h4>
+                    <p className="text-gray-400 text-xs leading-relaxed">{d.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {streetFood.length > 0 && (
+            <div>
+              <h4 className="text-lg font-bold mb-4 border-b border-gray-700/50 pb-2 inline-block">Street Food</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {streetFood.map((d) => (
+                  <div key={d.name} className="glass rounded-xl p-4">
+                    <h4 className="font-bold text-sm text-india-orange mb-1">{d.name}</h4>
+                    <p className="text-gray-400 text-xs leading-relaxed">{d.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════
+   KB — FESTIVALS
+   ═══════════════════════════════════════════════════════ */
+const KBFestivals = ({ data }) => {
+  if (!data?.festivals?.length) return null;
+  return (
+    <section className="py-12 sm:py-16 section-padding bg-navy-dark/50">
+      <div className="max-w-5xl mx-auto">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-xl bg-india-orange/15 flex items-center justify-center">
+              <PartyPopper size={18} className="text-india-orange" />
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold">Festivals & Events</h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {data.festivals.map((f) => (
+              <div key={f.name} className="glass rounded-xl p-4 flex gap-4">
+                <div className="shrink-0 text-center">
+                  <span className="text-[10px] uppercase tracking-wider text-india-orange font-bold">{f.period}</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm mb-1">{f.name}</h4>
+                  <p className="text-gray-400 text-xs leading-relaxed">{f.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════
+   KB — TRAVEL TIPS
+   ═══════════════════════════════════════════════════════ */
+const KBTravelTips = ({ data }) => {
+  if (!data?.travelTips?.length) return null;
+  return (
+    <section className="py-12 sm:py-16 section-padding">
+      <div className="max-w-5xl mx-auto">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-xl bg-india-orange/15 flex items-center justify-center">
+              <Lightbulb size={18} className="text-india-orange" />
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold">Travel Tips</h3>
+          </div>
+          <div className="glass rounded-2xl p-5 sm:p-6">
+            <ul className="space-y-3">
+              {data.travelTips.map((tip, i) => (
+                <li key={i} className="flex gap-3 text-sm text-gray-300">
+                  <ChevronRight size={14} className="text-india-orange shrink-0 mt-1" />
+                  <span>{tip}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════
+   KB — STAY OPTIONS
+   ═══════════════════════════════════════════════════════ */
+const KBStayOptions = ({ data }) => {
+  if (!data?.stayOptions && !data?.stay) return null;
+  const options = data.stayOptions || data.stay;
+  const categories = [
+    { label: 'Luxury', items: options.luxury || [] },
+    { label: 'Mid-Range', items: options.midRange || [] },
+    { label: 'Budget / Eco / Unique', items: options.budget || options.unique || [] },
+  ].filter(c => c.items.length > 0);
+
+  if (categories.length === 0) return null;
+
+  return (
+    <section className="py-12 sm:py-16 section-padding">
+      <div className="max-w-5xl mx-auto">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-xl bg-india-orange/15 flex items-center justify-center">
+              <MapPin size={18} className="text-india-orange" />
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold">Stay Options</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {categories.map((cat) => (
+              <div key={cat.label} className="glass rounded-xl p-5 border border-white/5 hover:border-india-orange/30 transition-colors">
+                <h4 className="font-bold text-sm text-india-orange border-b border-gray-700/50 pb-2 mb-3">{cat.label}</h4>
+                <ul className="space-y-3">
+                  {cat.items.map((item, i) => (
+                    <li key={i} className="text-gray-300 text-xs sm:text-sm flex gap-2">
+                       <span className="text-india-orange mt-0.5">•</span> 
+                       <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════
+   KB — ACTIVITIES & ADVENTURE
+   ═══════════════════════════════════════════════════════ */
+const KBActivities = ({ data }) => {
+  const activities = data?.adventure || data?.activities;
+  if (!activities?.length) return null;
+
+  return (
+    <section className="py-12 sm:py-16 section-padding bg-navy-dark/50">
+      <div className="max-w-5xl mx-auto">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-xl bg-india-orange/15 flex items-center justify-center">
+              <Mountain size={18} className="text-india-orange" />
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold">Adventure & Activities</h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {activities.map((act, i) => (
+              <div key={i} className="glass rounded-xl p-4 flex gap-3 items-center hover:bg-white/5 transition-colors">
+                 <div className="w-2 h-2 rounded-full bg-india-orange shrink-0" />
+                 <p className="text-gray-300 text-sm leading-relaxed">{act}</p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════
+   KB — CONNECTIVITY
+   ═══════════════════════════════════════════════════════ */
+const KBConnectivity = ({ data }) => {
+  if (!data?.transportation) return null;
+  const { airports = [], railways = [], roads = [] } = data.transportation;
+  if (!airports.length && !railways.length && !roads.length) return null;
+  const groups = [
+    { label: 'By Air', icon: Plane, items: airports },
+    { label: 'By Rail', icon: Map, items: railways },
+    { label: 'By Road', icon: ArrowRight, items: roads },
+  ].filter(g => g.items.length > 0);
+
+  return (
+    <section className="py-12 sm:py-16 section-padding bg-navy-dark/50">
+      <div className="max-w-5xl mx-auto">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-xl bg-india-orange/15 flex items-center justify-center">
+              <Plane size={18} className="text-india-orange" />
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold">How to Reach</h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {groups.map((g) => (
+              <div key={g.label} className="glass rounded-xl p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <g.icon size={14} className="text-india-orange" />
+                  <h4 className="font-bold text-sm">{g.label}</h4>
+                </div>
+                <ul className="space-y-2">
+                  {g.items.map((item, i) => (
+                    <li key={i} className="text-gray-400 text-xs leading-relaxed">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════
+   KB — BEST TIME TO VISIT
+   ═══════════════════════════════════════════════════════ */
+const KBBestTime = ({ data }) => {
+  if (!data?.bestTimeToVisit?.length) return null;
+  return (
+    <section className="py-12 sm:py-16 section-padding">
+      <div className="max-w-5xl mx-auto">
+        <ScrollReveal>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-9 h-9 rounded-xl bg-india-orange/15 flex items-center justify-center">
+              <Sun size={18} className="text-india-orange" />
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold">Best Time to Visit</h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {data.bestTimeToVisit.map((s) => (
+              <div key={s.season} className="glass rounded-xl p-4">
+                <h4 className="font-bold text-sm text-india-orange mb-1">{s.season}</h4>
+                <p className="text-white text-xs font-semibold mb-1">{s.months}</p>
+                <p className="text-gray-400 text-xs leading-relaxed">{s.conditions}</p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════
+   KB — TOP DESTINATIONS (from knowledge base)
+   ═══════════════════════════════════════════════════════ */
+const FALLBACK_IMG = 'data:image/svg+xml,' + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1B2A4E"/><stop offset="100%" stop-color="#0A192F"/></linearGradient></defs><rect fill="url(#g)" width="400" height="200"/><text x="200" y="108" text-anchor="middle" fill="#F97316" font-family="sans-serif" font-size="14" opacity="0.6">Image Coming Soon</text></svg>'
+);
+
+/**
+ * Try multiple strategies to resolve an image for a KB destination:
+ * 1. Exact slug tail match  (e.g. "old-goa" → destinationImages["old-goa"])
+ * 2. Any key that the slug contains  (e.g. "tirupati-tirumala" contains "tirupati")
+ * 3. Slugified name match  (e.g. "Visakhapatnam" → "visakhapatnam")
+ * 4. State image path fallback (e.g. /images/states/goa.jpg)
+ */
+const toSlug = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const imgKeys = Object.keys(destinationImages);
+
+const resolveDestImage = (dest, stateId) => {
+  if (dest.slug) {
+    const segments = dest.slug.split('/').filter(Boolean);
+    const tail = segments[segments.length - 1];
+    // Strategy 1: exact match
+    if (destinationImages[tail]) return destinationImages[tail];
+    // Strategy 2: key contained in tail or tail contains key
+    const partialMatch = imgKeys.find(k => tail.includes(k) || k.includes(tail));
+    if (partialMatch) return destinationImages[partialMatch];
+  }
+  // Strategy 3: name-based slug
+  if (dest.name) {
+    const nameSlug = toSlug(dest.name);
+    if (destinationImages[nameSlug]) return destinationImages[nameSlug];
+    const nameMatch = imgKeys.find(k => nameSlug.includes(k) || k.includes(nameSlug));
+    if (nameMatch) return destinationImages[nameMatch];
+  }
+  // Strategy 4: state hero image as fallback
+  const stateObj = states.find(s => s.id === stateId);
+  if (stateObj?.image) return stateObj.image;
+  return null;
+};
+
+const KBDestinationCard = ({ d, stateId }) => {
+  const stateImg = states.find(s => s.id === stateId)?.image;
+  // initial mapped image
+  const defaultImg = resolveDestImage(d, stateId);
+  const [imgSrc, setImgSrc] = React.useState(defaultImg || stateImg || FALLBACK_IMG);
+  const [hasError, setHasError] = React.useState(false);
+
+  const handleError = () => {
+    if (!hasError && stateImg && imgSrc !== stateImg) {
+      setHasError(true);
+      setImgSrc(stateImg);
+    } else {
+      setImgSrc(FALLBACK_IMG);
+    }
+  };
+
+  return (
+    <div className="glass rounded-xl overflow-hidden group">
+      {/* Image */}
+      <div className="relative h-36 overflow-hidden">
+        <img
+          src={imgSrc}
+          alt={d.name}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          onError={handleError}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
+        {imgSrc === FALLBACK_IMG && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <Mountain size={32} className="text-india-orange/40" />
+          </div>
+        )}
+      </div>
+      {/* Text */}
+      <div className="p-4">
+        <h4 className="font-bold text-sm mb-1">{d.name}</h4>
+        <p className="text-gray-500 text-[11px] mb-2">{d.location}</p>
+        <p className="text-gray-400 text-xs leading-relaxed line-clamp-3">{d.description}</p>
+      </div>
+    </div>
+  );
+};
+
+const KBTopDestinations = ({ data, stateId }) => {
+  const [showAll, setShowAll] = React.useState(false);
+  if (!data?.topDestinations?.length) return null;
+  
+  const allDests = data.topDestinations;
+  const dests = showAll ? allDests : allDests.slice(0, 6);
+
+  return (
+    <section className="py-12 sm:py-16 section-padding bg-navy-dark/50">
+      <div className="max-w-5xl mx-auto">
+        <ScrollReveal>
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl bg-india-orange/15 flex items-center justify-center">
+                <Mountain size={18} className="text-india-orange" />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold">Places to Explore</h3>
+            </div>
+            {allDests.length > 6 && showAll && (
+              <button 
+                onClick={() => setShowAll(false)}
+                className="text-sm font-semibold text-india-orange hover:text-white transition-colors"
+              >
+                Show Less
+              </button>
+            )}
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {dests.map((d) => (
+              <KBDestinationCard key={d.name} d={d} stateId={stateId} />
+            ))}
+          </div>
+          {allDests.length > 6 && !showAll && (
+            <div className="mt-8 text-center flex justify-center">
+              <button 
+                onClick={() => setShowAll(true)}
+                className="bg-navy border border-gray-700 hover:border-india-orange text-white px-6 py-3 rounded-full inline-flex items-center gap-2 text-sm transition-all"
+              >
+                View All {allDests.length} Destinations <ArrowRight size={16} />
+              </button>
+            </div>
+          )}
+        </ScrollReveal>
       </div>
     </section>
   );
@@ -220,7 +627,7 @@ const HiddenGemsSection = ({ stateSlug, stateName }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {gems.map((gem) => (
-            <HiddenGemCard key={gem.slug} gem={gem} />
+            <HiddenGemCard key={gem.id} gem={gem} />
           ))}
         </div>
       </div>
@@ -289,16 +696,23 @@ const ExploreMoreCTA = () => (
    ═══════════════════════════════════════════════════════ */
 const StateDetailsPage = () => {
   const { stateSlug } = useParams();
-  const state = states.find((s) => s.slug === stateSlug);
+  const state = states.find((s) => s.id === stateSlug);
+  const kb = getStateKnowledge(stateSlug);
 
   if (!state) return <StateNotFound slug={stateSlug} />;
 
   return (
     <>
       <HeroBanner state={state} />
-      <Overview state={state} />
-      <PopularDestinations stateSlug={state.slug} stateName={state.name} />
-      <HiddenGemsSection stateSlug={state.slug} stateName={state.name} />
+      <Overview state={state} data={kb} />
+      <KBTopDestinations data={kb} stateId={state.id} />
+      <KBFood data={kb} />
+      <KBStayOptions data={kb} />
+      <KBActivities data={kb} />
+      <KBBestTime data={kb} />
+      <KBConnectivity data={kb} />
+      <KBFestivals data={kb} />
+      <KBTravelTips data={kb} />
       <MapPlaceholder state={state} />
       <ExploreMoreCTA />
     </>

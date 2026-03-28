@@ -1,0 +1,618 @@
+{
+  "id": "madhya-pradesh",
+  "name": "Madhya Pradesh",
+  "capital": "Bhopal",
+  "region": "Central India",
+  "slug": "/india/madhya-pradesh",
+  "overview": {
+    "short": "Madhya Pradesh (“the Heart of India”) is a rare all-in-one destination: three UNESCO World Heritage Sites (Khajuraho, Sanchi, Bhimbetka), major wildlife landscapes with nationally significant parks and tiger reserves (Kanha, Bandhavgarh, Pench, Satpura), and dense pilgrimage geography anchored by two of India’s twelve Jyotirlingas (Ujjain and Omkareshwar).",
+    "paragraph2": "The state’s travel identity clusters into three powerful circuits: UNESCO + forts/palaces, central Indian forests and tiger landscapes, and sacred rivers/temple towns—particularly along and around the Narmada and key pilgrimage centers like Ujjain, Omkareshwar, Chitrakoot, and Amarkantak.",
+    "paragraph3": "Madhya Pradesh is positioned as a high-density heritage-and-nature state that highlights wildlife tourism and a wide spread of destinations supported by excellent state-run accommodations and itineraries.",
+    "cultureHeritage": "Madhya Pradesh’s cultural profile reflects a layered history: prehistoric rock art, classical temple architecture, medieval forts and palaces, plus living traditions of music and festivals like the Khajuraho Dance Festival and Tansen Sangeet Samaroh, all programmatically promoted through official event listings."
+  },
+  "topDestinations": [
+    {
+      "name": "Khajuraho",
+      "location": "Chhatarpur District",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/khajuraho",
+      "imageKeywords": [
+        "Khajuraho town sunset",
+        "Khajuraho heritage walk",
+        "Khajuraho temple skyline"
+      ],
+      "description": "Khajuraho is Madhya Pradesh’s flagship heritage town and an ideal base for exploring the region’s iconic temple architecture. Celebrated for its sculptural detail and preserved temple clusters, it works best as a 1–2 night stay: mornings for temple circuits, evenings for relaxed heritage walks and cultural programs.",
+      "whyFamous": "Gateway to one of India’s most celebrated temple complexes and carvings (UNESCO)."
+    },
+    {
+      "name": "Kanha National Park",
+      "location": "Mandla & Balaghat Districts",
+      "category": "wildlife",
+      "slug": "/india/madhya-pradesh/kanha-national-park",
+      "imageKeywords": [
+        "Kanha tiger safari jeep",
+        "Kanha meadow sunrise",
+        "barasingha Kanha"
+      ],
+      "description": "Tiger safaris, barasingha conservation, rich sal forests"
+    },
+    {
+      "name": "Bandhavgarh National Park",
+      "location": "Umaria District",
+      "category": "wildlife",
+      "slug": "/india/madhya-pradesh/bandhavgarh-national-park",
+      "imageKeywords": [
+        "Bandhavgarh tiger sighting",
+        "Bandhavgarh safari Tala zone",
+        "Bandhavgarh forest landscape"
+      ],
+      "description": "High-density tiger population, ancient fort integration"
+    },
+    {
+      "name": "Pench National Park",
+      "location": "Seoni & Chhindwara Districts",
+      "category": "wildlife",
+      "slug": "/india/madhya-pradesh/pench-national-park",
+      "imageKeywords": [
+        "Pench tiger reserve safari",
+        "Pench forest trail",
+        "Pench river landscape"
+      ],
+      "description": "Tiger reserve and strong birding destination, inspiration for Jungle Book"
+    },
+    {
+      "name": "Sanchi Stupa",
+      "location": "Raisen District",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/sanchi-stupa",
+      "imageKeywords": [
+        "Sanchi Stupa torana",
+        "Great Stupa Sanchi sunrise",
+        "Sanchi Buddhist site"
+      ],
+      "description": "Sanchi is a small town whose identity is inseparable from its UNESCO-recognized Buddhist stupa landscape. Set as an easy excursion from Bhopal, it is best experienced as a heritage visit focused on the Great Stupa, monolithic pillars, and the surrounding archaeological precinct’s monumental gateways.",
+      "whyFamous": "Great Stupa + Buddhist heritage precinct and UNESCO designation."
+    },
+    {
+      "name": "Orchha",
+      "location": "Niwari District",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/orchha",
+      "imageKeywords": [
+        "Orchha fort complex",
+        "Orchha chhatris Betwa",
+        "Jahangir Mahal Orchha"
+      ],
+      "description": "Orchha is a Bundela-era heritage town on the Betwa River. It features a concentrated cluster of palaces, temples, cenotaphs (chhatris), and riverside scenery. Its core appeal is walkability: the fort complex, temple circuits, and sunset viewpoints along the river's edge.",
+      "whyFamous": "Fort-palace complex + iconic chhatris + Betwa riverside heritage ambience."
+    },
+    {
+      "name": "Bhopal",
+      "location": "Bhopal",
+      "category": "city",
+      "slug": "/india/madhya-pradesh/bhopal",
+      "imageKeywords": [
+        "Upper Lake Bhopal",
+        "Bhopal city of lakes",
+        "Bhopal museum"
+      ],
+      "description": "The state capital is a high-value urban base that combines lake scenery with major cultural institutions and museums. It works excellently as a 2–3 night hub to cover nearby heritage sites like Sanchi and Bhimbetka without long transfers.",
+      "whyFamous": "Capital-city hub for lakes + museums + heritage day-trips."
+    },
+    {
+      "name": "Indore",
+      "location": "Indore",
+      "category": "city",
+      "slug": "/india/madhya-pradesh/indore",
+      "imageKeywords": [
+        "Rajwada Indore",
+        "Sarafa night food market",
+        "Indore heritage street"
+      ],
+      "description": "A “heritage + modern culture” city with palaces, temples, markets, and a strong food-travel identity. Indore is a strategic base for the Malwa circuit (Mandu, Maheshwar, Omkareshwar) because of its unmatched connectivity and accommodation depth.",
+      "whyFamous": "Malwa gateway + heritage palaces + major food city."
+    },
+    {
+      "name": "Ujjain",
+      "location": "Ujjain",
+      "category": "spiritual",
+      "slug": "/india/madhya-pradesh/ujjain",
+      "imageKeywords": [
+        "Mahakaleshwar Ujjain corridor",
+        "Ujjain temple ghats",
+        "Ujjain aarti"
+      ],
+      "description": "A deep pilgrimage city anchored by the Mahakaleshwar Jyotirlinga and a dense cluster of other shrines. It plays a dual role: a major spiritual destination and a Malwa-circuit stop that pairs well with Omkareshwar and Maheshwar.",
+      "whyFamous": "Mahakaleshwar Jyotirlinga + high-density temple circuit."
+    },
+    {
+      "name": "Gwalior",
+      "location": "Gwalior",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/gwalior",
+      "imageKeywords": [
+        "Gwalior city fort skyline",
+        "Man Singh Palace Gwalior",
+        "Gwalior heritage monuments"
+      ],
+      "description": "A heritage-heavy city dominated by its magnificent hill fort landscape and associated monuments, museums, and temples. It is a strong 1–2 day destination in northern MP offering incredible \"fort city storytelling\".",
+      "whyFamous": "One of India’s most iconic hill forts + dense heritage sightseeing."
+    },
+    {
+      "name": "Jabalpur",
+      "location": "Jabalpur",
+      "category": "city_nature",
+      "slug": "/india/madhya-pradesh/jabalpur",
+      "imageKeywords": [
+        "Dhuandhar Falls Jabalpur",
+        "Narmada ghat Jabalpur",
+        "marble rocks nearby"
+      ],
+      "description": "Framed around dramatic Narmada-linked nature and accessible urban parks, Jabalpur highlights the spectacular Dhuandhar Falls and marble rocks of Bhedaghat. It's a strong add-on to Kanha wildlife trips.",
+      "whyFamous": "Dhuandhar Falls + Narmada-linked natural attractions and marble rocks."
+    },
+    {
+      "name": "Pachmarhi",
+      "location": "Narmadapuram District",
+      "category": "nature",
+      "slug": "/india/madhya-pradesh/pachmarhi",
+      "imageKeywords": [
+        "Pachmarhi Satpura hills",
+        "Pachmarhi viewpoints",
+        "Bee Falls Pachmarhi"
+      ],
+      "description": "A popular nature destination located in Narmadapuram District."
+    },
+    {
+      "name": "Mandu",
+      "location": "Dhar District",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/mandu",
+      "imageKeywords": [
+        "Jahaz Mahal Mandu",
+        "Mandu palace ruins",
+        "Roopmati Pavilion view"
+      ],
+      "description": "A popular heritage destination located in Dhar District."
+    },
+    {
+      "name": "Bhimbetka",
+      "location": "Raisen District",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/bhimbetka",
+      "imageKeywords": [
+        "Bhimbetka rock art",
+        "Bhimbetka rock shelters",
+        "prehistoric paintings India"
+      ],
+      "description": "A popular heritage destination located in Raisen District."
+    },
+    {
+      "name": "Chitrakoot",
+      "location": "Satna District",
+      "category": "spiritual",
+      "slug": "/india/madhya-pradesh/chitrakoot",
+      "imageKeywords": [
+        "Chitrakoot ghat",
+        "Chitrakoot temple complex",
+        "Chitrakoot spiritual trail"
+      ],
+      "description": "A popular spiritual destination located in Satna District."
+    },
+    {
+      "name": "Omkareshwar",
+      "location": "Khandwa District",
+      "category": "spiritual",
+      "slug": "/india/madhya-pradesh/omkareshwar",
+      "imageKeywords": [
+        "Omkareshwar temple Narmada",
+        "Omkareshwar ghats",
+        "Omkareshwar island view"
+      ],
+      "description": "A popular spiritual destination located in Khandwa District."
+    },
+    {
+      "name": "Maheshwar",
+      "location": "Khargone District",
+      "category": "heritage_spiritual",
+      "slug": "/india/madhya-pradesh/maheshwar",
+      "imageKeywords": [
+        "Maheshwar ghat Narmada",
+        "Maheshwar fort riverside",
+        "Maheshwari saree weaving"
+      ],
+      "description": "A popular heritage_spiritual destination located in Khargone District."
+    },
+    {
+      "name": "Burhanpur",
+      "location": "Burhanpur District",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/burhanpur",
+      "imageKeywords": [
+        "Shahi Qila Burhanpur",
+        "Jama Masjid Burhanpur",
+        "Burhanpur heritage walk"
+      ],
+      "description": "A popular heritage destination located in Burhanpur District."
+    },
+    {
+      "name": "Satpura National Park",
+      "location": "Narmadapuram (Hoshangabad) District",
+      "category": "wildlife",
+      "slug": "/india/madhya-pradesh/satpura-national-park",
+      "imageKeywords": [
+        "Satpura forest safari",
+        "Satpura national park landscape",
+        "Satpura wildlife central india"
+      ],
+      "description": "Biodiversity-focused forest park, quieter safari experience, Pachmarhi Biosphere Reserve"
+    },
+    {
+      "name": "Amarkantak",
+      "location": "Anuppur District",
+      "category": "spiritual_nature",
+      "slug": "/india/madhya-pradesh/amarkantak",
+      "imageKeywords": [
+        "Amarkantak Narmada Udgam",
+        "Amarkantak Kapil Dhara",
+        "Amarkantak temple forest"
+      ],
+      "description": "A popular spiritual_nature destination located in Anuppur District."
+    },
+    {
+      "name": "Mahakaleshwar Temple",
+      "location": "Ujjain",
+      "category": "spiritual",
+      "slug": "/india/madhya-pradesh/mahakaleshwar-temple",
+      "imageKeywords": [
+        "Mahakaleshwar Jyotirlinga Ujjain",
+        "Mahakal Lok corridor",
+        "Mahakaleshwar temple aarti"
+      ],
+      "description": "One of the 12 Jyotirlingas, famous for Bhasma Aarti and Mahakal Lok corridor"
+    },
+    {
+      "name": "Omkareshwar Temple",
+      "location": "Omkareshwar",
+      "category": "spiritual",
+      "slug": "/india/madhya-pradesh/omkareshwar-temple",
+      "imageKeywords": [
+        "Omkareshwar Jyotirlinga darshan",
+        "Mamleshwar temple",
+        "Omkareshwar temple steps"
+      ],
+      "description": "Jyotirlinga shrine set on a sacred island in the Narmada River"
+    },
+    {
+      "name": "Chitrakoot Temples",
+      "location": "Chitrakoot",
+      "category": "spiritual",
+      "slug": "/india/madhya-pradesh/chitrakoot-temples",
+      "imageKeywords": [
+        "Chitrakoot temple darshan",
+        "Chitrakoot pilgrimage circuit",
+        "Chitrakoot sacred sites"
+      ],
+      "description": "Dense Ramayana-linked pilgrimage circuit"
+    },
+    {
+      "name": "Sanchi Buddhist Complex",
+      "location": "Sanchi",
+      "category": "heritage_spiritual",
+      "slug": "/india/madhya-pradesh/sanchi-buddhist-complex",
+      "imageKeywords": [
+        "Sanchi Buddhist complex toranas",
+        "Sanchi monastery ruins",
+        "Sanchi Ashoka pillar"
+      ],
+      "description": "UNESCO World Heritage Site with monuments dating back to 2nd BCE"
+    },
+    {
+      "name": "Amarkantak Temples",
+      "location": "Amarkantak",
+      "category": "spiritual",
+      "slug": "/india/madhya-pradesh/amarkantak-temples",
+      "imageKeywords": [
+        "Narmada Udgam Temple Amarkantak",
+        "Amarkantak temple complex",
+        "Amarkantak kund"
+      ],
+      "description": "Sacred emergence geography; origin of the Narmada and Son rivers"
+    },
+    {
+      "name": "Narmada River",
+      "location": "Across Madhya Pradesh",
+      "category": "nature",
+      "slug": "/india/madhya-pradesh/narmada-river",
+      "imageKeywords": [
+        "Narmada river ghats",
+        "Narmada aarti",
+        "Narmada river sunset"
+      ],
+      "description": "Sacred central axis shaping multiple MP pilgrimage and heritage destinations"
+    },
+    {
+      "name": "Betwa River",
+      "location": "Madhya Pradesh (toward Uttar Pradesh)",
+      "category": "nature",
+      "slug": "/india/madhya-pradesh/betwa-river",
+      "imageKeywords": [
+        "Betwa River Orchha",
+        "Betwa river rafting",
+        "Betwa river ghats"
+      ],
+      "description": "Scenic heritage river framing Bundelkhand towns like Orchha"
+    },
+    {
+      "name": "Chambal River",
+      "location": "Madhya Pradesh (toward Rajasthan)",
+      "category": "nature",
+      "slug": "/india/madhya-pradesh/chambal-river",
+      "imageKeywords": [
+        "Chambal river ravines",
+        "Chambal valley landscape",
+        "Chambal river sunset"
+      ],
+      "description": "Major river landscape known for its distinctive ravines and ecology"
+    },
+    {
+      "name": "Dhuandhar Falls",
+      "location": "Jabalpur region",
+      "category": "nature",
+      "slug": "/india/madhya-pradesh/dhuandhar-falls",
+      "imageKeywords": [
+        "Dhuandhar Falls mist",
+        "Dhuandhar waterfall Jabalpur",
+        "Narmada falls viewpoint"
+      ],
+      "description": "Jabalpur; misty, dramatic falls experience within the Narmada valley"
+    },
+    {
+      "name": "Bee Falls",
+      "location": "Pachmarhi",
+      "category": "nature",
+      "slug": "/india/madhya-pradesh/bee-falls",
+      "imageKeywords": [
+        "Bee Falls Pachmarhi cascade",
+        "Jamuna Prapat Bee Falls",
+        "Pachmarhi waterfall pool"
+      ],
+      "description": "Pachmarhi; flagship waterfall with an easy day-excursion profile"
+    },
+    {
+      "name": "Kapil Dhara",
+      "location": "Amarkantak",
+      "category": "nature",
+      "slug": "/india/madhya-pradesh/kapil-dhara",
+      "imageKeywords": [
+        "Kapil Dhara waterfall Amarkantak",
+        "Kapildhara Narmada falls",
+        "Amarkantak Kapil Dhara viewpoint"
+      ],
+      "description": "Amarkantak; popular waterfall with strong Saint Kapila legend associations"
+    },
+    {
+      "name": "Khajuraho Temples",
+      "location": "Khajuraho",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/khajuraho-temples",
+      "imageKeywords": [
+        "Khajuraho Kandariya Mahadeva",
+        "Khajuraho temple sculptures",
+        "Khajuraho western group sunrise"
+      ],
+      "description": "UNESCO World Heritage temple ensemble; top northern Indian sculpture tradition (10th-11th centuries)"
+    },
+    {
+      "name": "Bhimbetka Caves",
+      "location": "Bhimbetka",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/bhimbetka-caves",
+      "imageKeywords": [
+        "Bhimbetka cave paintings",
+        "Bhimbetka rock shelter art",
+        "Bhimbetka sandstone shelters"
+      ],
+      "description": "UNESCO-listed prehistoric rock art and continuous human settlement records"
+    },
+    {
+      "name": "Gwalior Fort",
+      "location": "Gwalior",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/gwalior-fort",
+      "imageKeywords": [
+        "Gwalior Fort panoramic",
+        "Gwalior Fort walls",
+        "Man Singh Palace Gwalior Fort"
+      ],
+      "description": "Monumental hill fort dominating Gwalior’s heritage identity with palatial and rock-cut elements"
+    },
+    {
+      "name": "Mandu Palaces",
+      "location": "Mandu",
+      "category": "heritage",
+      "slug": "/india/madhya-pradesh/mandu-palaces",
+      "imageKeywords": [
+        "Jahaz Mahal Mandu palace",
+        "Hindola Mahal Mandu",
+        "Mandu palace complex ruins"
+      ],
+      "description": "Monument plateau with iconic palace ruins (Jahaz Mahal) and high-value viewpoints"
+    }
+  ],
+  "religiousPlaces": [
+    {
+      "name": "Mahakaleshwar Temple",
+      "location": "Ujjain",
+      "significance": "One of the 12 Jyotirlingas, famous for Bhasma Aarti and Mahakal Lok corridor"
+    },
+    {
+      "name": "Omkareshwar Temple",
+      "location": "Khandwa District",
+      "significance": "Jyotirlinga shrine set on a sacred island in the Narmada River"
+    },
+    {
+      "name": "Chitrakoot Temples",
+      "location": "Satna District",
+      "significance": "Dense Ramayana-linked pilgrimage circuit"
+    },
+    {
+      "name": "Sanchi Buddhist Complex",
+      "location": "Raisen District",
+      "significance": "UNESCO World Heritage Site with monuments dating back to 2nd BCE"
+    },
+    {
+      "name": "Amarkantak Temples",
+      "location": "Anuppur District",
+      "significance": "Sacred emergence geography; origin of the Narmada and Son rivers"
+    }
+  ],
+  "naturalAttractions": {
+    "rivers": [
+      "Narmada River — Sacred central axis shaping multiple MP pilgrimage and heritage destinations",
+      "Betwa River — Scenic heritage river framing Bundelkhand towns like Orchha",
+      "Chambal River — Major river landscape known for its distinctive ravines and ecology"
+    ],
+    "waterfalls": [
+      "Dhuandhar Falls — Jabalpur; misty, dramatic falls experience within the Narmada valley",
+      "Bee Falls — Pachmarhi; flagship waterfall with an easy day-excursion profile",
+      "Kapil Dhara — Amarkantak; popular waterfall with strong Saint Kapila legend associations"
+    ],
+    "mountains": [],
+    "wildlife": [
+      {
+        "name": "Kanha National Park",
+        "note": "Tiger safaris, barasingha conservation, rich sal forests"
+      },
+      {
+        "name": "Bandhavgarh National Park",
+        "note": "High-density tiger population, ancient fort integration"
+      },
+      {
+        "name": "Pench National Park",
+        "note": "Tiger reserve and strong birding destination, inspiration for Jungle Book"
+      },
+      {
+        "name": "Satpura National Park",
+        "note": "Biodiversity-focused forest park, quieter safari experience, Pachmarhi Biosphere Reserve"
+      }
+    ]
+  },
+  "beaches": [],
+  "historicalSites": [
+    {
+      "name": "Khajuraho Temples",
+      "description": "UNESCO World Heritage temple ensemble; top northern Indian sculpture tradition (10th-11th centuries)"
+    },
+    {
+      "name": "Bhimbetka Caves",
+      "description": "UNESCO-listed prehistoric rock art and continuous human settlement records"
+    },
+    {
+      "name": "Gwalior Fort",
+      "description": "Monumental hill fort dominating Gwalior’s heritage identity with palatial and rock-cut elements"
+    },
+    {
+      "name": "Mandu Palaces",
+      "description": "Monument plateau with iconic palace ruins (Jahaz Mahal) and high-value viewpoints"
+    }
+  ],
+  "adventure": [
+    "Tiger Safaris — Kanha, Bandhavgarh, and Pench national parks (Oct-Jun)",
+    "Fort and Heritage Walks — Gwalior, Orchha, Mandu",
+    "Waterfall Treks — Bee Falls in Pachmarhi hill station",
+    "Boat Rides & River Views — Bhedaghat marble rocks in Jabalpur",
+    "River Ghats — Sunrise/sunset walks along Maheshwar and Omkareshwar"
+  ],
+  "foodCuisine": {
+    "famousDishes": [
+      {
+        "name": "Dal Bafla",
+        "description": "A classic MP plate; baked wheat balls dipped in ghee, served with spicy dal"
+      },
+      {
+        "name": "Bhutte ka Kees",
+        "description": "Grated corn cooked with milk and spices; a Malwa regional specialty"
+      }
+    ],
+    "streetFood": [
+      {
+        "name": "Poha-Jalebi",
+        "description": "The quintessential breakfast and street food icon of Indore and Bhopal"
+      },
+      {
+        "name": "Sabudana Khichdi",
+        "description": "Travel-friendly tapioca pearl dish, prominent in the Malwa region"
+      }
+    ],
+    "drinks": []
+  },
+  "stayOptions": {
+    "luxury": [
+      "Premium Wildlife Lodges — near primary Kanha, Bandhavgarh, and Pench gates",
+      "Heritage Hotels — converted forts and palaces in the Malwa and Bundelkhand circuits"
+    ],
+    "midRange": [
+      "MPSTDC Properties — Government-run MPT hotels at almost all major tourist spots, known for great locations",
+      "Indore & Bhopal City Hotels — Strategic base camps for regional day excursions"
+    ],
+    "unique": [
+      "Orchha Riverside Retreats — Accommodations styled around the Betwa river",
+      "Satpura Forest Stays — Low-noise, eco-immersion lodges"
+    ]
+  },
+  "bestTimeToVisit": [
+    {
+      "season": "Peak Season",
+      "months": "October – March",
+      "conditions": "Pleasant weather across heritage cities and temple circuits"
+    },
+    {
+      "season": "Wildlife Safaris",
+      "months": "Oct 15 – Jun 30",
+      "conditions": "Parks are open. Oct-Mar is comfortable; Mar-Jun offers excellent visibility for tigers."
+    },
+    {
+      "season": "Birdwatching (Pench)",
+      "months": "November – March",
+      "conditions": "Strong season for migratory birds"
+    }
+  ],
+  "transportation": {
+    "airports": [
+      "Bhopal (Raja Bhoj Airport) — Central hub",
+      "Indore (Devi Ahilya Bai Holkar Airport) — Major Malwa connection",
+      "Gwalior, Jabalpur, Khajuraho — Regional airport access"
+    ],
+    "railways": [
+      "Major junctions: Bhopal, Gwalior, Indore, Itarsi, Jabalpur, Katni, Ratlam, Ujjain"
+    ],
+    "roads": [
+      "Well-connected by state and national highways, making MP ideal for structured road trips"
+    ]
+  },
+  "festivals": [
+    {
+      "name": "Khajuraho Dance Festival",
+      "period": "February / March",
+      "description": "Classical Indian dance performances set against the illuminated heritage temples"
+    },
+    {
+      "name": "Tansen Sangeet Samaroh",
+      "period": "December",
+      "description": "Prestigious Indian classical music festival held in Gwalior"
+    }
+  ],
+  "travelTips": [
+    "Safaris: Pre-book wildlife safaris well in advance via the official MP forest online portal.",
+    "Pilgrimage Timing: Plan temple darshans (Ujjain/Omkareshwar) for early mornings to manage crowds and smooth movement.",
+    "Heat Management: Avoid peak summer afternoons when walking through forts and monument-heavy complexes.",
+    "Bases: Use Bhopal or Indore as comfortable urban hubs for exploring Sanchi/Bhimbetka and Mandu/Maheshwar respectively."
+  ],
+  "uniqueFacts": [
+    "Madhya Pradesh is famously known as the 'Heart of India' due to its central geographic location.",
+    "The state contains three UNESCO World Heritage Sites: Khajuraho Temples, Sanchi Buddhist Complex, and the prehistoric Bhimbetka Rock Shelters.",
+    "It is home to two of the twelve revered Jyotirlinga shrines in India—Mahakaleshwar in Ujjain and Omkareshwar on the Narmada River.",
+    "MP boasts some of India's most successful wildlife conservation efforts, particularly saving the Barasingha (swamp deer) from extinction in Kanha National Park."
+  ]
+}

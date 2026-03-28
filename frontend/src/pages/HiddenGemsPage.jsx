@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { Gem, MapPin, Filter, Search, ArrowRight } from 'lucide-react';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
-import hiddenGems from '../data/hiddenGems';
-import states from '../data/states';
+import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
+import { statesData as states } from '../data/statesData';
 import PageHero from '../components/layout/PageHero';
 import HiddenGemCard from '../components/cards/HiddenGemCard';
 import EmptyState from '../components/ui/EmptyState';
@@ -132,7 +132,7 @@ const HiddenGemsPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredGems.length > 0 ? (
               filteredGems.map((gem) => (
-                <HiddenGemCard key={gem.slug} gem={gem} linkToState showExplore />
+                <HiddenGemCard key={gem.id} gem={gem} linkToState showExplore />
               ))
             ) : (
               <EmptyState icon={Gem} message="No hidden gems match your search. Try a different region or keyword." />

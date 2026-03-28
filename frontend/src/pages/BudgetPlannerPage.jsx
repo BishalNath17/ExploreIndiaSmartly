@@ -22,9 +22,10 @@ import {
   STYLE_OPTIONS,
   formatINR,
 } from '../services/api';
-import states from '../data/states';
+import { statesData as states } from '../data/statesData';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
+import StateSelect from '../components/features/StateSelect';
 
 /* ── Icon map for categories ────────────────── */
 const CATEGORY_ICONS = {
@@ -51,34 +52,7 @@ const CATEGORY_BG = {
   extras: 'bg-pink-500/15 text-pink-400',
 };
 
-/* ═══════════════════════════════════════════════════════
-   FORM: DESTINATION SELECTOR
-   ═══════════════════════════════════════════════════════ */
-const DestinationSelect = ({ value, onChange }) => (
-  <div>
-    <label htmlFor="bp-state" className="block text-sm font-medium mb-2">
-      <MapPin size={14} className="inline text-india-orange mr-1 -mt-0.5" />
-      Destination
-    </label>
-    <div className="relative">
-      <select
-        id="bp-state"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full appearance-none bg-white/5 border border-white/15 rounded-xl px-4 py-3 pr-10
-                   text-sm text-white focus:outline-none focus:border-india-orange/60 transition-colors cursor-pointer"
-      >
-        <option value="">Select a state or UT</option>
-        {states.map((s) => (
-          <option key={s.slug} value={s.slug}>
-            {s.name}
-          </option>
-        ))}
-      </select>
-      <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
-    </div>
-  </div>
-);
+
 
 /* ═══════════════════════════════════════════════════════
    FORM: STYLE SELECTOR
@@ -250,7 +224,7 @@ const BudgetPlannerPage = () => {
   const [style, setStyle] = useState('standard');
   const [showResults, setShowResults] = useState(false);
 
-  const selectedState = states.find((s) => s.slug === stateSlug);
+  const selectedState = states.find((s) => s.id === stateSlug);
 
   const result = useMemo(() => {
     if (!stateSlug) return null;
@@ -281,7 +255,7 @@ const BudgetPlannerPage = () => {
           {/* ── LEFT: Form ── */}
           <div className="lg:col-span-2">
             <div className="glass rounded-3xl p-6 sm:p-8 space-y-6 sticky top-24">
-              <DestinationSelect value={stateSlug} onChange={(v) => { setStateSlug(v); setShowResults(false); }} />
+              <StateSelect value={stateSlug} onChange={(v) => { setStateSlug(v); setShowResults(false); }} label="Destination" placeholder="Search and select a state or UT" />
               <StyleSelector value={style} onChange={(v) => { setStyle(v); setShowResults(false); }} />
 
               <div className="grid grid-cols-2 gap-4">

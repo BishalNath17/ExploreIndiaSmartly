@@ -1,0 +1,210 @@
+{
+  "id": "gujarat",
+  "name": "Gujarat",
+  "capital": "Gandhinagar",
+  "region": "West India",
+  "slug": "/india/gujarat",
+
+  "overview": {
+    "short": "Gujarat is India's entrepreneurial heartland — the birthplace of Mahatma Gandhi and Vallabhbhai Patel — and simultaneously one of its most extraordinarily diverse travel destinations. From the world's last surviving Asiatic lions in Gir Forest to the salt-white infinity of the Rann of Kutch; from the ancient stepwells of Patan and Modhera to the ornate Jain temples of Palitana; from the diamond-polishing capital of Surat to the holy city of Dwarka — Gujarat is a state of superlatives.",
+    "paragraph2": "The state has the longest coastline of any Indian state (1,600 km) and encompasses three distinct cultural regions: Kathiawar (Saurashtra) peninsula with its pastoral, colorful rural culture; Kutch, the vast semi-arid border region with extraordinary craft traditions; and mainland Gujarat with its industrial and commercial dynamism. The Great Rann of Kutch — 7,500 sq km of salt desert that becomes the world's largest salt flat in the dry season — is one of India's most otherworldly landscapes, celebrated during the annual Rann Utsav.",
+    "paragraph3": "Gujarat's vegetarian cuisine is one of India's finest — the \"Gujarati thali\" is a legendary 15–20 item meal. The state's craft traditions (bandhani tie-dye, patola silk, mirror-work embroidery, block printing) are internationally renowned, and its festivals (Navratri — the world's largest folk dance festival — Uttarayan/kite festival) are among India's most spectacular.",
+    "cultureHeritage": "The Gujarati people's defining characteristics — entrepreneurship, community solidarity, and vegetarianism — are deeply rooted in Jain and Vaishnav Hindu influences. Nearly 25% of Gujarat's population follows Jainism, giving the state an extraordinary concentration of Jain temples (Palitana's 863 temples on one hill is unique in the world). The Swaminarayan movement, founded in Gujarat, has built some of the world's most magnificent temples globally. Navratri — 9 nights of garba and dandiya-raas dance — has been nominated for UNESCO Intangible Heritage status."
+  },
+
+  "topDestinations": [
+    {
+      "name": "Rann of Kutch",
+      "location": "Kutch District; northwest Gujarat; Pakistan border",
+      "slug": "/india/gujarat/rann-of-kutch",
+      "description": "The Great Rann of Kutch — an extraordinary 7,500 sq km salt marsh that transforms into a brilliant white flat during dry season (October–March). At full moon, the white salt desert stretching to the horizon under star-filled sky is one of India's most transcendental experiences. The Rann Utsav cultural festival (November–February) brings India's richest crafts, music, and cuisine to tent cities on the salt.",
+      "whyFamous": "World's largest salt desert; Rann Utsav festival; incredible photography; full-moon experience",
+      "imageKeywords": ["Rann of Kutch white salt desert", "Rann Utsav tent city Gujarat", "Kutch full moon salt flat"]
+    },
+    {
+      "name": "Gir National Park",
+      "location": "Junagadh/Gir Somnath Districts; Saurashtra",
+      "slug": "/india/gujarat/gir-national-park",
+      "description": "The last wild refuge of the Asiatic lion on Earth. Population has grown from 180 in 1968 to 674+ today — one of conservation's greatest success stories. Safari drives through dry deciduous forests almost guarantee lion sightings, along with leopard, hyena, jungle cat, and over 300 bird species.",
+      "whyFamous": "World's only wild Asiatic lion population; remarkable conservation story; lion safari",
+      "imageKeywords": ["Asiatic lion Gir forest safari", "Gir National Park lions Gujarat", "Gir forest jeep safari"]
+    },
+    {
+      "name": "Somnath",
+      "location": "Gir Somnath District; south Saurashtra coast",
+      "slug": "/india/gujarat/somnath",
+      "description": "One of the 12 Jyotirlingas (most sacred Shiva shrines) and one of India's most historically significant temples. Somnath has been destroyed and rebuilt 17 times — by Arab traders, Mahmud of Ghazni, Aurangzeb — and stands today as a magnificent symbol of resilience. The Sound & Light show at dusk is exceptionally well-produced.",
+      "whyFamous": "Jyotirlinga; destroyed 17 times; Arabian Sea shore; Sound & Light show",
+      "imageKeywords": ["Somnath temple sea shore", "Somnath Jyotirlinga Gujarat", "Somnath temple evening"]
+    },
+    {
+      "name": "Palitana",
+      "location": "Bhavnagar District; Saurashtra",
+      "slug": "/india/gujarat/palitana",
+      "description": "The world's only city declared meat-free, Palitana is home to Shatrunjaya Hill with 863 Jain temples atop it — the world's largest temple complex and Jainism's most sacred pilgrimage. The 3.8 km climb up 3,745 steps through a procession of increasingly elaborate marble temples culminates at the hilltop with extraordinary views and spiritual intensity.",
+      "whyFamous": "World's only vegetarian city; 863 Jain temples; most sacred Jain pilgrimage",
+      "imageKeywords": ["Palitana Jain temples hill", "Shatrunjaya hill marble temples", "Palitana pilgrims steps Gujarat"]
+    },
+    {
+      "name": "Ahmedabad",
+      "location": "Central Gujarat; Sabarmati River",
+      "slug": "/india/gujarat/ahmedabad",
+      "description": "India's first UNESCO World Heritage City (2017), Ahmedabad's 600-year-old walled city contains a remarkable concentration of intricately carved stepwells, mosques, temples, and pols (traditional residential neighborhoods). Gandhi's Sabarmati Ashram on the river's bank is one of modern India's most important pilgrimage sites. The world's largest cricket stadium (Narendra Modi Stadium, 132,000 capacity) is also here.",
+      "whyFamous": "India's first UNESCO Heritage City; Sabarmati Ashram; pols architecture; business capital",
+      "imageKeywords": ["Ahmedabad old city pols", "Sabarmati Ashram Gandhi", "Ahmedabad stepwell architecture"]
+    },
+    {
+      "name": "Dwarka",
+      "location": "Devbhumi Dwarka District; westernmost tip of Gujarat",
+      "slug": "/india/gujarat/dwarka",
+      "description": "One of Hinduism's Char Dham (four sacred pilgrimage sites) and the legendary kingdom of Lord Krishna. The Dwarkadhish Temple (5th century CE; rebuilt multiple times) on the banks of the Gomti River is one of India's finest examples of Chalukyan temple architecture. Underwater archaeological surveys have found ruins of ancient Dwarka submerged in the Gulf of Kutch.",
+      "whyFamous": "Char Dham pilgrimage; Krishna's kingdom; submerged ancient city; westernmost land in Gujarat",
+      "imageKeywords": ["Dwarka Dwarkadhish temple", "Dwarka temple Gujarat spire", "Dwarka sea Gujarat pilgrimage"]
+    },
+    {
+      "name": "Patan",
+      "location": "North Gujarat; Patan District",
+      "slug": "/india/gujarat/patan",
+      "description": "The ancient capital of the Solanki dynasty (950–1300 CE), Patan houses two UNESCO-declared monuments: the Rani ki Vav (Queen's Stepwell) — arguably India's finest stepwell with 500+ sculpted panels — and the ruined city of Anhilwara Patan. The town is also the last center of Patola silk weaving, where single ikat double-ikat silk saris take 6 months to complete.",
+      "whyFamous": "Rani ki Vav UNESCO; Patola silk heritage; Solanki dynasty capital",
+      "imageKeywords": ["Rani ki Vav stepwell UNESCO", "Patan stepwell Gujarat sculptures", "Patola silk weaving Gujarat"]
+    },
+    {
+      "name": "Vadodara (Baroda)",
+      "location": "Central Gujarat; Vishwamitri River",
+      "slug": "/india/gujarat/vadodara",
+      "description": "The cultural capital of Gujarat, built by the Gaekwad dynasty (18th–20th century). The Laxmi Vilas Palace (1890) — 4 times the size of Buckingham Palace and still inhabited by the royal family — is the finest Indo-Saracenic palace in India. The Baroda Museum, Sayaji Baug, Maharaja Fateh Singh Museum, and Kirti Mandir (Gandhi family memorial) make this a layered cultural destination.",
+      "whyFamous": "Laxmi Vilas Palace; cultural capital of Gujarat; Gaekwad royal heritage",
+      "imageKeywords": ["Laxmi Vilas Palace Baroda", "Vadodara palace Gujarat", "Baroda museum collection"]
+    }
+  ],
+
+  "religiousPlaces": [
+    { "name": "Somnath Temple", "location": "Somnath, Gir Somnath", "significance": "Jyotirlinga #1; first and holiest; Arabian Sea shore" },
+    { "name": "Dwarkadhish Temple", "location": "Dwarka", "significance": "Char Dham; Lord Krishna; Chalukyan architecture" },
+    { "name": "Palitana Temples", "location": "Bhavnagar", "significance": "863 Jain temples; Shatrunjaya Hill; Jain holy of holies" },
+    { "name": "Ambaji Temple", "location": "Banaskantha", "significance": "51 Shakti Peethas; massive pilgrimage center" },
+    { "name": "Akshardham Temple, Gandhinagar", "location": "Gandhinagar", "significance": "Swaminarayan; pink sandstone; second-largest Akshardham" },
+    { "name": "Girnar Hill Temples", "location": "Junagadh", "significance": "Multi-faith complex; Jain, Hindu, Nath sect; 10,000 steps" },
+    { "name": "Shamlaji Temple", "location": "Aravalli", "significance": "Vishnu temple; ancient; major fair" },
+    { "name": "Dakor Ranchhodray Temple", "location": "Kheda", "significance": "Ranchhodrai (Krishna); crowded festivals" }
+  ],
+
+  "naturalAttractions": {
+    "rivers": [
+      "Sabarmati — Gandhinagar/Ahmedabad; Gandhi's ashram on banks; riverfront development",
+      "Mahi River — Vadodara area; fertile plains",
+      "Rupen River — Kutch; seasonal"
+    ],
+    "wildlife": [
+      { "name": "Marine National Park, Gulf of Kutch", "note": "India's first marine NP; corals, dugongs, dolphins" },
+      { "name": "Velavadar Blackbuck NP", "note": "Bhavnagar; world's highest blackbuck density" },
+      { "name": "Wild Ass Sanctuary", "note": "Little Rann of Kutch; world's only Indian wild ass population" },
+      { "name": "Nal Sarovar Bird Sanctuary", "note": "Near Ahmedabad; 200+ bird species; flamingos in season" }
+    ]
+  },
+
+  "beaches": [
+    { "name": "Mandvi Beach", "location": "Kutch", "highlights": "Historic shipbuilding port; Vijay Vilas Palace nearby; clean" },
+    { "name": "Diu (Nagoa Beach)", "location": "Diu UT", "highlights": "Casuarina grove; calm water" },
+    { "name": "Dwarka/Beyt Dwarka", "location": "Devbhumi Dwarka", "highlights": "Sacred island; pilgrimage + beach" },
+    { "name": "Somnath Beach", "location": "Gir Somnath", "highlights": "Temple backdrop; dramatic sunsets" },
+    { "name": "Chorwad Beach", "location": "Junagadh", "highlights": "Remote; Gandhi ancestral village nearby" }
+  ],
+
+  "historicalSites": [
+    { "name": "Rani ki Vav", "description": "UNESCO; 11th century; 7-storey inverted temple stepwell; 500+ sculptures" },
+    { "name": "Modhera Sun Temple", "description": "11th century Solanki; gold at sunrise; Navratri dance festival venue" },
+    { "name": "Laxmi Vilas Palace", "description": "Vadodara; 1890; Indo-Saracenic; 4x Buckingham Palace" },
+    { "name": "Lothal", "description": "Ahmedabad District; 4,500-year-old Indus Valley city; world's first tidal dock" },
+    { "name": "Dholavira", "description": "Kutch; Harappan city; UNESCO 2021; largest IVC site in India" },
+    { "name": "Champaner-Pavagadh", "description": "UNESCO 2004; 15th century sultanate city; Jama Masjid; hilltop temple" }
+  ],
+
+  "adventure": [
+    "Wild Ass Safari, Little Rann — Jeep safari; only place to see Indian wild ass (khur)",
+    "Gir Lion Safari — Canter and jeep; early morning; lion sightings near guaranteed Oct–June",
+    "Rann of Kutch Camping — Full-moon camping on salt flat; Rann Utsav luxury tents",
+    "Flamingo Safari, Nal Sarovar — Boat ride among flamingos; November–February",
+    "Rock Climbing, Junagadh/Girnar — Granite outcrops; 10,000 steps climb",
+    "Marine National Park Snorkeling — Gulf of Kutch; coral reefs; sea horses; sea turtles"
+  ],
+
+  "foodCuisine": {
+    "famousDishes": [
+      { "name": "Gujarati Thali", "description": "15–20 dishes; dal, shaak, rotli, rice, kadhi, chutney, papad, achaar; infinite refills" },
+      { "name": "Dhokla", "description": "Steamed fermented rice-chana flour cake; spongy; with green chutney and tempering" },
+      { "name": "Khandvi", "description": "Thin rolled gram flour sheets with coconut-sesame topping; finger food" },
+      { "name": "Undhiyu", "description": "Winter mixed vegetable and muthia (dumpling) casserole; Surat specialty; cooked upside-down" },
+      { "name": "Thepla", "description": "Methi (fenugreek) flatbread; travel food; stays fresh days" }
+    ],
+    "streetFood": [
+      { "name": "Fafda-Jalebi", "description": "Crunchy gram flour snack with sweet spirals; Gujarat's iconic breakfast" },
+      { "name": "Sev Usal", "description": "Sprouted bean curry topped with sev (crispy noodles); Surat street staple" },
+      { "name": "Kutchi Dabeli", "description": "Spiced potato mixture in bun with tamarind chutney and pomegranate; popular snack" }
+    ],
+    "drinks": []
+  },
+
+  "stayOptions": {
+    "luxury": [
+      "The Rann Riders — Rann of Kutch; luxury tent city; camel safaris; craft village",
+      "Gir Lion Safari Resort — Adjacent to park; lion-themed decor; excellent safari access",
+      "Laxmi Vilas Palace Hotel — Vadodara; part of royal palace; heritage rooms"
+    ],
+    "midRange": [
+      "House of MG, Ahmedabad — 1924 heritage bungalow; colonial-era; city center",
+      "Vijay Vilas Palace (guesthouse), Mandvi — Royal guest accommodation; beach access"
+    ],
+    "unique": [
+      "Shaam-e-Sarhad Village, Hodka — Bhirandiyara, Kutch; award-winning tribal homestay near Rann",
+      "Rann Utsav Tents (GTDC) — Official festival accommodation; luxury tents on the salt",
+      "Jungle Safari Lodge, Sasan Gir — Forest edge; ranger-guided nights"
+    ]
+  },
+
+  "bestTimeToVisit": [
+    { "season": "Best (Winter)", "months": "November – February", "conditions": "15–25°C; Rann Utsav; Gir safaris; Navratri in Oct" },
+    { "season": "Monsoon", "months": "June – September", "conditions": "Lush; Gir closed June–Oct; Kutch impassable" },
+    { "season": "Summer", "months": "March – May", "conditions": "38–45°C; not recommended except Girnar area" }
+  ],
+
+  "transportation": {
+    "airports": [
+      "Sardar Vallabhbhai Patel International Airport, Ahmedabad — International hub; major connections",
+      "Vadodara Airport — Domestic",
+      "Rajkot Airport — Saurashtra gateway",
+      "Bhuj Airport — Kutch/Rann gateway; seasonal increase"
+    ],
+    "railways": [
+      "Ahmedabad Junction — Major hub; Delhi (Shatabdi 7 hrs), Mumbai (6 hrs)",
+      "Vadodara Junction, Surat, Rajkot — Well-connected"
+    ],
+    "roads": []
+  },
+
+  "festivals": [
+    { "name": "Navratri", "period": "September–October", "description": "World's longest folk dance festival; 9 nights; garba across all of Gujarat" },
+    { "name": "Uttarayan (Makar Sankranti)", "period": "January 14", "description": "Kite Festival; sky fills with kites across Gujarat; International Kite Festival in Ahmedabad" },
+    { "name": "Rann Utsav", "period": "November–February", "description": "Cultural festival on white Rann; music, craft, food, stargazing" },
+    { "name": "Rath Yatra, Ahmedabad", "period": "June–July", "description": "Jagannath chariot procession; massive; second only to Puri" }
+  ],
+
+  "travelTips": [
+    "Vegetarian State: Gujarat is overwhelmingly vegetarian; meat/alcohol harder to find outside tourist areas",
+    "Alcohol: Gujarat is a prohibition state; permits required; some hotels have bar facilities for guests",
+    "Rann Utsav: Book tent accommodation months ahead — it sells out completely",
+    "Gir Safari: Book online at girlion.gujarat.gov.in; Central Zone safaris fill up fast in season",
+    "Dress: Modest dress required at temples; avoid shorts and sleeveless at Somnath, Dwarka, Palitana",
+    "Budget: ₹1,000–2,000 budget; ₹3,000–6,000 mid; ₹8,000–30,000 luxury"
+  ],
+
+  "uniqueFacts": [
+    "Gujarat's Asiatic lion population has tripled since the 1970s — going from about 180 to 674+ lions — the world's greatest large-cat conservation success",
+    "Palitana is the world's first and only city to legally ban the killing or selling of animals for food",
+    "Dholavira (Kutch) is a 4,500-year-old Harappan city with the world's first billboard — a 3m wooden signboard in ancient Indus script",
+    "The Patola silk weavers of Patan are down to only 3 families still practicing the double-ikat technique; a single sari takes 6 months and costs ₹1–5 lakh",
+    "Gujarat produces 72% of India's diamonds by value (Surat cutting and polishing center)",
+    "Mahatma Gandhi's Salt March (Dandi March, 1930) started from Sabarmati Ashram, Ahmedabad and ended 240 miles away at Dandi Beach on the Gujarat coast"
+  ]
+}

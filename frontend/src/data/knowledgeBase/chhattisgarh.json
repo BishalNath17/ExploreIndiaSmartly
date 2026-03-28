@@ -1,0 +1,185 @@
+{
+  "id": "chhattisgarh",
+  "name": "Chhattisgarh",
+  "capital": "Raipur",
+  "region": "Central India",
+  "slug": "/india/chhattisgarh",
+
+  "overview": {
+    "short": "Chhattisgarh — 'Land of 36 Forts' — is India's tribal heartland, covered by dense forests (44% of area), crisscrossed by the Mahanadi and its tributaries, and home to 32% indigenous tribal population. The Chitrakote Waterfall ('Niagara of India'), ancient cave paintings, and the world's longest festival — the 75-day Bastar Dussehra — make this one of the subcontinent's most authentic and unexplored destinations.",
+    "paragraph2": "The Bastar district is particularly extraordinary: weekly tribal haats bring together Gond, Halba, Maria, Muriya, and Dhruva tribes in age-old commerce. Ancient cave paintings at Singanpur and Kutumsar caves reveal a human presence going back 30,000+ years.",
+    "paragraph3": "Chhattisgarh hides remarkable natural treasures — including Indravati National Park (home to rare wild buffalo), and the surreal temple towns of Sirpur and Rajim that preserve a rich medieval Shaivite-Buddhist layering predating the Chola and Mughal periods.",
+    "cultureHeritage": "Tribal art forms are internationally acclaimed: Dokra metal casting (lost-wax process), Bastar wrought iron craft, Kosa silk weaving, and Gondh/Pithora paintings. The Panthi dance of the Satnami community is an ecstatic devotional dance. The Karma and Rai dances of the Gond and Baiga tribes are performed at harvest and marriage."
+  },
+
+  "topDestinations": [
+    {
+      "name": "Chitrakote Falls",
+      "location": "Bastar District; on the Indravati River",
+      "slug": "/india/chhattisgarh/chitrakote-falls",
+      "description": "The widest waterfall in India (approximately 300m wide), often called the 'Niagara of India.' The crescent-shaped falls plunge 29m through dense forest. Most spectacular during monsoon when rust-red waters thunder with tremendous force. Boat rides available during low-flow season.",
+      "whyFamous": "India's widest waterfall; Niagara comparison; boat rides; dramatic monsoon form",
+      "imageKeywords": ["Chitrakote waterfall Bastar India", "Chitrakote Niagara India", "Chitrakote falls monsoon aerial"]
+    },
+    {
+      "name": "Jagdalpur & Bastar",
+      "location": "Bastar District; southern Chhattisgarh",
+      "slug": "/india/chhattisgarh/jagdalpur-bastar",
+      "description": "The tribal capital of Bastar division and gateway to extraordinary tribal culture. Weekly haats at Nagaras, Tokapal, and Kondagaon draw tribes in traditional dress. Bastar Palace, Anthropological Museum, and proximity to Kanger Valley National Park make this a complete destination.",
+      "whyFamous": "Tribal haat markets; Bastar Dussehra; tribal art and culture headquarters",
+      "imageKeywords": ["Bastar tribal haat market", "Jagdalpur tribal women Chhattisgarh", "Bastar Dussehra festival"]
+    },
+    {
+      "name": "Kanger Valley National Park",
+      "location": "Bastar District; near Jagdalpur",
+      "slug": "/india/chhattisgarh/kanger-valley",
+      "description": "A compact but extraordinarily diverse national park with the Kanger River flowing through limestone karst terrain. Famous for Kutumsar Caves (longest natural cave in India, 4.5 km) and Kailash Caves with stalactites and stalagmites, plus rare hill myna birds.",
+      "whyFamous": "Kutumsar limestone caves; diverse tribal-forest ecosystem; hill myna birds",
+      "imageKeywords": ["Kutumsar caves Kanger Valley", "Kanger Valley National Park", "Tirathgarh waterfall Kanger"]
+    },
+    {
+      "name": "Sirpur",
+      "location": "Mahasamund District; Mahanadi River bank",
+      "slug": "/india/chhattisgarh/sirpur",
+      "description": "A major archaeological site of the Sarabhapuri and Panduvamshi dynasties (5th–8th century CE) revealing a cosmopolitan ancient city where Buddhism, Jainism, and Shaivism coexisted. The 7th century Lakshmana Temple is one of India's finest brick temples.",
+      "whyFamous": "7th century brick temple; Buddhist-Hindu-Jain convergence; excavation site",
+      "imageKeywords": ["Sirpur Lakshmana temple brick", "Sirpur archaeological site", "Sirpur Buddhist vihara"]
+    },
+    {
+      "name": "Raipur",
+      "location": "Central Chhattisgarh; state capital",
+      "slug": "/india/chhattisgarh/raipur",
+      "description": "The fast-growing capital city with MM Fun City, Nandan Van (zoo and botanical garden), and proximity to Barnawapara Wildlife Sanctuary. The Dudhadhari Math temple complex and Mahamaya Mandir are important religious centers.",
+      "whyFamous": "State capital; gateway to Chhattisgarh tourism; Barnawapara wildlife access",
+      "imageKeywords": ["Raipur city Chhattisgarh", "Dudhadhari Math Raipur", "Barnawapara wildlife sanctuary"]
+    }
+  ],
+
+  "religiousPlaces": [
+    { "name": "Danteshwari Temple", "location": "Dantewada", "significance": "9th century; Shakti Peetha; Bastar's presiding deity" },
+    { "name": "Rajim (Rajim Triveni)", "location": "Gariaband", "significance": "Mahanadi confluence; 'Prayagraj of Chhattisgarh'; Ram-Lakshman temple" },
+    { "name": "Dongargarh Bambleshwari", "location": "Rajnandgaon", "significance": "Hilltop Durga temple; ropeway; thousands at Navratri" },
+    { "name": "Bhoramdeo Temple", "location": "Kawardha", "significance": "7th–12th century; Shaivite; 'Khajuraho of Chhattisgarh'" },
+    { "name": "Gangrel Dam Shivnath", "location": "Durg", "significance": "Dam and river confluence; Mahadev temple" }
+  ],
+
+  "naturalAttractions": {
+    "rivers": [
+      "Mahanadi — 'Great River'; originates at Sihawa, Chhattisgarh; Gangrel Dam",
+      "Indravati — Chitrakote Falls; Indravati National Park; Bastar",
+      "Sheonath — Joins Mahanadi; Rajnandgaon"
+    ],
+    "waterfalls": [
+      { "name": "Chitrakote Falls", "note": "300m wide; 'India's Niagara'; Bastar" },
+      { "name": "Tirathgarh Falls", "height": "91m", "note": "Kanger Valley; one of India's most beautiful" },
+      { "name": "Amrit Dhara", "note": "Koriya district; 'Niagara of northern Chhattisgarh'" },
+      { "name": "Ramdaha Falls", "note": "Achanakmar; forest waterfall; picturesque" }
+    ],
+    "nationalParks": [
+      { "name": "Indravati NP", "area": "2,799 sq km", "note": "Wild gaur; barasingha; tiger; Indian wild buffalo" },
+      { "name": "Kanger Valley NP", "area": "200 sq km", "note": "Limestone caves; hill myna" },
+      { "name": "Achanakmar Wildlife Sanctuary", "note": "Bilaspur; tiger reserve; sal forests" },
+      { "name": "Barnawapara WLS", "note": "Near Raipur; nilgai, wild boar, leopard; accessible day trip" },
+      { "name": "Sitanadi WLS", "note": "Dhamtari; wild buffalo; dense forests" }
+    ]
+  },
+
+  "beaches": [],
+
+  "historicalSites": [
+    { "name": "Bhoramdeo Temple", "period": "7th–12th century", "description": "Kawardha; erotic sculptures; 'Khajuraho of Chhattisgarh'" },
+    { "name": "Sirpur Archaeological Complex", "period": "5th–8th century", "description": "Brick temples; Buddhist viharas" },
+    { "name": "Ratanpur", "location": "Bilaspur", "description": "Ancient Haihaya Kingdom capital; Mahamaya Temple" },
+    { "name": "Malhar", "location": "Bilaspur", "description": "1st–2nd century; ancient Pali-speaking city; Buddhist and Shaivite remains" },
+    { "name": "Kutumsar Caves", "location": "Kanger Valley", "description": "4.5 km long; India's longest natural cave; prehistoric paintings near entrance" }
+  ],
+
+  "adventure": [
+    "Cave Exploration, Kutumsar/Kailash — Guided 4.5 km underground walk; stalactite formations",
+    "Tribal Haat Market Visits — Bastar: Tokapal (Sunday), Nagaras, Kondagaon markets",
+    "Indravati Tiger Safari — Remote; deep forest; advance forest department permission",
+    "Chitrakote Boat Ride — Under the falls spray; available October–March",
+    "Dokra Art Workshop — Kondagaon; learn lost-wax metal casting with tribal artisans",
+    "Achanakmar Trek — Forest trails; wildlife spotting; overnight camping",
+    "Bhoramdeo Cultural Evening — Dance and music performance near temple"
+  ],
+
+  "foodCuisine": {
+    "famousDishes": [
+      { "name": "Bafauri", "description": "Steamed chana dal dumplings; light and nutritious; daily breakfast" },
+      { "name": "Chila", "description": "Rice flour crepes; staple; with garlic chutney or mixed vegetables" },
+      { "name": "Aamat", "description": "Mixed vegetable curry with tamarind and oil; tribal-origin dish" },
+      { "name": "Muthiya", "description": "Spiced rice flour dumplings steamed in banana leaf; tribal" },
+      { "name": "Faraa", "description": "Steamed rice dumplings stuffed with dal paste; popular snack" },
+      { "name": "Mahua Flower Dishes", "description": "Mahua laddoo, mahua roti; seasonal tribal food" },
+      { "name": "Red Ant Chutney (Chapura)", "description": "Tribal delicacy; ant paste with salt and chili; high in protein" }
+    ],
+    "streetFood": [
+      { "name": "Forest Herb Chutneys", "description": "Tendu leaf, Mahua, wild herb varieties; unique to Chhattisgarh" },
+      { "name": "Angakar Roti", "description": "Rice flour flatbread baked on fire; filling and rustic" }
+    ]
+  },
+
+  "stayOptions": {
+    "luxury": [
+      "Bastar Jungle Resort, Jagdalpur — Forest edge; tribal cultural programs",
+      "Hotel Babylon Inn, Raipur — City's best; business and leisure"
+    ],
+    "midRange": [
+      "CGTDC Circuit Houses — Government; most wildlife and heritage sites; ₹500–1,200",
+      "Chitrakote Eco Tourism Resort — Waterfalls view; budget-luxury mix"
+    ],
+    "unique": [
+      "Bastar Tribal Homestays — Kondagaon area; stay with Gond/Maria families",
+      "Tribal Art Homestays, Kondagaon — ₹400–800; includes meals; craft demonstrations"
+    ]
+  },
+
+  "bestTimeToVisit": [
+    { "season": "Best (Winter)", "months": "October – February", "conditions": "10–25°C; Bastar Dussehra (Oct); wildlife safaris; waterfall access" },
+    { "season": "Monsoon", "months": "July – September", "conditions": "Waterfalls at peak; Chitrakote most spectacular; forests lush" },
+    { "season": "Summer", "months": "March – June", "conditions": "35–45°C; avoid central districts; hills (Mainpat) remain cool" }
+  ],
+
+  "transportation": {
+    "airports": [
+      "Swami Vivekananda Airport, Raipur — Largest; domestic; Delhi, Mumbai, Hyderabad",
+      "Jagdalpur Airport — Limited service; nearest to Bastar"
+    ],
+    "railways": [
+      "Raipur Junction — Main junction; Howrah-Mumbai trunk line",
+      "Bilaspur — Major railway hub; Northeast India connections"
+    ],
+    "roads": [
+      "NH 30, NH 43, NH 130 (Trans-Chhattisgarh Highway)",
+      "NH 43 links Raipur to Jagdalpur (300 km)"
+    ]
+  },
+
+  "festivals": [
+    { "name": "Bastar Dussehra", "period": "September–October", "description": "75-day tribal festival; world's longest; Danteshwari Mata rituals" },
+    { "name": "Rajim Kumbh Mela", "period": "February–March", "description": "Mahanadi confluence; large Hindu pilgrimage gathering" },
+    { "name": "Sirpur National Dance Festival", "period": "January", "description": "Open-air classical dance in ancient temple complex" },
+    { "name": "Chakradhar Samaroh", "period": "September", "description": "Raipur; classical music tribute to Chakradhar Singh" },
+    { "name": "Bastar Lokotsav", "period": "January", "description": "Tribal crafts, dance, music festival" },
+    { "name": "Madai Fair", "period": "Throughout winter", "description": "Village deity processions; dozens across Bastar" }
+  ],
+
+  "travelTips": [
+    "Bastar Travel: Some interior Bastar areas remain Naxal-affected; check current advisories; tourist areas (Jagdalpur, Chitrakote, Kanger Valley) are safe",
+    "Tribal Haat Etiquette: Ask before photographing tribal people; purchase crafts directly to support artisans",
+    "Permits: Some interior forest areas require permits from Bastar Collectorate",
+    "Best Guide: Hire local tribal guides for Bastar; they provide irreplaceable cultural context",
+    "Cash: Carry adequate cash; ATMs limited in rural Bastar",
+    "Budget: Very affordable; ₹600–1,200 budget; ₹2,000–4,000 mid; limited luxury"
+  ],
+
+  "uniqueFacts": [
+    "The Bastar Dussehra is the world's longest festival at 75 days, predating the pan-Indian Dussehra",
+    "The Gond tribe of Bastar is one of the world's largest indigenous groups (~4 million in India)",
+    "Chhattisgarh has the largest forest coverage of any state in central India (44%)",
+    "Red ant chutney (Chapura) is a tribal delicacy rich in protein, vitamin C and formic acid",
+    "Kutumsar Caves (4.5 km) are the longest caves in India open to the public with prehistoric paintings",
+    "The Dokra metal craft tradition practiced in Kondagaon is at least 5,000 years old"
+  ]
+}
