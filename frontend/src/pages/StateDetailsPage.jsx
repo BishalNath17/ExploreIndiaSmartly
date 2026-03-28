@@ -21,7 +21,7 @@ import {
   X,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
-import { statesData as states } from '../data/statesData';
+import { statesData as states, stateMapEmbeds } from '../data/statesData';
 import { destinationsData as destinations, destinationImages } from '../data/destinationsData';
 import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 import { getStateKnowledge } from '../data/knowledgeBase';
@@ -54,66 +54,143 @@ const StateNotFound = ({ slug }) => (
 );
 
 /* ═══════════════════════════════════════════════════════
-   1. HERO BANNER
+   1. HERO BANNER  —  State Image + State Map side-by-side
    ═══════════════════════════════════════════════════════ */
-const HeroBanner = ({ state }) => (
-  <section className="relative h-[55vh] sm:h-[65vh] overflow-hidden">
-    {/* Image */}
-    <img
-      src={state.image}
-      alt={state.name}
-      className="absolute inset-0 w-full h-full object-cover"
-    />
-    {/* Gradient overlay */}
-    <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/60 to-navy z-10" />
+const HeroBanner = ({ state }) => {
+  const mapUrl = stateMapEmbeds[state.id] || '';
 
-    {/* Content */}
-    <div className="absolute bottom-0 left-0 w-full p-6 sm:p-12 lg:p-16 z-20 max-w-5xl">
-      <motion.div variants={fadeUp} initial="hidden" animate="visible" className="flex flex-col gap-4 mb-5">
-        <BackButton fallback="/states" label="All States" className="w-fit" />
-        <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-400">
-          <Link to="/" className="hover:text-india-orange transition-colors">Home</Link>
-          <ChevronRight size={14} />
-          <Link to="/states" className="hover:text-india-orange transition-colors">States</Link>
-          <ChevronRight size={14} />
-          <span className="text-gray-200 font-semibold">{state.name}</span>
-        </div>
-      </motion.div>
+  return (
+    <section className="relative pt-24 pb-10 sm:pt-32 sm:pb-14 overflow-hidden">
+      {/* Ambient gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-india-orange/10 via-navy to-navy-dark z-0" />
+      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-india-orange/5 blur-3xl z-0" />
 
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        custom={0.1}
-        className="flex items-center gap-3 mb-3"
-      >
-        <span className="text-[10px] font-bold uppercase tracking-widest text-india-orange bg-india-orange/15 px-3 py-1 rounded-full">
-          {state.type === 'ut' ? 'Union Territory' : 'State'}
-        </span>
-      </motion.div>
+      <div className="relative z-10 max-w-6xl mx-auto section-padding">
+        {/* Navigation row */}
+        <motion.div variants={fadeUp} initial="hidden" animate="visible" className="flex flex-col gap-3 mb-8">
+          <BackButton fallback="/states" label="All States" className="w-fit" />
+          <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-400">
+            <Link to="/" className="hover:text-india-orange transition-colors">Home</Link>
+            <ChevronRight size={14} />
+            <Link to="/states" className="hover:text-india-orange transition-colors">States</Link>
+            <ChevronRight size={14} />
+            <span className="text-gray-200 font-semibold">{state.name}</span>
+          </div>
+        </motion.div>
 
-      <motion.h1
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        custom={0.2}
-        className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-3"
-      >
-        {state.name}
-      </motion.h1>
+        {/* ── Hero Visuals (Image + Map Overlay) ── */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.1}
+          className="relative mb-8 flex flex-col sm:block"
+        >
+          {/* Main State Image */}
+          <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 h-[260px] sm:h-[380px] lg:h-[480px] shadow-2xl group">
+            <img
+              src={state.image}
+              alt={state.name}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-black/20" />
+            <div className="absolute bottom-6 left-6 flex items-center gap-2 z-10">
+              <MapPin size={16} className="text-india-orange" />
+              <span className="text-sm font-medium tracking-wide text-gray-200 drop-shadow-md">{state.name}, India</span>
+            </div>
 
-      <motion.p
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        custom={0.3}
-        className="text-lg sm:text-xl text-gray-300 italic"
-      >
-        {state.tagline}
-      </motion.p>
-    </div>
-  </section>
-);
+            {/* Desktop Map Overlay (Hidden on < sm) */}
+            <div className="hidden sm:block absolute top-6 right-6 w-[260px] h-[180px] lg:w-[320px] lg:h-[220px] rounded-xl overflow-hidden border border-white/20 shadow-[-10px_10px_30px_rgba(0,0,0,0.5)] bg-navy/80 backdrop-blur-md z-20 group-hover:border-white/30 transition-all duration-300">
+              {mapUrl ? (
+                <iframe
+                  src={mapUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0"
+                  title={`Map of ${state.name}`}
+                />
+              ) : (
+                <div className="w-full h-full flex flex-col items-center justify-center text-center p-4 bg-navy-dark/60">
+                  <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-3">
+                    <Map size={22} className="text-gray-400" />
+                  </div>
+                  <h4 className="font-semibold text-gray-300 mb-1 text-xs">Map will be added soon</h4>
+                  <p className="text-gray-500 text-[10px] max-w-[180px]">
+                    Interactive map embedding shortly
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile Map (Shown below image on < sm) */}
+          <div className="sm:hidden mt-4 w-full h-[200px] rounded-2xl overflow-hidden border border-white/10 shadow-lg bg-navy-dark/80 relative">
+            {mapUrl ? (
+              <iframe
+                src={mapUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0"
+                title={`Map of ${state.name}`}
+              />
+            ) : (
+              <div className="w-full h-full flex flex-col items-center justify-center text-center p-6">
+                <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-3">
+                  <Map size={24} className="text-gray-500" />
+                </div>
+                <h4 className="font-bold text-gray-300 mb-1 text-sm">Map will be added soon</h4>
+                <p className="text-gray-500 text-xs max-w-[200px]">
+                  Interactive map will be embedded shortly
+                </p>
+              </div>
+            )}
+          </div>
+        </motion.div>
+
+        {/* ── Title section ── */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.2}
+          className="flex items-center gap-3 mb-3"
+        >
+          <span className="text-[10px] font-bold uppercase tracking-widest text-india-orange bg-india-orange/15 px-3 py-1 rounded-full">
+            {state.type === 'ut' ? 'Union Territory' : 'State'}
+          </span>
+        </motion.div>
+
+        <motion.h1
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.25}
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-3"
+        >
+          {state.name}
+        </motion.h1>
+
+        <motion.p
+          variants={fadeUp}
+          initial="hidden"
+          animate="visible"
+          custom={0.3}
+          className="text-lg sm:text-xl text-gray-300 italic"
+        >
+          {state.tagline}
+        </motion.p>
+      </div>
+    </section>
+  );
+};
 
 /* ═══════════════════════════════════════════════════════
    2. OVERVIEW + INFO CARDS
@@ -133,7 +210,9 @@ const Overview = ({ state, data }) => {
     {
       icon: MapPin,
       label: 'Coordinates',
-      value: `${state.coords.lat.toFixed(2)}°N, ${state.coords.lng.toFixed(2)}°E`,
+      value: state?.coords && typeof state.coords === 'object' && state.coords.lat 
+        ? `${Number(state.coords.lat).toFixed(2)}°N, ${Number(state.coords.lng).toFixed(2)}°E` 
+        : 'Location coords unavailable',
     },
   ];
 
@@ -605,16 +684,29 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
               </div>
 
               {/* Title & Details */}
-              <h2 className="text-3xl sm:text-4xl font-bold mb-3">{dest.name}</h2>
-              {dest.location && (
-                <p className="flex items-center gap-2 text-gray-400 text-sm mb-6">
-                  <MapPin size={16} className="text-india-orange shrink-0" /> {dest.location}
+              <h2 className="text-3xl sm:text-4xl font-bold mb-3">{dest.name || 'Unknown Destination'}</h2>
+              
+              {/* Enhanced Location Rendering with new fields */}
+              {(dest.location || dest.district || dest.city) && (
+                <p className="flex items-center gap-2 text-gray-400 text-sm mb-4">
+                  <MapPin size={16} className="text-india-orange shrink-0" /> 
+                  {dest.city ? `${dest.city}` : ''}
+                  {dest.city && dest.district ? ', ' : ''}
+                  {dest.district ? `${dest.district} District` : ''}
+                  {!dest.city && !dest.district && dest.location ? dest.location : ''}
                 </p>
               )}
-              <p className="text-gray-300 leading-relaxed mb-8">{dest.description}</p>
+              
+              {dest.address && (
+                <p className="text-gray-400 text-sm italic mb-4">
+                  <span className="font-semibold text-gray-300">Address: </span>{dest.address}
+                </p>
+              )}
+              
+              <p className="text-gray-300 leading-relaxed mb-6">{dest.description || 'No description available for this destination.'}</p>
               
               {dest.whyFamous && (
-                <div className="bg-navy-dark/50 rounded-xl p-5 border-l-4 border-india-orange">
+                <div className="bg-navy-dark/50 rounded-xl p-5 border-l-4 border-india-orange mb-4">
                   <h4 className="text-sm font-bold text-india-orange mb-1">Famous For</h4>
                   <p className="text-gray-300 text-sm leading-relaxed">{dest.whyFamous}</p>
                 </div>
@@ -625,7 +717,7 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
             <div className="w-full bg-navy-dark rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-[400px] border border-gray-800 relative flex flex-col items-center justify-center">
               {dest.mapEmbedUrl ? (
                 <iframe 
-                  src={dest.mapEmbedUrl} 
+                  src={typeof dest.mapEmbedUrl === 'string' && dest.mapEmbedUrl.match(/src=["']([^"']+)["']/) ? dest.mapEmbedUrl.match(/src=["']([^"']+)["']/)[1] : dest.mapEmbedUrl} 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
@@ -633,7 +725,7 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                   className="absolute inset-0 z-0"
-                  title={`Map of ${dest.name}`}
+                  title={`Map of ${dest.name || 'Destination'}`}
                 ></iframe>
               ) : (
                 <div className="text-center p-6 z-10">
@@ -650,13 +742,20 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
   );
 };
 
-const KBTopDestinations = ({ data, stateId }) => {
+const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
   const [showAll, setShowAll] = React.useState(false);
   const [selectedDest, setSelectedDest] = React.useState(null);
 
-  if (!data?.topDestinations?.length) return null;
+  const kbDests = data?.topDestinations || [];
   
-  const allDests = data.topDestinations;
+  // Deduplicate against KB top destinations safely
+  const kbNames = new Set(kbDests.map(d => toSlug(d.name || '')));
+  const uniqueAdditional = additionalDestinations.filter(d => !kbNames.has(toSlug(d.name || '')));
+  
+  const allDests = [...kbDests, ...uniqueAdditional];
+
+  if (!allDests.length) return null;
+  
   const dests = showAll ? allDests : allDests.slice(0, 6);
 
   return (
@@ -707,41 +806,13 @@ const KBTopDestinations = ({ data, stateId }) => {
   );
 };
 
-/* ═══════════════════════════════════════════════════════
-   3. POPULAR DESTINATIONS
-   ═══════════════════════════════════════════════════════ */
-const PopularDestinations = ({ stateSlug, stateName }) => {
-  const stateDestinations = destinations.filter((d) => d.state === stateSlug);
 
-  return (
-    <section className="py-16 sm:py-20 section-padding bg-navy-dark/50">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeader
-          title="Popular Destinations"
-          subtitle={`Must-visit places in ${stateName}.`}
-        />
-
-        {stateDestinations.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {stateDestinations.map((dest) => (
-              <DestinationCard key={dest.id} destination={dest} />
-            ))}
-          </div>
-        ) : (
-          <ScrollReveal>
-            <EmptyState icon={MapPin} message={`We're curating destinations for ${stateName}. Check back soon!`} />
-          </ScrollReveal>
-        )}
-      </div>
-    </section>
-  );
-};
 
 /* ═══════════════════════════════════════════════════════
    4. HIDDEN GEMS
    ═══════════════════════════════════════════════════════ */
 const HiddenGemsSection = ({ stateSlug, stateName }) => {
-  const gems = hiddenGems.filter((g) => g.state === stateSlug);
+  const gems = hiddenGems.filter((g) => g.state === stateSlug || (g.state ? toSlug(g.state) === stateSlug : false));
 
   if (gems.length === 0) return null;
 
@@ -806,11 +877,16 @@ const StateDetailsPage = () => {
 
   if (!state) return <StateNotFound slug={stateSlug} />;
 
+  const stateDestinations = destinations.filter((d) => {
+    return d.state === stateSlug || (d.state ? toSlug(d.state) === stateSlug : false);
+  });
+
   return (
     <>
       <HeroBanner state={state} />
       <Overview state={state} data={kb} />
-      <KBTopDestinations data={kb} stateId={state.id} />
+      <KBTopDestinations data={kb} stateId={state.id} additionalDestinations={stateDestinations} />
+      <HiddenGemsSection stateSlug={state.id} stateName={state.name} />
       <KBFood data={kb} />
       <KBStayOptions data={kb} />
       <KBActivities data={kb} />

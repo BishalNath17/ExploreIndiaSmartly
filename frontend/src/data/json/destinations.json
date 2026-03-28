@@ -1,0 +1,3548 @@
+[
+  {
+    "id": "tirupati",
+    "name": "Tirupati",
+    "state": "andhra-pradesh",
+    "description": "Home to the Tirumala Venkateswara Temple, the richest and most visited pilgrimage centre in the world.",
+    "image": "/images/destinations/tirupati.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "visakhapatnam",
+    "name": "Visakhapatnam",
+    "state": "andhra-pradesh",
+    "description": "The Jewel of the East Coast — pristine beaches, submarine museums, and the lush Araku Valley nearby.",
+    "image": "/images/destinations/visakhapatnam.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "tawang",
+    "name": "Tawang",
+    "state": "arunachal-pradesh",
+    "description": "A mist-clad Himalayan town with the second-largest Buddhist monastery in the world after Lhasa.",
+    "image": "/images/destinations/tawang.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "ziro-valley",
+    "name": "Ziro Valley",
+    "state": "arunachal-pradesh",
+    "description": "A lush, pine-clad valley home to the Apatani tribe and an epic outdoor music festival.",
+    "image": "/images/destinations/ziro-valley.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "kaziranga",
+    "name": "Kaziranga",
+    "state": "assam",
+    "description": "A UNESCO World Heritage Site protecting two-thirds of the world's one-horned rhinoceroses.",
+    "image": "/images/destinations/kaziranga.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "majuli-island",
+    "name": "Majuli Island",
+    "state": "assam",
+    "description": "The world's largest river island and a hub of neo-Vaishnavite culture on the Brahmaputra.",
+    "image": "/images/destinations/majuli-island.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "bodh-gaya",
+    "name": "Bodh Gaya",
+    "state": "bihar",
+    "description": "The place where Siddhartha Gautama attained enlightenment — one of Buddhism's holiest sites.",
+    "image": "/images/destinations/bodh-gaya.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "nalanda",
+    "name": "Nalanda",
+    "state": "bihar",
+    "description": "Ruins of the ancient Nalanda University, once the world's greatest centre of learning.",
+    "image": "/images/destinations/nalanda.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "chitrakote",
+    "name": "Chitrakote Falls",
+    "state": "chhattisgarh",
+    "description": "India's widest waterfall, often called the \"Niagara of India\", on the Indravati River.",
+    "image": "/images/destinations/chitrakote.jpg",
+    "rating": 4.4,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "palolem",
+    "name": "Palolem Beach",
+    "state": "goa",
+    "description": "A crescent-shaped beach in south Goa with calm waters, colourful beach huts, and vibrant nightlife.",
+    "image": "/images/destinations/palolem.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "old-goa",
+    "name": "Old Goa",
+    "state": "goa",
+    "description": "UNESCO-listed Portuguese churches including the Basilica of Bom Jesus and Se Cathedral.",
+    "image": "/images/destinations/old-goa.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "rann-of-kutch",
+    "name": "Rann of Kutch",
+    "state": "gujarat",
+    "description": "A vast white salt desert that transforms into a cultural wonderland during the Rann Utsav festival.",
+    "image": "/images/destinations/rann-of-kutch.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "gir",
+    "name": "Gir National Park",
+    "state": "gujarat",
+    "description": "The last refuge of the Asiatic lion — a premier wildlife sanctuary in the Saurashtra region.",
+    "image": "/images/destinations/gir.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "dholavira",
+    "name": "Dholavira",
+    "state": "gujarat",
+    "description": "A 5,000-year-old Indus Valley Civilisation site in the Rann of Kutch, a UNESCO World Heritage Site.",
+    "image": "/images/destinations/dholavira.jpg",
+    "rating": 4.4,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "kurukshetra",
+    "name": "Kurukshetra",
+    "state": "haryana",
+    "description": "The legendary battlefield of the Mahabharata, now a spiritual tourism hub with sacred tanks and temples.",
+    "image": "/images/destinations/kurukshetra.jpg",
+    "rating": 4.3,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "shimla",
+    "name": "Shimla",
+    "state": "himachal-pradesh",
+    "description": "The former summer capital of British India, with colonial architecture, Mall Road, and pine-clad hills.",
+    "image": "/images/destinations/shimla.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "manali",
+    "name": "Manali",
+    "state": "himachal-pradesh",
+    "description": "A Himalayan resort town on the Beas River, gateway to adventure sports and the Rohtang Pass.",
+    "image": "/images/destinations/manali.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "spiti-valley",
+    "name": "Spiti Valley",
+    "state": "himachal-pradesh",
+    "description": "A cold desert mountain valley with ancient monasteries, surreal landscapes, and star-filled skies.",
+    "image": "/images/destinations/spiti-valley.jpg",
+    "rating": 4.9,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "deoghar",
+    "name": "Deoghar",
+    "state": "jharkhand",
+    "description": "A sacred town famous for the Baidyanath Dham temple, one of the twelve Jyotirlingas of Lord Shiva.",
+    "image": "/images/destinations/deoghar.jpg",
+    "rating": 4.4,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "hampi",
+    "name": "Hampi",
+    "state": "karnataka",
+    "description": "Ruins of the Vijayanagara Empire scattered among boulder-strewn terrain — a UNESCO World Heritage Site.",
+    "image": "/images/destinations/hampi.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "coorg",
+    "name": "Coorg",
+    "state": "karnataka",
+    "description": "The \"Scotland of India\" — misty hills, coffee plantations, waterfalls, and Kodava culture.",
+    "image": "/images/destinations/coorg.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "mysuru",
+    "name": "Mysuru",
+    "state": "karnataka",
+    "description": "The City of Palaces — Mysore Palace, Chamundi Hills, and the vibrant Dasara festival.",
+    "image": "/images/destinations/mysuru.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "munnar",
+    "name": "Munnar",
+    "state": "kerala",
+    "description": "Verdant tea plantations and misty hills in God's Own Country.",
+    "image": "/images/destinations/munnar.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "alleppey",
+    "name": "Alleppey",
+    "state": "kerala",
+    "description": "The Venice of the East — emerald backwater canals, houseboats, and coconut-fringed waterways.",
+    "image": "/images/destinations/alleppey.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "varkala",
+    "name": "Varkala",
+    "state": "kerala",
+    "description": "Dramatic red-laterite cliffs overlooking the Arabian Sea, with beach cafés and the ancient Janardanaswamy Temple.",
+    "image": "/images/destinations/varkala.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "khajuraho",
+    "name": "Khajuraho",
+    "state": "madhya-pradesh",
+    "description": "Exquisite 10th-century temples with intricate erotic sculptures — a UNESCO World Heritage Site.",
+    "image": "/images/destinations/khajuraho.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "bandhavgarh",
+    "name": "Bandhavgarh",
+    "state": "madhya-pradesh",
+    "description": "One of India's best tiger reserves with the highest density of Bengal tigers in the country.",
+    "image": "/images/destinations/bandhavgarh.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "mumbai",
+    "name": "Mumbai",
+    "state": "maharashtra",
+    "description": "The City of Dreams — Gateway of India, marine drives, Bollywood, street food, and endless energy.",
+    "image": "/images/destinations/mumbai.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "ajanta-ellora",
+    "name": "Ajanta & Ellora Caves",
+    "state": "maharashtra",
+    "description": "Rock-cut Buddhist, Hindu, and Jain cave temples dating back to the 2nd century BCE.",
+    "image": "/images/destinations/ajanta-ellora.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "loktak-lake",
+    "name": "Loktak Lake",
+    "state": "manipur",
+    "description": "The largest freshwater lake in north-east India, famous for its floating islands (phumdis).",
+    "image": "/images/destinations/loktak-lake.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "cherrapunji",
+    "name": "Cherrapunji",
+    "state": "meghalaya",
+    "description": "One of the wettest places on Earth, with living root bridges, dramatic waterfalls, and misty valleys.",
+    "image": "/images/destinations/cherrapunji.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "dawki",
+    "name": "Dawki",
+    "state": "meghalaya",
+    "description": "Crystal-clear Umngot River where boats appear to float in mid-air — the clearest river in India.",
+    "image": "/images/destinations/dawki.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "kohima",
+    "name": "Kohima",
+    "state": "nagaland",
+    "description": "The capital of Nagaland and gateway to the Hornbill Festival, with WWII war cemeteries and tribal heritage.",
+    "image": "/images/destinations/kohima.jpg",
+    "rating": 4.4,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "puri",
+    "name": "Puri",
+    "state": "odisha",
+    "description": "A sacred seaside city home to the Jagannath Temple and the spectacular annual Rath Yatra procession.",
+    "image": "/images/destinations/puri.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "konark",
+    "name": "Konark Sun Temple",
+    "state": "odisha",
+    "description": "A 13th-century temple shaped like a giant chariot, dedicated to the Sun God — a UNESCO marvel.",
+    "image": "/images/destinations/konark.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "amritsar",
+    "name": "Amritsar",
+    "state": "punjab",
+    "description": "The Golden Temple (Harmandir Sahib), the Wagah Border ceremony, and unforgettable Punjabi cuisine.",
+    "image": "/images/destinations/amritsar.jpg",
+    "rating": 4.9,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "jaipur",
+    "name": "Jaipur",
+    "state": "rajasthan",
+    "description": "The Pink City — majestic palaces, Amber Fort, Hawa Mahal, and rich Rajput heritage.",
+    "image": "/images/destinations/jaipur.jpg",
+    "rating": 4.9,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "udaipur",
+    "name": "Udaipur",
+    "state": "rajasthan",
+    "description": "The City of Lakes — romantic palaces, shimmering lakes, and sunset boat rides.",
+    "image": "/images/destinations/udaipur.jpg",
+    "rating": 4.9,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "jaisalmer",
+    "name": "Jaisalmer",
+    "state": "rajasthan",
+    "description": "The Golden City — a living sandstone fort, camel safaris across the Thar Desert, and starlit dunes.",
+    "image": "/images/destinations/jaisalmer.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "jodhpur",
+    "name": "Jodhpur",
+    "state": "rajasthan",
+    "description": "The Blue City — Mehrangarh Fort towering above a sea of blue-painted houses.",
+    "image": "/images/destinations/jodhpur.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "gangtok",
+    "name": "Gangtok",
+    "state": "sikkim",
+    "description": "A charming hill-station capital with panoramic views of Kanchenjunga, monasteries, and cable cars.",
+    "image": "/images/destinations/gangtok.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "pelling",
+    "name": "Pelling",
+    "state": "sikkim",
+    "description": "Stunning Kanchenjunga views, the glass Skywalk, ancient Pemayangtse Monastery, and the Kanchenjunga Falls.",
+    "image": "/images/destinations/pelling.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "mahabalipuram",
+    "name": "Mahabalipuram",
+    "state": "tamil-nadu",
+    "description": "UNESCO shore temples, stone-carved rathas, and Arjuna's Penance — Pallava dynasty heritage by the sea.",
+    "image": "/images/destinations/mahabalipuram.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "ooty",
+    "name": "Ooty",
+    "state": "tamil-nadu",
+    "description": "Queen of Hill Stations — Nilgiri toy train, botanical gardens, and cool tea-estate walks.",
+    "image": "/images/destinations/ooty.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "madurai",
+    "name": "Madurai",
+    "state": "tamil-nadu",
+    "description": "The Temple City — the magnificent Meenakshi Amman Temple and centuries of Dravidian heritage.",
+    "image": "/images/destinations/madurai.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "hyderabad",
+    "name": "Hyderabad",
+    "state": "telangana",
+    "description": "The City of Pearls — Charminar, Golconda Fort, world-class biryani, and a booming tech scene.",
+    "image": "/images/destinations/hyderabad.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "unakoti",
+    "name": "Unakoti",
+    "state": "tripura",
+    "description": "Mysterious rock carvings and sculptures of Hindu deities etched into a hillside, dating back to the 7th century.",
+    "image": "/images/destinations/unakoti-1774729238074.png",
+    "rating": "4.3",
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "_cat": "destinations"
+  },
+  {
+    "id": "agra",
+    "name": "Agra",
+    "state": "uttar-pradesh",
+    "description": "Home to the Taj Mahal, Agra Fort, and Fatehpur Sikri — the crown jewel of Mughal architecture.",
+    "image": "/images/destinations/agra.jpg",
+    "rating": 4.9,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "varanasi",
+    "name": "Varanasi",
+    "state": "uttar-pradesh",
+    "description": "The spiritual heart of India — ancient ghats, evening Ganga Aarti, and timeless traditions on the banks of the Ganges.",
+    "image": "/images/destinations/varanasi.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "lucknow",
+    "name": "Lucknow",
+    "state": "uttar-pradesh",
+    "description": "The City of Nawabs — Bara Imambara, Rumi Darwaza, legendary kebabs, and refined Awadhi culture.",
+    "image": "/images/destinations/lucknow.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "rishikesh",
+    "name": "Rishikesh",
+    "state": "uttarakhand",
+    "description": "The Yoga Capital of the World — Ganga rapids, ashrams, the Beatles Ashram, and bungee jumping.",
+    "image": "/images/destinations/rishikesh.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "nainital",
+    "name": "Nainital",
+    "state": "uttarakhand",
+    "description": "A charming lakeside hill station surrounded by seven hills, colonial-era charm, and vibrant Mall Road.",
+    "image": "/images/destinations/nainital.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "chopta",
+    "name": "Chopta",
+    "state": "uttarakhand",
+    "description": "The \"Mini Switzerland\" of India — alpine meadows, Tungnath temple trek, and panoramic Himalayan views.",
+    "image": "/images/destinations/chopta.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "darjeeling",
+    "name": "Darjeeling",
+    "state": "west-bengal",
+    "description": "Tea gardens with Kanchenjunga views, the Darjeeling Himalayan Railway (toy train), and colonial charm.",
+    "image": "/images/destinations/darjeeling.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "sundarbans",
+    "name": "Sundarbans",
+    "state": "west-bengal",
+    "description": "The world's largest mangrove forest, home to the Royal Bengal Tiger, in the Ganges delta.",
+    "image": "/images/destinations/sundarbans.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "havelock-island",
+    "name": "Havelock Island",
+    "state": "andaman-nicobar",
+    "description": "Radhanagar Beach (Asia's best beach), turquoise waters, scuba diving, and lush tropical forests.",
+    "image": "/images/destinations/havelock-island.jpg",
+    "rating": 4.9,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "state": "delhi",
+    "description": "India's capital — Red Fort, Qutub Minar, Humayun's Tomb, Chandni Chowk street food, and seven historic cities.",
+    "image": "/images/destinations/delhi.jpg",
+    "rating": 4.7,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "srinagar",
+    "name": "Srinagar",
+    "state": "jammu-kashmir",
+    "description": "Dal Lake houseboats, Mughal gardens, floating flower markets, and snow-draped Zabarwan Hills.",
+    "image": "/images/destinations/srinagar.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "gulmarg",
+    "name": "Gulmarg",
+    "state": "jammu-kashmir",
+    "description": "A premier ski resort and the world's second-highest operating gondola, surrounded by snow-capped peaks.",
+    "image": "/images/destinations/gulmarg.jpg",
+    "rating": 4.8,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "leh",
+    "name": "Leh",
+    "state": "ladakh",
+    "description": "A high-altitude town with ancient Buddhist monasteries, prayer flags, and the gateway to the world's highest passes.",
+    "image": "/images/destinations/leh.jpg",
+    "rating": 4.9,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "pangong-lake",
+    "name": "Pangong Lake",
+    "state": "ladakh",
+    "description": "An endorheic lake at 14,000 ft altitude whose waters shift between shades of blue, green, and violet.",
+    "image": "/images/destinations/pangong-lake.jpg",
+    "rating": 4.9,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "puducherry",
+    "name": "Puducherry",
+    "state": "puducherry",
+    "description": "Pastel-coloured French Quarter, Auroville, serene promenades, and some of the best cafés in South India.",
+    "image": "/images/destinations/puducherry.jpg",
+    "rating": 4.6,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ]
+  },
+  {
+    "id": "kadarnath-uttarakhand",
+    "name": "Kadarnath",
+    "state": "uttarakhand",
+    "description": "Lord Shiva Temple",
+    "rating": "5",
+    "image": "/images/destinations/kadarnath-uttarakhand-1774720544506.png"
+  },
+  {
+    "id": "surma-dongur-tuisoi-waterfall-tripura",
+    "name": "Surma Dongur Tuisoi Waterfall",
+    "state": "tripura",
+    "description": "Surma Dongur Tuisoi Waterfall \r\nDhalai District ",
+    "rating": "3",
+    "image": "/images/destinations/surma-dongur-tuisoi-waterfall-tripura-1774723373136.webp",
+    "_cat": "destinations",
+    "mapEmbedUrl": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.1924622015463!2d91.9009643!3d24.1238474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37522b7dd8b6b18b%3A0x25002f2ce591c173!2sSurma%20Dongur%20Tuisoi%20Waterfall!5e1!3m2!1sen!2sin!4v1774727914522!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+    "district": "Dhalai"
+  },
+  {
+    "id": "tirupati-tirumala",
+    "name": "Tirupati & Tirumala",
+    "state": "andhra-pradesh",
+    "description": "Pilgrimage twin-city. Tirumala is the hilltop site of the famous Sri Venkateswara Temple (Vishnu), the richest and most-visited Hindu shrine (≈25 million devotees per year).",
+    "district": "",
+    "city": "Chittoor",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "World's most visited religious site",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/tirupati-tirumala.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "visakhapatnam-vizag",
+    "name": "Visakhapatnam (Vizag)",
+    "state": "andhra-pradesh",
+    "description": "Andhra's largest coastal city, known as the 'Jewel of the East Coast'. A busy port with scenic beaches (e.g. RK Beach, Rushikonda) and the Eastern Ghats hills as backdrop.",
+    "district": "",
+    "city": "North Andhra",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Beaches and hills",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/visakhapatnam-vizag.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "city"
+  },
+  {
+    "id": "araku-valley",
+    "name": "Araku Valley",
+    "state": "andhra-pradesh",
+    "description": "A cool hill station 120 km northwest of Visakhapatnam. Lush forests, streams and waterfalls surround coffee plantations and tribal villages.",
+    "district": "",
+    "city": "Visakhapatnam District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Coffee plantations & tribal culture",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/araku-valley.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "amaravati",
+    "name": "Amaravati",
+    "state": "andhra-pradesh",
+    "description": "Planned capital region on the Krishna River plains. A historic Buddhist center – site of the ancient Amaravati Stupa ruins (3rd century BCE onward).",
+    "district": "",
+    "city": "Guntur",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Buddhist Stupa & capital city",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/amaravati.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "lepakshi-veerabhadra-temple",
+    "name": "Lepakshi (Veerabhadra Temple)",
+    "state": "andhra-pradesh",
+    "description": "Famed for its 16th-century Veerabhadra temple complex. Renowned for monumental carvings, notably a granite hanging pillar and huge Nandi bull, and vibrant frescoes.",
+    "district": "",
+    "city": "Anantapur",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Vijayanagara carvings & hanging pillar",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/lepakshi-veerabhadra-temple.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "nagarjunakonda",
+    "name": "Nagarjunakonda",
+    "state": "andhra-pradesh",
+    "description": "Archaeological island in the Nagarjuna Sagar reservoir. Excavations uncovered monasteries, sculptures and stupas of the Ikshvaku dynasty. Displays ancient Buddhist relics.",
+    "district": "",
+    "city": "Nalgonda",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Submerged Buddhist city & museum",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/nagarjunakonda.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "srikalahasti",
+    "name": "Srikalahasti",
+    "state": "andhra-pradesh",
+    "description": "Home to the Srikalahasteeswara Temple – an 11th-century Shiva shrine (Vayu Lingam) and one of the Pancha Bhuta temples set amidst rocky hills.",
+    "district": "",
+    "city": "Chittoor",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Vayu Lingam & evening rituals",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/srikalahasti.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "vijayawada",
+    "name": "Vijayawada",
+    "state": "andhra-pradesh",
+    "description": "Major city on the Krishna River. A commercial and cultural hub, Vijayawada's top landmark is the Kanaka Durga Temple atop Indrakeeladri hill.",
+    "district": "",
+    "city": "NTR District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Kanaka Durga & Prakasam Barrage",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/vijayawada.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "city"
+  },
+  {
+    "id": "sri-venkateswara-temple",
+    "name": "Sri Venkateswara Temple",
+    "state": "andhra-pradesh",
+    "description": "World-famous hilltop Vishnu temple, holiest and richest temples. The gold-plated domes and lavish ornamentation of the 9th-century shrine attract pilgrims worldwide.",
+    "district": "",
+    "city": "Tirumala",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Richest Hindu temple",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/sri-venkateswara-temple.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "srikalahasteeswara-temple",
+    "name": "Srikalahasteeswara Temple",
+    "state": "andhra-pradesh",
+    "description": "Ancient Shiva temple representing wind (Vayu Lingam). The hilltop complex is celebrated for its spiritual energy and historic architecture.",
+    "district": "",
+    "city": "Srikalahasti",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Pancha Bhuta shrine",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/srikalahasteeswara-temple.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "kanaka-durga-temple",
+    "name": "Kanaka Durga Temple",
+    "state": "andhra-pradesh",
+    "description": "Iconic Durga Devi temple on Indrakeeladri hill. The towering granite idol and annual festivals (Navaratri) draw thousands.",
+    "district": "",
+    "city": "Vijayawada",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Shakti Peetha & Navaratri",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kanaka-durga-temple.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "simhachalam-temple",
+    "name": "Simhachalam Temple",
+    "state": "andhra-pradesh",
+    "description": "13th-century Vaishnava shrine dedicated to Varaha Lakshmi Narasimha. Houses a unique idol usually covered in sandalwood paste.",
+    "district": "",
+    "city": "Visakhapatnam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Unique Lion-Man avatar idol",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/simhachalam-temple.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "srisailam-mallikarjuna",
+    "name": "Srisailam (Mallikarjuna)",
+    "state": "andhra-pradesh",
+    "description": "Legendary Shaivite temple on the Nallamala Hills. One of the 12 Jyotirlingas and 18 Shakti Peethas framed by the Krishna River gorge.",
+    "district": "",
+    "city": "Kurnool",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Jyotirlinga & Shakti Peetha",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/srisailam-mallikarjuna.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "alampur-navabrahma-temples",
+    "name": "Alampur Navabrahma Temples",
+    "state": "andhra-pradesh",
+    "description": "Group of nine ancient 7th-9th century Shiva shrines. Important example of early Dravidian/Vesara architecture.",
+    "district": "",
+    "city": "Alampuram",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Pallava-era architecture",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/alampur-navabrahma-temples.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage_spiritual"
+  },
+  {
+    "id": "ahobilam",
+    "name": "Ahobilam",
+    "state": "andhra-pradesh",
+    "description": "Sacred mountain gorge and foremost center of Narasimha worship. Includes nine cave temples along a steep valley in the Eastern Ghats.",
+    "district": "",
+    "city": "Nandyal",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Navanarasimhulu cave temples",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/ahobilam.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual_nature"
+  },
+  {
+    "id": "mukhalingam-temples",
+    "name": "Mukhalingam Temples",
+    "state": "andhra-pradesh",
+    "description": "Trio of 11th-century Shiva temples reflecting Kalinga architectural style, noted for their colossal six-faced stone lingam.",
+    "district": "",
+    "city": "Srikakulam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Kalinga architecture",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/mukhalingam-temples.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage_spiritual"
+  },
+  {
+    "id": "rushikonda-beach",
+    "name": "Rushikonda Beach",
+    "state": "andhra-pradesh",
+    "description": "A golden-sand beach famous for clear waters and water sports like snorkeling, windsurfing. Backed by wooded hills and resorts.",
+    "district": "",
+    "city": "Visakhapatnam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Water sports & scenic bay",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/rushikonda-beach.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "beach"
+  },
+  {
+    "id": "ramakrishna-rk-beach",
+    "name": "Ramakrishna (RK) Beach",
+    "state": "andhra-pradesh",
+    "description": "Main city beach known for its wide promenade, Bay of Bengal sunsets, INS Kurusura submarine museum, and beach festivals.",
+    "district": "",
+    "city": "Visakhapatnam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Submarine museum & city views",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/ramakrishna-rk-beach.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "beach"
+  },
+  {
+    "id": "bheemunipatnam-bheemili-beach",
+    "name": "Bheemunipatnam (Bheemili) Beach",
+    "state": "andhra-pradesh",
+    "description": "Tranquil beach with golden sands and coconut groves. Features Dutch cemeteries, old lighthouse and colonial churches.",
+    "district": "",
+    "city": "Visakhapatnam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Dutch heritage & calm waters",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bheemunipatnam-bheemili-beach.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "beach"
+  },
+  {
+    "id": "mypadu-beach",
+    "name": "Mypadu Beach",
+    "state": "andhra-pradesh",
+    "description": "1500–600 m curve of white sand along the Bay of Bengal, favored for weekend getaways, swimming, and water rides.",
+    "district": "",
+    "city": "Nellore",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "White sand & sunsets",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/mypadu-beach.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "beach"
+  },
+  {
+    "id": "vodarevu-beach",
+    "name": "Vodarevu Beach",
+    "state": "andhra-pradesh",
+    "description": "Quiet fishing village beach famous for its long wooden pier, expansive sunrise views, and nearby mangroves.",
+    "district": "",
+    "city": "Prakasam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Sunrise views & peaceful charm",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/vodarevu-beach.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "beach"
+  },
+  {
+    "id": "manginapudi-beach",
+    "name": "Manginapudi Beach",
+    "state": "andhra-pradesh",
+    "description": "Sandy beach with palm groves and a lighthouse, popular for local outings, gentle waves, and backwater access.",
+    "district": "",
+    "city": "Krishna",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Black sands & wading",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/manginapudi-beach.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "beach"
+  },
+  {
+    "id": "talakona-waterfall",
+    "name": "Talakona Waterfall",
+    "state": "andhra-pradesh",
+    "description": "Andhra Pradesh's highest waterfall (91 m) in Sri Venkateswara National Park. Plunges amidst dense deciduous forests.",
+    "district": "",
+    "city": "Chittoor",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Highest waterfall in AP",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/talakona-waterfall.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "ethipothala-falls",
+    "name": "Ethipothala Falls",
+    "state": "andhra-pradesh",
+    "description": "A 70-foot cascade on the Chandravanka River flowing year-round, popular for its viewpoint overlooking a rocky gorge.",
+    "district": "",
+    "city": "Nalgonda",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Scenic rocky cascading falls",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/ethipothala-falls.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "ubbalamadugu-falls-tada-falls",
+    "name": "Ubbalamadugu Falls (Tada Falls)",
+    "state": "andhra-pradesh",
+    "description": "A 100-meter-high waterfall popular with trekkers, requiring a rugged hike through jungle in the Siddulaiah Kona forests.",
+    "district": "",
+    "city": "Chittoor",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Trekking waterfall trails",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/ubbalamadugu-falls-tada-falls.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "eastern-ghats-nallamala-range",
+    "name": "Eastern Ghats (Nallamala Range)",
+    "state": "andhra-pradesh",
+    "description": "A fragmented mountain chain of dense forests and wildlife sanctuaries spanning parallel to the coast.",
+    "district": "",
+    "city": "Eastern AP",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Red sanders & tiger reserves",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/eastern-ghats-nallamala-range.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "horsley-hills",
+    "name": "Horsley Hills",
+    "state": "andhra-pradesh",
+    "description": "Hill resort at ~1,300m elevation known as 'Ooty of Andhra'. Evergreen forests, eucalyptus, and panoramic viewpoints.",
+    "district": "",
+    "city": "Annamayya",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Cool hill station retreat",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/horsley-hills.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "sri-venkateswara-national-park",
+    "name": "Sri Venkateswara National Park",
+    "state": "andhra-pradesh",
+    "description": "A 353 sq km moist deciduous forest reserve in Seshachalam Biosphere guarding endemic flora and wildlife.",
+    "district": "",
+    "city": "Chittoor/Annamayya",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Red sandalwood & waterfalls",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/sri-venkateswara-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "wildlife"
+  },
+  {
+    "id": "nagarjunasagar-srisailam-tiger-reserve",
+    "name": "Nagarjunasagar-Srisailam Tiger Reserve",
+    "state": "andhra-pradesh",
+    "description": "India's largest tiger reserve spanning dense forests and deep gorges along the Krishna River. Home to Bengal tigers and leopards.",
+    "district": "",
+    "city": "Nallamala Range",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Largest tiger reserve in India",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/nagarjunasagar-srisailam-tiger-reserve.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "wildlife"
+  },
+  {
+    "id": "coringa-wildlife-sanctuary",
+    "name": "Coringa Wildlife Sanctuary",
+    "state": "andhra-pradesh",
+    "description": "India's third-largest mangrove forest. Crucial coastal wetland ecosystem conserving endangered birds, fishing cats, and boating.",
+    "district": "",
+    "city": "Kakinada",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Vast mangrove estauries",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/coringa-wildlife-sanctuary.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "wildlife"
+  },
+  {
+    "id": "krishna-wildlife-sanctuary",
+    "name": "Krishna Wildlife Sanctuary",
+    "state": "andhra-pradesh",
+    "description": "Coastal mangrove reserve on the Krishna River delta harboring dense forests, migratory birds, and crocodiles.",
+    "district": "",
+    "city": "Machilipatnam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Pristine mangrove tracts",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/krishna-wildlife-sanctuary.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "wildlife"
+  },
+  {
+    "id": "lepakshi-temple-complex",
+    "name": "Lepakshi Temple Complex",
+    "state": "andhra-pradesh",
+    "description": "16th-century Veerabhadra temple with exquisite Vijayanagara carvings, giant Nandi, and hanging pillars.",
+    "district": "",
+    "city": "Anantapur",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Floating pillar architecture",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/lepakshi-temple-complex.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "undavalli-caves",
+    "name": "Undavalli Caves",
+    "state": "andhra-pradesh",
+    "description": "4th-5th century rock-cut caves. Multi-storeyed sandstone halls with a colossal reclining Vishnu sculpture.",
+    "district": "",
+    "city": "Vijayawada",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Rock-cut monolithic architecture",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/undavalli-caves.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "bhavani-island",
+    "name": "Bhavani Island",
+    "state": "andhra-pradesh",
+    "description": "Large 133-acre river island in the Krishna River featuring boat rides, water sports, and parks.",
+    "district": "",
+    "city": "Vijayawada",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Largest river island in AP",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bhavani-island.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage_nature"
+  },
+  {
+    "id": "chandragiri-fort",
+    "name": "Chandragiri Fort",
+    "state": "andhra-pradesh",
+    "description": "11th-century hilltop fort, later a Vijayanagara capital. Houses the Raja and Rani Mahal palaces.",
+    "district": "",
+    "city": "Tirupati",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Vijayanagara palaces & museums",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/chandragiri-fort.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "kondapalli-fort",
+    "name": "Kondapalli Fort",
+    "state": "andhra-pradesh",
+    "description": "14th-century Reddi dynasty fort on laterite hills. The village is known for its traditional wooden toys.",
+    "district": "",
+    "city": "Vijayawada",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Historic fort & traditional toys",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kondapalli-fort.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "bobbili-fort",
+    "name": "Bobbili Fort",
+    "state": "andhra-pradesh",
+    "description": "Mid-19th century fort featuring Indo-Saracenic entrances, a Durbar Hall, and palatial mansions.",
+    "district": "",
+    "city": "Vizianagaram",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Historic battle site & palace",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bobbili-fort.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "amaravati-stupa",
+    "name": "Amaravati Stupa",
+    "state": "andhra-pradesh",
+    "description": "Ancient 3rd-century BCE Buddhist Great Stupa. Foundational site of the 'Andhra' school of sculpted art.",
+    "district": "",
+    "city": "Guntur",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Buddhist relief carvings",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/amaravati-stupa.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "papikondalu-papi-hills",
+    "name": "Papikondalu (Papi Hills)",
+    "state": "andhra-pradesh",
+    "description": "Dramatic meanders flanked by forested hills on the Godavari River. Multi-day boat cruises and camping.",
+    "district": "",
+    "city": "Godavari River",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Scenic river gorge cruises",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/papikondalu-papi-hills.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "adventure"
+  },
+  {
+    "id": "belum-caves",
+    "name": "Belum Caves",
+    "state": "andhra-pradesh",
+    "description": "Over 3.2 km of natural limestone passages. The second-longest cave system in India featuring stalactites and subterranean streams.",
+    "district": "",
+    "city": "Kurnool",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Massive natural limestone caves",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/belum-caves.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "adventure"
+  },
+  {
+    "id": "namdapha-national-park",
+    "name": "Namdapha National Park",
+    "state": "arunachal-pradesh",
+    "description": "India's 3rd largest national park and one of the most biodiverse places on the planet. Home to the only known population of four big cat species coexisting — tiger, leopard, snow leopard, and clouded leopard.",
+    "district": "",
+    "city": "Changlang District, eastern Arunachal",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Only place in India with 4 big cat species; extreme biodiversity; pristine wilderness",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/namdapha-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "along-aalo",
+    "name": "Along (Aalo)",
+    "state": "arunachal-pradesh",
+    "description": "Gateway to Adi tribal territory, Along sits on the Siang River (the Brahmaputra before entering Assam). Excellent base for white-water rafting, jungle trekking, and village homestays.",
+    "district": "",
+    "city": "West Siang District, Siang River valley",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Siang River rafting; Adi tribe culture; trekking gateway",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/along-aalo.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "bomdila",
+    "name": "Bomdila",
+    "state": "arunachal-pradesh",
+    "description": "A charming hill town with apple orchards, craft centers, and spectacular views of the eastern Himalayas including Kangto and Gorichen peaks. Three Buddhist gompas and a thriving market for Monpa crafts make it a cultural stop on the Tawang circuit.",
+    "district": "",
+    "city": "West Kameng District; 2,217m",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Apple orchards; Himalayan panorama; Monpa Buddhist gompas",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bomdila.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "pasighat",
+    "name": "Pasighat",
+    "state": "arunachal-pradesh",
+    "description": "The oldest town in Arunachal Pradesh, established in 1911 by the British. Sits where the Siang River bursts out of the Himalayan gorges into the plains. Famous for adventure sports and sunrise views over the Siang gorge.",
+    "district": "",
+    "city": "East Siang District; 153m elevation",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Oldest town in state; Siang River gorge exit; adventure base",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/pasighat.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "kaziranga-national-park",
+    "name": "Kaziranga National Park",
+    "state": "assam",
+    "description": "UNESCO World Heritage Site and one of the world's great conservation success stories. Home to 2,613+ one-horned rhinoceroses (70% of global population), 103 tigers, and 1,293 elephants. The tall elephant-grass wetlands and sal forests create a primordial landscape. Elephant safaris at dawn are among India's most magical wildlife experiences.",
+    "district": "",
+    "city": "Golaghat & Nagaon districts; 430 sq km",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "World's highest density of Royal Bengal Tigers; majority of one-horned rhinos; UNESCO heritage",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kaziranga-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "guwahati",
+    "name": "Guwahati",
+    "state": "assam",
+    "description": "The largest city in Northeast India and the region's commercial hub. Home to the Kamakhya Devi Temple (one of India's most powerful Shakti Peethas), Umananda Island Temple, Assam State Museum, and the Brahmaputra riverfront. Gateway to all Northeast India.",
+    "district": "",
+    "city": "Brahmaputra south bank; western Assam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Kamakhya Temple; Brahmaputra river cruises; NE India gateway",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/guwahati.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "manas-national-park",
+    "name": "Manas National Park",
+    "state": "assam",
+    "description": "A UNESCO Natural World Heritage Site and Project Tiger reserve at the foothills of Bhutan Himalayas. Home to golden langur, hispid hare, pygmy hog, wild buffalo — several species found nowhere else on Earth. The Manas River divides India from Bhutan.",
+    "district": "",
+    "city": "Baksa & Chirang Districts; western Assam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "UNESCO World Heritage; golden langur; pygmy hog (world's smallest wild pig)",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/manas-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "tezpur",
+    "name": "Tezpur",
+    "state": "assam",
+    "description": "'City of Blood' — named for its mythological association with a divine battle. A charming riverside town on the Brahmaputra known for the Agnigarh Hill (mythological fortress), Cole Park ruins (7th century), Chitralekha Udyan, and proximity to Nameri National Park. Gateway to Arunachal Pradesh.",
+    "district": "",
+    "city": "Sonitpur District; northern Assam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Agnigarh mythology; ancient ruins; Arunachal gateway",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/tezpur.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "jorhat",
+    "name": "Jorhat",
+    "state": "assam",
+    "description": "The cultural capital of Assam and the 'Tea Capital of the World.' Headquarters of the Ahom Kingdom's last capital at Rangpur; gateway to Majuli Island; surrounded by lush tea estates with colonial bungalow experiences.",
+    "district": "",
+    "city": "Upper Assam; Jorhat District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Tea capital; Majuli ferry point; Ahom heritage",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/jorhat.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "sivasagar-sibsagar",
+    "name": "Sivasagar (Sibsagar)",
+    "state": "assam",
+    "description": "The ancient capital of the Ahom Kingdom, Sivasagar is an open-air museum of Ahom civilization. Rang Ghar (royal sports arena — Asia's oldest amphitheatre), Talatal Ghar (7-story palace with 3 underground floors), Kareng Ghar, and the magnificent Sivasagar tank with its three temples form one of India's most underrated heritage landscapes.",
+    "district": "",
+    "city": "Sivasagar District; upper Assam",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Ahom capital; Rang Ghar; Talatal Ghar palace; 600-year kingdom",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/sivasagar-sibsagar.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "patna-pataliputra",
+    "name": "Patna (Pataliputra)",
+    "state": "bihar",
+    "description": "One of the world's oldest continuously inhabited cities, founded 2,500+ years ago as Pataliputra. Features the Patna Sahib Gurudwara (birthplace of Guru Gobind Singh), Golghar granary, Patna Museum (Yaksha masterpieces), Bihar Museum, and Ganges riverfront ghats.",
+    "district": "",
+    "city": "Ganges south bank; capital of Bihar",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Maurya capital; Guru Gobind Singh birthplace; ancient city continuity",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/patna-pataliputra.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "rajgir",
+    "name": "Rajgir",
+    "state": "bihar",
+    "description": "Ancient Magadha Kingdom city where Buddha delivered many sermons and Mahavira spent years in meditation. The Vishwa Shanti Stupa atop Ratnagiri Hill with a ropeway, hot springs (Brahmakund), cyclopean walls, and Venu Vana (Buddha's bamboo grove).",
+    "district": "",
+    "city": "Nalanda District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Buddha's sermon site; Mahavira meditation site; Maurya-era ruins; hot springs",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/rajgir.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "vaishali",
+    "name": "Vaishali",
+    "state": "bihar",
+    "description": "Claims to be the world's first republic (Licchavi, 6th century BCE). Birthplace of Lord Mahavira. Buddha delivered his last sermon here. The Ashoka Pillar at Kolhua with a single lion capital is one of Bihar's most striking monuments.",
+    "district": "",
+    "city": "Vaishali District; north of Patna",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "World's first republic; Mahavira birthplace; Buddha's last sermon; Ashoka pillar",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/vaishali.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "pawapuri",
+    "name": "Pawapuri",
+    "state": "bihar",
+    "description": "Jainism's most sacred site — where Lord Mahavira attained nirvana (moksha) in 527 BCE. The Jal Mandir — a white marble temple in the middle of a lotus pond — is one of India's most serene religious sites.",
+    "district": "",
+    "city": "Nalanda District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Mahavira's nirvana site; Jal Mandir lotus temple; Jain pilgrimage center",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/pawapuri.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "kesaria",
+    "name": "Kesaria",
+    "state": "bihar",
+    "description": "Site of the world's tallest Buddhist stupa (approximately 104 feet), built during the Maurya-Gupta period. Legend holds that Buddha gave away his begging bowl here before his Mahaparinirvana journey.",
+    "district": "",
+    "city": "East Champaran District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "World's tallest Buddhist stupa; Maurya-Gupta period; undervisited gem",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kesaria.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "jagdalpur-bastar",
+    "name": "Jagdalpur & Bastar",
+    "state": "chhattisgarh",
+    "description": "The tribal capital of Bastar division and gateway to extraordinary tribal culture. Weekly haats at Nagaras, Tokapal, and Kondagaon draw tribes in traditional dress. Bastar Palace, Anthropological Museum, and proximity to Kanger Valley National Park make this a complete destination.",
+    "district": "",
+    "city": "Bastar District; southern Chhattisgarh",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Tribal haat markets; Bastar Dussehra; tribal art and culture headquarters",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/jagdalpur-bastar.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "kanger-valley-national-park",
+    "name": "Kanger Valley National Park",
+    "state": "chhattisgarh",
+    "description": "A compact but extraordinarily diverse national park with the Kanger River flowing through limestone karst terrain. Famous for Kutumsar Caves (longest natural cave in India, 4.5 km) and Kailash Caves with stalactites and stalagmites, plus rare hill myna birds.",
+    "district": "",
+    "city": "Bastar District; near Jagdalpur",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Kutumsar limestone caves; diverse tribal-forest ecosystem; hill myna birds",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kanger-valley-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "sirpur",
+    "name": "Sirpur",
+    "state": "chhattisgarh",
+    "description": "A major archaeological site of the Sarabhapuri and Panduvamshi dynasties (5th–8th century CE) revealing a cosmopolitan ancient city where Buddhism, Jainism, and Shaivism coexisted. The 7th century Lakshmana Temple is one of India's finest brick temples.",
+    "district": "",
+    "city": "Mahasamund District; Mahanadi River bank",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "7th century brick temple; Buddhist-Hindu-Jain convergence; excavation site",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/sirpur.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "raipur",
+    "name": "Raipur",
+    "state": "chhattisgarh",
+    "description": "The fast-growing capital city with MM Fun City, Nandan Van (zoo and botanical garden), and proximity to Barnawapara Wildlife Sanctuary. The Dudhadhari Math temple complex and Mahamaya Mandir are important religious centers.",
+    "district": "",
+    "city": "Central Chhattisgarh; state capital",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "State capital; gateway to Chhattisgarh tourism; Barnawapara wildlife access",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/raipur.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "north-goa-beaches-calangute-baga-anjuna",
+    "name": "North Goa Beaches (Calangute–Baga–Anjuna)",
+    "state": "goa",
+    "description": "Goa's most famous beach belt stretching from Calangute ('Queen of Beaches') through Baga (nightlife, water sports) to Anjuna (flea market, trance parties). Vagator and Chapora Fort ('Dil Chahta Hai' fort) are nearby.",
+    "district": "",
+    "city": "North Goa coast",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "India's most famous beach destination; nightlife; water sports; backpacker culture",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/north-goa-beaches-calangute-baga-anjuna.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "south-goa-beaches-palolem-agonda-colva",
+    "name": "South Goa Beaches (Palolem–Agonda–Colva)",
+    "state": "goa",
+    "description": "The serene counterpart to North Goa. Palolem's crescent bay is arguably India's most photogenic beach; Agonda is unspoiled with nesting Olive Ridley turtles; Colva is the longest beach in Goa at 25 km.",
+    "district": "",
+    "city": "South Goa coast",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "India's most beautiful crescent beach (Palolem); quiet luxury; turtle nesting",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/south-goa-beaches-palolem-agonda-colva.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "old-goa-velha-goa",
+    "name": "Old Goa (Velha Goa)",
+    "state": "goa",
+    "description": "Former capital of Portuguese India, now a UNESCO World Heritage Site. Basilica of Bom Jesus (1605) contains the incorrupt body of St. Francis Xavier. Se Cathedral (1619) is Asia's largest church.",
+    "district": "",
+    "city": "10 km east of Panaji",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "UNESCO heritage; Basilica of Bom Jesus; St. Francis Xavier remains; Se Cathedral",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/old-goa-velha-goa.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "panaji-panjim",
+    "name": "Panaji (Panjim)",
+    "state": "goa",
+    "description": "One of India's most charming small capitals with Fontainhas (Latin Quarter), Immaculate Conception Church, Mandovi riverfront promenade, and Miramar Beach. Hosts IFFI every November.",
+    "district": "",
+    "city": "North Goa; state capital on Mandovi River",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Portuguese Latin Quarter; IFFI; Mandovi river cruises; Goa's most charming city",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/panaji-panjim.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "dudhsagar-falls",
+    "name": "Dudhsagar Falls",
+    "state": "goa",
+    "description": "One of India's tallest waterfalls (310m; India's 5th tallest), 'Sea of Milk' plunges in 4 tiers through dense evergreen forest, dramatically framed by the Konkan Railway viaduct. Jeep safari through forest to reach it.",
+    "district": "",
+    "city": "Mollem, Bhagwan Mahaveer Sanctuary",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "India's 5th tallest waterfall; 'Sea of Milk'; railway bridge framing; monsoon spectacle",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/dudhsagar-falls.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "spice-plantations-ponda",
+    "name": "Spice Plantations (Ponda)",
+    "state": "goa",
+    "description": "Goa's interior hills conceal magnificent spice estates where cardamom, pepper, vanilla, cinnamon, nutmeg, cloves grow. Tours include guided walks, traditional Goan lunch, and feni distillery visits.",
+    "district": "",
+    "city": "Ponda area, North Goa",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Spice education; Goan cuisine connection; plantation lunch",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/spice-plantations-ponda.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "chapora-fort-vagator",
+    "name": "Chapora Fort & Vagator",
+    "state": "goa",
+    "description": "16th century fort became iconic after 'Dil Chahta Hai' (2001). Ruins offer dramatic panoramic views over Chapora River and Vagator Beach with red laterite cliffs below.",
+    "district": "",
+    "city": "North Goa; Bardez taluka",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "'Dil Chahta Hai' fort; Chapora River panorama; Vagator red cliffs",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/chapora-fort-vagator.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "somnath",
+    "name": "Somnath",
+    "state": "gujarat",
+    "description": "One of the 12 Jyotirlingas (most sacred Shiva shrines) and one of India's most historically significant temples. Somnath has been destroyed and rebuilt 17 times — by Arab traders, Mahmud of Ghazni, Aurangzeb — and stands today as a magnificent symbol of resilience. The Sound & Light show at dusk is exceptionally well-produced.",
+    "district": "",
+    "city": "Gir Somnath District; south Saurashtra coast",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Jyotirlinga; destroyed 17 times; Arabian Sea shore; Sound & Light show",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/somnath.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "palitana",
+    "name": "Palitana",
+    "state": "gujarat",
+    "description": "The world's only city declared meat-free, Palitana is home to Shatrunjaya Hill with 863 Jain temples atop it — the world's largest temple complex and Jainism's most sacred pilgrimage. The 3.8 km climb up 3,745 steps through a procession of increasingly elaborate marble temples culminates at the hilltop with extraordinary views and spiritual intensity.",
+    "district": "",
+    "city": "Bhavnagar District; Saurashtra",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "World's only vegetarian city; 863 Jain temples; most sacred Jain pilgrimage",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/palitana.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "ahmedabad",
+    "name": "Ahmedabad",
+    "state": "gujarat",
+    "description": "India's first UNESCO World Heritage City (2017), Ahmedabad's 600-year-old walled city contains a remarkable concentration of intricately carved stepwells, mosques, temples, and pols (traditional residential neighborhoods). Gandhi's Sabarmati Ashram on the river's bank is one of modern India's most important pilgrimage sites. The world's largest cricket stadium (Narendra Modi Stadium, 132,000 capacity) is also here.",
+    "district": "",
+    "city": "Central Gujarat; Sabarmati River",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "India's first UNESCO Heritage City; Sabarmati Ashram; pols architecture; business capital",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/ahmedabad.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "dwarka",
+    "name": "Dwarka",
+    "state": "gujarat",
+    "description": "One of Hinduism's Char Dham (four sacred pilgrimage sites) and the legendary kingdom of Lord Krishna. The Dwarkadhish Temple (5th century CE; rebuilt multiple times) on the banks of the Gomti River is one of India's finest examples of Chalukyan temple architecture. Underwater archaeological surveys have found ruins of ancient Dwarka submerged in the Gulf of Kutch.",
+    "district": "",
+    "city": "Devbhumi Dwarka District; westernmost tip of Gujarat",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Char Dham pilgrimage; Krishna's kingdom; submerged ancient city; westernmost land in Gujarat",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/dwarka.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "patan",
+    "name": "Patan",
+    "state": "gujarat",
+    "description": "The ancient capital of the Solanki dynasty (950–1300 CE), Patan houses two UNESCO-declared monuments: the Rani ki Vav (Queen's Stepwell) — arguably India's finest stepwell with 500+ sculpted panels — and the ruined city of Anhilwara Patan. The town is also the last center of Patola silk weaving, where single ikat double-ikat silk saris take 6 months to complete.",
+    "district": "",
+    "city": "North Gujarat; Patan District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Rani ki Vav UNESCO; Patola silk heritage; Solanki dynasty capital",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/patan.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "vadodara-baroda",
+    "name": "Vadodara (Baroda)",
+    "state": "gujarat",
+    "description": "The cultural capital of Gujarat, built by the Gaekwad dynasty (18th–20th century). The Laxmi Vilas Palace (1890) — 4 times the size of Buckingham Palace and still inhabited by the royal family — is the finest Indo-Saracenic palace in India. The Baroda Museum, Sayaji Baug, Maharaja Fateh Singh Museum, and Kirti Mandir (Gandhi family memorial) make this a layered cultural destination.",
+    "district": "",
+    "city": "Central Gujarat; Vishwamitri River",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Laxmi Vilas Palace; cultural capital of Gujarat; Gaekwad royal heritage",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/vadodara-baroda.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "pinjore-yadavindra-gardens",
+    "name": "Pinjore (Yadavindra Gardens)",
+    "state": "haryana",
+    "description": "A magnificent 17th century Mughal-style terraced garden (Farrukh Niyar's Pinjore Bagh) covering 100 acres with 7 terraces, fountains, palaces (Shish Mahal, Rang Mahal, Jal Mahal), and the Yadavindra Wildlife Sanctuary. The annual Mango Festival in summer is a beloved local event.",
+    "district": "",
+    "city": "Panchkula District; foothills of Shivaliks",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "17th century Mughal garden; Shivalik foothills; mango festival",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/pinjore-yadavindra-gardens.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "sultanpur-national-park",
+    "name": "Sultanpur National Park",
+    "state": "haryana",
+    "description": "A compact but remarkable birdwatching haven just 46 km from Delhi. Over 250 bird species including 130+ migratory species from Central Asia, Siberia, and Europe visit this shallow jheel (lake). Easily accessible for Delhi residents seeking a quick nature escape.",
+    "district": "",
+    "city": "Gurugram District; near Delhi",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Delhi's nearest birdwatching destination; Siberian crane historical sightings; 250+ species",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/sultanpur-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "panipat",
+    "name": "Panipat",
+    "state": "haryana",
+    "description": "\"City of Weavers\" and site of three battles that decided India's political destiny — Panipat 1 (1526: Babur defeats Ibrahim Lodi; Mughal Empire founded), Panipat 2 (1556: Akbar defeats Hemu), Panipat 3 (1761: Afghans defeat Marathas). The Kala Amb memorial, Ibrahim Lodi's tomb, the Panipat Museum, and Devi Temple make this a historically essential destination.",
+    "district": "",
+    "city": "Panipat District; central Haryana",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Three decisive battles of Indian history; Mughal Empire birth; history museum",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/panipat.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "morni-hills",
+    "name": "Morni Hills",
+    "state": "haryana",
+    "description": "Haryana's only hill station at 1,220m, with the twin Tikkar Taal lakes, forest trekking, the Morni Fort, and rock-climbing opportunities. A popular weekend retreat from Chandigarh and Delhi, with an adventure park and military heritage museum.",
+    "district": "",
+    "city": "Panchkula District; Shivalik range",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Haryana's only hill station; Tikkar lakes; forest trekking; Chandigarh weekend",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/morni-hills.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "dharamshala-mcleod-ganj",
+    "name": "Dharamshala & McLeod Ganj",
+    "state": "himachal-pradesh",
+    "description": "Home of His Holiness the Dalai Lama and the Tibetan Government in Exile since 1960, McLeod Ganj is often called \"Little Lhasa.\" Tibetan monasteries (Namgyal Monastery), the Tibet Museum, Bhagsu Nag waterfall, Dharamsala cricket ground (highest international cricket ground in India at 1,457m), and the surrounding Dhauladhar range trekking make this a unique destination.",
+    "district": "",
+    "city": "Kangra District; lower Dhauladhar range; 1,457m",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Dalai Lama residence; Tibet-in-India; Dhauladhar trekking; Buddhist culture",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/dharamshala-mcleod-ganj.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "kullu-valley",
+    "name": "Kullu Valley",
+    "state": "himachal-pradesh",
+    "description": "The \"Valley of Gods\" — a gorgeous mountain valley with apple orchards, deodar cedar forests, and over 360 ancient temples. Famous for the Kullu Dussehra (7-day chariot festival of 300+ deities), the Great Himalayan National Park (UNESCO; 905 sq km), and river rafting on the Beas.",
+    "district": "",
+    "city": "Kullu District; Beas River valley",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Kullu Dussehra; apple orchards; Great Himalayan NP; river rafting",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kullu-valley.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "kinnaur",
+    "name": "Kinnaur",
+    "state": "himachal-pradesh",
+    "description": "A remote trans-Himalayan district bordering Tibet, Kinnaur reveals a dramatic landscape of sheer rock faces, hanging bridges, and Buddhist-Hindu village culture. Kalpa (with views of Kinner Kailash peak), Sarahan's Bhimakali Temple, the apple and apricot orchards of the Sutlej valley, and Chitkul (India's last inhabited village near Tibet border) are the highlights.",
+    "district": "",
+    "city": "Kinnaur District; Sutlej River valley; northeast HP",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Kinner Kailash; Chitkul last village; Kinnauri culture; apricot orchards",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kinnaur.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "kasauli-chail",
+    "name": "Kasauli & Chail",
+    "state": "himachal-pradesh",
+    "description": "Twin hill stations south of Shimla: Kasauli (1,900m) is a quiet, preserved British cantonment with colonial bungalows, Monkey Point temple, and Kasauli Brewery (one of India's oldest); Chail (2,250m) has the world's highest cricket ground (2,444m) and the colonial Chail Palace Hotel.",
+    "district": "",
+    "city": "Solan District; Shivalik range",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "World's highest cricket ground (Chail); colonial hill station character; Kasauli Brewery",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kasauli-chail.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "hundru-falls",
+    "name": "Hundru Falls",
+    "state": "jharkhand",
+    "description": "One of India's most dramatic waterfalls — 98m high, with the Subarnarekha River plunging through a series of granite gorges. The natural pools at the base are safe for swimming in season. An easy 1-hour excursion from Ranchi, making it the most-visited waterfall in Jharkhand.",
+    "district": "",
+    "city": "Ranchi District; Subarnarekha River",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "98m fall; swimming pools; Subarnarekha river; Ranchi's most accessible natural attraction",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/hundru-falls.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "parasnath-shikharji",
+    "name": "Parasnath (Shikharji)",
+    "state": "jharkhand",
+    "description": "Jainism's most sacred pilgrimage site — the hill where 20 of the 24 Tirthankaras (Jain spiritual masters) are believed to have attained Moksha (liberation). The 24 km circuit trek through 28 Jain temples of elaborate marble and color is undertaken barefoot by thousands of white-clad pilgrims daily. At 1,365m, it's Jharkhand's highest peak.",
+    "district": "",
+    "city": "Giridih District; Parasnath Hills",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Jainism's holiest site; 20 of 24 Tirthankaras moksha site; 28 temples; barefoot pilgrimage",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/parasnath-shikharji.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "betla-national-park",
+    "name": "Betla National Park",
+    "state": "jharkhand",
+    "description": "One of the first two Project Tiger reserves in India (designated 1974), Betla covers 979 sq km of dry deciduous forest. Home to Bengal tigers, Asian elephants, leopards, sloth bears, mugger crocodiles in the Koel River, and 174 bird species. The ruins of Betla Fort inside the park add historical intrigue.",
+    "district": "",
+    "city": "Latehar District; Chota Nagpur Plateau",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "First Project Tiger reserve; elephant and tiger habitat; Betla Fort",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/betla-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "ranchi",
+    "name": "Ranchi",
+    "state": "jharkhand",
+    "description": "The state capital and a pleasant highland city on the Chota Nagpur Plateau. Home to the Jagannath Temple (replica of Puri; rath yatra held annually), Rock Garden, Ranchi Lake, Pahari Mandir, and excellent connections to the surrounding waterfalls. Birthplace of MS Dhoni — a cricket pilgrimage destination in its own right.",
+    "district": "",
+    "city": "Central Jharkhand; 651m elevation",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "State capital; waterfall hub; MS Dhoni birthplace; Jagannath Temple",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/ranchi.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "deoghar-baidyanath-dham",
+    "name": "Deoghar (Baidyanath Dham)",
+    "state": "jharkhand",
+    "description": "One of the 12 Jyotirlingas — the Baidyanath Temple is one of Hinduism's most important Shiva shrines. During Shravan month (July–August), millions of Kanwariyas (devotees) walk from the Ganges at Sultanganj (Bihar) carrying holy water 105 km to pour over the Shiva lingam — one of India's great religious spectacles.",
+    "district": "",
+    "city": "Deoghar District; northeast Jharkhand",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Jyotirlinga; Shravan Kanwariya yatra; millions of pilgrims; one of India's largest gatherings",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/deoghar-baidyanath-dham.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "mysuru-mysore",
+    "name": "Mysuru (Mysore)",
+    "state": "karnataka",
+    "description": "India's most regal and fragrant city — the former capital of the Wodeyar kingdom, renowned for its Mysore Palace (illuminated at night by 100,000 bulbs; 4th most visited monument in India after Taj, Red Fort, Golconda), Chamundeshwari Temple, Brindavan Gardens, and the Dasara festival. Also India's sandalwood and silk capital — Mysore silk sarees and sandalwood products are globally traded.",
+    "district": "",
+    "city": "Mysuru District; south Karnataka; 763m",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Mysore Palace; Dasara festival; sandalwood and silk; Brindavan Gardens fountains",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/mysuru-mysore.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "coorg-kodagu",
+    "name": "Coorg (Kodagu)",
+    "state": "karnataka",
+    "description": "Karnataka's most romantic hill district — a landscape of mist-covered coffee plantations, cardamom and pepper estates, silver oak trees, and the Kaveri (Cauvery) River's origin at Talakaveri. The Kodava people — a warrior community with a distinctive culture, cuisine, language, and right to carry firearms — are among India's most unique ethnic groups. Abbey Falls, Namdroling Monastery (the \"Golden Temple\"), and outstanding trekking make Coorg extraordinary.",
+    "district": "",
+    "city": "Kodagu District; Western Ghats; 1,000–1,800m",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Coffee capital of India; Kaveri origin; Kodava culture; Namdroling Golden Temple",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/coorg-kodagu.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "chikmagalur",
+    "name": "Chikmagalur",
+    "state": "karnataka",
+    "description": "India's coffee birthland — legend holds that the 17th century Sufi saint Baba Budan smuggled 7 coffee beans from Yemen and planted them in the Baba Budan Giri hills here. Mullayanagiri (1,930m; Karnataka's highest peak), Bhadra Wildlife Sanctuary, Hebbe Falls, and magnificent coffee estates make this a perfect nature and coffee tourism destination.",
+    "district": "",
+    "city": "Chikmagalur District; Western Ghats",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "India's coffee origin; Mullayanagiri peak; Bhadra Wildlife Sanctuary",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/chikmagalur.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "belur-halebidu",
+    "name": "Belur & Halebidu",
+    "state": "karnataka",
+    "description": "Two adjacent towns housing the finest Hoysala temple sculptures in the world. Belur's Chennakeshava Temple (1117 CE; 103-year construction; every inch covered with breathtaking sculptures) and Halebidu's Hoysaleswara Temple (unfinished despite 86 years of work; stunning freeze of elephants, horses, Ramayana scenes, erotic figures, and 240+ musicians) represent the pinnacle of medieval Indian artistic achievement.",
+    "district": "",
+    "city": "Hassan District; north Karnataka; 975m",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "World's finest medieval temple sculptures; 900-year-old art; Hoysala civilization",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/belur-halebidu.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "bandipur-national-park",
+    "name": "Bandipur National Park",
+    "state": "karnataka",
+    "description": "Karnataka's premier wildlife destination — part of the Nilgiris Biosphere Reserve (the world's largest protected elephant range). Famous for large herds of wild elephants, gaur, spotted deer, tiger, and an extraordinary variety of birds. The late evening \"elephant crossing\" on the Mysore-Ooty road is one of India's most memorable wildlife encounters.",
+    "district": "",
+    "city": "Chamarajanagar District; Nilgiris foothills; Mysore-Ooty highway",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Elephant herds; part of Nilgiris Biosphere; tigers; elephant crossing on highway",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bandipur-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "badami-aihole-pattadakal",
+    "name": "Badami, Aihole & Pattadakal",
+    "state": "karnataka",
+    "description": "A \"trinity of archaeology\" — three adjacent early Chalukya sites covering the evolution of temple architecture (5th–8th century CE). Badami's dramatic sandstone cave temples (carved from a red sandstone cliff above a sacred lake); Aihole's 125+ experimental temples spanning all Hindu-Buddhist-Jain styles; and Pattadakal (UNESCO) — the \"coronation city\" — complete the story of how South Indian temple architecture was invented.",
+    "district": "",
+    "city": "Bagalkote District; north Karnataka",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "UNESCO (Pattadakal); Chalukya temple architecture origin; cave temples",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/badami-aihole-pattadakal.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "gokarna",
+    "name": "Gokarna",
+    "state": "karnataka",
+    "description": "A sacred Shaivite town on the Arabian Sea coast, Gokarna balances temple town atmosphere (Mahabaleshwar Shiva Temple with one of its most sacred Shiva Atmalinga) with some of South India's most beautiful beaches — Om Beach (shaped like the Om symbol), Kudle Beach, and Half-Moon Beach. Less crowded than Goa; more spiritual; increasingly popular backpacker alternative.",
+    "district": "",
+    "city": "Uttara Kannada District; Karnataka coast; 12m elevation",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Sacred Shiva temple; Om-shaped beach; Goa alternative; dolphin-watching",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/gokarna.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "kerala-backwaters",
+    "name": "Kerala Backwaters",
+    "state": "kerala",
+    "description": "The crown jewel of Kerala tourism — 900 km of interconnected waterways, lakes, and canals forming a unique inland water ecosystem. The Alappuzha (Alleppey) houseboat experience — drifting through narrow canals lined with coconut palms, watching village life, sleeping on the water — is arguably South India's most distinctive travel experience. Kumarakom Bird Sanctuary, Kuttanad (below sea-level rice fields), and the Nehru Trophy Boat Race add layers.",
+    "district": "",
+    "city": "Alappuzha, Kottayam, Kollam districts; Vembanad Lake system",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "World's most famous houseboat experience; unique waterway ecosystem; Nehru Trophy race",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kerala-backwaters.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "fort-kochi-cochin",
+    "name": "Fort Kochi (Cochin)",
+    "state": "kerala",
+    "description": "India's most cosmopolitan heritage port city — a UNESCO tentative World Heritage Site where Chinese fishing nets, a Portuguese cathedral (1503; India's first European church), Jewish synagogue (1567; Mattancherry), Dutch Palace (1557), British-era buildings, Sufi shrines, and Hindu temples share a few square kilometers. The contemporary art district, café culture, and Kathakali performances make Fort Kochi one of India's most enchanting urban destinations.",
+    "district": "",
+    "city": "Ernakulam District; Kerala coast",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Chinese fishing nets; India's first European church; Jewish Paradesi Synagogue; Kathakali",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/fort-kochi-cochin.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "thekkady-periyar",
+    "name": "Thekkady (Periyar)",
+    "state": "kerala",
+    "description": "Periyar Wildlife Sanctuary — centered on an artificial lake created by the Mullaperiyar Dam — offers one of India's most dramatic wildlife experiences: boat rides at dawn on the lake watching wild elephants, gaur, otters, and river birds come to the water. Spice plantation walks, bamboo rafting, and the village life of Kumily make Thekkady a complete destination.",
+    "district": "",
+    "city": "Idukki District; Western Ghats; 900m",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Periyar elephant sanctuary; boat safari; spice estate tours; trekking",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/thekkady-periyar.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "wayanad",
+    "name": "Wayanad",
+    "state": "kerala",
+    "description": "Kerala's most biodiverse district and tribal heartland, Wayanad blends coffee and spice estates, ancient tribal rock art (Edakkal Caves; Neolithic carvings), the Chembra Peak (2,100m; heart-shaped lake near summit), pristine Muthanga and Tholpetty wildlife sanctuaries, and some of Kerala's most innovative eco-resorts and tree houses.",
+    "district": "",
+    "city": "Wayanad District; Western Ghats; 700–2,100m",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Edakkal Caves prehistoric art; Chembra Peak; tribal culture; coffee estates; wildlife",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/wayanad.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "thiruvananthapuram-trivandrum",
+    "name": "Thiruvananthapuram (Trivandrum)",
+    "state": "kerala",
+    "description": "Kerala's capital is anchored by the magnificent Padmanabhaswamy Temple — the world's wealthiest temple by asset value (estimated $22 billion in gold, jewels, and artifacts in underground vaults). The Napier Museum (1880; Gothic-Kerala fusion), Shankhumugham Beach, Kuthiramalika Palace, and the nearby beaches of Kovalam make TVM a full destination rather than just a transit point.",
+    "district": "",
+    "city": "Kerala's southern tip; capital",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "World's wealthiest temple; Kovalam beaches; colonial capital; Napier Museum",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/thiruvananthapuram-trivandrum.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "kovalam",
+    "name": "Kovalam",
+    "state": "kerala",
+    "description": "Kerala's most iconic beach destination — three crescent beaches separated by rocky headlands. Lighthouse Beach (most busy; lighthouse walk-up), Hawa Beach, and the quieter Samudra Beach offer a range from lively to serene. Kovalam is also a major Ayurveda treatment destination with dozens of certified centers.",
+    "district": "",
+    "city": "Thiruvananthapuram District; Kerala southern coast",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Kerala's most famous beach; lighthouse; Ayurveda treatments",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kovalam.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": ""
+  },
+  {
+    "id": "kanha-national-park",
+    "name": "Kanha National Park",
+    "state": "madhya-pradesh",
+    "description": "Tiger safaris, barasingha conservation, rich sal forests",
+    "district": "",
+    "city": "Mandla & Balaghat Districts",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kanha-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "wildlife"
+  },
+  {
+    "id": "bandhavgarh-national-park",
+    "name": "Bandhavgarh National Park",
+    "state": "madhya-pradesh",
+    "description": "High-density tiger population, ancient fort integration",
+    "district": "",
+    "city": "Umaria District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bandhavgarh-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "wildlife"
+  },
+  {
+    "id": "pench-national-park",
+    "name": "Pench National Park",
+    "state": "madhya-pradesh",
+    "description": "Tiger reserve and strong birding destination, inspiration for Jungle Book",
+    "district": "",
+    "city": "Seoni & Chhindwara Districts",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/pench-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "wildlife"
+  },
+  {
+    "id": "sanchi-stupa",
+    "name": "Sanchi Stupa",
+    "state": "madhya-pradesh",
+    "description": "Sanchi is a small town whose identity is inseparable from its UNESCO-recognized Buddhist stupa landscape. Set as an easy excursion from Bhopal, it is best experienced as a heritage visit focused on the Great Stupa, monolithic pillars, and the surrounding archaeological precinct’s monumental gateways.",
+    "district": "",
+    "city": "Raisen District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Great Stupa + Buddhist heritage precinct and UNESCO designation.",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/sanchi-stupa.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "orchha",
+    "name": "Orchha",
+    "state": "madhya-pradesh",
+    "description": "Orchha is a Bundela-era heritage town on the Betwa River. It features a concentrated cluster of palaces, temples, cenotaphs (chhatris), and riverside scenery. Its core appeal is walkability: the fort complex, temple circuits, and sunset viewpoints along the river's edge.",
+    "district": "",
+    "city": "Niwari District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Fort-palace complex + iconic chhatris + Betwa riverside heritage ambience.",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/orchha.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "bhopal",
+    "name": "Bhopal",
+    "state": "madhya-pradesh",
+    "description": "The state capital is a high-value urban base that combines lake scenery with major cultural institutions and museums. It works excellently as a 2–3 night hub to cover nearby heritage sites like Sanchi and Bhimbetka without long transfers.",
+    "district": "",
+    "city": "Bhopal",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Capital-city hub for lakes + museums + heritage day-trips.",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bhopal.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "city"
+  },
+  {
+    "id": "indore",
+    "name": "Indore",
+    "state": "madhya-pradesh",
+    "description": "A “heritage + modern culture” city with palaces, temples, markets, and a strong food-travel identity. Indore is a strategic base for the Malwa circuit (Mandu, Maheshwar, Omkareshwar) because of its unmatched connectivity and accommodation depth.",
+    "district": "",
+    "city": "Indore",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Malwa gateway + heritage palaces + major food city.",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/indore.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "city"
+  },
+  {
+    "id": "ujjain",
+    "name": "Ujjain",
+    "state": "madhya-pradesh",
+    "description": "A deep pilgrimage city anchored by the Mahakaleshwar Jyotirlinga and a dense cluster of other shrines. It plays a dual role: a major spiritual destination and a Malwa-circuit stop that pairs well with Omkareshwar and Maheshwar.",
+    "district": "",
+    "city": "Ujjain",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Mahakaleshwar Jyotirlinga + high-density temple circuit.",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/ujjain.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "gwalior",
+    "name": "Gwalior",
+    "state": "madhya-pradesh",
+    "description": "A heritage-heavy city dominated by its magnificent hill fort landscape and associated monuments, museums, and temples. It is a strong 1–2 day destination in northern MP offering incredible \"fort city storytelling\".",
+    "district": "",
+    "city": "Gwalior",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "One of India’s most iconic hill forts + dense heritage sightseeing.",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/gwalior.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "jabalpur",
+    "name": "Jabalpur",
+    "state": "madhya-pradesh",
+    "description": "Framed around dramatic Narmada-linked nature and accessible urban parks, Jabalpur highlights the spectacular Dhuandhar Falls and marble rocks of Bhedaghat. It's a strong add-on to Kanha wildlife trips.",
+    "district": "",
+    "city": "Jabalpur",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Dhuandhar Falls + Narmada-linked natural attractions and marble rocks.",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/jabalpur.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "city_nature"
+  },
+  {
+    "id": "pachmarhi",
+    "name": "Pachmarhi",
+    "state": "madhya-pradesh",
+    "description": "A popular nature destination located in Narmadapuram District.",
+    "district": "",
+    "city": "Narmadapuram District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/pachmarhi.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "mandu",
+    "name": "Mandu",
+    "state": "madhya-pradesh",
+    "description": "A popular heritage destination located in Dhar District.",
+    "district": "",
+    "city": "Dhar District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/mandu.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "bhimbetka",
+    "name": "Bhimbetka",
+    "state": "madhya-pradesh",
+    "description": "A popular heritage destination located in Raisen District.",
+    "district": "",
+    "city": "Raisen District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bhimbetka.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "chitrakoot",
+    "name": "Chitrakoot",
+    "state": "madhya-pradesh",
+    "description": "A popular spiritual destination located in Satna District.",
+    "district": "",
+    "city": "Satna District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/chitrakoot.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "omkareshwar",
+    "name": "Omkareshwar",
+    "state": "madhya-pradesh",
+    "description": "A popular spiritual destination located in Khandwa District.",
+    "district": "",
+    "city": "Khandwa District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/omkareshwar.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "maheshwar",
+    "name": "Maheshwar",
+    "state": "madhya-pradesh",
+    "description": "A popular heritage_spiritual destination located in Khargone District.",
+    "district": "",
+    "city": "Khargone District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/maheshwar.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage_spiritual"
+  },
+  {
+    "id": "burhanpur",
+    "name": "Burhanpur",
+    "state": "madhya-pradesh",
+    "description": "A popular heritage destination located in Burhanpur District.",
+    "district": "",
+    "city": "Burhanpur District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/burhanpur.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "satpura-national-park",
+    "name": "Satpura National Park",
+    "state": "madhya-pradesh",
+    "description": "Biodiversity-focused forest park, quieter safari experience, Pachmarhi Biosphere Reserve",
+    "district": "",
+    "city": "Narmadapuram (Hoshangabad) District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/satpura-national-park.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "wildlife"
+  },
+  {
+    "id": "amarkantak",
+    "name": "Amarkantak",
+    "state": "madhya-pradesh",
+    "description": "A popular spiritual_nature destination located in Anuppur District.",
+    "district": "",
+    "city": "Anuppur District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/amarkantak.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual_nature"
+  },
+  {
+    "id": "mahakaleshwar-temple",
+    "name": "Mahakaleshwar Temple",
+    "state": "madhya-pradesh",
+    "description": "One of the 12 Jyotirlingas, famous for Bhasma Aarti and Mahakal Lok corridor",
+    "district": "",
+    "city": "Ujjain",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/mahakaleshwar-temple.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "omkareshwar-temple",
+    "name": "Omkareshwar Temple",
+    "state": "madhya-pradesh",
+    "description": "Jyotirlinga shrine set on a sacred island in the Narmada River",
+    "district": "",
+    "city": "Omkareshwar",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/omkareshwar-temple.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "chitrakoot-temples",
+    "name": "Chitrakoot Temples",
+    "state": "madhya-pradesh",
+    "description": "Dense Ramayana-linked pilgrimage circuit",
+    "district": "",
+    "city": "Chitrakoot",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/chitrakoot-temples.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "sanchi-buddhist-complex",
+    "name": "Sanchi Buddhist Complex",
+    "state": "madhya-pradesh",
+    "description": "UNESCO World Heritage Site with monuments dating back to 2nd BCE",
+    "district": "",
+    "city": "Sanchi",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/sanchi-buddhist-complex.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage_spiritual"
+  },
+  {
+    "id": "amarkantak-temples",
+    "name": "Amarkantak Temples",
+    "state": "madhya-pradesh",
+    "description": "Sacred emergence geography; origin of the Narmada and Son rivers",
+    "district": "",
+    "city": "Amarkantak",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/amarkantak-temples.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "spiritual"
+  },
+  {
+    "id": "narmada-river",
+    "name": "Narmada River",
+    "state": "madhya-pradesh",
+    "description": "Sacred central axis shaping multiple MP pilgrimage and heritage destinations",
+    "district": "",
+    "city": "Across Madhya Pradesh",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/narmada-river.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "betwa-river",
+    "name": "Betwa River",
+    "state": "madhya-pradesh",
+    "description": "Scenic heritage river framing Bundelkhand towns like Orchha",
+    "district": "",
+    "city": "Madhya Pradesh (toward Uttar Pradesh)",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/betwa-river.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "chambal-river",
+    "name": "Chambal River",
+    "state": "madhya-pradesh",
+    "description": "Major river landscape known for its distinctive ravines and ecology",
+    "district": "",
+    "city": "Madhya Pradesh (toward Rajasthan)",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/chambal-river.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "dhuandhar-falls",
+    "name": "Dhuandhar Falls",
+    "state": "madhya-pradesh",
+    "description": "Jabalpur; misty, dramatic falls experience within the Narmada valley",
+    "district": "",
+    "city": "Jabalpur region",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/dhuandhar-falls.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "bee-falls",
+    "name": "Bee Falls",
+    "state": "madhya-pradesh",
+    "description": "Pachmarhi; flagship waterfall with an easy day-excursion profile",
+    "district": "",
+    "city": "Pachmarhi",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bee-falls.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "kapil-dhara",
+    "name": "Kapil Dhara",
+    "state": "madhya-pradesh",
+    "description": "Amarkantak; popular waterfall with strong Saint Kapila legend associations",
+    "district": "",
+    "city": "Amarkantak",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/kapil-dhara.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "khajuraho-temples",
+    "name": "Khajuraho Temples",
+    "state": "madhya-pradesh",
+    "description": "UNESCO World Heritage temple ensemble; top northern Indian sculpture tradition (10th-11th centuries)",
+    "district": "",
+    "city": "Khajuraho",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/khajuraho-temples.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "bhimbetka-caves",
+    "name": "Bhimbetka Caves",
+    "state": "madhya-pradesh",
+    "description": "UNESCO-listed prehistoric rock art and continuous human settlement records",
+    "district": "",
+    "city": "Bhimbetka",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/bhimbetka-caves.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "gwalior-fort",
+    "name": "Gwalior Fort",
+    "state": "madhya-pradesh",
+    "description": "Monumental hill fort dominating Gwalior’s heritage identity with palatial and rock-cut elements",
+    "district": "",
+    "city": "Gwalior",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/gwalior-fort.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "mandu-palaces",
+    "name": "Mandu Palaces",
+    "state": "madhya-pradesh",
+    "description": "Monument plateau with iconic palace ruins (Jahaz Mahal) and high-value viewpoints",
+    "district": "",
+    "city": "Mandu",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "",
+    "mapEmbedUrl": "",
+    "image": "/images/destinations/mandu-palaces.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "ujjayanta-palace",
+    "name": "Ujjayanta Palace",
+    "state": "tripura",
+    "description": "A grand royal palace built in 1901 by Maharaja Radha Kishore Manikya on the banks of two lakes within Mughal-style gardens. Now converted into the Tripura State Museum showcasing tribal artifacts, royal costumes, archaeological finds, and cultural displays spanning centuries of Tripuri heritage.",
+    "district": "",
+    "city": "Agartala, Central Tripura",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Former Royal Palace; Tripura State Museum; Mughal-style gardens; twin lakeside setting",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849781.730852768!2d91.7431495!3d23.734645199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753b566f6c1a285%3A0x14dd7ae7453fff74!2sTripura!5e1!3m2!1sen!2sin!4v1774710710167!5m2!1sen!2sin",
+    "image": "/images/destinations/ujjayanta-palace.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "neermahal",
+    "name": "Neermahal",
+    "state": "tripura",
+    "description": "India's only water palace, built in 1930 by Maharaja Bir Bikram Kishore Manikya in the middle of Rudrasagar Lake. A stunning blend of Hindu and Mughal architectural styles, Neermahal served as the royal summer retreat. The lake and palace are illuminated during the annual Neermahal Tourism Festival.",
+    "district": "",
+    "city": "Melaghar, Sepahijala District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "India's only water palace; Rudrasagar Lake; Hindu-Mughal architecture; tourism festival",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849781.730852768!2d91.7431495!3d23.734645199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753b566f6c1a285%3A0x14dd7ae7453fff74!2sTripura!5e1!3m2!1sen!2sin!4v1774710710167!5m2!1sen!2sin",
+    "image": "/images/destinations/neermahal.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "heritage"
+  },
+  {
+    "id": "jampui-hills",
+    "name": "Jampui Hills",
+    "state": "tripura",
+    "description": "Known as the 'permanent spring land,' Jampui Hills rise to 3000 feet and offer panoramic views of Mizoram and Bangladesh. Famous for orange orchards, cool climate, and the annual Orange & Tourism Festival. Home to Mizo and Reang tribal communities with rich cultural traditions.",
+    "district": "",
+    "city": "North Tripura District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Orange orchards; cool hill station; tribal culture; Orange & Tourism Festival",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849781.730852768!2d91.7431495!3d23.734645199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753b566f6c1a285%3A0x14dd7ae7453fff74!2sTripura!5e1!3m2!1sen!2sin!4v1774710710167!5m2!1sen!2sin",
+    "image": "/images/destinations/jampui-hills.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  },
+  {
+    "id": "sipahijala-wildlife-sanctuary",
+    "name": "Sipahijala Wildlife Sanctuary",
+    "state": "tripura",
+    "description": "A lush 18.5 sq km wildlife sanctuary and botanical garden housing clouded leopards, spectacled monkeys, and diverse bird species. Features a natural lake, a zoo, and rubber, tea, and coffee plantations. One of the best places to spot the endangered Phayre's langur in India.",
+    "district": "",
+    "city": "Sepahijala District",
+    "exactPlace": "",
+    "address": "",
+    "whyFamous": "Clouded leopard; Phayre's langur; botanical garden; natural lake",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849781.730852768!2d91.7431495!3d23.734645199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753b566f6c1a285%3A0x14dd7ae7453fff74!2sTripura!5e1!3m2!1sen!2sin!4v1774710710167!5m2!1sen!2sin",
+    "image": "/images/destinations/sipahijala-wildlife-sanctuary.jpg",
+    "rating": 4.5,
+    "tags": [
+      "tourism",
+      "travel",
+      "india"
+    ],
+    "category": "nature"
+  }
+]

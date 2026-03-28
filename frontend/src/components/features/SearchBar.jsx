@@ -63,7 +63,7 @@ const ALL_SEARCH_ITEMS = [...STATE_ITEMS, ...DESTINATION_ITEMS, ...GEM_ITEMS];
 /* ═══════════════════════════════════════════════════════
    SEARCH BAR COMPONENT
    ═══════════════════════════════════════════════════════ */
-const SearchBar = ({ onClose }) => {
+const SearchBar = ({ onClose, onSearchActive }) => {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -127,13 +127,16 @@ const SearchBar = ({ onClose }) => {
 
   // Sync manual typing with loading overlay
   useEffect(() => {
-    if (query !== debouncedQuery && query.trim() !== '') {
+    const hasQuery = query.trim() !== '';
+    if (onSearchActive) onSearchActive(hasQuery);
+
+    if (query !== debouncedQuery && hasQuery) {
       setIsLoading(true);
-    } else if (query.trim() === '') {
+    } else if (!hasQuery) {
       setIsLoading(false);
       setResults([]);
     }
-  }, [query, debouncedQuery]);
+  }, [query, debouncedQuery, onSearchActive]);
 
   // Keyboard navigation
   const handleKeyDown = (e) => {

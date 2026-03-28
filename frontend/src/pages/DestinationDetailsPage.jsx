@@ -46,7 +46,7 @@ const DestNotFound = ({ slug }) => (
    1. HERO BANNER
    ═══════════════════════════════════════════════════════ */
 const HeroBanner = ({ dest, parentState }) => {
-  const stateName = parentState?.name || dest.state?.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  const stateName = parentState?.name || (typeof dest.state === 'string' ? dest.state.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : 'Unknown State');
 
   return (
     <section className="relative h-[50vh] sm:h-[65vh] overflow-hidden">
@@ -252,22 +252,38 @@ const TravelTips = ({ dest, parentState }) => {
 };
 
 /* ═══════════════════════════════════════════════════════
-   6. MAP PLACEHOLDER
+   6. MAP SECTION
    ═══════════════════════════════════════════════════════ */
-const MapPlaceholder = ({ dest, parentState }) => {
+const MapSection = ({ dest, parentState }) => {
+  const mapUrl = dest.mapEmbedUrl || parentState?.mapEmbedUrl;
   const coords = dest.coords || parentState?.coords;
-  if (!coords) return null;
+  
+  if (!mapUrl && !coords) return null;
 
   return (
     <section className="py-16 sm:py-20 section-padding bg-navy-dark/50">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <div className="w-full bg-navy-dark rounded-2xl overflow-hidden h-[400px] border border-gray-800 flex flex-col items-center justify-center">
-            <div className="text-center p-6">
-              <Map size={48} className="text-gray-600 mx-auto mb-4" />
-              <h4 className="font-bold text-gray-300 text-xl mb-2">Map will be added soon</h4>
-              <p className="text-gray-500 text-sm">Interactive map will be embedded shortly</p>
-            </div>
+          <div className="w-full bg-navy-dark rounded-2xl overflow-hidden h-[400px] border border-gray-800 relative flex flex-col items-center justify-center">
+            {mapUrl ? (
+              <iframe 
+                src={typeof mapUrl === 'string' && mapUrl.match(/src=["']([^"']+)["']/) ? mapUrl.match(/src=["']([^"']+)["']/)[1] : mapUrl} 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 z-0"
+                title={`Map of ${dest.name}`}
+              ></iframe>
+            ) : (
+              <div className="text-center p-6 z-10">
+                <Map size={48} className="text-gray-600 mx-auto mb-4" />
+                <h4 className="font-bold text-gray-300 text-xl mb-2">Map will be added soon</h4>
+                <p className="text-gray-500 text-sm">Interactive map will be embedded shortly</p>
+              </div>
+            )}
           </div>
         </ScrollReveal>
       </div>
@@ -320,7 +336,7 @@ const DestinationDetailsPage = () => {
       <ItineraryHints dest={dest} />
       <NearbyPlaces dest={dest} parentState={parentState} />
       <TravelTips dest={dest} parentState={parentState} />
-      <MapPlaceholder dest={dest} parentState={parentState} />
+      <MapSection dest={dest} parentState={parentState} />
       <ExploreCTA parentState={parentState} />
     </>
   );

@@ -55,6 +55,7 @@ const Navbar = () => {
         <NavLink to="/budget-planner" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Budget Planner</NavLink>
         <NavLink to="/safety-tips" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Safety</NavLink>
         <a href="#contact" onClick={handleContactClick} className="transition-colors hover:text-sky-400 text-gray-200 cursor-pointer">Contact</a>
+        <NavLink to="/admin/dashboard" className="bg-india-orange/20 text-india-orange border border-india-orange/50 hover:bg-india-orange hover:text-white px-4 py-1.5 rounded-full transition-all text-xs font-bold uppercase tracking-wider ml-2">Admin Panel</NavLink>
         <button onClick={() => setIsSearchOpen(true)} className="text-gray-200 hover:text-sky-400 transition-colors ml-2 cursor-pointer">
           <Search size={18} />
         </button>
@@ -108,9 +109,16 @@ const Navbar = () => {
               Search <Search size={18} />
             </button>
             <Link
+              to="/admin/dashboard"
+              onClick={close}
+              className="text-lg text-india-orange transition-colors hover:text-white flex items-center gap-2"
+            >
+              Admin Panel
+            </Link>
+            <Link
               to="/travel-planner"
               onClick={close}
-              className="btn-primary text-center"
+              className="btn-primary text-center mt-2"
             >
               Plan a Trip
             </Link>

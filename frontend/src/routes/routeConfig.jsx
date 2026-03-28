@@ -14,6 +14,8 @@ import TravelPlannerPage from '../pages/TravelPlannerPage';
 import SafetyTipsPage from '../pages/SafetyTipsPage';
 import HiddenGemsPage from '../pages/HiddenGemsPage';
 import NotFoundPage from '../pages/NotFoundPage';
+import AdminLogin from '../pages/admin/AdminLogin';
+import AdminDashboard from '../pages/admin/AdminDashboard';
 
 const routeConfig = [
   { path: '/', element: <HomePage /> },
@@ -24,6 +26,8 @@ const routeConfig = [
   { path: '/travel-planner', element: <TravelPlannerPage /> },
   { path: '/safety-tips', element: <SafetyTipsPage /> },
   { path: '/hidden-gems', element: <HiddenGemsPage /> },
+  { path: '/admin', element: <AdminLogin /> },
+  { path: '/admin/dashboard', element: <AdminDashboard /> },
   { path: '*', element: <NotFoundPage /> },
 ];
 
