@@ -4,14 +4,12 @@
   "capital": "Panaji",
   "region": "West India (Konkan Coast)",
   "slug": "/india/goa",
-
   "overview": {
     "short": "India's smallest state but most iconic beach destination — a 450-year Portuguese colonial legacy layered over ancient Konkani civilization, set against 101 km of Arabian Sea coastline, lush Western Ghats forests, and an easygoing susegad way of life. Goa is simultaneously India's party capital, UNESCO heritage gem, spice coast, wildlife sanctuary, and yoga retreat.",
     "paragraph2": "Portuguese architecture defines Goa's visual identity — Fontainhas (Latin Quarter), UNESCO World Heritage Churches of Old Goa including the Basilica of Bom Jesus holding St. Francis Xavier's incorrupt body, and hundreds of heritage houses. This 450-year European influence created a unique Indo-Portuguese culture: vindaloo, xacuti, bebinca, feni, and Konkani Catholicism.",
     "paragraph3": "Yet beneath the colonial overlay, Goa's ancient Hindu soul endures: the Mahadeva Temple at Tambdi Surla (12th century) is the oldest surviving temple; the Shantadurga Temple draws 100,000+ pilgrims at Shigmo; and the Konkani Hindu community maintains festivals and traditions undisturbed for centuries.",
     "cultureHeritage": "Goa's culture is a miraculous fusion — the Susegad philosophy (contented ease), the fish-curry-rice daily ritual, passion for football, and the pre-Lenten Goa Carnival (the only one in Asia comparable to European counterparts). Feni — cashew or coconut spirit — has a GI tag protecting its distinct character."
   },
-
   "topDestinations": [
     {
       "name": "North Goa Beaches (Calangute–Baga–Anjuna)",
@@ -19,7 +17,12 @@
       "slug": "/india/goa/north-goa-beaches",
       "description": "Goa's most famous beach belt stretching from Calangute ('Queen of Beaches') through Baga (nightlife, water sports) to Anjuna (flea market, trance parties). Vagator and Chapora Fort ('Dil Chahta Hai' fort) are nearby.",
       "whyFamous": "India's most famous beach destination; nightlife; water sports; backpacker culture",
-      "imageKeywords": ["Calangute beach Goa aerial", "Baga beach nightlife Goa", "Anjuna beach sunset market"]
+      "imageKeywords": [
+        "Calangute beach Goa aerial",
+        "Baga beach nightlife Goa",
+        "Anjuna beach sunset market"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "South Goa Beaches (Palolem–Agonda–Colva)",
@@ -27,7 +30,12 @@
       "slug": "/india/goa/south-goa-beaches",
       "description": "The serene counterpart to North Goa. Palolem's crescent bay is arguably India's most photogenic beach; Agonda is unspoiled with nesting Olive Ridley turtles; Colva is the longest beach in Goa at 25 km.",
       "whyFamous": "India's most beautiful crescent beach (Palolem); quiet luxury; turtle nesting",
-      "imageKeywords": ["Palolem beach crescent bay Goa", "Agonda beach South Goa", "Colva beach white sand Goa"]
+      "imageKeywords": [
+        "Palolem beach crescent bay Goa",
+        "Agonda beach South Goa",
+        "Colva beach white sand Goa"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Old Goa (Velha Goa)",
@@ -35,7 +43,12 @@
       "slug": "/india/goa/old-goa",
       "description": "Former capital of Portuguese India, now a UNESCO World Heritage Site. Basilica of Bom Jesus (1605) contains the incorrupt body of St. Francis Xavier. Se Cathedral (1619) is Asia's largest church.",
       "whyFamous": "UNESCO heritage; Basilica of Bom Jesus; St. Francis Xavier remains; Se Cathedral",
-      "imageKeywords": ["Basilica Bom Jesus Old Goa", "Se Cathedral Old Goa", "Old Goa churches UNESCO"]
+      "imageKeywords": [
+        "Basilica Bom Jesus Old Goa",
+        "Se Cathedral Old Goa",
+        "Old Goa churches UNESCO"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Panaji (Panjim)",
@@ -43,7 +56,12 @@
       "slug": "/india/goa/panaji",
       "description": "One of India's most charming small capitals with Fontainhas (Latin Quarter), Immaculate Conception Church, Mandovi riverfront promenade, and Miramar Beach. Hosts IFFI every November.",
       "whyFamous": "Portuguese Latin Quarter; IFFI; Mandovi river cruises; Goa's most charming city",
-      "imageKeywords": ["Fontainhas Latin Quarter Panaji", "Panaji church Immaculate Conception", "Mandovi river Panaji"]
+      "imageKeywords": [
+        "Fontainhas Latin Quarter Panaji",
+        "Panaji church Immaculate Conception",
+        "Mandovi river Panaji"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Dudhsagar Falls",
@@ -51,7 +69,12 @@
       "slug": "/india/goa/dudhsagar-falls",
       "description": "One of India's tallest waterfalls (310m; India's 5th tallest), 'Sea of Milk' plunges in 4 tiers through dense evergreen forest, dramatically framed by the Konkan Railway viaduct. Jeep safari through forest to reach it.",
       "whyFamous": "India's 5th tallest waterfall; 'Sea of Milk'; railway bridge framing; monsoon spectacle",
-      "imageKeywords": ["Dudhsagar falls monsoon railway bridge", "Dudhsagar waterfall forest Goa", "Dudhsagar tiered falls aerial"]
+      "imageKeywords": [
+        "Dudhsagar falls monsoon railway bridge",
+        "Dudhsagar waterfall forest Goa",
+        "Dudhsagar tiered falls aerial"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Spice Plantations (Ponda)",
@@ -59,7 +82,12 @@
       "slug": "/india/goa/spice-plantations",
       "description": "Goa's interior hills conceal magnificent spice estates where cardamom, pepper, vanilla, cinnamon, nutmeg, cloves grow. Tours include guided walks, traditional Goan lunch, and feni distillery visits.",
       "whyFamous": "Spice education; Goan cuisine connection; plantation lunch",
-      "imageKeywords": ["Goa spice plantation tropical", "Ponda spice estate tour", "Goa cardamom pepper estate"]
+      "imageKeywords": [
+        "Goa spice plantation tropical",
+        "Ponda spice estate tour",
+        "Goa cardamom pepper estate"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Chapora Fort & Vagator",
@@ -67,20 +95,51 @@
       "slug": "/india/goa/chapora-fort-vagator",
       "description": "16th century fort became iconic after 'Dil Chahta Hai' (2001). Ruins offer dramatic panoramic views over Chapora River and Vagator Beach with red laterite cliffs below.",
       "whyFamous": "'Dil Chahta Hai' fort; Chapora River panorama; Vagator red cliffs",
-      "imageKeywords": ["Chapora fort Goa sunset", "Vagator beach red cliffs", "Chapora fort Dil Chahta Hai"]
+      "imageKeywords": [
+        "Chapora fort Goa sunset",
+        "Vagator beach red cliffs",
+        "Chapora fort Dil Chahta Hai"
+      ],
+      "mapEmbedUrl": ""
     }
   ],
-
   "religiousPlaces": [
-    { "name": "Basilica of Bom Jesus", "location": "Old Goa", "significance": "UNESCO; incorrupt body of St. Francis Xavier; 1605" },
-    { "name": "Se Cathedral", "location": "Old Goa", "significance": "Asia's largest church; Portuguese-Gothic; 1619" },
-    { "name": "Shantadurga Temple", "location": "Kavlem, Ponda", "significance": "Most popular Hindu temple in Goa; goddess of peace" },
-    { "name": "Mahalasa Temple", "location": "Mardol, Ponda", "significance": "Unique Goan avatar of Lakshmi/Vishnu goddess" },
-    { "name": "Tambdi Surla Mahadeva Temple", "location": "Bhagwan Mahaveer Sanctuary", "significance": "12th century; oldest surviving temple in Goa; Hemadpanthi style" },
-    { "name": "Mangeshi Temple", "location": "Priol, Ponda", "significance": "Shiva temple; most visited in Goa; 400-year-old lamp tower" },
-    { "name": "St. Cajetan Church", "location": "Old Goa", "significance": "1651; modeled after St. Peter's Basilica, Rome" }
+    {
+      "name": "Basilica of Bom Jesus",
+      "location": "Old Goa",
+      "significance": "UNESCO; incorrupt body of St. Francis Xavier; 1605"
+    },
+    {
+      "name": "Se Cathedral",
+      "location": "Old Goa",
+      "significance": "Asia's largest church; Portuguese-Gothic; 1619"
+    },
+    {
+      "name": "Shantadurga Temple",
+      "location": "Kavlem, Ponda",
+      "significance": "Most popular Hindu temple in Goa; goddess of peace"
+    },
+    {
+      "name": "Mahalasa Temple",
+      "location": "Mardol, Ponda",
+      "significance": "Unique Goan avatar of Lakshmi/Vishnu goddess"
+    },
+    {
+      "name": "Tambdi Surla Mahadeva Temple",
+      "location": "Bhagwan Mahaveer Sanctuary",
+      "significance": "12th century; oldest surviving temple in Goa; Hemadpanthi style"
+    },
+    {
+      "name": "Mangeshi Temple",
+      "location": "Priol, Ponda",
+      "significance": "Shiva temple; most visited in Goa; 400-year-old lamp tower"
+    },
+    {
+      "name": "St. Cajetan Church",
+      "location": "Old Goa",
+      "significance": "1651; modeled after St. Peter's Basilica, Rome"
+    }
   ],
-
   "naturalAttractions": {
     "rivers": [
       "Mandovi River — Main river; Panaji on its banks; Chorao Island (Salim Ali Bird Sanctuary)",
@@ -89,38 +148,120 @@
       "Sal River — South Goa; Cavelossim and Mobor beaches at mouth"
     ],
     "nationalParks": [
-      { "name": "Bhagwan Mahaveer WLS", "area": "240 sq km", "note": "Mollem; Dudhsagar; panther, gaur, sloth bear, giant squirrel" },
-      { "name": "Cotigao Wildlife Sanctuary", "note": "South Goa; primate haven; night sightings possible" },
-      { "name": "Salim Ali Bird Sanctuary", "note": "Chorao Island; mangrove bird haven; crocodiles" },
-      { "name": "Bondla Wildlife Sanctuary", "note": "Mini zoo + sanctuary; family friendly" }
+      {
+        "name": "Bhagwan Mahaveer WLS",
+        "area": "240 sq km",
+        "note": "Mollem; Dudhsagar; panther, gaur, sloth bear, giant squirrel"
+      },
+      {
+        "name": "Cotigao Wildlife Sanctuary",
+        "note": "South Goa; primate haven; night sightings possible"
+      },
+      {
+        "name": "Salim Ali Bird Sanctuary",
+        "note": "Chorao Island; mangrove bird haven; crocodiles"
+      },
+      {
+        "name": "Bondla Wildlife Sanctuary",
+        "note": "Mini zoo + sanctuary; family friendly"
+      }
     ]
   },
-
   "beaches": [
-    { "name": "Palolem", "location": "South Goa (Canacona)", "highlights": "Crescent bay; India's most photogenic; dolphin watching" },
-    { "name": "Calangute", "location": "North Goa (Bardez)", "highlights": "Largest; 'Queen of Beaches'; busy; water sports hub" },
-    { "name": "Baga", "location": "North Goa", "highlights": "Nightlife; shacks; Tito's Lane; Britto's seafood" },
-    { "name": "Anjuna", "location": "North Goa", "highlights": "Wednesday flea market; backpacker culture; full-moon parties" },
-    { "name": "Agonda", "location": "South Goa", "highlights": "Quiet; Olive Ridley turtles; yoga retreats; no nightclubs" },
-    { "name": "Arambol", "location": "Far North Goa", "highlights": "Drumming circles; alternative community; sweet water lake" },
-    { "name": "Vagator", "location": "North Goa", "highlights": "Red cliffs; Chapora Fort views; trance music scene" },
-    { "name": "Morjim", "location": "North Goa", "highlights": "Olive Ridley nesting; sea turtles" },
-    { "name": "Cavelossim", "location": "South Goa", "highlights": "Luxury resort stretch; Sal River meeting sea" },
-    { "name": "Mandrem", "location": "North Goa", "highlights": "Quiet; families; pristine; yoga" },
-    { "name": "Butterfly Beach", "location": "South Goa", "highlights": "Accessible only by boat; crescent cove; dolphins" }
+    {
+      "name": "Palolem",
+      "location": "South Goa (Canacona)",
+      "highlights": "Crescent bay; India's most photogenic; dolphin watching"
+    },
+    {
+      "name": "Calangute",
+      "location": "North Goa (Bardez)",
+      "highlights": "Largest; 'Queen of Beaches'; busy; water sports hub"
+    },
+    {
+      "name": "Baga",
+      "location": "North Goa",
+      "highlights": "Nightlife; shacks; Tito's Lane; Britto's seafood"
+    },
+    {
+      "name": "Anjuna",
+      "location": "North Goa",
+      "highlights": "Wednesday flea market; backpacker culture; full-moon parties"
+    },
+    {
+      "name": "Agonda",
+      "location": "South Goa",
+      "highlights": "Quiet; Olive Ridley turtles; yoga retreats; no nightclubs"
+    },
+    {
+      "name": "Arambol",
+      "location": "Far North Goa",
+      "highlights": "Drumming circles; alternative community; sweet water lake"
+    },
+    {
+      "name": "Vagator",
+      "location": "North Goa",
+      "highlights": "Red cliffs; Chapora Fort views; trance music scene"
+    },
+    {
+      "name": "Morjim",
+      "location": "North Goa",
+      "highlights": "Olive Ridley nesting; sea turtles"
+    },
+    {
+      "name": "Cavelossim",
+      "location": "South Goa",
+      "highlights": "Luxury resort stretch; Sal River meeting sea"
+    },
+    {
+      "name": "Mandrem",
+      "location": "North Goa",
+      "highlights": "Quiet; families; pristine; yoga"
+    },
+    {
+      "name": "Butterfly Beach",
+      "location": "South Goa",
+      "highlights": "Accessible only by boat; crescent cove; dolphins"
+    }
   ],
-
   "historicalSites": [
-    { "name": "Old Goa", "description": "UNESCO; Basilica, Se Cathedral, St. Cajetan, Church of St. Francis of Assisi" },
-    { "name": "Fontainhas Latin Quarter", "description": "19th century Portuguese houses; brightest colors in India; heritage walk" },
-    { "name": "Chapora Fort", "period": "16th century", "description": "Panoramic views; Bollywood fame" },
-    { "name": "Cabo de Rama Fort", "description": "Abandoned Portuguese fortress on cliff above sea; dramatic" },
-    { "name": "Aguada Fort & Lighthouse", "period": "1612", "description": "Portuguese sea fort; lighthouse; Sinquerim beach" },
-    { "name": "Reis Magos Fort", "period": "1551", "description": "Restored; contemporary art gallery inside; Mandovi views" },
-    { "name": "Palacio do Deão", "description": "250-year-old Portuguese priest's mansion; restored; Portuguese lunches" },
-    { "name": "Rachol Seminary", "period": "1606", "description": "Oldest Latin seminary in Asia; magnificent library" }
+    {
+      "name": "Old Goa",
+      "description": "UNESCO; Basilica, Se Cathedral, St. Cajetan, Church of St. Francis of Assisi"
+    },
+    {
+      "name": "Fontainhas Latin Quarter",
+      "description": "19th century Portuguese houses; brightest colors in India; heritage walk"
+    },
+    {
+      "name": "Chapora Fort",
+      "period": "16th century",
+      "description": "Panoramic views; Bollywood fame"
+    },
+    {
+      "name": "Cabo de Rama Fort",
+      "description": "Abandoned Portuguese fortress on cliff above sea; dramatic"
+    },
+    {
+      "name": "Aguada Fort & Lighthouse",
+      "period": "1612",
+      "description": "Portuguese sea fort; lighthouse; Sinquerim beach"
+    },
+    {
+      "name": "Reis Magos Fort",
+      "period": "1551",
+      "description": "Restored; contemporary art gallery inside; Mandovi views"
+    },
+    {
+      "name": "Palacio do Deão",
+      "description": "250-year-old Portuguese priest's mansion; restored; Portuguese lunches"
+    },
+    {
+      "name": "Rachol Seminary",
+      "period": "1606",
+      "description": "Oldest Latin seminary in Asia; magnificent library"
+    }
   ],
-
   "adventure": [
     "Water Sports (Calangute/Baga/Candolim) — Parasailing, jet skiing, banana boat, flyboarding, scuba",
     "Scuba Diving (Grand Island) — Visibility 10–20m; corals; wreck diving (MV River Princess)",
@@ -131,29 +272,66 @@
     "Cycling (South Goa) — Quiet village roads; spice plantation trails; heritage cycling tours",
     "Yoga Retreats (Arambol/Agonda/Morjim) — Dozens of reputable yoga and wellness centers"
   ],
-
   "foodCuisine": {
     "famousDishes": [
-      { "name": "Goan Fish Curry", "description": "Kokum-coconut curry with mackerel or pomfret; Goa's soul dish" },
-      { "name": "Chicken Xacuti", "description": "Complex coconut-roasted spice curry; Portuguese-influenced" },
-      { "name": "Pork Vindaloo", "description": "Garlic-vinegar marinated pork; internationally known; truly Goan in origin" },
-      { "name": "Sorpotel", "description": "Pork offal in spiced vinegar gravy; Catholic Goan feast dish" },
-      { "name": "Prawn Balchão", "description": "Tangy-spicy prawn in tomato-vinegar pickle sauce" },
-      { "name": "Bebinca", "description": "7-layer coconut-jaggery egg custard dessert; quintessential Goan sweet" },
-      { "name": "Ros Omelette", "description": "Egg omelet with vegetable curry poured over it; quick street meal" }
+      {
+        "name": "Goan Fish Curry",
+        "description": "Kokum-coconut curry with mackerel or pomfret; Goa's soul dish"
+      },
+      {
+        "name": "Chicken Xacuti",
+        "description": "Complex coconut-roasted spice curry; Portuguese-influenced"
+      },
+      {
+        "name": "Pork Vindaloo",
+        "description": "Garlic-vinegar marinated pork; internationally known; truly Goan in origin"
+      },
+      {
+        "name": "Sorpotel",
+        "description": "Pork offal in spiced vinegar gravy; Catholic Goan feast dish"
+      },
+      {
+        "name": "Prawn Balchão",
+        "description": "Tangy-spicy prawn in tomato-vinegar pickle sauce"
+      },
+      {
+        "name": "Bebinca",
+        "description": "7-layer coconut-jaggery egg custard dessert; quintessential Goan sweet"
+      },
+      {
+        "name": "Ros Omelette",
+        "description": "Egg omelet with vegetable curry poured over it; quick street meal"
+      }
     ],
     "streetFood": [
-      { "name": "Pav with Chorizo", "description": "Goan pork chorizo stuffed in bread roll; best at Mapusa Friday Market" },
-      { "name": "Rawa Fried Fish", "description": "Semolina-crusted fried kingfish or pomfret; beach shack staple" },
-      { "name": "Sanna", "description": "Soft steamed cakes with coconut milk; served at feasts and cafes" }
+      {
+        "name": "Pav with Chorizo",
+        "description": "Goan pork chorizo stuffed in bread roll; best at Mapusa Friday Market"
+      },
+      {
+        "name": "Rawa Fried Fish",
+        "description": "Semolina-crusted fried kingfish or pomfret; beach shack staple"
+      },
+      {
+        "name": "Sanna",
+        "description": "Soft steamed cakes with coconut milk; served at feasts and cafes"
+      }
     ],
     "drinks": [
-      { "name": "Feni", "description": "Cashew or coconut toddy spirit; GI-tagged drink; Urrak is lighter first distillation" },
-      { "name": "Sol Kadhi", "description": "Coconut milk-kokum digestive drink; cooling; every Goan meal" },
-      { "name": "Port Wine", "description": "Goa's colonial legacy; available at Old Goa restaurants" }
+      {
+        "name": "Feni",
+        "description": "Cashew or coconut toddy spirit; GI-tagged drink; Urrak is lighter first distillation"
+      },
+      {
+        "name": "Sol Kadhi",
+        "description": "Coconut milk-kokum digestive drink; cooling; every Goan meal"
+      },
+      {
+        "name": "Port Wine",
+        "description": "Goa's colonial legacy; available at Old Goa restaurants"
+      }
     ]
   },
-
   "stayOptions": {
     "luxury": [
       "Taj Exotica Resort & Spa, Benaulim — 58-acre estate; private beach; South Goa's finest",
@@ -172,14 +350,28 @@
       "Coconut Creek, Bogmalo — Eco-boutique; quiet beach; responsible tourism"
     ]
   },
-
   "bestTimeToVisit": [
-    { "season": "Peak Season", "months": "November – February", "conditions": "20–32°C; Christmas & NYE peak; all beaches open; best weather" },
-    { "season": "Shoulder Season", "months": "October, March", "conditions": "Crowd-free; great weather; better prices; Dudhsagar accessible" },
-    { "season": "Monsoon", "months": "June – September", "conditions": "Heavy rains; wild sea; Dudhsagar at peak; most shacks closed; cheap" },
-    { "season": "Summer", "months": "April – May", "conditions": "35–40°C; humid; quiet; cashew feni harvest season" }
+    {
+      "season": "Peak Season",
+      "months": "November – February",
+      "conditions": "20–32°C; Christmas & NYE peak; all beaches open; best weather"
+    },
+    {
+      "season": "Shoulder Season",
+      "months": "October, March",
+      "conditions": "Crowd-free; great weather; better prices; Dudhsagar accessible"
+    },
+    {
+      "season": "Monsoon",
+      "months": "June – September",
+      "conditions": "Heavy rains; wild sea; Dudhsagar at peak; most shacks closed; cheap"
+    },
+    {
+      "season": "Summer",
+      "months": "April – May",
+      "conditions": "35–40°C; humid; quiet; cashew feni harvest season"
+    }
   ],
-
   "transportation": {
     "airports": [
       "Goa International Airport (Dabolim) — International; London, Dubai, Moscow, Singapore + Indian cities",
@@ -195,17 +387,43 @@
       "Renting scooters/bikes is the best way to explore — from ₹300/day"
     ]
   },
-
   "festivals": [
-    { "name": "Goa Carnival", "period": "February–March", "description": "Pre-Lenten Portuguese tradition; 3-day street parade; Latin Quarter" },
-    { "name": "Christmas", "period": "December 24–25", "description": "Goa's biggest Christian celebration; Old Goa Midnight Mass; lights" },
-    { "name": "Shigmotsav (Goan Holi)", "period": "February–March", "description": "Vibrant tribal Hindu spring festival; longer than North Indian Holi" },
-    { "name": "IFFI", "period": "November", "description": "India's premier International Film Festival; Panaji" },
-    { "name": "Sunburn Festival", "period": "December", "description": "Asia's largest electronic music festival" },
-    { "name": "Feast of St. Francis Xavier", "period": "December 3", "description": "Old Goa; annual feast; Exposition every 10 years" },
-    { "name": "Narkasur Burning", "period": "Diwali eve", "description": "Giant demon effigies built and burned; North Goa specialty" }
+    {
+      "name": "Goa Carnival",
+      "period": "February–March",
+      "description": "Pre-Lenten Portuguese tradition; 3-day street parade; Latin Quarter"
+    },
+    {
+      "name": "Christmas",
+      "period": "December 24–25",
+      "description": "Goa's biggest Christian celebration; Old Goa Midnight Mass; lights"
+    },
+    {
+      "name": "Shigmotsav (Goan Holi)",
+      "period": "February–March",
+      "description": "Vibrant tribal Hindu spring festival; longer than North Indian Holi"
+    },
+    {
+      "name": "IFFI",
+      "period": "November",
+      "description": "India's premier International Film Festival; Panaji"
+    },
+    {
+      "name": "Sunburn Festival",
+      "period": "December",
+      "description": "Asia's largest electronic music festival"
+    },
+    {
+      "name": "Feast of St. Francis Xavier",
+      "period": "December 3",
+      "description": "Old Goa; annual feast; Exposition every 10 years"
+    },
+    {
+      "name": "Narkasur Burning",
+      "period": "Diwali eve",
+      "description": "Giant demon effigies built and burned; North Goa specialty"
+    }
   ],
-
   "travelTips": [
     "Beach Safety: Heed flag warnings — red/black flags mean no swimming; rip currents kill annually",
     "Scooter Rentals: Cheapest and best way to explore; always wear helmet; International Driving Permit required",
@@ -215,7 +433,6 @@
     "Budget: Beach shack ₹800–2,500; mid-range ₹3,000–8,000; luxury ₹15,000–80,000+",
     "Best Value: October and March are perfect shoulder months — great weather, lower prices, fewer crowds"
   ],
-
   "uniqueFacts": [
     "Goa was a Portuguese colony for 451 years (1510–1961) — the longest European colonial presence in Asia",
     "The incorrupt body of St. Francis Xavier in the Basilica of Bom Jesus has been displayed since 1554; science cannot explain why it hasn't decomposed",

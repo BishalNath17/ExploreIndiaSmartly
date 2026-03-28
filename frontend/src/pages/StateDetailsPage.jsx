@@ -18,6 +18,7 @@ import {
   Plane,
   Sun,
   Mountain,
+  X,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
 import { statesData as states } from '../data/statesData';
@@ -25,10 +26,10 @@ import { destinationsData as destinations, destinationImages } from '../data/des
 import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 import { getStateKnowledge } from '../data/knowledgeBase';
 
+import BackButton from '../components/ui/BackButton';
 import DestinationCard from '../components/cards/DestinationCard';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
-import MapboxViewer from '../components/features/MapboxViewer';
 import InfoCard from '../components/cards/InfoCard';
 import HiddenGemCard from '../components/cards/HiddenGemCard';
 import EmptyState from '../components/ui/EmptyState';
@@ -68,13 +69,15 @@ const HeroBanner = ({ state }) => (
 
     {/* Content */}
     <div className="absolute bottom-0 left-0 w-full p-6 sm:p-12 lg:p-16 z-20 max-w-5xl">
-      <motion.div variants={fadeUp} initial="hidden" animate="visible">
-        <Link
-          to="/states"
-          className="inline-flex items-center gap-2 text-gray-300 hover:text-india-orange transition-colors mb-5 text-sm"
-        >
-          <ArrowLeft size={16} /> All States
-        </Link>
+      <motion.div variants={fadeUp} initial="hidden" animate="visible" className="flex flex-col gap-4 mb-5">
+        <BackButton fallback="/states" label="All States" className="w-fit" />
+        <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-400">
+          <Link to="/" className="hover:text-india-orange transition-colors">Home</Link>
+          <ChevronRight size={14} />
+          <Link to="/states" className="hover:text-india-orange transition-colors">States</Link>
+          <ChevronRight size={14} />
+          <span className="text-gray-200 font-semibold">{state.name}</span>
+        </div>
       </motion.div>
 
       <motion.div
@@ -488,7 +491,7 @@ const resolveDestImage = (dest, stateId) => {
   return null;
 };
 
-const KBDestinationCard = ({ d, stateId }) => {
+const KBDestinationCard = ({ d, stateId, onClick }) => {
   const stateImg = states.find(s => s.id === stateId)?.image;
   // initial mapped image
   const defaultImg = resolveDestImage(d, stateId);
@@ -505,7 +508,10 @@ const KBDestinationCard = ({ d, stateId }) => {
   };
 
   return (
-    <div className="glass rounded-xl overflow-hidden group">
+    <div 
+      onClick={onClick}
+      className={`glass rounded-xl overflow-hidden group ${onClick ? 'cursor-pointer hover:border-india-orange/30 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-india-orange/10' : ''}`}
+    >
       {/* Image */}
       <div className="relative h-36 overflow-hidden">
         <img
@@ -531,8 +537,123 @@ const KBDestinationCard = ({ d, stateId }) => {
   );
 };
 
+/* ═══════════════════════════════════════════════════════
+   KB — DESTINATION DETAIL MODAL
+   ═══════════════════════════════════════════════════════ */
+const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
+  const stateImg = states.find(s => s.id === stateId)?.image;
+  const defaultImg = resolveDestImage(dest, stateId);
+  const [imgSrc, setImgSrc] = React.useState(defaultImg || stateImg || FALLBACK_IMG);
+  const [hasError, setHasError] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [onClose]);
+
+  const handleError = () => {
+    if (!hasError && stateImg && imgSrc !== stateImg) {
+      setHasError(true);
+      setImgSrc(stateImg);
+    } else {
+      setImgSrc(FALLBACK_IMG);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-12 animate-in fade-in duration-300">
+      <div className="absolute inset-0 bg-navy-dark/90 backdrop-blur-sm" onClick={onClose} />
+      
+      <div className="relative w-full max-w-5xl bg-navy border border-gray-800 rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+        <button 
+          onClick={onClose} 
+          className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-india-orange rounded-full text-white transition-colors"
+        >
+          <X size={20} />
+        </button>
+
+        <div className="overflow-y-auto w-full h-full p-6 sm:p-10 custom-scrollbar">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Left Info */}
+            <div className="flex flex-col">
+              {/* Destination Image */}
+              <div className="relative w-full h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden mb-6 border border-white/5 shrink-0 bg-navy-dark/50">
+                <img
+                  src={imgSrc}
+                  alt={dest.name}
+                  className="w-full h-full object-cover"
+                  onError={handleError}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
+                {imgSrc === FALLBACK_IMG && (
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <Mountain size={48} className="text-india-orange/30" />
+                  </div>
+                )}
+                
+                {/* Category Badge overlay on image */}
+                {dest.category && (
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-white bg-india-orange/80 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-white/20">
+                      {dest.category.replace('_', ' & ')}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Title & Details */}
+              <h2 className="text-3xl sm:text-4xl font-bold mb-3">{dest.name}</h2>
+              {dest.location && (
+                <p className="flex items-center gap-2 text-gray-400 text-sm mb-6">
+                  <MapPin size={16} className="text-india-orange shrink-0" /> {dest.location}
+                </p>
+              )}
+              <p className="text-gray-300 leading-relaxed mb-8">{dest.description}</p>
+              
+              {dest.whyFamous && (
+                <div className="bg-navy-dark/50 rounded-xl p-5 border-l-4 border-india-orange">
+                  <h4 className="text-sm font-bold text-india-orange mb-1">Famous For</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed">{dest.whyFamous}</p>
+                </div>
+              )}
+            </div>
+
+            {/* Right Map */}
+            <div className="w-full bg-navy-dark rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-[400px] border border-gray-800 relative flex flex-col items-center justify-center">
+              {dest.mapEmbedUrl ? (
+                <iframe 
+                  src={dest.mapEmbedUrl} 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0 z-0"
+                  title={`Map of ${dest.name}`}
+                ></iframe>
+              ) : (
+                <div className="text-center p-6 z-10">
+                  <Map size={40} className="text-gray-600 mx-auto mb-4" />
+                  <h4 className="font-bold text-gray-300 mb-2">Map will be added soon</h4>
+                  <p className="text-gray-500 text-xs max-w-[200px] mx-auto">Embed link can be added later in the destination data</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const KBTopDestinations = ({ data, stateId }) => {
   const [showAll, setShowAll] = React.useState(false);
+  const [selectedDest, setSelectedDest] = React.useState(null);
+
   if (!data?.topDestinations?.length) return null;
   
   const allDests = data.topDestinations;
@@ -541,6 +662,13 @@ const KBTopDestinations = ({ data, stateId }) => {
   return (
     <section className="py-12 sm:py-16 section-padding bg-navy-dark/50">
       <div className="max-w-5xl mx-auto">
+        {selectedDest && (
+          <KBDestinationDetailModal 
+            dest={selectedDest} 
+            stateId={stateId} 
+            onClose={() => setSelectedDest(null)} 
+          />
+        )}
         <ScrollReveal>
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
@@ -560,7 +688,7 @@ const KBTopDestinations = ({ data, stateId }) => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {dests.map((d) => (
-              <KBDestinationCard key={d.name} d={d} stateId={stateId} />
+              <KBDestinationCard key={d.name} d={d} stateId={stateId} onClick={() => setSelectedDest(d)} />
             ))}
           </div>
           {allDests.length > 6 && !showAll && (
@@ -636,29 +764,6 @@ const HiddenGemsSection = ({ stateSlug, stateName }) => {
 };
 
 /* ═══════════════════════════════════════════════════════
-   5. MAP PLACEHOLDER
-   ═══════════════════════════════════════════════════════ */
-const MapPlaceholder = ({ state }) => (
-  <section className="py-16 sm:py-20 section-padding bg-navy-dark/50">
-    <div className="max-w-6xl mx-auto">
-      <SectionHeader
-        title={`Explore ${state.name}`}
-        subtitle="Interactive Map"
-      />
-
-      <ScrollReveal>
-        <MapboxViewer 
-          coordinates={state.coords ? [state.coords.lng, state.coords.lat] : undefined}
-          title={state.name}
-          zoom={5}
-          height="450px"
-        />
-      </ScrollReveal>
-    </div>
-  </section>
-);
-
-/* ═══════════════════════════════════════════════════════
    6. CTA — EXPLORE MORE
    ═══════════════════════════════════════════════════════ */
 const ExploreMoreCTA = () => (
@@ -713,7 +818,6 @@ const StateDetailsPage = () => {
       <KBConnectivity data={kb} />
       <KBFestivals data={kb} />
       <KBTravelTips data={kb} />
-      <MapPlaceholder state={state} />
       <ExploreMoreCTA />
     </>
   );

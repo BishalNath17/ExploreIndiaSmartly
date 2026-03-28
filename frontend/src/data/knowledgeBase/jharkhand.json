@@ -4,14 +4,12 @@
   "capital": "Ranchi",
   "region": "East India",
   "slug": "/india/jharkhand",
-
   "overview": {
     "short": "Jharkhand — \"Land of Forests\" — was carved from Bihar in 2000 to give its primarily tribal population (26% of the state is Scheduled Tribe, the largest proportion in East India) political self-determination. The Chota Nagpur Plateau, a mineral-rich highland with extraordinary waterfalls, dense forests, and flowing rivers, is the state's defining geography.",
     "paragraph2": "India's mineral heartland, Jharkhand holds 40% of India's mineral reserves — coal, iron ore, copper, uranium, mica — beneath its red laterite soils. Yet this extractive industrial story sits alongside a rich tribal heritage: the Santali, Mundari, Ho, Kurux (Oraon), and Gond tribes maintain distinctive languages, festivals, art (Sohrai and Khovar cave paintings), and nature-worship traditions that are ancient and vibrant.",
     "paragraph3": "The state's natural beauty is stunning — Hundru, Jonha, Dassam, and Hirni waterfalls tumble dramatically through forest gorges; Betla National Park is home to elephants and tigers; and the Parasnath Hill (Shikharji) — Jainism's most sacred pilgrimage — draws lakhs of white-clad pilgrims annually.",
     "cultureHeritage": "Jharkhand's tribal culture is among India's richest and most alive. Sohrai and Khovar paintings — geometric and naturalistic wall paintings made by Santali women using natural pigments — are now internationally exhibited. The Chhau dance of Seraikela (a martial arts-based masked dance form) is a UNESCO Intangible Heritage of Humanity. Santali music (particularly the madal drum and flute) is extraordinary in its polyrhythmic complexity. The Sarhul (spring flower festival) and Karma festivals are celebrated with remarkable community joyfulness."
   },
-
   "topDestinations": [
     {
       "name": "Hundru Falls",
@@ -19,7 +17,12 @@
       "slug": "/india/jharkhand/hundru-falls",
       "description": "One of India's most dramatic waterfalls — 98m high, with the Subarnarekha River plunging through a series of granite gorges. The natural pools at the base are safe for swimming in season. An easy 1-hour excursion from Ranchi, making it the most-visited waterfall in Jharkhand.",
       "whyFamous": "98m fall; swimming pools; Subarnarekha river; Ranchi's most accessible natural attraction",
-      "imageKeywords": ["Hundru Falls Jharkhand", "Subarnarekha river falls", "Hundru waterfall granite gorge"]
+      "imageKeywords": [
+        "Hundru Falls Jharkhand",
+        "Subarnarekha river falls",
+        "Hundru waterfall granite gorge"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Parasnath (Shikharji)",
@@ -27,7 +30,12 @@
       "slug": "/india/jharkhand/parasnath-shikharji",
       "description": "Jainism's most sacred pilgrimage site — the hill where 20 of the 24 Tirthankaras (Jain spiritual masters) are believed to have attained Moksha (liberation). The 24 km circuit trek through 28 Jain temples of elaborate marble and color is undertaken barefoot by thousands of white-clad pilgrims daily. At 1,365m, it's Jharkhand's highest peak.",
       "whyFamous": "Jainism's holiest site; 20 of 24 Tirthankaras moksha site; 28 temples; barefoot pilgrimage",
-      "imageKeywords": ["Parasnath Shikharji Jain temples", "Jharkhand Parasnath hill pilgrimage", "Shikharji marble temples summit"]
+      "imageKeywords": [
+        "Parasnath Shikharji Jain temples",
+        "Jharkhand Parasnath hill pilgrimage",
+        "Shikharji marble temples summit"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Betla National Park",
@@ -35,7 +43,12 @@
       "slug": "/india/jharkhand/betla-national-park",
       "description": "One of the first two Project Tiger reserves in India (designated 1974), Betla covers 979 sq km of dry deciduous forest. Home to Bengal tigers, Asian elephants, leopards, sloth bears, mugger crocodiles in the Koel River, and 174 bird species. The ruins of Betla Fort inside the park add historical intrigue.",
       "whyFamous": "First Project Tiger reserve; elephant and tiger habitat; Betla Fort",
-      "imageKeywords": ["Betla National Park tiger", "Betla elephant safari Jharkhand", "Betla forest reserve"]
+      "imageKeywords": [
+        "Betla National Park tiger",
+        "Betla elephant safari Jharkhand",
+        "Betla forest reserve"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Ranchi",
@@ -43,7 +56,12 @@
       "slug": "/india/jharkhand/ranchi",
       "description": "The state capital and a pleasant highland city on the Chota Nagpur Plateau. Home to the Jagannath Temple (replica of Puri; rath yatra held annually), Rock Garden, Ranchi Lake, Pahari Mandir, and excellent connections to the surrounding waterfalls. Birthplace of MS Dhoni — a cricket pilgrimage destination in its own right.",
       "whyFamous": "State capital; waterfall hub; MS Dhoni birthplace; Jagannath Temple",
-      "imageKeywords": ["Ranchi city Jharkhand", "Ranchi Rock Garden", "Jagannath Temple Ranchi"]
+      "imageKeywords": [
+        "Ranchi city Jharkhand",
+        "Ranchi Rock Garden",
+        "Jagannath Temple Ranchi"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Deoghar (Baidyanath Dham)",
@@ -51,18 +69,41 @@
       "slug": "/india/jharkhand/deoghar",
       "description": "One of the 12 Jyotirlingas — the Baidyanath Temple is one of Hinduism's most important Shiva shrines. During Shravan month (July–August), millions of Kanwariyas (devotees) walk from the Ganges at Sultanganj (Bihar) carrying holy water 105 km to pour over the Shiva lingam — one of India's great religious spectacles.",
       "whyFamous": "Jyotirlinga; Shravan Kanwariya yatra; millions of pilgrims; one of India's largest gatherings",
-      "imageKeywords": ["Baidyanath Temple Deoghar", "Deoghar Shiva temple", "Shravan kanwariya yatra Deoghar"]
+      "imageKeywords": [
+        "Baidyanath Temple Deoghar",
+        "Deoghar Shiva temple",
+        "Shravan kanwariya yatra Deoghar"
+      ],
+      "mapEmbedUrl": ""
     }
   ],
-
   "religiousPlaces": [
-    { "name": "Baidyanath Temple", "location": "Deoghar", "significance": "Jyotirlinga #9; Shakti Peetha; Shravan yatra" },
-    { "name": "Shikharji (Parasnath)", "location": "Giridih", "significance": "Jain's most sacred; 20 Tirthankara moksha sites" },
-    { "name": "Jagannath Temple", "location": "Ranchi", "significance": "Puri replica; annual Rath Yatra; 17th century" },
-    { "name": "Pahari Mandir", "location": "Ranchi", "significance": "Hilltop Shiva temple; city views" },
-    { "name": "Itkhori", "location": "Chatra", "significance": "Ancient Katyayani (Durga) shrine; rock-cut images" }
+    {
+      "name": "Baidyanath Temple",
+      "location": "Deoghar",
+      "significance": "Jyotirlinga #9; Shakti Peetha; Shravan yatra"
+    },
+    {
+      "name": "Shikharji (Parasnath)",
+      "location": "Giridih",
+      "significance": "Jain's most sacred; 20 Tirthankara moksha sites"
+    },
+    {
+      "name": "Jagannath Temple",
+      "location": "Ranchi",
+      "significance": "Puri replica; annual Rath Yatra; 17th century"
+    },
+    {
+      "name": "Pahari Mandir",
+      "location": "Ranchi",
+      "significance": "Hilltop Shiva temple; city views"
+    },
+    {
+      "name": "Itkhori",
+      "location": "Chatra",
+      "significance": "Ancient Katyayani (Durga) shrine; rock-cut images"
+    }
   ],
-
   "naturalAttractions": {
     "rivers": [
       "Subarnarekha — \"Gold-streaked\" river; Hundru Falls; flows to Bay of Bengal",
@@ -77,22 +118,43 @@
       "Lower Ghaghri Falls — Latehar; dramatic gorge falls near Betla"
     ],
     "wildlife": [
-      { "name": "Betla NP", "note": "979 sq km; tiger, elephant; first Project Tiger" },
-      { "name": "Hazaribagh WLS", "note": "183 sq km; tiger, leopard; Hazaribagh plateau" },
-      { "name": "Dalma WLS", "note": "Jamshedpur; elephant habitat; day trip from city" },
-      { "name": "Mahuadanr Wolf Sanctuary", "note": "Latehar; India's only dedicated wolf sanctuary" }
+      {
+        "name": "Betla NP",
+        "note": "979 sq km; tiger, elephant; first Project Tiger"
+      },
+      {
+        "name": "Hazaribagh WLS",
+        "note": "183 sq km; tiger, leopard; Hazaribagh plateau"
+      },
+      {
+        "name": "Dalma WLS",
+        "note": "Jamshedpur; elephant habitat; day trip from city"
+      },
+      {
+        "name": "Mahuadanr Wolf Sanctuary",
+        "note": "Latehar; India's only dedicated wolf sanctuary"
+      }
     ]
   },
-
   "beaches": [],
-
   "historicalSites": [
-    { "name": "Betla Fort", "description": "Inside Betla NP; 16th century; Chero dynasty; crumbling but atmospheric" },
-    { "name": "Telkupi", "description": "Purulia (border); submerged temple complex exposed when dam level drops" },
-    { "name": "Hazaribagh", "description": "British-era hill station; colonial architecture; pleasant climate; Rajrappa Temple nearby" },
-    { "name": "Rajrappa", "description": "Ramgarh; Chhinnamasta Devi temple; waterfall at river confluence; powerful Shakti site" }
+    {
+      "name": "Betla Fort",
+      "description": "Inside Betla NP; 16th century; Chero dynasty; crumbling but atmospheric"
+    },
+    {
+      "name": "Telkupi",
+      "description": "Purulia (border); submerged temple complex exposed when dam level drops"
+    },
+    {
+      "name": "Hazaribagh",
+      "description": "British-era hill station; colonial architecture; pleasant climate; Rajrappa Temple nearby"
+    },
+    {
+      "name": "Rajrappa",
+      "description": "Ramgarh; Chhinnamasta Devi temple; waterfall at river confluence; powerful Shakti site"
+    }
   ],
-
   "adventure": [
     "Betla Safari — Elephant back and jeep; early morning",
     "Parasnath Trek — 24 km barefoot circuit; pilgrimage-adventure combination",
@@ -100,33 +162,59 @@
     "Topchanchi Lake Boating — Dhanbad district; scenic lake; forest background",
     "Subarnarekha Rafting — Seasonal; near Hundru area"
   ],
-
   "foodCuisine": {
     "famousDishes": [
-      { "name": "Rugra", "description": "Forest mushroom (wild variety); stir-fried; tribal delicacy" },
-      { "name": "Dhuska", "description": "Deep-fried rice-lentil bread; crispy; Ranchi street staple" },
-      { "name": "Pittha", "description": "Steamed rice dumplings; sweet or savory; festival food (same as Bihar)" },
-      { "name": "Badi", "description": "Sun-dried lentil dumplings; added to curries and chutneys" }
+      {
+        "name": "Rugra",
+        "description": "Forest mushroom (wild variety); stir-fried; tribal delicacy"
+      },
+      {
+        "name": "Dhuska",
+        "description": "Deep-fried rice-lentil bread; crispy; Ranchi street staple"
+      },
+      {
+        "name": "Pittha",
+        "description": "Steamed rice dumplings; sweet or savory; festival food (same as Bihar)"
+      },
+      {
+        "name": "Badi",
+        "description": "Sun-dried lentil dumplings; added to curries and chutneys"
+      }
     ],
     "streetFood": [],
     "drinks": [
-      { "name": "Maad", "description": "Fermented rice beer; essential tribal beverage; Santali and Ho communities" },
-      { "name": "Handia", "description": "Rice beer; similar to Maad; widespread in tribal areas" }
+      {
+        "name": "Maad",
+        "description": "Fermented rice beer; essential tribal beverage; Santali and Ho communities"
+      },
+      {
+        "name": "Handia",
+        "description": "Rice beer; similar to Maad; widespread in tribal areas"
+      }
     ]
   },
-
   "stayOptions": {
     "luxury": [],
     "midRange": [],
     "unique": []
   },
-
   "bestTimeToVisit": [
-    { "season": "Best (Winter)", "months": "October – March", "conditions": "10–25°C; waterfalls strong after monsoon; comfortable" },
-    { "season": "Monsoon", "months": "June – September", "conditions": "Waterfalls spectacular; forests lush; some roads difficult" },
-    { "season": "Summer", "months": "April – May", "conditions": "35–42°C; plateau heat; avoid" }
+    {
+      "season": "Best (Winter)",
+      "months": "October – March",
+      "conditions": "10–25°C; waterfalls strong after monsoon; comfortable"
+    },
+    {
+      "season": "Monsoon",
+      "months": "June – September",
+      "conditions": "Waterfalls spectacular; forests lush; some roads difficult"
+    },
+    {
+      "season": "Summer",
+      "months": "April – May",
+      "conditions": "35–42°C; plateau heat; avoid"
+    }
   ],
-
   "transportation": {
     "airports": [
       "Birsa Munda Airport, Ranchi — Main airport; Delhi, Mumbai, Kolkata connections",
@@ -138,22 +226,39 @@
     ],
     "roads": []
   },
-
   "festivals": [
-    { "name": "Sarhul", "period": "March–April", "description": "Santali spring festival; Sal flower worship; community dance" },
-    { "name": "Karma Festival", "period": "August–September", "description": "Brother-sister bond; nature worship; karmaah tree" },
-    { "name": "Shravan Kanwariya Yatra", "period": "July–August", "description": "Deoghar; millions walk from Sultanganj" },
-    { "name": "Chhau Dance Festival", "period": "March", "description": "Seraikela; UNESCO-listed martial masked dance" },
-    { "name": "Sohrai Festival", "period": "Post-harvest", "description": "Cattle worship; wall paintings renewed; Hazaribagh district" }
+    {
+      "name": "Sarhul",
+      "period": "March–April",
+      "description": "Santali spring festival; Sal flower worship; community dance"
+    },
+    {
+      "name": "Karma Festival",
+      "period": "August–September",
+      "description": "Brother-sister bond; nature worship; karmaah tree"
+    },
+    {
+      "name": "Shravan Kanwariya Yatra",
+      "period": "July–August",
+      "description": "Deoghar; millions walk from Sultanganj"
+    },
+    {
+      "name": "Chhau Dance Festival",
+      "period": "March",
+      "description": "Seraikela; UNESCO-listed martial masked dance"
+    },
+    {
+      "name": "Sohrai Festival",
+      "period": "Post-harvest",
+      "description": "Cattle worship; wall paintings renewed; Hazaribagh district"
+    }
   ],
-
   "travelTips": [
     "Deoghar Shravan: If visiting in July–August, be prepared for massive crowds; accommodation fills up completely; book weeks in advance",
     "Tribal Areas: Seek local guidance for tribal village visits; always ask permission before photographing",
     "Wildlife Booking: Betla safari online at jharkhand.gov.in",
     "Budget: Very affordable; ₹700–1,500 budget; ₹2,000–4,000 mid"
   ],
-
   "uniqueFacts": [
     "Jharkhand holds approximately 40% of India's total mineral wealth including coal, iron ore, copper, mica, and uranium",
     "Mahuadanr Wolf Sanctuary in Latehar is India's only sanctuary exclusively dedicated to the wolf",

@@ -1,4 +1,5 @@
 import ScrollReveal from '../ui/ScrollReveal';
+import BackButton from '../ui/BackButton';
 
 /**
  * Reusable gradient hero banner with badge, title, highlighted word, and subtitle.
@@ -37,10 +38,14 @@ const PageHero = ({
   };
 
   return (
-    <section className="relative py-20 sm:py-28 section-padding overflow-hidden">
+    <section className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 section-padding overflow-hidden">
       {/* Gradient background */}
       <div className={`absolute inset-0 bg-gradient-to-br ${gradientFrom} via-navy to-navy-dark z-0`} />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-india-orange/5 blur-3xl z-0" />
+
+      <div className="relative z-20 max-w-6xl mx-auto mb-8 sm:mb-12">
+        <BackButton fallback="/" label="Back to Home" />
+      </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         {badge && (

@@ -19,6 +19,7 @@ import { generateItinerary, formatINR, STYLE_OPTIONS } from '../services/api';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import StateSelect from '../components/features/StateSelect';
+import BackButton from '../components/ui/BackButton';
 
 
 
@@ -213,8 +214,9 @@ const TravelPlannerPage = () => {
   };
 
   return (
-    <section className="py-16 sm:py-24 section-padding">
+    <section className="pt-24 pb-16 sm:pt-32 sm:pb-24 section-padding">
       <div className="max-w-6xl mx-auto">
+        <BackButton fallback="/" label="Back to Home" className="mb-8" />
         <SectionHeader
           title="Plan Your Budget & Days"
           subtitle="Generate a smart, day-wise itinerary instantly."

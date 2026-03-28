@@ -4,14 +4,12 @@
   "capital": "Chandigarh",
   "region": "North India",
   "slug": "/india/haryana",
-
   "overview": {
     "short": "Haryana is the agricultural heartland of India's \"Green Revolution\" — the fertile plains that feed the nation, lying wrapped around Delhi and forming the core of the ancient Kurukshetra civilization where the Mahabharata's great battle was fought. The state's landscape is primarily flat agricultural land enriched by the Ghaggar-Hakra and Yamuna rivers, with the Aravalli Hills forming its southern boundary.",
     "paragraph2": "Haryana's cultural identity is deeply intertwined with Jat and Ahir communities — known for their martial traditions, dairy farming, and the distinctive Haryanvi language and music. The state is also India's per-capita sports champion, producing more Olympic and Commonwealth Games medalists than almost any other state relative to its population. Wrestlers, boxers, and martial arts practitioners from Haryana dominate Indian sport.",
     "paragraph3": "Kurukshetra — where the Mahabharata war was fought 5,000 years ago according to tradition — is one of Hinduism's most sacred sites. The Brahma Sarovar, one of the world's largest religious tanks, and over 350 sacred sites (tirthas) within the 48-km Kurukshetra district make this a major pilgrimage destination. Pinjore Gardens (Yadavindra Gardens), Sultanpur National Park, and the Aravalli hill temples add natural and heritage dimensions.",
     "cultureHeritage": "Haryanvi folk traditions — phag songs (Holi season), ragini (competitive folk singing), Saang theater (open-air drama), and Swang (comedy-drama) — reflect a robust rural culture. Traditional crafts include durrie (floor rugs) weaving, phulkari embroidery (shared with Punjab), and pottery. Panipat — site of three decisive battles (1526, 1556, 1761) that shaped Indian history — is another of Haryana's profound historical contributions."
   },
-
   "topDestinations": [
     {
       "name": "Kurukshetra",
@@ -19,7 +17,12 @@
       "slug": "/india/haryana/kurukshetra",
       "description": "The battlefield where the Mahabharata war was fought, Kurukshetra is one of Hinduism's most sacred dharmic landscapes with 350+ pilgrimage sites. Brahma Sarovar (one of the world's largest man-made tanks), Sannihit Sarovar, Jyotisar (where Krishna delivered the Bhagavad Gita), the Sheesh Mahal, and numerous temples make this a deeply spiritual destination. The Kurukshetra Panorama & Science Centre presents the Mahabharata in 3D.",
       "whyFamous": "Mahabharata battlefield; Bhagavad Gita birthplace; Hindu pilgrimage; Brahma Sarovar",
-      "imageKeywords": ["Kurukshetra Brahma Sarovar tank", "Kurukshetra Jyotisar temple", "Kurukshetra Mahabharata panorama"]
+      "imageKeywords": [
+        "Kurukshetra Brahma Sarovar tank",
+        "Kurukshetra Jyotisar temple",
+        "Kurukshetra Mahabharata panorama"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Pinjore (Yadavindra Gardens)",
@@ -27,7 +30,12 @@
       "slug": "/india/haryana/pinjore",
       "description": "A magnificent 17th century Mughal-style terraced garden (Farrukh Niyar's Pinjore Bagh) covering 100 acres with 7 terraces, fountains, palaces (Shish Mahal, Rang Mahal, Jal Mahal), and the Yadavindra Wildlife Sanctuary. The annual Mango Festival in summer is a beloved local event.",
       "whyFamous": "17th century Mughal garden; Shivalik foothills; mango festival",
-      "imageKeywords": ["Pinjore Yadavindra Gardens Mughal", "Pinjore terraced gardens fountains", "Pinjore palace garden Haryana"]
+      "imageKeywords": [
+        "Pinjore Yadavindra Gardens Mughal",
+        "Pinjore terraced gardens fountains",
+        "Pinjore palace garden Haryana"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Sultanpur National Park",
@@ -35,7 +43,12 @@
       "slug": "/india/haryana/sultanpur",
       "description": "A compact but remarkable birdwatching haven just 46 km from Delhi. Over 250 bird species including 130+ migratory species from Central Asia, Siberia, and Europe visit this shallow jheel (lake). Easily accessible for Delhi residents seeking a quick nature escape.",
       "whyFamous": "Delhi's nearest birdwatching destination; Siberian crane historical sightings; 250+ species",
-      "imageKeywords": ["Sultanpur National Park birds", "Sultanpur jheel migratory birds", "Sultanpur wetland Haryana"]
+      "imageKeywords": [
+        "Sultanpur National Park birds",
+        "Sultanpur jheel migratory birds",
+        "Sultanpur wetland Haryana"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Panipat",
@@ -43,7 +56,12 @@
       "slug": "/india/haryana/panipat",
       "description": "\"City of Weavers\" and site of three battles that decided India's political destiny — Panipat 1 (1526: Babur defeats Ibrahim Lodi; Mughal Empire founded), Panipat 2 (1556: Akbar defeats Hemu), Panipat 3 (1761: Afghans defeat Marathas). The Kala Amb memorial, Ibrahim Lodi's tomb, the Panipat Museum, and Devi Temple make this a historically essential destination.",
       "whyFamous": "Three decisive battles of Indian history; Mughal Empire birth; history museum",
-      "imageKeywords": ["Panipat battlefield memorial", "Ibrahim Lodi tomb Panipat", "Panipat museum Haryana"]
+      "imageKeywords": [
+        "Panipat battlefield memorial",
+        "Ibrahim Lodi tomb Panipat",
+        "Panipat museum Haryana"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Morni Hills",
@@ -51,76 +69,157 @@
       "slug": "/india/haryana/morni-hills",
       "description": "Haryana's only hill station at 1,220m, with the twin Tikkar Taal lakes, forest trekking, the Morni Fort, and rock-climbing opportunities. A popular weekend retreat from Chandigarh and Delhi, with an adventure park and military heritage museum.",
       "whyFamous": "Haryana's only hill station; Tikkar lakes; forest trekking; Chandigarh weekend",
-      "imageKeywords": ["Morni Hills lakes Haryana", "Tikkar Taal Morni", "Morni Hills forest trek"]
+      "imageKeywords": [
+        "Morni Hills lakes Haryana",
+        "Tikkar Taal Morni",
+        "Morni Hills forest trek"
+      ],
+      "mapEmbedUrl": ""
     }
   ],
-
   "religiousPlaces": [
-    { "name": "Jyotisar", "location": "Kurukshetra", "significance": "Where Krishna delivered Bhagavad Gita to Arjuna" },
-    { "name": "Brahma Sarovar", "location": "Kurukshetra", "significance": "Solar eclipse bathing; one of world's largest religious tanks" },
-    { "name": "Sannihit Sarovar", "location": "Kurukshetra", "significance": "Where Sapta Saraswati meet; pilgrimage tank" },
-    { "name": "Sthaneshwar Mahadev Temple", "location": "Kurukshetra", "significance": "Pandavas prayed here before battle; ancient Shiva shrine" },
-    { "name": "Mata Mansa Devi Temple", "location": "Panchkula", "significance": "Shakti Peetha; massive Navratri gatherings" },
-    { "name": "Pehowa", "location": "Kurukshetra District", "significance": "Ancient tirtha; ancestor rites (Pind Daan)" },
-    { "name": "Kalka Devi Temple", "location": "Kalka", "significance": "Shivalik foothills; popular pilgrimage" }
+    {
+      "name": "Jyotisar",
+      "location": "Kurukshetra",
+      "significance": "Where Krishna delivered Bhagavad Gita to Arjuna"
+    },
+    {
+      "name": "Brahma Sarovar",
+      "location": "Kurukshetra",
+      "significance": "Solar eclipse bathing; one of world's largest religious tanks"
+    },
+    {
+      "name": "Sannihit Sarovar",
+      "location": "Kurukshetra",
+      "significance": "Where Sapta Saraswati meet; pilgrimage tank"
+    },
+    {
+      "name": "Sthaneshwar Mahadev Temple",
+      "location": "Kurukshetra",
+      "significance": "Pandavas prayed here before battle; ancient Shiva shrine"
+    },
+    {
+      "name": "Mata Mansa Devi Temple",
+      "location": "Panchkula",
+      "significance": "Shakti Peetha; massive Navratri gatherings"
+    },
+    {
+      "name": "Pehowa",
+      "location": "Kurukshetra District",
+      "significance": "Ancient tirtha; ancestor rites (Pind Daan)"
+    },
+    {
+      "name": "Kalka Devi Temple",
+      "location": "Kalka",
+      "significance": "Shivalik foothills; popular pilgrimage"
+    }
   ],
-
   "naturalAttractions": {
     "rivers": [
       "Yamuna River — Eastern boundary; irrigation; pilgrimage ghats",
       "Ghaggar River — Northwest; seasonal Saraswati River trace"
     ],
     "wildlife": [
-      { "name": "Sultanpur NP", "note": "250+ bird species; migratory birds Oct–March" },
-      { "name": "Kalesar National Park", "note": "Yamuna Nagar; sal forests; leopard, elephant corridor" },
-      { "name": "Chibbar Wildlife Sanctuary", "note": "Morni Hills; deer, wild boar" }
+      {
+        "name": "Sultanpur NP",
+        "note": "250+ bird species; migratory birds Oct–March"
+      },
+      {
+        "name": "Kalesar National Park",
+        "note": "Yamuna Nagar; sal forests; leopard, elephant corridor"
+      },
+      {
+        "name": "Chibbar Wildlife Sanctuary",
+        "note": "Morni Hills; deer, wild boar"
+      }
     ]
   },
-
   "beaches": [],
-
   "historicalSites": [
-    { "name": "Panipat Museum", "description": "Detailed display of 3 battles; battle models; artifacts" },
-    { "name": "Ibrahim Lodi Tomb", "description": "1526; Panipat; India's only Mughal-era sultan tomb outside Delhi" },
-    { "name": "Yadavindra Gardens", "description": "17th century; 7-tiered Mughal garden" },
-    { "name": "Sheesh Mahal, Kurukshetra", "description": "Inlaid mirror palace; in Kurukshetra area" },
-    { "name": "Harsh ka Tila", "description": "Kurukshetra; Harsha dynasty earthen mound remains" }
+    {
+      "name": "Panipat Museum",
+      "description": "Detailed display of 3 battles; battle models; artifacts"
+    },
+    {
+      "name": "Ibrahim Lodi Tomb",
+      "description": "1526; Panipat; India's only Mughal-era sultan tomb outside Delhi"
+    },
+    {
+      "name": "Yadavindra Gardens",
+      "description": "17th century; 7-tiered Mughal garden"
+    },
+    {
+      "name": "Sheesh Mahal, Kurukshetra",
+      "description": "Inlaid mirror palace; in Kurukshetra area"
+    },
+    {
+      "name": "Harsh ka Tila",
+      "description": "Kurukshetra; Harsha dynasty earthen mound remains"
+    }
   ],
-
   "adventure": [
     "Adventure Sports at Damdama Lake — Gurugram; hot air balloon, zip-line, wall climbing",
     "Morni Hills Trekking — Short day hikes; forest trails; Tikkar Taal circuit",
     "Aravalli Trekking — Faridabad border; ridge walks",
     "Wrestling (Akhadas) — Visit traditional wrestling practice centers in rural Haryana"
   ],
-
   "foodCuisine": {
     "famousDishes": [
-      { "name": "Bajra Khichdi", "description": "Pearl millet and lentil porridge; hearty winter dish" },
-      { "name": "Kadhi Pakora", "description": "Yogurt-besan curry with fried fritters; daily staple" },
-      { "name": "Hara Dhania Cholia", "description": "Fresh chickpeas with coriander; winter season dish" },
-      { "name": "Kachri ki Sabzi", "description": "Wild melon (kachri) dry curry; unique Haryanvi flavor" },
-      { "name": "Singri ki Sabzi", "description": "Desert bean preparation; Aravalli region specialty" },
-      { "name": "Churma", "description": "Sweet crumbled wheat preparation; with ghee and jaggery; celebratory" }
+      {
+        "name": "Bajra Khichdi",
+        "description": "Pearl millet and lentil porridge; hearty winter dish"
+      },
+      {
+        "name": "Kadhi Pakora",
+        "description": "Yogurt-besan curry with fried fritters; daily staple"
+      },
+      {
+        "name": "Hara Dhania Cholia",
+        "description": "Fresh chickpeas with coriander; winter season dish"
+      },
+      {
+        "name": "Kachri ki Sabzi",
+        "description": "Wild melon (kachri) dry curry; unique Haryanvi flavor"
+      },
+      {
+        "name": "Singri ki Sabzi",
+        "description": "Desert bean preparation; Aravalli region specialty"
+      },
+      {
+        "name": "Churma",
+        "description": "Sweet crumbled wheat preparation; with ghee and jaggery; celebratory"
+      }
     ],
     "streetFood": [],
     "drinks": [
-      { "name": "Lassi", "description": "Thick, creamy buffalo milk yogurt drink; universally available" }
+      {
+        "name": "Lassi",
+        "description": "Thick, creamy buffalo milk yogurt drink; universally available"
+      }
     ]
   },
-
   "stayOptions": {
     "luxury": [],
     "midRange": [],
     "unique": []
   },
-
   "bestTimeToVisit": [
-    { "season": "Best (Winter)", "months": "October – March", "conditions": "5–20°C; migratory birds; Kurukshetra in solar eclipses; festivals" },
-    { "season": "Summer", "months": "April – June", "conditions": "40–48°C; avoid; Morni Hills remain bearable" },
-    { "season": "Monsoon", "months": "July – September", "conditions": "Greenery; comfortable but humid" }
+    {
+      "season": "Best (Winter)",
+      "months": "October – March",
+      "conditions": "5–20°C; migratory birds; Kurukshetra in solar eclipses; festivals"
+    },
+    {
+      "season": "Summer",
+      "months": "April – June",
+      "conditions": "40–48°C; avoid; Morni Hills remain bearable"
+    },
+    {
+      "season": "Monsoon",
+      "months": "July – September",
+      "conditions": "Greenery; comfortable but humid"
+    }
   ],
-
   "transportation": {
     "airports": [
       "Chandigarh Airport — Serves Haryana and Punjab; domestic",
@@ -132,21 +231,34 @@
     ],
     "roads": []
   },
-
   "festivals": [
-    { "name": "Kurukshetra Festival", "period": "November", "description": "Mahabharata re-enactments; cultural fair on Brahma Sarovar" },
-    { "name": "Surajkund Crafts Mela", "period": "February", "description": "Faridabad; India's largest crafts and folk culture fair" },
-    { "name": "Phag Doli Utsav", "period": "Holi season", "description": "Rural Haryana; phag singing; Holi celebrations" },
-    { "name": "Sanjhi Festival", "period": "Sep–Oct", "description": "Courtyards adorned with clay art; Kurukshetra region" }
+    {
+      "name": "Kurukshetra Festival",
+      "period": "November",
+      "description": "Mahabharata re-enactments; cultural fair on Brahma Sarovar"
+    },
+    {
+      "name": "Surajkund Crafts Mela",
+      "period": "February",
+      "description": "Faridabad; India's largest crafts and folk culture fair"
+    },
+    {
+      "name": "Phag Doli Utsav",
+      "period": "Holi season",
+      "description": "Rural Haryana; phag singing; Holi celebrations"
+    },
+    {
+      "name": "Sanjhi Festival",
+      "period": "Sep–Oct",
+      "description": "Courtyards adorned with clay art; Kurukshetra region"
+    }
   ],
-
   "travelTips": [
     "Kurukshetra Solar Eclipse: If visiting during a solar eclipse — lakhs of pilgrims; book accommodation months ahead",
     "Surajkund Crafts Mela (February): One of India's best artisan fairs; plan Faridabad visit around it",
     "Road Connectivity: Haryana has excellent road infrastructure; best explored by car",
     "Budget: Very affordable; ₹700–1,500 budget; ₹2,000–4,000 mid"
   ],
-
   "uniqueFacts": [
     "Haryana has produced more Olympic medals per capita than any other Indian state — particularly in wrestling, boxing, and shooting",
     "The Mahabharata war at Kurukshetra is believed to have lasted 18 days; over 300 tirthas (sacred spots) are identified within the 48 km Kurukshetra circle",

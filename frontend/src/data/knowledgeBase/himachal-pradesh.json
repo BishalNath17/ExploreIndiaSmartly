@@ -4,14 +4,12 @@
   "capital": "Shimla (Summer) | Dharamshala (Proposed Winter)",
   "region": "North India (Western Himalayas)",
   "slug": "/india/himachal-pradesh",
-
   "overview": {
     "short": "Himachal Pradesh — \"Land of Snow-Capped Peaks\" — is India's crown jewel of Himalayan tourism. Stretching from the subtropical foothills (Kangra valley, 300m) to the high-altitude cold desert of Spiti (4,500m+), Himachal encompasses extraordinary diversity: colonial hill stations (Shimla, Dharamshala), lush apple orchards and cedar forests (Kullu, Manali), sacred pilgrimage (Vaishno Devi approach, Manikaran, Bijli Mahadev), adventure sports paradise (Solang, Rohtang), and the extraordinary Tibetan Buddhist culture of Lahaul-Spiti.",
     "paragraph2": "The state's British colonial heritage is particularly vivid — Shimla was the summer capital of the entire British Indian Empire from 1864 to 1947, and its Victorian and Tudor architecture, the Kalka-Shimla toy train (UNESCO Heritage), and the colonial-era Mall Road atmosphere remain remarkably intact. Dharamshala/McLeod Ganj has been the home of the Tibetan Government in Exile since 1960, creating a remarkable Tibet-in-India cultural enclave.",
     "paragraph3": "Himachal's apple orchards (Kullu, Shimla, Kinnaur) produce 25% of India's apples; its hydroelectric dams power much of north India; and its sacred rivers — Beas, Ravi, Chenab, Sutlej — are the lifeblood of Punjab's agriculture downstream. The Kullu Dussehra (7 days; 300+ deities gathered) and Spiti's Losar and Gustor festivals are among India's most spectacular cultural events.",
     "cultureHeritage": "Himachali culture synthesizes Hindu mountain traditions with Tibetan Buddhism at its northern edge. The Gaddi shepherds (Chamba-Kangra) who migrate seasonally with their flocks are among India's most ancient nomadic communities. Pahari miniature paintings — the Kangra, Kullu, and Basohli schools — are internationally collected. Kullu shawls and Kinnauri shawls (with distinctive geometric border patterns) are India's finest woolen textiles. The Nati — a group folk dance performed at festivals — is among India's most joyous mass cultural expressions."
   },
-
   "topDestinations": [
     {
       "name": "Shimla",
@@ -19,7 +17,12 @@
       "slug": "/india/himachal-pradesh/shimla",
       "description": "India's most iconic hill station, built by the British on 7 ridges above the Himalayan foothills. The Mall Road (pedestrianized; lined with colonial-era shops, churches, Gaiety Theatre), Jakhu Hill and Temple (2,455m; viewpoint with Hanuman statue), the Vice Regal Lodge (Indian Institute of Advanced Study), Christ Church (1857), and the toy train from Kalka make Shimla a layered destination.",
       "whyFamous": "Summer capital of British India; colonial architecture; toy train; snow season",
-      "imageKeywords": ["Shimla Mall Road colonial winter", "Shimla toy train Kalka", "Jakhu hill Shimla temple"]
+      "imageKeywords": [
+        "Shimla Mall Road colonial winter",
+        "Shimla toy train Kalka",
+        "Jakhu hill Shimla temple"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Manali",
@@ -27,7 +30,12 @@
       "slug": "/india/himachal-pradesh/manali",
       "description": "Gateway to the Himalayan high roads (Rohtang Pass, Leh-Manali Highway), Manali is Himachal's adventure capital. Old Manali retains Kullu village character; Hadimba Devi Temple (1553) is set in cedar forest; Solang Valley offers skiing and paragliding; Beas River provides rafting; and the Leh-Manali Highway (world's 2nd highest motorable road) opens June–September.",
       "whyFamous": "Gateway to Leh; skiing at Solang; paragliding; Hadimba Temple; backpacker culture",
-      "imageKeywords": ["Manali Hadimba temple cedar forest", "Rohtang Pass snow Manali", "Solang Valley skiing Manali"]
+      "imageKeywords": [
+        "Manali Hadimba temple cedar forest",
+        "Rohtang Pass snow Manali",
+        "Solang Valley skiing Manali"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Dharamshala & McLeod Ganj",
@@ -35,7 +43,12 @@
       "slug": "/india/himachal-pradesh/dharamshala-mcleod-ganj",
       "description": "Home of His Holiness the Dalai Lama and the Tibetan Government in Exile since 1960, McLeod Ganj is often called \"Little Lhasa.\" Tibetan monasteries (Namgyal Monastery), the Tibet Museum, Bhagsu Nag waterfall, Dharamsala cricket ground (highest international cricket ground in India at 1,457m), and the surrounding Dhauladhar range trekking make this a unique destination.",
       "whyFamous": "Dalai Lama residence; Tibet-in-India; Dhauladhar trekking; Buddhist culture",
-      "imageKeywords": ["Dharamshala McLeod Ganj Tibetan", "Dalai Lama temple Namgyal monastery", "Dhauladhar range Dharamsala snow"]
+      "imageKeywords": [
+        "Dharamshala McLeod Ganj Tibetan",
+        "Dalai Lama temple Namgyal monastery",
+        "Dhauladhar range Dharamsala snow"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Spiti Valley",
@@ -43,7 +56,12 @@
       "slug": "/india/himachal-pradesh/spiti-valley",
       "description": "A high-altitude cold desert valley often called \"Middle Earth\" — a stark, lunar landscape of eroded brown mountains, turquoise rivers, and ancient Buddhist monasteries clinging to clifftops. Key Monastery (1,000 years old; 4,166m), Dhankar Monastery, Tabo Monastery (UNESCO tentative; 1,017-year-old frescoes), and Chandratal Lake (4,300m) are among India's most remote and extraordinary destinations.",
       "whyFamous": "Ancient Buddhist monasteries; cold desert landscape; remote India; Chandratal Lake",
-      "imageKeywords": ["Key Monastery Spiti Valley", "Spiti Valley moonscape", "Chandratal Lake Spiti blue"]
+      "imageKeywords": [
+        "Key Monastery Spiti Valley",
+        "Spiti Valley moonscape",
+        "Chandratal Lake Spiti blue"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Kullu Valley",
@@ -51,7 +69,12 @@
       "slug": "/india/himachal-pradesh/kullu-valley",
       "description": "The \"Valley of Gods\" — a gorgeous mountain valley with apple orchards, deodar cedar forests, and over 360 ancient temples. Famous for the Kullu Dussehra (7-day chariot festival of 300+ deities), the Great Himalayan National Park (UNESCO; 905 sq km), and river rafting on the Beas.",
       "whyFamous": "Kullu Dussehra; apple orchards; Great Himalayan NP; river rafting",
-      "imageKeywords": ["Kullu Valley apple orchards", "Kullu Dussehra chariot festival", "Kullu Beas River valley"]
+      "imageKeywords": [
+        "Kullu Valley apple orchards",
+        "Kullu Dussehra chariot festival",
+        "Kullu Beas River valley"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Kinnaur",
@@ -59,7 +82,12 @@
       "slug": "/india/himachal-pradesh/kinnaur",
       "description": "A remote trans-Himalayan district bordering Tibet, Kinnaur reveals a dramatic landscape of sheer rock faces, hanging bridges, and Buddhist-Hindu village culture. Kalpa (with views of Kinner Kailash peak), Sarahan's Bhimakali Temple, the apple and apricot orchards of the Sutlej valley, and Chitkul (India's last inhabited village near Tibet border) are the highlights.",
       "whyFamous": "Kinner Kailash; Chitkul last village; Kinnauri culture; apricot orchards",
-      "imageKeywords": ["Kinnaur Kailash peak", "Chitkul village Kinnaur", "Kinnaur orchard Himachal"]
+      "imageKeywords": [
+        "Kinnaur Kailash peak",
+        "Chitkul village Kinnaur",
+        "Kinnaur orchard Himachal"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Kasauli & Chail",
@@ -67,21 +95,56 @@
       "slug": "/india/himachal-pradesh/kasauli-chail",
       "description": "Twin hill stations south of Shimla: Kasauli (1,900m) is a quiet, preserved British cantonment with colonial bungalows, Monkey Point temple, and Kasauli Brewery (one of India's oldest); Chail (2,250m) has the world's highest cricket ground (2,444m) and the colonial Chail Palace Hotel.",
       "whyFamous": "World's highest cricket ground (Chail); colonial hill station character; Kasauli Brewery",
-      "imageKeywords": ["Chail highest cricket ground world", "Kasauli colonial cantonment", "Chail Palace hotel hills"]
+      "imageKeywords": [
+        "Chail highest cricket ground world",
+        "Kasauli colonial cantonment",
+        "Chail Palace hotel hills"
+      ],
+      "mapEmbedUrl": ""
     }
   ],
-
   "religiousPlaces": [
-    { "name": "Tabo Monastery", "location": "Spiti", "significance": "1,017 years old; UNESCO tentative; 'Ajanta of the Himalayas' frescoes" },
-    { "name": "Key Monastery", "location": "Spiti", "significance": "1,000+ years; 4,166m; resident lamas; summer festivals" },
-    { "name": "Hadimba Devi Temple", "location": "Manali", "significance": "1553; pagoda in cedar forest; demon goddess" },
-    { "name": "Manikaran Sahib", "location": "Kullu", "significance": "Sikh Gurudwara with natural hot springs; pilgrimage" },
-    { "name": "Bijli Mahadev Temple", "location": "Kullu", "significance": "Lightning-struck Shiva lingam; 2,460m hilltop" },
-    { "name": "Rewalsar Lake", "location": "Mandi", "significance": "Floating islands; sacred to Hindus, Sikhs, Buddhists simultaneously" },
-    { "name": "Chamunda Devi Temple", "location": "Kangra", "significance": "Fierce form of Durga; Baner River gorge" },
-    { "name": "Baijnath Temple", "location": "Kangra", "significance": "13th century; Shiva as Lord of Physicians" }
+    {
+      "name": "Tabo Monastery",
+      "location": "Spiti",
+      "significance": "1,017 years old; UNESCO tentative; 'Ajanta of the Himalayas' frescoes"
+    },
+    {
+      "name": "Key Monastery",
+      "location": "Spiti",
+      "significance": "1,000+ years; 4,166m; resident lamas; summer festivals"
+    },
+    {
+      "name": "Hadimba Devi Temple",
+      "location": "Manali",
+      "significance": "1553; pagoda in cedar forest; demon goddess"
+    },
+    {
+      "name": "Manikaran Sahib",
+      "location": "Kullu",
+      "significance": "Sikh Gurudwara with natural hot springs; pilgrimage"
+    },
+    {
+      "name": "Bijli Mahadev Temple",
+      "location": "Kullu",
+      "significance": "Lightning-struck Shiva lingam; 2,460m hilltop"
+    },
+    {
+      "name": "Rewalsar Lake",
+      "location": "Mandi",
+      "significance": "Floating islands; sacred to Hindus, Sikhs, Buddhists simultaneously"
+    },
+    {
+      "name": "Chamunda Devi Temple",
+      "location": "Kangra",
+      "significance": "Fierce form of Durga; Baner River gorge"
+    },
+    {
+      "name": "Baijnath Temple",
+      "location": "Kangra",
+      "significance": "13th century; Shiva as Lord of Physicians"
+    }
   ],
-
   "naturalAttractions": {
     "rivers": [
       "Beas River — Kullu-Manali; rafting; flows through Kullu valley",
@@ -101,15 +164,18 @@
       "Baralacha La — 4,890m; Leh-Manali Highway; spectacular"
     ],
     "wildlife": [
-      { "name": "Great Himalayan National Park", "note": "UNESCO; 905 sq km; Kullu; pristine alpine ecosystems; Tirthan trekking" },
-      { "name": "Pin Valley NP", "note": "Spiti; snow leopard habitat; Himalayan ibex" }
+      {
+        "name": "Great Himalayan National Park",
+        "note": "UNESCO; 905 sq km; Kullu; pristine alpine ecosystems; Tirthan trekking"
+      },
+      {
+        "name": "Pin Valley NP",
+        "note": "Spiti; snow leopard habitat; Himalayan ibex"
+      }
     ]
   },
-
   "beaches": [],
-
   "historicalSites": [],
-
   "adventure": [
     "Skiing (Solang Valley/Narkanda/Kufri) — November–March; Solang and Rohtang for snow sports",
     "Paragliding (Bir-Billing) — World's 2nd highest paragliding site; Billing (2,400m) to Bir; international competitions",
@@ -120,23 +186,45 @@
     "Ice Climbing (Lahaul) — Frozen waterfall ice climbs; Chandra River winter expeditions",
     "Apple Picking — Shimla/Kinnaur orchards; August–October; farm stays"
   ],
-
   "foodCuisine": {
     "famousDishes": [
-      { "name": "Siddu", "description": "Steamed wheat bun stuffed with walnut-poppy seed paste; Manali/Kullu specialty" },
-      { "name": "Babru", "description": "Black gram stuffed deep-fried bread; Shimla and Kullu hills" },
-      { "name": "Dham", "description": "Traditional multi-course feast on leaf plate; Madras (dal/rice/curd/dessert) — festival food" },
-      { "name": "Aktori", "description": "Buckwheat pancakes; Lahaul-Spiti; high altitude staple" },
-      { "name": "Chha Gosht", "description": "Marinated lamb slow-cooked in yogurt gravy; Kullu valley" },
-      { "name": "Sepu Vadi", "description": "Dried urad dal dumplings with spinach; Kangra valley" },
-      { "name": "Kullu Trout", "description": "Rainbow trout from Beas River; grilled with local herbs; restaurants in Kullu" }
+      {
+        "name": "Siddu",
+        "description": "Steamed wheat bun stuffed with walnut-poppy seed paste; Manali/Kullu specialty"
+      },
+      {
+        "name": "Babru",
+        "description": "Black gram stuffed deep-fried bread; Shimla and Kullu hills"
+      },
+      {
+        "name": "Dham",
+        "description": "Traditional multi-course feast on leaf plate; Madras (dal/rice/curd/dessert) — festival food"
+      },
+      {
+        "name": "Aktori",
+        "description": "Buckwheat pancakes; Lahaul-Spiti; high altitude staple"
+      },
+      {
+        "name": "Chha Gosht",
+        "description": "Marinated lamb slow-cooked in yogurt gravy; Kullu valley"
+      },
+      {
+        "name": "Sepu Vadi",
+        "description": "Dried urad dal dumplings with spinach; Kangra valley"
+      },
+      {
+        "name": "Kullu Trout",
+        "description": "Rainbow trout from Beas River; grilled with local herbs; restaurants in Kullu"
+      }
     ],
     "streetFood": [
-      { "name": "Thukpa", "description": "Noodle soup; Tibetan influence; Spiti and Kinnaur" }
+      {
+        "name": "Thukpa",
+        "description": "Noodle soup; Tibetan influence; Spiti and Kinnaur"
+      }
     ],
     "drinks": []
   },
-
   "stayOptions": {
     "luxury": [
       "Wildflower Hall, Mashobra — Oberoi; 8,250 ft; cedar forest; infinity pool; near Shimla",
@@ -153,15 +241,33 @@
       "Norling Guesthouse, McLeod Ganj — Tibetan-run; monastery atmosphere; Himalayan views"
     ]
   },
-
   "bestTimeToVisit": [
-    { "season": "Winter snow OR spring", "months": "Dec–Feb (snow) OR Mar–Jun", "conditions": "Shimla/Kasauli region" },
-    { "season": "Adventure", "months": "Apr–Jun; Oct–Nov", "conditions": "Manali (snow: Dec-Feb)" },
-    { "season": "Open season", "months": "June–October", "conditions": "Spiti (road open)" },
-    { "season": "October", "months": "October", "conditions": "Bir-Billing Paragliding (best thermals)" },
-    { "season": "Year-round", "months": "Spring and autumn best", "conditions": "Dharamshala" }
+    {
+      "season": "Winter snow OR spring",
+      "months": "Dec–Feb (snow) OR Mar–Jun",
+      "conditions": "Shimla/Kasauli region"
+    },
+    {
+      "season": "Adventure",
+      "months": "Apr–Jun; Oct–Nov",
+      "conditions": "Manali (snow: Dec-Feb)"
+    },
+    {
+      "season": "Open season",
+      "months": "June–October",
+      "conditions": "Spiti (road open)"
+    },
+    {
+      "season": "October",
+      "months": "October",
+      "conditions": "Bir-Billing Paragliding (best thermals)"
+    },
+    {
+      "season": "Year-round",
+      "months": "Spring and autumn best",
+      "conditions": "Dharamshala"
+    }
   ],
-
   "transportation": {
     "airports": [
       "Shimla Airport (Jubbarhatti) — Limited; small planes only; Delhi connection",
@@ -177,16 +283,38 @@
       "NH 3 (Manali-Leh Highway; open June–October); NH 5 (Shimla-Spiti); NH 21 (Kullu)"
     ]
   },
-
   "festivals": [
-    { "name": "Kullu Dussehra", "period": "October", "description": "7-day; 300+ deities gathered; chariot procession; UNESCO" },
-    { "name": "Shimla Summer Festival", "period": "May–June", "description": "Cultural events; flower shows; highland games" },
-    { "name": "Losar (Tibetan New Year)", "period": "January–February", "description": "Spiti; Lahaul; McLeod Ganj; Buddhist celebrations" },
-    { "name": "Shivratri Fair, Mandi", "period": "February–March", "description": "200+ deity congregation; Mandi's great fair" },
-    { "name": "Minjar Fair, Chamba", "period": "July–August", "description": "Corn festival; chariot procession; Chamba town" },
-    { "name": "Ice Skating, Shimla", "period": "December–January", "description": "Asia's only natural (outdoor) ice skating rink" }
+    {
+      "name": "Kullu Dussehra",
+      "period": "October",
+      "description": "7-day; 300+ deities gathered; chariot procession; UNESCO"
+    },
+    {
+      "name": "Shimla Summer Festival",
+      "period": "May–June",
+      "description": "Cultural events; flower shows; highland games"
+    },
+    {
+      "name": "Losar (Tibetan New Year)",
+      "period": "January–February",
+      "description": "Spiti; Lahaul; McLeod Ganj; Buddhist celebrations"
+    },
+    {
+      "name": "Shivratri Fair, Mandi",
+      "period": "February–March",
+      "description": "200+ deity congregation; Mandi's great fair"
+    },
+    {
+      "name": "Minjar Fair, Chamba",
+      "period": "July–August",
+      "description": "Corn festival; chariot procession; Chamba town"
+    },
+    {
+      "name": "Ice Skating, Shimla",
+      "period": "December–January",
+      "description": "Asia's only natural (outdoor) ice skating rink"
+    }
   ],
-
   "travelTips": [
     "Rohtang Permit: Required for all vehicles going to Rohtang Pass; book online at himachaltourism.gov.in",
     "Altitude Sickness: Acclimatize at Manali (2,050m) before going to Spiti (3,800m+); carry Diamox if needed",
@@ -195,7 +323,6 @@
     "Toy Train: Book Kalka-Shimla toy train well in advance; limited seats; incredible scenic journey",
     "Budget: ₹1,000–2,500 budget; ₹3,000–7,000 mid; ₹10,000–30,000 luxury"
   ],
-
   "uniqueFacts": [
     "Shimla was the summer capital of British India for 83 years (1864–1947) — all cabinet meetings, major policy decisions, and military campaigns were planned here during summer",
     "Bir-Billing is the world's second highest paragliding take-off site; the 2015 Paragliding World Championship was held here",

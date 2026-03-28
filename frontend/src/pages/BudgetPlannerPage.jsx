@@ -26,6 +26,7 @@ import { statesData as states } from '../data/statesData';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import StateSelect from '../components/features/StateSelect';
+import BackButton from '../components/ui/BackButton';
 
 /* ── Icon map for categories ────────────────── */
 const CATEGORY_ICONS = {
@@ -244,8 +245,9 @@ const BudgetPlannerPage = () => {
   };
 
   return (
-    <section className="py-16 sm:py-24 section-padding">
+    <section className="pt-24 pb-16 sm:pt-32 sm:pb-24 section-padding">
       <div className="max-w-5xl mx-auto">
+        <BackButton fallback="/" label="Back to Home" className="mb-8" />
         <SectionHeader
           title="Budget Planner"
           subtitle="Estimate your trip costs across any Indian state or territory."

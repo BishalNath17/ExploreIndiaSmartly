@@ -4,14 +4,12 @@
   "capital": "Dispur (Guwahati is largest city)",
   "region": "Northeast India",
   "slug": "/india/assam",
-
   "overview": {
     "short": "Assam is the gateway to Northeast India and the land where the mighty Brahmaputra River writes its most dramatic chapter — a river so wide it appears as an inland sea in places. This lush, verdant state is world-famous for its single-origin Assam tea, the one-horned rhinoceros, and a cultural identity built on the Bihu festival that unites all communities in joyous celebration three times a year.",
     "paragraph2": "The Brahmaputra valley civilization is ancient and layered — from the Ahom Kingdom that ruled for 600 uninterrupted years (the longest-lasting dynasty in Indian history), to a mosaic of Bodo, Karbi, Mishing, Rabha, and Bengali communities, to the colonial-era tea estates that transformed the global beverage industry. Assam's forests are among the most biodiverse in Asia, hosting 36 species of mammals, 800+ bird species, and the world's greatest concentration of one-horned rhinoceroses.",
     "paragraph3": "Majuli Island — the world's largest river island — is a center of neo-Vaishnavite culture and a living museum of Assamese civilization. The state's silk (Muga, Eri, Pat) is world-renowned, and Assamese cuisine offers a unique blend of fermented ingredients, smoked meats, and river fish that reflects the landscape itself.",
     "cultureHeritage": "Assamese culture orbits around the Bihu festival (Bohag/Rangali Bihu in April is the grandest), neo-Vaishnavite philosophy of Srimanta Shankaradeva (15th–16th century), and the Sattra monastery institutions on Majuli Island that have preserved unique mask-making, dance-drama (Bhaona), and manuscript traditions. The Ahom kingdom's legacy — palaces, burial mounds (Maidam), and an imperial culture that resisted Mughal invasions 17 times — is uniquely Assamese. Muga silk, produced only in Assam, is one of the world's rarest natural fabrics."
   },
-
   "topDestinations": [
     {
       "name": "Kaziranga National Park",
@@ -19,7 +17,12 @@
       "slug": "/india/assam/kaziranga-national-park",
       "description": "UNESCO World Heritage Site and one of the world's great conservation success stories. Home to 2,613+ one-horned rhinoceroses (70% of global population), 103 tigers, and 1,293 elephants. The tall elephant-grass wetlands and sal forests create a primordial landscape. Elephant safaris at dawn are among India's most magical wildlife experiences.",
       "whyFamous": "World's highest density of Royal Bengal Tigers; majority of one-horned rhinos; UNESCO heritage",
-      "imageKeywords": ["Kaziranga one-horned rhinoceros", "Kaziranga elephant safari", "Kaziranga National Park grasslands"]
+      "imageKeywords": [
+        "Kaziranga one-horned rhinoceros",
+        "Kaziranga elephant safari",
+        "Kaziranga National Park grasslands"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Majuli Island",
@@ -27,7 +30,12 @@
       "slug": "/india/assam/majuli-island",
       "description": "World's largest river island (880 sq km; shrinking due to erosion), Majuli is a living cultural ecosystem hosting 22 Sattras (Vaishnavite monasteries) that practice unique mask-making, classical dance, manuscript art, and devotional theater. The island is accessible only by ferry, preserving its timeless quality.",
       "whyFamous": "World's largest river island; Sattra culture; unique neo-Vaishnavite traditions",
-      "imageKeywords": ["Majuli island Brahmaputra aerial", "Majuli Sattra mask dance", "Majuli ferry river sunset"]
+      "imageKeywords": [
+        "Majuli island Brahmaputra aerial",
+        "Majuli Sattra mask dance",
+        "Majuli ferry river sunset"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Guwahati",
@@ -35,7 +43,12 @@
       "slug": "/india/assam/guwahati",
       "description": "The largest city in Northeast India and the region's commercial hub. Home to the Kamakhya Devi Temple (one of India's most powerful Shakti Peethas), Umananda Island Temple, Assam State Museum, and the Brahmaputra riverfront. Gateway to all Northeast India.",
       "whyFamous": "Kamakhya Temple; Brahmaputra river cruises; NE India gateway",
-      "imageKeywords": ["Kamakhya temple Guwahati", "Brahmaputra river Guwahati", "Guwahati city panorama"]
+      "imageKeywords": [
+        "Kamakhya temple Guwahati",
+        "Brahmaputra river Guwahati",
+        "Guwahati city panorama"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Manas National Park",
@@ -43,7 +56,12 @@
       "slug": "/india/assam/manas-national-park",
       "description": "A UNESCO Natural World Heritage Site and Project Tiger reserve at the foothills of Bhutan Himalayas. Home to golden langur, hispid hare, pygmy hog, wild buffalo — several species found nowhere else on Earth. The Manas River divides India from Bhutan.",
       "whyFamous": "UNESCO World Heritage; golden langur; pygmy hog (world's smallest wild pig)",
-      "imageKeywords": ["Manas National Park golden langur", "Manas river Bhutan hills", "Manas safari elephants"]
+      "imageKeywords": [
+        "Manas National Park golden langur",
+        "Manas river Bhutan hills",
+        "Manas safari elephants"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Tezpur",
@@ -51,7 +69,12 @@
       "slug": "/india/assam/tezpur",
       "description": "'City of Blood' — named for its mythological association with a divine battle. A charming riverside town on the Brahmaputra known for the Agnigarh Hill (mythological fortress), Cole Park ruins (7th century), Chitralekha Udyan, and proximity to Nameri National Park. Gateway to Arunachal Pradesh.",
       "whyFamous": "Agnigarh mythology; ancient ruins; Arunachal gateway",
-      "imageKeywords": ["Tezpur Agnigarh hill", "Tezpur Brahmaputra sunset", "Nameri National Park Tezpur"]
+      "imageKeywords": [
+        "Tezpur Agnigarh hill",
+        "Tezpur Brahmaputra sunset",
+        "Nameri National Park Tezpur"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Jorhat",
@@ -59,7 +82,12 @@
       "slug": "/india/assam/jorhat",
       "description": "The cultural capital of Assam and the 'Tea Capital of the World.' Headquarters of the Ahom Kingdom's last capital at Rangpur; gateway to Majuli Island; surrounded by lush tea estates with colonial bungalow experiences.",
       "whyFamous": "Tea capital; Majuli ferry point; Ahom heritage",
-      "imageKeywords": ["Jorhat tea estate Assam", "Jorhat colonial bungalow", "Majuli ferry Jorhat"]
+      "imageKeywords": [
+        "Jorhat tea estate Assam",
+        "Jorhat colonial bungalow",
+        "Majuli ferry Jorhat"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Sivasagar (Sibsagar)",
@@ -67,21 +95,56 @@
       "slug": "/india/assam/sivasagar",
       "description": "The ancient capital of the Ahom Kingdom, Sivasagar is an open-air museum of Ahom civilization. Rang Ghar (royal sports arena — Asia's oldest amphitheatre), Talatal Ghar (7-story palace with 3 underground floors), Kareng Ghar, and the magnificent Sivasagar tank with its three temples form one of India's most underrated heritage landscapes.",
       "whyFamous": "Ahom capital; Rang Ghar; Talatal Ghar palace; 600-year kingdom",
-      "imageKeywords": ["Rang Ghar Sivasagar", "Talatal Ghar palace Assam", "Sivasagar tank temple"]
+      "imageKeywords": [
+        "Rang Ghar Sivasagar",
+        "Talatal Ghar palace Assam",
+        "Sivasagar tank temple"
+      ],
+      "mapEmbedUrl": ""
     }
   ],
-
   "religiousPlaces": [
-    { "name": "Kamakhya Devi Temple", "location": "Nilachal Hill, Guwahati", "significance": "One of 51 Shakti Peethas; yoni goddess worship; Ambubachi Mela" },
-    { "name": "Umananda Temple", "location": "Umananda Island, Brahmaputra", "significance": "World's smallest inhabited river island; Lord Shiva temple" },
-    { "name": "Batadrava Than", "location": "Nagaon", "significance": "Birthplace of Srimanta Shankaradeva; neo-Vaishnavism origin" },
-    { "name": "Hayagriva Madhava Temple", "location": "Hajo", "significance": "Vishnu temple on hill; also sacred to Buddhists (Maya Devi)" },
-    { "name": "Shiva Dol", "location": "Sivasagar", "significance": "18th century; 104 ft high; largest Shiva temple in Assam" },
-    { "name": "Navagraha Temple", "location": "Guwahati", "significance": "9 planetary shrines atop Chitrachal Hill" },
-    { "name": "22 Sattras of Majuli", "location": "Majuli Island", "significance": "Living Vaishnavite monastic centers; Kamalabari, Auniati, Dakhinpat" },
-    { "name": "Madan Kamdev", "location": "Baihata Chariali", "significance": "9th–10th century erotic sculpture complex; 'Assam's Khajuraho'" }
+    {
+      "name": "Kamakhya Devi Temple",
+      "location": "Nilachal Hill, Guwahati",
+      "significance": "One of 51 Shakti Peethas; yoni goddess worship; Ambubachi Mela"
+    },
+    {
+      "name": "Umananda Temple",
+      "location": "Umananda Island, Brahmaputra",
+      "significance": "World's smallest inhabited river island; Lord Shiva temple"
+    },
+    {
+      "name": "Batadrava Than",
+      "location": "Nagaon",
+      "significance": "Birthplace of Srimanta Shankaradeva; neo-Vaishnavism origin"
+    },
+    {
+      "name": "Hayagriva Madhava Temple",
+      "location": "Hajo",
+      "significance": "Vishnu temple on hill; also sacred to Buddhists (Maya Devi)"
+    },
+    {
+      "name": "Shiva Dol",
+      "location": "Sivasagar",
+      "significance": "18th century; 104 ft high; largest Shiva temple in Assam"
+    },
+    {
+      "name": "Navagraha Temple",
+      "location": "Guwahati",
+      "significance": "9 planetary shrines atop Chitrachal Hill"
+    },
+    {
+      "name": "22 Sattras of Majuli",
+      "location": "Majuli Island",
+      "significance": "Living Vaishnavite monastic centers; Kamalabari, Auniati, Dakhinpat"
+    },
+    {
+      "name": "Madan Kamdev",
+      "location": "Baihata Chariali",
+      "significance": "9th–10th century erotic sculpture complex; 'Assam's Khajuraho'"
+    }
   ],
-
   "naturalAttractions": {
     "rivers": [
       "Brahmaputra — One of world's largest rivers; 2,900 km; enormous sand islands (chars)",
@@ -89,32 +152,86 @@
       "Subansiri, Jia Bharali, Manas — Northern tributaries from Bhutan/Arunachal Himalayas"
     ],
     "lakes": [
-      { "name": "Chandubi Lake", "note": "Near Guwahati; seasonal migratory bird haven; surrounded by elephant habitat" },
-      { "name": "Son Beel", "note": "Largest wetland in Assam (Cachar district); seasonal fish migration festival" },
-      { "name": "Deepor Beel", "note": "Guwahati; Ramsar wetland; migratory bird hub" }
+      {
+        "name": "Chandubi Lake",
+        "note": "Near Guwahati; seasonal migratory bird haven; surrounded by elephant habitat"
+      },
+      {
+        "name": "Son Beel",
+        "note": "Largest wetland in Assam (Cachar district); seasonal fish migration festival"
+      },
+      {
+        "name": "Deepor Beel",
+        "note": "Guwahati; Ramsar wetland; migratory bird hub"
+      }
     ],
     "nationalParks": [
-      { "name": "Kaziranga NP", "area": "430 sq km", "note": "UNESCO; one-horned rhino capital" },
-      { "name": "Manas NP", "area": "950 sq km", "note": "UNESCO; Bhutan border; golden langur" },
-      { "name": "Nameri NP", "area": "200 sq km", "note": "Tezpur; Jia Bharali River; river tern breeding" },
-      { "name": "Dibru-Saikhowa NP", "note": "Dibrugarh; wild horses; semi-aquatic landscape" },
-      { "name": "Pobitora Wildlife Sanctuary", "note": "Highest rhino density in world (by area); day trip from Guwahati" },
-      { "name": "Orang National Park", "note": "'Mini Kaziranga'; north bank; tiger and rhino" }
+      {
+        "name": "Kaziranga NP",
+        "area": "430 sq km",
+        "note": "UNESCO; one-horned rhino capital"
+      },
+      {
+        "name": "Manas NP",
+        "area": "950 sq km",
+        "note": "UNESCO; Bhutan border; golden langur"
+      },
+      {
+        "name": "Nameri NP",
+        "area": "200 sq km",
+        "note": "Tezpur; Jia Bharali River; river tern breeding"
+      },
+      {
+        "name": "Dibru-Saikhowa NP",
+        "note": "Dibrugarh; wild horses; semi-aquatic landscape"
+      },
+      {
+        "name": "Pobitora Wildlife Sanctuary",
+        "note": "Highest rhino density in world (by area); day trip from Guwahati"
+      },
+      {
+        "name": "Orang National Park",
+        "note": "'Mini Kaziranga'; north bank; tiger and rhino"
+      }
     ]
   },
-
   "beaches": [],
-
   "historicalSites": [
-    { "name": "Rang Ghar", "period": "18th century", "description": "Ahom royal amphitheatre; two-storey pavilion; unique Indo-Ahom architecture" },
-    { "name": "Talatal Ghar", "location": "Rangpur", "description": "7 floors (4 above + 3 underground); secret escape tunnels" },
-    { "name": "Kareng Ghar", "location": "Sivasagar", "description": "4-story Ahom royal residence" },
-    { "name": "Charaideo Maidam", "location": "Sivasagar district", "description": "Ahom royal burial mounds; UNESCO tentative list" },
-    { "name": "Ahom Museum", "location": "Sivasagar", "description": "Ahom artifacts, manuscripts, weapons" },
-    { "name": "Assam State Museum", "location": "Guwahati", "description": "Archaeological finds; tribal artifacts" },
-    { "name": "Heritage Tea Estates", "description": "Doomur Dullung, Bokakhat; colonial plantation bungalows" }
+    {
+      "name": "Rang Ghar",
+      "period": "18th century",
+      "description": "Ahom royal amphitheatre; two-storey pavilion; unique Indo-Ahom architecture"
+    },
+    {
+      "name": "Talatal Ghar",
+      "location": "Rangpur",
+      "description": "7 floors (4 above + 3 underground); secret escape tunnels"
+    },
+    {
+      "name": "Kareng Ghar",
+      "location": "Sivasagar",
+      "description": "4-story Ahom royal residence"
+    },
+    {
+      "name": "Charaideo Maidam",
+      "location": "Sivasagar district",
+      "description": "Ahom royal burial mounds; UNESCO tentative list"
+    },
+    {
+      "name": "Ahom Museum",
+      "location": "Sivasagar",
+      "description": "Ahom artifacts, manuscripts, weapons"
+    },
+    {
+      "name": "Assam State Museum",
+      "location": "Guwahati",
+      "description": "Archaeological finds; tribal artifacts"
+    },
+    {
+      "name": "Heritage Tea Estates",
+      "description": "Doomur Dullung, Bokakhat; colonial plantation bungalows"
+    }
   ],
-
   "adventure": [
     "Elephant Safari at Kaziranga — Early morning; 2-hour; through rhino and buffalo territory",
     "Jia Bharali River Rafting — Nameri NP area; Grade II–III; day trips from Tezpur",
@@ -125,25 +242,56 @@
     "Majuli Cycle Tour — Flat island; 30–40 km circuit through Sattras and fishing villages",
     "Tea Estate Walk — Jorhat/Dibrugarh; guided walk through tea gardens; plucking experience"
   ],
-
   "foodCuisine": {
     "famousDishes": [
-      { "name": "Masor Tenga", "description": "Sour fish curry with tomato, ou-tenga (elephant apple) or lemon; signature Assamese dish" },
-      { "name": "Khar", "description": "Unique dish cooked with dried sun-dried raw papaya ash water; Assam's culinary signature" },
-      { "name": "Duck Meat with Lauki", "description": "Festive dish; Bihu specialty" },
-      { "name": "Pitha", "description": "Rice cakes in multiple varieties (Til Pitha, Ghila Pitha) made especially for Bihu" },
-      { "name": "Poita Bhat", "description": "Fermented leftover rice soaked overnight; eaten with mustard, green chili, and salt" },
-      { "name": "Bamboo Shoot Curry", "description": "With pork or chicken; widespread in Assam" },
-      { "name": "Assam Tea", "description": "Single-estate CTC and orthodox varieties; Breakfast tea worldwide" },
-      { "name": "Jolpan", "description": "Traditional breakfast platter: chira (flattened rice), puffed rice, curd, jaggery" }
+      {
+        "name": "Masor Tenga",
+        "description": "Sour fish curry with tomato, ou-tenga (elephant apple) or lemon; signature Assamese dish"
+      },
+      {
+        "name": "Khar",
+        "description": "Unique dish cooked with dried sun-dried raw papaya ash water; Assam's culinary signature"
+      },
+      {
+        "name": "Duck Meat with Lauki",
+        "description": "Festive dish; Bihu specialty"
+      },
+      {
+        "name": "Pitha",
+        "description": "Rice cakes in multiple varieties (Til Pitha, Ghila Pitha) made especially for Bihu"
+      },
+      {
+        "name": "Poita Bhat",
+        "description": "Fermented leftover rice soaked overnight; eaten with mustard, green chili, and salt"
+      },
+      {
+        "name": "Bamboo Shoot Curry",
+        "description": "With pork or chicken; widespread in Assam"
+      },
+      {
+        "name": "Assam Tea",
+        "description": "Single-estate CTC and orthodox varieties; Breakfast tea worldwide"
+      },
+      {
+        "name": "Jolpan",
+        "description": "Traditional breakfast platter: chira (flattened rice), puffed rice, curd, jaggery"
+      }
     ],
     "streetFood": [
-      { "name": "Momos", "description": "Tibetan-influenced dumplings; Guwahati's Fancy Bazaar" },
-      { "name": "Pani Puri / Phuchka", "description": "Local version with sweet-sour water" },
-      { "name": "Laru/Naru", "description": "Coconut-sesame sweets; Bihu specialty" }
+      {
+        "name": "Momos",
+        "description": "Tibetan-influenced dumplings; Guwahati's Fancy Bazaar"
+      },
+      {
+        "name": "Pani Puri / Phuchka",
+        "description": "Local version with sweet-sour water"
+      },
+      {
+        "name": "Laru/Naru",
+        "description": "Coconut-sesame sweets; Bihu specialty"
+      }
     ]
   },
-
   "stayOptions": {
     "luxury": [
       "Diphlu River Lodge, Kaziranga — Inside buffer zone; stunning rhino sightings from rooms",
@@ -161,14 +309,28 @@
       "Gibbon Wildlife Sanctuary Resort — Jorhat; hoolock gibbon sightings; forest edge"
     ]
   },
-
   "bestTimeToVisit": [
-    { "season": "Best (Winter)", "months": "November – March", "conditions": "8–22°C; excellent safari; migratory birds; clear skies" },
-    { "season": "Post-Monsoon", "months": "October – November", "conditions": "Rhino calves visible; lush green; Kaziranga reopens" },
-    { "season": "Monsoon", "months": "June – September", "conditions": "Heavy rains; Kaziranga flooded and closed; tea plucking season" },
-    { "season": "Summer", "months": "April – May", "conditions": "Bihu festival (April); hot and humid; pre-monsoon" }
+    {
+      "season": "Best (Winter)",
+      "months": "November – March",
+      "conditions": "8–22°C; excellent safari; migratory birds; clear skies"
+    },
+    {
+      "season": "Post-Monsoon",
+      "months": "October – November",
+      "conditions": "Rhino calves visible; lush green; Kaziranga reopens"
+    },
+    {
+      "season": "Monsoon",
+      "months": "June – September",
+      "conditions": "Heavy rains; Kaziranga flooded and closed; tea plucking season"
+    },
+    {
+      "season": "Summer",
+      "months": "April – May",
+      "conditions": "Bihu festival (April); hot and humid; pre-monsoon"
+    }
   ],
-
   "transportation": {
     "airports": [
       "Lokpriya Gopinath Bordoloi Airport, Guwahati — Largest in NE India; international connections to Bangkok, Dhaka",
@@ -186,18 +348,48 @@
       "Kaziranga: 5 hours from Guwahati by road; easily accessible"
     ]
   },
-
   "festivals": [
-    { "name": "Bohag Bihu (Rangali)", "period": "April 13–19", "description": "New Year; dancing, feasting, Bihu music; 7-day celebration" },
-    { "name": "Kati Bihu (Kongali)", "period": "October", "description": "Harvest prayer; lamps in fields; introspective" },
-    { "name": "Magh Bihu (Bhogali)", "period": "January 14–15", "description": "Harvest thanksgiving; feast; bonfire (meji) burning" },
-    { "name": "Ambubachi Mela", "period": "June", "description": "Kamakhya Temple; largest tantric fair; 4 days" },
-    { "name": "Raas Mahotsav", "period": "November", "description": "Majuli Island; Vaishnavite drama festival" },
-    { "name": "Dehing Patkai Festival", "period": "January", "description": "Tea, culture, and wildlife festival in Dibrugarh" },
-    { "name": "Ali Ai Ligang", "period": "February", "description": "Mishing tribe seed-sowing festival" },
-    { "name": "Jonbeel Mela", "period": "January", "description": "Ancient barter mela; Morigaon; unique trade without money" }
+    {
+      "name": "Bohag Bihu (Rangali)",
+      "period": "April 13–19",
+      "description": "New Year; dancing, feasting, Bihu music; 7-day celebration"
+    },
+    {
+      "name": "Kati Bihu (Kongali)",
+      "period": "October",
+      "description": "Harvest prayer; lamps in fields; introspective"
+    },
+    {
+      "name": "Magh Bihu (Bhogali)",
+      "period": "January 14–15",
+      "description": "Harvest thanksgiving; feast; bonfire (meji) burning"
+    },
+    {
+      "name": "Ambubachi Mela",
+      "period": "June",
+      "description": "Kamakhya Temple; largest tantric fair; 4 days"
+    },
+    {
+      "name": "Raas Mahotsav",
+      "period": "November",
+      "description": "Majuli Island; Vaishnavite drama festival"
+    },
+    {
+      "name": "Dehing Patkai Festival",
+      "period": "January",
+      "description": "Tea, culture, and wildlife festival in Dibrugarh"
+    },
+    {
+      "name": "Ali Ai Ligang",
+      "period": "February",
+      "description": "Mishing tribe seed-sowing festival"
+    },
+    {
+      "name": "Jonbeel Mela",
+      "period": "January",
+      "description": "Ancient barter mela; Morigaon; unique trade without money"
+    }
   ],
-
   "travelTips": [
     "No ILP required for Assam (unlike other NE states)",
     "Safari booking: Reserve Kaziranga safaris online; Western range for grasslands; Central for forest",
@@ -207,7 +399,6 @@
     "Safety: Generally very safe for tourists; some political sensitivity in border districts",
     "Budget: ₹1,000–2,000 budget; ₹3,000–6,000 mid; ₹12,000+ luxury resorts"
   ],
-
   "uniqueFacts": [
     "Assam produces 52% of India's total tea output and is the world's largest single tea-growing region",
     "Kaziranga has the highest density of Royal Bengal Tigers per unit area of any protected area in the world",

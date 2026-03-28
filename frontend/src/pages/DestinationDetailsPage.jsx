@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import {
   ArrowLeft,
   ArrowRight,
+  ChevronRight,
   Star,
   MapPin,
   Calendar,
@@ -19,9 +20,9 @@ import { destinationsData as destinations } from '../data/destinationsData';
 import { statesData as states } from '../data/statesData';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import SectionHeader from '../components/layout/SectionHeader';
-import MapboxViewer from '../components/features/MapboxViewer';
 import InfoCard from '../components/cards/InfoCard';
 import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
+import BackButton from '../components/ui/BackButton';
 
 /* ═══════════════════════════════════════════════════════
    DESTINATION NOT FOUND
@@ -53,13 +54,17 @@ const HeroBanner = ({ dest, parentState }) => {
       <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/60 to-navy z-10" />
 
       <div className="absolute bottom-0 left-0 w-full p-6 sm:p-12 lg:p-16 z-20 max-w-5xl">
-        <motion.div variants={fadeUp} initial="hidden" animate="visible">
-          <Link
-            to={`/state/${dest.state}`}
-            className="inline-flex items-center gap-2 text-gray-300 hover:text-india-orange transition-colors mb-5 text-sm"
-          >
-            <ArrowLeft size={16} /> {stateName}
-          </Link>
+        <motion.div variants={fadeUp} initial="hidden" animate="visible" className="flex flex-col gap-4 mb-5">
+          <BackButton fallback={`/state/${dest.state}`} label={`Back to ${stateName}`} className="w-fit" />
+          <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-400">
+            <Link to="/" className="hover:text-india-orange transition-colors">Home</Link>
+            <ChevronRight size={14} />
+            <Link to="/states" className="hover:text-india-orange transition-colors">States</Link>
+            <ChevronRight size={14} />
+            <Link to={`/state/${dest.state}`} className="hover:text-india-orange transition-colors">{stateName}</Link>
+            <ChevronRight size={14} />
+            <span className="text-gray-200 font-semibold">{dest.name}</span>
+          </div>
         </motion.div>
 
         {dest.category && (
@@ -257,12 +262,13 @@ const MapPlaceholder = ({ dest, parentState }) => {
     <section className="py-16 sm:py-20 section-padding bg-navy-dark/50">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <MapboxViewer 
-            coordinates={coords ? [coords.lng, coords.lat] : undefined}
-            title={dest.name}
-            zoom={8}
-            height="400px"
-          />
+          <div className="w-full bg-navy-dark rounded-2xl overflow-hidden h-[400px] border border-gray-800 flex flex-col items-center justify-center">
+            <div className="text-center p-6">
+              <Map size={48} className="text-gray-600 mx-auto mb-4" />
+              <h4 className="font-bold text-gray-300 text-xl mb-2">Map will be added soon</h4>
+              <p className="text-gray-500 text-sm">Interactive map will be embedded shortly</p>
+            </div>
+          </div>
         </ScrollReveal>
       </div>
     </section>

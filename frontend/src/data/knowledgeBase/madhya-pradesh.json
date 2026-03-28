@@ -22,7 +22,8 @@
         "Khajuraho temple skyline"
       ],
       "description": "Khajuraho is Madhya Pradesh’s flagship heritage town and an ideal base for exploring the region’s iconic temple architecture. Celebrated for its sculptural detail and preserved temple clusters, it works best as a 1–2 night stay: mornings for temple circuits, evenings for relaxed heritage walks and cultural programs.",
-      "whyFamous": "Gateway to one of India’s most celebrated temple complexes and carvings (UNESCO)."
+      "whyFamous": "Gateway to one of India’s most celebrated temple complexes and carvings (UNESCO).",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Kanha National Park",
@@ -34,7 +35,8 @@
         "Kanha meadow sunrise",
         "barasingha Kanha"
       ],
-      "description": "Tiger safaris, barasingha conservation, rich sal forests"
+      "description": "Tiger safaris, barasingha conservation, rich sal forests",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Bandhavgarh National Park",
@@ -46,7 +48,8 @@
         "Bandhavgarh safari Tala zone",
         "Bandhavgarh forest landscape"
       ],
-      "description": "High-density tiger population, ancient fort integration"
+      "description": "High-density tiger population, ancient fort integration",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Pench National Park",
@@ -58,7 +61,8 @@
         "Pench forest trail",
         "Pench river landscape"
       ],
-      "description": "Tiger reserve and strong birding destination, inspiration for Jungle Book"
+      "description": "Tiger reserve and strong birding destination, inspiration for Jungle Book",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Sanchi Stupa",
@@ -71,7 +75,8 @@
         "Sanchi Buddhist site"
       ],
       "description": "Sanchi is a small town whose identity is inseparable from its UNESCO-recognized Buddhist stupa landscape. Set as an easy excursion from Bhopal, it is best experienced as a heritage visit focused on the Great Stupa, monolithic pillars, and the surrounding archaeological precinct’s monumental gateways.",
-      "whyFamous": "Great Stupa + Buddhist heritage precinct and UNESCO designation."
+      "whyFamous": "Great Stupa + Buddhist heritage precinct and UNESCO designation.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Orchha",
@@ -84,7 +89,8 @@
         "Jahangir Mahal Orchha"
       ],
       "description": "Orchha is a Bundela-era heritage town on the Betwa River. It features a concentrated cluster of palaces, temples, cenotaphs (chhatris), and riverside scenery. Its core appeal is walkability: the fort complex, temple circuits, and sunset viewpoints along the river's edge.",
-      "whyFamous": "Fort-palace complex + iconic chhatris + Betwa riverside heritage ambience."
+      "whyFamous": "Fort-palace complex + iconic chhatris + Betwa riverside heritage ambience.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Bhopal",
@@ -97,7 +103,8 @@
         "Bhopal museum"
       ],
       "description": "The state capital is a high-value urban base that combines lake scenery with major cultural institutions and museums. It works excellently as a 2–3 night hub to cover nearby heritage sites like Sanchi and Bhimbetka without long transfers.",
-      "whyFamous": "Capital-city hub for lakes + museums + heritage day-trips."
+      "whyFamous": "Capital-city hub for lakes + museums + heritage day-trips.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Indore",
@@ -110,7 +117,8 @@
         "Indore heritage street"
       ],
       "description": "A “heritage + modern culture” city with palaces, temples, markets, and a strong food-travel identity. Indore is a strategic base for the Malwa circuit (Mandu, Maheshwar, Omkareshwar) because of its unmatched connectivity and accommodation depth.",
-      "whyFamous": "Malwa gateway + heritage palaces + major food city."
+      "whyFamous": "Malwa gateway + heritage palaces + major food city.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Ujjain",
@@ -123,7 +131,8 @@
         "Ujjain aarti"
       ],
       "description": "A deep pilgrimage city anchored by the Mahakaleshwar Jyotirlinga and a dense cluster of other shrines. It plays a dual role: a major spiritual destination and a Malwa-circuit stop that pairs well with Omkareshwar and Maheshwar.",
-      "whyFamous": "Mahakaleshwar Jyotirlinga + high-density temple circuit."
+      "whyFamous": "Mahakaleshwar Jyotirlinga + high-density temple circuit.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Gwalior",
@@ -136,7 +145,8 @@
         "Gwalior heritage monuments"
       ],
       "description": "A heritage-heavy city dominated by its magnificent hill fort landscape and associated monuments, museums, and temples. It is a strong 1–2 day destination in northern MP offering incredible \"fort city storytelling\".",
-      "whyFamous": "One of India’s most iconic hill forts + dense heritage sightseeing."
+      "whyFamous": "One of India’s most iconic hill forts + dense heritage sightseeing.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Jabalpur",
@@ -149,7 +159,8 @@
         "marble rocks nearby"
       ],
       "description": "Framed around dramatic Narmada-linked nature and accessible urban parks, Jabalpur highlights the spectacular Dhuandhar Falls and marble rocks of Bhedaghat. It's a strong add-on to Kanha wildlife trips.",
-      "whyFamous": "Dhuandhar Falls + Narmada-linked natural attractions and marble rocks."
+      "whyFamous": "Dhuandhar Falls + Narmada-linked natural attractions and marble rocks.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Pachmarhi",
@@ -161,7 +172,8 @@
         "Pachmarhi viewpoints",
         "Bee Falls Pachmarhi"
       ],
-      "description": "A popular nature destination located in Narmadapuram District."
+      "description": "A popular nature destination located in Narmadapuram District.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Mandu",
@@ -173,7 +185,8 @@
         "Mandu palace ruins",
         "Roopmati Pavilion view"
       ],
-      "description": "A popular heritage destination located in Dhar District."
+      "description": "A popular heritage destination located in Dhar District.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Bhimbetka",
@@ -185,7 +198,8 @@
         "Bhimbetka rock shelters",
         "prehistoric paintings India"
       ],
-      "description": "A popular heritage destination located in Raisen District."
+      "description": "A popular heritage destination located in Raisen District.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Chitrakoot",
@@ -197,7 +211,8 @@
         "Chitrakoot temple complex",
         "Chitrakoot spiritual trail"
       ],
-      "description": "A popular spiritual destination located in Satna District."
+      "description": "A popular spiritual destination located in Satna District.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Omkareshwar",
@@ -209,7 +224,8 @@
         "Omkareshwar ghats",
         "Omkareshwar island view"
       ],
-      "description": "A popular spiritual destination located in Khandwa District."
+      "description": "A popular spiritual destination located in Khandwa District.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Maheshwar",
@@ -221,7 +237,8 @@
         "Maheshwar fort riverside",
         "Maheshwari saree weaving"
       ],
-      "description": "A popular heritage_spiritual destination located in Khargone District."
+      "description": "A popular heritage_spiritual destination located in Khargone District.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Burhanpur",
@@ -233,7 +250,8 @@
         "Jama Masjid Burhanpur",
         "Burhanpur heritage walk"
       ],
-      "description": "A popular heritage destination located in Burhanpur District."
+      "description": "A popular heritage destination located in Burhanpur District.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Satpura National Park",
@@ -245,7 +263,8 @@
         "Satpura national park landscape",
         "Satpura wildlife central india"
       ],
-      "description": "Biodiversity-focused forest park, quieter safari experience, Pachmarhi Biosphere Reserve"
+      "description": "Biodiversity-focused forest park, quieter safari experience, Pachmarhi Biosphere Reserve",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Amarkantak",
@@ -257,7 +276,8 @@
         "Amarkantak Kapil Dhara",
         "Amarkantak temple forest"
       ],
-      "description": "A popular spiritual_nature destination located in Anuppur District."
+      "description": "A popular spiritual_nature destination located in Anuppur District.",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Mahakaleshwar Temple",
@@ -269,7 +289,8 @@
         "Mahakal Lok corridor",
         "Mahakaleshwar temple aarti"
       ],
-      "description": "One of the 12 Jyotirlingas, famous for Bhasma Aarti and Mahakal Lok corridor"
+      "description": "One of the 12 Jyotirlingas, famous for Bhasma Aarti and Mahakal Lok corridor",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Omkareshwar Temple",
@@ -281,7 +302,8 @@
         "Mamleshwar temple",
         "Omkareshwar temple steps"
       ],
-      "description": "Jyotirlinga shrine set on a sacred island in the Narmada River"
+      "description": "Jyotirlinga shrine set on a sacred island in the Narmada River",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Chitrakoot Temples",
@@ -293,7 +315,8 @@
         "Chitrakoot pilgrimage circuit",
         "Chitrakoot sacred sites"
       ],
-      "description": "Dense Ramayana-linked pilgrimage circuit"
+      "description": "Dense Ramayana-linked pilgrimage circuit",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Sanchi Buddhist Complex",
@@ -305,7 +328,8 @@
         "Sanchi monastery ruins",
         "Sanchi Ashoka pillar"
       ],
-      "description": "UNESCO World Heritage Site with monuments dating back to 2nd BCE"
+      "description": "UNESCO World Heritage Site with monuments dating back to 2nd BCE",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Amarkantak Temples",
@@ -317,7 +341,8 @@
         "Amarkantak temple complex",
         "Amarkantak kund"
       ],
-      "description": "Sacred emergence geography; origin of the Narmada and Son rivers"
+      "description": "Sacred emergence geography; origin of the Narmada and Son rivers",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Narmada River",
@@ -329,7 +354,8 @@
         "Narmada aarti",
         "Narmada river sunset"
       ],
-      "description": "Sacred central axis shaping multiple MP pilgrimage and heritage destinations"
+      "description": "Sacred central axis shaping multiple MP pilgrimage and heritage destinations",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Betwa River",
@@ -341,7 +367,8 @@
         "Betwa river rafting",
         "Betwa river ghats"
       ],
-      "description": "Scenic heritage river framing Bundelkhand towns like Orchha"
+      "description": "Scenic heritage river framing Bundelkhand towns like Orchha",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Chambal River",
@@ -353,7 +380,8 @@
         "Chambal valley landscape",
         "Chambal river sunset"
       ],
-      "description": "Major river landscape known for its distinctive ravines and ecology"
+      "description": "Major river landscape known for its distinctive ravines and ecology",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Dhuandhar Falls",
@@ -365,7 +393,8 @@
         "Dhuandhar waterfall Jabalpur",
         "Narmada falls viewpoint"
       ],
-      "description": "Jabalpur; misty, dramatic falls experience within the Narmada valley"
+      "description": "Jabalpur; misty, dramatic falls experience within the Narmada valley",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Bee Falls",
@@ -377,7 +406,8 @@
         "Jamuna Prapat Bee Falls",
         "Pachmarhi waterfall pool"
       ],
-      "description": "Pachmarhi; flagship waterfall with an easy day-excursion profile"
+      "description": "Pachmarhi; flagship waterfall with an easy day-excursion profile",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Kapil Dhara",
@@ -389,7 +419,8 @@
         "Kapildhara Narmada falls",
         "Amarkantak Kapil Dhara viewpoint"
       ],
-      "description": "Amarkantak; popular waterfall with strong Saint Kapila legend associations"
+      "description": "Amarkantak; popular waterfall with strong Saint Kapila legend associations",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Khajuraho Temples",
@@ -401,7 +432,8 @@
         "Khajuraho temple sculptures",
         "Khajuraho western group sunrise"
       ],
-      "description": "UNESCO World Heritage temple ensemble; top northern Indian sculpture tradition (10th-11th centuries)"
+      "description": "UNESCO World Heritage temple ensemble; top northern Indian sculpture tradition (10th-11th centuries)",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Bhimbetka Caves",
@@ -413,7 +445,8 @@
         "Bhimbetka rock shelter art",
         "Bhimbetka sandstone shelters"
       ],
-      "description": "UNESCO-listed prehistoric rock art and continuous human settlement records"
+      "description": "UNESCO-listed prehistoric rock art and continuous human settlement records",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Gwalior Fort",
@@ -425,7 +458,8 @@
         "Gwalior Fort walls",
         "Man Singh Palace Gwalior Fort"
       ],
-      "description": "Monumental hill fort dominating Gwalior’s heritage identity with palatial and rock-cut elements"
+      "description": "Monumental hill fort dominating Gwalior’s heritage identity with palatial and rock-cut elements",
+      "mapEmbedUrl": ""
     },
     {
       "name": "Mandu Palaces",
@@ -437,7 +471,8 @@
         "Hindola Mahal Mandu",
         "Mandu palace complex ruins"
       ],
-      "description": "Monument plateau with iconic palace ruins (Jahaz Mahal) and high-value viewpoints"
+      "description": "Monument plateau with iconic palace ruins (Jahaz Mahal) and high-value viewpoints",
+      "mapEmbedUrl": ""
     }
   ],
   "religiousPlaces": [

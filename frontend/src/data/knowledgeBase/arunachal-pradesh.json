@@ -4,14 +4,12 @@
   "capital": "Itanagar",
   "region": "Northeast India",
   "slug": "/india/arunachal-pradesh",
-
   "overview": {
     "short": "Arunachal Pradesh — 'Land of the Dawn-Lit Mountains' — is India's largest northeastern state and one of its most pristine wilderness frontiers. Sharing international borders with Bhutan, China (Tibet), and Myanmar, this state of extraordinary biodiversity encompasses glacier-fed rivers, dense subtropical and temperate forests, alpine meadows, and towering Himalayan peaks. Barely 1% of India's tourists visit here.",
     "paragraph2": "Home to 26 major tribes and over 100 sub-tribes, each with distinct languages, customs, dress, and animist or Buddhist traditions, Arunachal is India's most ethnically diverse state. The Tawang district in the west is a sacred Buddhist land, home to one of Asia's largest monasteries; while the east shelters Nyishi, Adi, Galo, and Idu-Mishmi tribal communities whose way of life has remained largely unchanged for centuries.",
     "paragraph3": "The state receives the first rays of sunlight in India each morning, earning it the name 'Land of the Rising Sun.' Connectivity is improving with new roads and the Arunachal Frontier Highway, making this a destination on the cusp of opening to sustainable adventure and cultural tourism.",
     "cultureHeritage": "Tribal life is the heart of Arunachal's culture. The Monpa people of Tawang practice Mahayana Buddhism with Tibetan influence; their mask dances (Cham) during Torgya Festival are spectacular. The Adi tribe of Siang district are known for the Ponung dance and their remarkable oral literature. The Apatani tribe of Ziro Valley is celebrated for sustainable paddy-cum-fish cultivation, a UNESCO-nominated agricultural system. Traditional Nyishi jewelry — distinctive cane helmets topped with hornbill beaks — reflects the deep relationship between tribes and biodiversity."
   },
-
   "topDestinations": [
     {
       "name": "Tawang",
@@ -19,7 +17,12 @@
       "slug": "/india/arunachal-pradesh/tawang",
       "description": "An enchanting highland town near the Tibetan border, anchored by the Tawang Monastery (17th century) — the largest Buddhist monastery in India and second largest in the world after Lhasa. Surrounded by snowy peaks, glacial lakes (Shungatser, Madhuri), and apple orchards.",
       "whyFamous": "Tawang Monastery; birthplace of the 6th Dalai Lama; border scenery",
-      "imageKeywords": ["Tawang monastery aerial snow", "Tawang valley winter", "Sela Pass snow road"]
+      "imageKeywords": [
+        "Tawang monastery aerial snow",
+        "Tawang valley winter",
+        "Sela Pass snow road"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Ziro Valley",
@@ -27,7 +30,12 @@
       "slug": "/india/arunachal-pradesh/ziro-valley",
       "description": "A UNESCO World Heritage tentative listed site, Ziro is the heartland of the Apatani tribe, whose women once practiced facial tattooing and wore large nose plugs. The valley's flat-topped pine hills, green paddy fields, and bamboo villages create a landscape unlike anywhere in India. Also hosts India's premier indie music festival.",
       "whyFamous": "Apatani culture; Ziro Music Festival; unique paddy-fish agriculture; UNESCO nomination",
-      "imageKeywords": ["Ziro Valley paddy fields Apatani", "Ziro pine hills mist", "Apatani tribe woman"]
+      "imageKeywords": [
+        "Ziro Valley paddy fields Apatani",
+        "Ziro pine hills mist",
+        "Apatani tribe woman"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Namdapha National Park",
@@ -35,7 +43,12 @@
       "slug": "/india/arunachal-pradesh/namdapha",
       "description": "India's 3rd largest national park and one of the most biodiverse places on the planet. Home to the only known population of four big cat species coexisting — tiger, leopard, snow leopard, and clouded leopard.",
       "whyFamous": "Only place in India with 4 big cat species; extreme biodiversity; pristine wilderness",
-      "imageKeywords": ["Namdapha National Park forest", "Namdapha tiger biodiversity", "Idu Mishmi tribe Arunachal"]
+      "imageKeywords": [
+        "Namdapha National Park forest",
+        "Namdapha tiger biodiversity",
+        "Idu Mishmi tribe Arunachal"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Along (Aalo)",
@@ -43,7 +56,12 @@
       "slug": "/india/arunachal-pradesh/along-aalo",
       "description": "Gateway to Adi tribal territory, Along sits on the Siang River (the Brahmaputra before entering Assam). Excellent base for white-water rafting, jungle trekking, and village homestays.",
       "whyFamous": "Siang River rafting; Adi tribe culture; trekking gateway",
-      "imageKeywords": ["Siang River rafting Arunachal", "Adi tribe village Along", "Along town Arunachal valley"]
+      "imageKeywords": [
+        "Siang River rafting Arunachal",
+        "Adi tribe village Along",
+        "Along town Arunachal valley"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Bomdila",
@@ -51,7 +69,12 @@
       "slug": "/india/arunachal-pradesh/bomdila",
       "description": "A charming hill town with apple orchards, craft centers, and spectacular views of the eastern Himalayas including Kangto and Gorichen peaks. Three Buddhist gompas and a thriving market for Monpa crafts make it a cultural stop on the Tawang circuit.",
       "whyFamous": "Apple orchards; Himalayan panorama; Monpa Buddhist gompas",
-      "imageKeywords": ["Bomdila monastery Arunachal", "Bomdila apple orchard Himalaya", "Bomdila town view"]
+      "imageKeywords": [
+        "Bomdila monastery Arunachal",
+        "Bomdila apple orchard Himalaya",
+        "Bomdila town view"
+      ],
+      "mapEmbedUrl": ""
     },
     {
       "name": "Pasighat",
@@ -59,21 +82,56 @@
       "slug": "/india/arunachal-pradesh/pasighat",
       "description": "The oldest town in Arunachal Pradesh, established in 1911 by the British. Sits where the Siang River bursts out of the Himalayan gorges into the plains. Famous for adventure sports and sunrise views over the Siang gorge.",
       "whyFamous": "Oldest town in state; Siang River gorge exit; adventure base",
-      "imageKeywords": ["Pasighat Siang River gorge", "Pasighat sunrise Arunachal", "East Siang river valley"]
+      "imageKeywords": [
+        "Pasighat Siang River gorge",
+        "Pasighat sunrise Arunachal",
+        "East Siang river valley"
+      ],
+      "mapEmbedUrl": ""
     }
   ],
-
   "religiousPlaces": [
-    { "name": "Tawang Monastery (Galden Namgey Lhatse)", "location": "Tawang", "significance": "17th century; 2nd largest Buddhist monastery in world" },
-    { "name": "Urgelling Monastery", "location": "Tawang", "significance": "Birthplace of 6th Dalai Lama Tsangyang Gyatso" },
-    { "name": "Ani Gompa (Nunnery)", "location": "Tawang", "significance": "Women's monastery; stunning mountain backdrop" },
-    { "name": "Dirang Dzong", "location": "West Kameng", "significance": "Ancient fortified monastery complex" },
-    { "name": "Gorsam Chorten Stupa", "location": "Zemithang", "significance": "Largest stupa in Arunachal; 14th century Tibetan style" },
-    { "name": "Malinithan Temple", "location": "Likabali, West Siang", "significance": "10th century Hindu temple; riverside pilgrimage" },
-    { "name": "Parshuram Kund", "location": "Lohit District", "significance": "Hindu pilgrimage site; Makar Sankranti fair" },
-    { "name": "Doimukh Temple", "location": "Papum Pare", "significance": "Shakti temple; Doimukh-Itanagar area" }
+    {
+      "name": "Tawang Monastery (Galden Namgey Lhatse)",
+      "location": "Tawang",
+      "significance": "17th century; 2nd largest Buddhist monastery in world"
+    },
+    {
+      "name": "Urgelling Monastery",
+      "location": "Tawang",
+      "significance": "Birthplace of 6th Dalai Lama Tsangyang Gyatso"
+    },
+    {
+      "name": "Ani Gompa (Nunnery)",
+      "location": "Tawang",
+      "significance": "Women's monastery; stunning mountain backdrop"
+    },
+    {
+      "name": "Dirang Dzong",
+      "location": "West Kameng",
+      "significance": "Ancient fortified monastery complex"
+    },
+    {
+      "name": "Gorsam Chorten Stupa",
+      "location": "Zemithang",
+      "significance": "Largest stupa in Arunachal; 14th century Tibetan style"
+    },
+    {
+      "name": "Malinithan Temple",
+      "location": "Likabali, West Siang",
+      "significance": "10th century Hindu temple; riverside pilgrimage"
+    },
+    {
+      "name": "Parshuram Kund",
+      "location": "Lohit District",
+      "significance": "Hindu pilgrimage site; Makar Sankranti fair"
+    },
+    {
+      "name": "Doimukh Temple",
+      "location": "Papum Pare",
+      "significance": "Shakti temple; Doimukh-Itanagar area"
+    }
   ],
-
   "naturalAttractions": {
     "rivers": [
       "Siang (Brahmaputra) — Roars through Himalayan gorges; world's deepest canyon reach",
@@ -82,9 +140,18 @@
       "Subansiri River — 'Gold River'; longest tributary of Brahmaputra within India"
     ],
     "lakes": [
-      { "name": "Shungatser Lake (Madhuri Lake)", "note": "Near Tawang; named after Bollywood film; snow peaks reflection" },
-      { "name": "PT Tso Lake", "note": "Tawang; high-altitude glacial lake; migratory birds" },
-      { "name": "Sela Lake", "note": "At 4,170m on Sela Pass; permanently snow-fed" }
+      {
+        "name": "Shungatser Lake (Madhuri Lake)",
+        "note": "Near Tawang; named after Bollywood film; snow peaks reflection"
+      },
+      {
+        "name": "PT Tso Lake",
+        "note": "Tawang; high-altitude glacial lake; migratory birds"
+      },
+      {
+        "name": "Sela Lake",
+        "note": "At 4,170m on Sela Pass; permanently snow-fed"
+      }
     ],
     "mountains": [
       "Gorichen Peak — 6,538m; highest peak in Arunachal Pradesh and the eastern Himalayas",
@@ -92,24 +159,55 @@
       "Bomdi La Pass — 2,217m; scenic views of snowy peaks"
     ],
     "nationalParks": [
-      { "name": "Namdapha National Park", "area": "1,985 sq km", "note": "UNESCO tentative; 4 big cat species" },
-      { "name": "Eaglenest Wildlife Sanctuary", "note": "One of world's top 10 birdwatching sites; 500+ bird species" },
-      { "name": "Pakke Tiger Reserve", "note": "Hornbill breeding ground; Pakke Paga Hornbill Festival" },
-      { "name": "Kamlang Wildlife Sanctuary", "note": "Lohit district; elephant corridor" },
-      { "name": "Dibang Wildlife Sanctuary", "note": "Remote; Mishmi hills; red panda habitat" }
+      {
+        "name": "Namdapha National Park",
+        "area": "1,985 sq km",
+        "note": "UNESCO tentative; 4 big cat species"
+      },
+      {
+        "name": "Eaglenest Wildlife Sanctuary",
+        "note": "One of world's top 10 birdwatching sites; 500+ bird species"
+      },
+      {
+        "name": "Pakke Tiger Reserve",
+        "note": "Hornbill breeding ground; Pakke Paga Hornbill Festival"
+      },
+      {
+        "name": "Kamlang Wildlife Sanctuary",
+        "note": "Lohit district; elephant corridor"
+      },
+      {
+        "name": "Dibang Wildlife Sanctuary",
+        "note": "Remote; Mishmi hills; red panda habitat"
+      }
     ]
   },
-
   "beaches": [],
-
   "historicalSites": [
-    { "name": "Itanagar Fort (Ita Fort)", "period": "14th–15th century", "description": "Brickwork fort; gives city its name" },
-    { "name": "Jawaharlal Nehru State Museum", "location": "Itanagar", "description": "Tribal artifacts, clothing, weapons" },
-    { "name": "Bhismaknagar Fort", "location": "Lohit District", "description": "Ancient brick fort; Brahmaputra valley civilization" },
-    { "name": "Malinithan Archaeological Site", "description": "Chalcolithic sculptures; riverside terrace temples" },
-    { "name": "Churchill Museum, Mechuka", "description": "Memorial to WWII pilot; remote valley location" }
+    {
+      "name": "Itanagar Fort (Ita Fort)",
+      "period": "14th–15th century",
+      "description": "Brickwork fort; gives city its name"
+    },
+    {
+      "name": "Jawaharlal Nehru State Museum",
+      "location": "Itanagar",
+      "description": "Tribal artifacts, clothing, weapons"
+    },
+    {
+      "name": "Bhismaknagar Fort",
+      "location": "Lohit District",
+      "description": "Ancient brick fort; Brahmaputra valley civilization"
+    },
+    {
+      "name": "Malinithan Archaeological Site",
+      "description": "Chalcolithic sculptures; riverside terrace temples"
+    },
+    {
+      "name": "Churchill Museum, Mechuka",
+      "description": "Memorial to WWII pilot; remote valley location"
+    }
   ],
-
   "adventure": [
     "Siang River Rafting — Grade IV–V rapids from Tuting to Pasighat; multi-day expeditions",
     "Gorichen Peak Expedition — 6,538m; technical mountaineering; permit required",
@@ -120,23 +218,48 @@
     "Angling at Subansiri/Kameng — Golden Mahseer fishing; permit required",
     "Camping at Sela Pass — High-altitude star gazing and ice lake photography"
   ],
-
   "foodCuisine": {
     "famousDishes": [
-      { "name": "Thukpa", "description": "Noodle soup with vegetables or meat; Tibetan-Monpa influence; ubiquitous in Tawang" },
-      { "name": "Momos", "description": "Steamed/fried dumplings; pork, yak, or vegetable; street staple" },
-      { "name": "Apong", "description": "Rice beer; staple of Adi, Nyishi, and most tribes; fermented with herbs" },
-      { "name": "Smoked Pork with Bamboo Shoot", "description": "Adi/Galo specialty; deeply flavored slow-cooked dish" },
-      { "name": "Pika Pila", "description": "Spicy chutney made from king chili (Bhut Jolokia) and fermented vegetables" },
-      { "name": "Ngatok", "description": "Steamed flat bread; Monpa tribe; served with yak butter tea" },
-      { "name": "Yak Butter Tea (Po Cha)", "description": "Salty buttered tea; energy drink in high-altitude Tawang" }
+      {
+        "name": "Thukpa",
+        "description": "Noodle soup with vegetables or meat; Tibetan-Monpa influence; ubiquitous in Tawang"
+      },
+      {
+        "name": "Momos",
+        "description": "Steamed/fried dumplings; pork, yak, or vegetable; street staple"
+      },
+      {
+        "name": "Apong",
+        "description": "Rice beer; staple of Adi, Nyishi, and most tribes; fermented with herbs"
+      },
+      {
+        "name": "Smoked Pork with Bamboo Shoot",
+        "description": "Adi/Galo specialty; deeply flavored slow-cooked dish"
+      },
+      {
+        "name": "Pika Pila",
+        "description": "Spicy chutney made from king chili (Bhut Jolokia) and fermented vegetables"
+      },
+      {
+        "name": "Ngatok",
+        "description": "Steamed flat bread; Monpa tribe; served with yak butter tea"
+      },
+      {
+        "name": "Yak Butter Tea (Po Cha)",
+        "description": "Salty buttered tea; energy drink in high-altitude Tawang"
+      }
     ],
     "streetFood": [
-      { "name": "Eri Polu", "description": "Wild silkworm dish; tribal delicacy in eastern Arunachal" },
-      { "name": "Bamboo Shoot Pickle", "description": "With dry fish; accompanies most tribal meals" }
+      {
+        "name": "Eri Polu",
+        "description": "Wild silkworm dish; tribal delicacy in eastern Arunachal"
+      },
+      {
+        "name": "Bamboo Shoot Pickle",
+        "description": "With dry fish; accompanies most tribal meals"
+      }
     ]
   },
-
   "stayOptions": {
     "luxury": [
       "Pemaling Boutique Hotel, Tawang — Tibetan-styled; mountain views; warm hospitality",
@@ -153,13 +276,23 @@
       "Tribe Homestays — Most valleys; ₹600–1,200; meals included"
     ]
   },
-
   "bestTimeToVisit": [
-    { "season": "Best (Spring/Autumn)", "months": "March–May, Sep–Nov", "conditions": "Clear skies; rhododendrons in bloom; trekking ideal" },
-    { "season": "Winter", "months": "December–February", "conditions": "Tawang snowbound; Sela Pass may close; stunning snow scenes" },
-    { "season": "Monsoon", "months": "June–August", "conditions": "Heavy rainfall; landslides possible; Ziro Music Festival (September)" }
+    {
+      "season": "Best (Spring/Autumn)",
+      "months": "March–May, Sep–Nov",
+      "conditions": "Clear skies; rhododendrons in bloom; trekking ideal"
+    },
+    {
+      "season": "Winter",
+      "months": "December–February",
+      "conditions": "Tawang snowbound; Sela Pass may close; stunning snow scenes"
+    },
+    {
+      "season": "Monsoon",
+      "months": "June–August",
+      "conditions": "Heavy rainfall; landslides possible; Ziro Music Festival (September)"
+    }
   ],
-
   "transportation": {
     "airports": [
       "Lilabari Airport (Lakhimpur) — Nearest to central/east Arunachal",
@@ -177,18 +310,48 @@
       "Inner Line Permit (ILP) checkpoints at all entry points"
     ]
   },
-
   "festivals": [
-    { "name": "Torgya Festival", "period": "January", "description": "Tawang; Monpa; Buddhist mask dance; 3 days" },
-    { "name": "Losar (Tibetan New Year)", "period": "January–February", "description": "Tawang; Monpa community" },
-    { "name": "Nyokum Yullo", "period": "February", "description": "Nyishi tribe; harvest thanksgiving with ritual pole" },
-    { "name": "Ali Ai Ligang", "period": "February–March", "description": "Mishing tribe; seed-sowing festival" },
-    { "name": "Ponung (Mopin) Festival", "period": "April", "description": "Adi/Galo tribe; harvest; masked dance" },
-    { "name": "Dree Festival", "period": "July", "description": "Apatani tribe; Ziro valley; most colorful tribal festival" },
-    { "name": "Ziro Music Festival", "period": "September", "description": "International indie music; paddy fields stage" },
-    { "name": "Hornbill-Pakke Paga Festival", "period": "February", "description": "Pakke; Nyishi tribe; hornbill conservation celebration" }
+    {
+      "name": "Torgya Festival",
+      "period": "January",
+      "description": "Tawang; Monpa; Buddhist mask dance; 3 days"
+    },
+    {
+      "name": "Losar (Tibetan New Year)",
+      "period": "January–February",
+      "description": "Tawang; Monpa community"
+    },
+    {
+      "name": "Nyokum Yullo",
+      "period": "February",
+      "description": "Nyishi tribe; harvest thanksgiving with ritual pole"
+    },
+    {
+      "name": "Ali Ai Ligang",
+      "period": "February–March",
+      "description": "Mishing tribe; seed-sowing festival"
+    },
+    {
+      "name": "Ponung (Mopin) Festival",
+      "period": "April",
+      "description": "Adi/Galo tribe; harvest; masked dance"
+    },
+    {
+      "name": "Dree Festival",
+      "period": "July",
+      "description": "Apatani tribe; Ziro valley; most colorful tribal festival"
+    },
+    {
+      "name": "Ziro Music Festival",
+      "period": "September",
+      "description": "International indie music; paddy fields stage"
+    },
+    {
+      "name": "Hornbill-Pakke Paga Festival",
+      "period": "February",
+      "description": "Pakke; Nyishi tribe; hornbill conservation celebration"
+    }
   ],
-
   "travelTips": [
     "ILP (Inner Line Permit): Mandatory for all non-Arunachal Indians; obtain online at arunachalilp.com or at Guwahati/Dibrugarh offices; valid 15–30 days",
     "Foreigners: PAP (Protected Area Permit) required; must travel in groups of 2+ with registered guide",
@@ -198,7 +361,6 @@
     "Roads: Road conditions vary dramatically; travel with local knowledge; jeep/SUV advisable",
     "Budget: Budget stays ₹700–1,500; mid-range ₹2,000–4,000; luxury limited and expensive"
   ],
-
   "uniqueFacts": [
     "Arunachal Pradesh is the largest state in Northeast India (83,743 sq km)",
     "The sun rises first in India at Dong village, Arunachal Pradesh — at 4:29 AM in summer",

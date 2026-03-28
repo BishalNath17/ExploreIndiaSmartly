@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import SectionHeader from '../components/layout/SectionHeader';
 import StateCard from '../components/cards/StateCard';
+import BackButton from '../components/ui/BackButton';
 import { statesData } from '../data/statesData';
 
 const AllStatesPage = () => {
@@ -8,8 +9,9 @@ const AllStatesPage = () => {
   const onlyUTs = statesData.filter((s) => s.type === 'ut');
 
   return (
-    <section className="py-16 sm:py-24 section-padding">
+    <section className="pt-24 pb-16 sm:pt-32 sm:pb-24 section-padding">
       <div className="max-w-6xl mx-auto">
+        <BackButton fallback="/" label="Back to Home" className="mb-8" />
         <SectionHeader
           title="Explore By State"
           subtitle="Discover the unique charm each Indian state has to offer."
