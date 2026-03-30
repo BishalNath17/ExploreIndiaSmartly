@@ -1,4 +1,3 @@
-import { destinationsData as destinations } from '../data/destinationsData';
 import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 import { calculateBudget } from './budgetCalculator';
 
@@ -13,11 +12,21 @@ const shuffleArray = (array) => [...array].sort(() => 0.5 - Math.random());
  * @param {{ stateSlug: string, days: number, style: 'budget'|'standard'|'premium' }} params
  * @returns {Array<{ day: number, title: string, description: string, locations: Array<object>, costs: object }>}
  */
-export const generateItinerary = ({ stateSlug, days, style }) => {
+export const generateItinerary = async ({ stateSlug, days, style }) => {
   if (!stateSlug || !days) return [];
 
-  // Gather places for the state
-  const stateDestinations = destinations.filter((d) => d.state === stateSlug);
+  // Fetch live destinations array dynamically mapped to the state
+  let stateDestinations = [];
+  try {
+    const res = await fetch('http://localhost:5000/api/v1/admin/destinations');
+    const json = await res.json();
+    if (json.success && json.data) {
+       stateDestinations = json.data.filter(d => d.state === stateSlug || (d.state && d.state.toLowerCase().replace(/[^a-z0-9]+/g, '-') === stateSlug));
+    }
+  } catch (err) {
+    console.error('Itinerary Gen destination fetch failed:', err);
+  }
+
   const stateGems = hiddenGems.filter((g) => g.state === stateSlug);
 
   // Combine and pick at random for variety, prioritizing major destinations

@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
 import { statesData as states, stateMapEmbeds } from '../data/statesData';
-import { destinationsData as destinations, destinationImages } from '../data/destinationsData';
+import { destinationImages } from '../data/destinationsData'; // Preserved just for KB mapping fallbacks
 import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 import { getStateKnowledge } from '../data/knowledgeBase';
 
@@ -570,12 +570,28 @@ const resolveDestImage = (dest, stateId) => {
   return null;
 };
 
+const API_BASE = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL || 'http://localhost:5000').replace('/api/v1', '');
+
+const resolveDisplayImage = (img) => {
+  if (!img) return null;
+  if (img.startsWith('/uploads/')) return `${API_BASE}${img}`;
+  return img;
+};
+
 const KBDestinationCard = ({ d, stateId, onClick }) => {
   const stateImg = states.find(s => s.id === stateId)?.image;
-  // initial mapped image
-  const defaultImg = resolveDestImage(d, stateId);
+  // Prioritize MongoDB image field, then fall back to static JSON lookup
+  const mongoImg = resolveDisplayImage(d.image);
+  const defaultImg = mongoImg || resolveDestImage(d, stateId);
   const [imgSrc, setImgSrc] = React.useState(defaultImg || stateImg || FALLBACK_IMG);
   const [hasError, setHasError] = React.useState(false);
+
+  // Re-sync if the destination object changes (e.g. after edit)
+  React.useEffect(() => {
+    const fresh = resolveDisplayImage(d.image) || resolveDestImage(d, stateId) || stateImg || FALLBACK_IMG;
+    setImgSrc(fresh);
+    setHasError(false);
+  }, [d.image, d.name]);
 
   const handleError = () => {
     if (!hasError && stateImg && imgSrc !== stateImg) {
@@ -621,7 +637,9 @@ const KBDestinationCard = ({ d, stateId, onClick }) => {
    ═══════════════════════════════════════════════════════ */
 const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
   const stateImg = states.find(s => s.id === stateId)?.image;
-  const defaultImg = resolveDestImage(dest, stateId);
+  // Prioritize MongoDB image field, then fall back to static JSON lookup
+  const mongoImg = resolveDisplayImage(dest.image);
+  const defaultImg = mongoImg || resolveDestImage(dest, stateId);
   const [imgSrc, setImgSrc] = React.useState(defaultImg || stateImg || FALLBACK_IMG);
   const [hasError, setHasError] = React.useState(false);
 
@@ -875,17 +893,31 @@ const StateDetailsPage = () => {
   const state = states.find((s) => s.id === stateSlug);
   const kb = getStateKnowledge(stateSlug);
 
-  if (!state) return <StateNotFound slug={stateSlug} />;
+  const [dbDestinations, setDbDestinations] = useState([]);
 
-  const stateDestinations = destinations.filter((d) => {
-    return d.state === stateSlug || (d.state ? toSlug(d.state) === stateSlug : false);
-  });
+  React.useEffect(() => {
+    const fetchDests = async () => {
+      try {
+        const res = await fetch('http://localhost:5000/api/v1/admin/destinations');
+        const json = await res.json();
+        if (json.success && json.data) {
+          const match = json.data.filter(d => d.state === stateSlug || toSlug(d.state || '') === stateSlug);
+          setDbDestinations(match);
+        }
+      } catch (err) {
+        console.error('Failed fetching DB destinations:', err);
+      }
+    };
+    fetchDests();
+  }, [stateSlug]);
+
+  if (!state) return <StateNotFound slug={stateSlug} />;
 
   return (
     <>
       <HeroBanner state={state} />
       <Overview state={state} data={kb} />
-      <KBTopDestinations data={kb} stateId={state.id} additionalDestinations={stateDestinations} />
+      <KBTopDestinations data={kb} stateId={state.id} additionalDestinations={dbDestinations} />
       <HiddenGemsSection stateSlug={state.id} stateName={state.name} />
       <KBFood data={kb} />
       <KBStayOptions data={kb} />

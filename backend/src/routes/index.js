@@ -5,6 +5,14 @@ const healthController = require('../controllers/healthController');
 const planningController = require('../controllers/planningController');
 const adminRoutes = require('./admin.routes');
 
+// Base test route for /api/v1
+router.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Welcome to Explore India API v1'
+  });
+});
+
 // System Check
 router.get('/health', healthController.getHealthStatus);
 

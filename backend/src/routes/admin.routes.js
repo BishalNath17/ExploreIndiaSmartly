@@ -1,7 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const upload = require('../middlewares/upload.middleware');
+const { upload, uploadDest } = require('../middlewares/upload.middleware');
 const adminController = require('../controllers/admin.controller');
+const destinationController = require('../controllers/destination.controller');
+
+// Absolute Base Route for Admin (/api/v1/admin)
+router.get(['/', ''], (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'Admin API is running'
+  });
+});
 
 // Dummy auth route for 'beginner' simplicity
 router.post('/login', (req, res) => {
@@ -22,6 +31,12 @@ const requireAuth = (req, res, next) => {
     res.status(403).json({ success: false, message: 'Unauthorized' });
   }
 };
+
+// --- MONGODB REST API Endpoints for Destinations ---
+router.get('/destinations', destinationController.getDestinations);
+router.post('/destinations', requireAuth, uploadDest.single('image'), destinationController.createDestination);
+router.put('/destinations/:id', requireAuth, uploadDest.single('image'), destinationController.updateDestination);
+router.delete('/destinations/:id', requireAuth, destinationController.deleteDestination);
 
 // CRUD Routes for the File-based Database
 router.get('/data/:category', requireAuth, adminController.getData);

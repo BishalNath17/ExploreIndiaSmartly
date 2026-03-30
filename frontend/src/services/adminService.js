@@ -17,14 +17,22 @@ const getAuthHeaders = () => {
 };
 
 export const fetchData = async (category) => {
-  const response = await fetch(`${API_URL}/admin/data/${category}`, {
+  const endpoint = category === 'destinations' 
+    ? `${API_URL}/admin/destinations` 
+    : `${API_URL}/admin/data/${category}`;
+
+  const response = await fetch(endpoint, {
     headers: getAuthHeaders()
   });
   return response.json();
 };
 
 export const addItem = async (category, formData) => {
-  const response = await fetch(`${API_URL}/admin/data/${category}`, {
+  const endpoint = category === 'destinations' 
+    ? `${API_URL}/admin/destinations` 
+    : `${API_URL}/admin/data/${category}`;
+
+  const response = await fetch(endpoint, {
     method: 'POST',
     headers: getAuthHeaders(),
     body: formData // using FormData because we need to upload images
@@ -33,7 +41,11 @@ export const addItem = async (category, formData) => {
 };
 
 export const updateItem = async (category, id, formData) => {
-  const response = await fetch(`${API_URL}/admin/data/${category}/${id}`, {
+  const endpoint = category === 'destinations' 
+    ? `${API_URL}/admin/destinations/${id}` 
+    : `${API_URL}/admin/data/${category}/${id}`;
+
+  const response = await fetch(endpoint, {
     method: 'PUT',
     headers: getAuthHeaders(),
     body: formData
@@ -42,7 +54,11 @@ export const updateItem = async (category, id, formData) => {
 };
 
 export const deleteItem = async (category, id) => {
-  const response = await fetch(`${API_URL}/admin/data/${category}/${id}`, {
+  const endpoint = category === 'destinations' 
+    ? `${API_URL}/admin/destinations/${id}` 
+    : `${API_URL}/admin/data/${category}/${id}`;
+
+  const response = await fetch(endpoint, {
     method: 'DELETE',
     headers: getAuthHeaders()
   });

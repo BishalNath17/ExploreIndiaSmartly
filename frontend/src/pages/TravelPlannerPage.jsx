@@ -193,12 +193,24 @@ const TravelPlannerPage = () => {
   const [days, setDays] = useState(3);
   const [style, setStyle] = useState('standard');
   const [showPlan, setShowPlan] = useState(false);
+  const [itinerary, setItinerary] = useState([]);
+  const [isGenerating, setIsGenerating] = useState(false);
 
-  // Memoize itinerary generation
-  const itinerary = useMemo(() => {
-    if (!stateSlug) return [];
-    return generateItinerary({ stateSlug, days, style });
-  }, [stateSlug, days, style]);
+  // Re-generate efficiently on param swaps
+  useEffect(() => {
+    if (showPlan && stateSlug) {
+      setIsGenerating(true);
+      generateItinerary({ stateSlug, days, style })
+        .then(data => {
+          setItinerary(data);
+          setIsGenerating(false);
+        })
+        .catch(err => {
+          console.error(err);
+          setIsGenerating(false);
+        });
+    }
+  }, [stateSlug, days, style, showPlan]);
 
   const selectedStateName = states.find((s) => s.id === stateSlug)?.name || '';
 
@@ -256,7 +268,19 @@ const TravelPlannerPage = () => {
           {/* ── RIGHT: Results Timeline ── */}
           <div className="lg:col-span-8">
             <AnimatePresence mode="wait">
-              {showPlan && itinerary.length > 0 ? (
+              {isGenerating ? (
+                <motion.div
+                  key="loading"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="glass rounded-3xl p-10 sm:p-20 flex flex-col items-center justify-center min-h-[500px]"
+                >
+                  <div className="w-12 h-12 border-4 border-india-orange/30 border-t-india-orange rounded-full animate-spin mb-6"></div>
+                  <h3 className="text-xl font-bold mb-2 text-white">Crafting your perfect trip...</h3>
+                  <p className="text-gray-400 text-sm">Analyzing destinations and calculating budgets</p>
+                </motion.div>
+              ) : showPlan && itinerary.length > 0 ? (
                 <motion.div
                   key="timeline"
                   initial={{ opacity: 0, y: 20 }}

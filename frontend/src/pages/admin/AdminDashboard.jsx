@@ -220,10 +220,13 @@ const AdminDashboard = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {displayData.map((item) => {
               const categoryBadge = tabs.find(t => t.id === item._cat)?.label;
+              const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace('/api/v1', '');
+              const displayImage = item.image?.startsWith('/uploads/') ? `${API_BASE}${item.image}` : item.image;
+              
               return (
                 <div key={`${item._cat}-${item.id}`} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all group flex flex-col">
                   <div className="h-48 overflow-hidden relative">
-                    <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <img src={displayImage} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/fallback.jpg'; }} />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
                       {searchQuery && (
                         <span className="text-[10px] font-bold uppercase tracking-wider text-black bg-white/90 px-2 py-0.5 rounded shadow mb-1 inline-block">

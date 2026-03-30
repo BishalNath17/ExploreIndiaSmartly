@@ -23,7 +23,7 @@ const HiddenGemCard = ({ gem, linkToState = false, showExplore = false }) => {
   return (
     <Wrapper
       {...wrapperProps}
-      className="group relative block rounded-2xl overflow-hidden aspect-[4/5]"
+      className="group relative block rounded-2xl overflow-hidden aspect-[3/4]"
     >
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent z-10" />

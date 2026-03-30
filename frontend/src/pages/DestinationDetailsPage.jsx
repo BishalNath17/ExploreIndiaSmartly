@@ -16,7 +16,6 @@ import {
   Gem,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
-import { destinationsData as destinations } from '../data/destinationsData';
 import { statesData as states } from '../data/statesData';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import SectionHeader from '../components/layout/SectionHeader';
@@ -47,10 +46,19 @@ const DestNotFound = ({ slug }) => (
    ═══════════════════════════════════════════════════════ */
 const HeroBanner = ({ dest, parentState }) => {
   const stateName = parentState?.name || (typeof dest.state === 'string' ? dest.state.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : 'Unknown State');
+  
+  const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace('/api/v1', '');
+  const resolvedImage = dest.image?.startsWith('/uploads/') ? `${API_BASE}${dest.image}` : dest.image;
+  const fallbackImage = parentState?.image || '/images/fallback.jpg';
 
   return (
     <section className="relative h-[50vh] sm:h-[65vh] overflow-hidden">
-      <img src={dest.image} alt={dest.name} className="absolute inset-0 w-full h-full object-cover" />
+      <img 
+        src={resolvedImage} 
+        alt={dest.name} 
+        className="absolute inset-0 w-full h-full object-cover"
+        onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = fallbackImage; }}
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-navy/40 via-navy/60 to-navy z-10" />
 
       <div className="absolute bottom-0 left-0 w-full p-6 sm:p-12 lg:p-16 z-20 max-w-5xl">
@@ -161,9 +169,9 @@ const ItineraryHints = ({ dest }) => {
 /* ═══════════════════════════════════════════════════════
    4. NEARBY PLACES
    ═══════════════════════════════════════════════════════ */
-const NearbyPlaces = ({ dest, parentState }) => {
-  // Show other destinations in the same state (excluding current)
-  const nearby = destinations.filter(d => d.state === dest.state && d.id !== dest.id);
+const NearbyPlaces = ({ dest, parentState, allDests }) => {
+  // Show other destinations in the same state (excluding current) from live DB
+  const nearby = allDests.filter(d => d.state === dest.state && d.id !== dest.id);
   // Also check hidden gems
   const nearbyGems = hiddenGems.filter(g => g.state === dest.state && g.id !== dest.id);
 
@@ -180,8 +188,9 @@ const NearbyPlaces = ({ dest, parentState }) => {
               <Link key={place.id} to={`/destination/${place.id}`}
                 className="group glass rounded-2xl overflow-hidden block hover:bg-white/15 transition-colors">
                 <div className="relative h-48">
-                  <img src={place.image} alt={place.name} loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={place.image?.startsWith('/uploads/') ? `${(import.meta.env.VITE_API_URL || 'http://localhost:5000').replace('/api/v1', '')}${place.image}` : place.image} alt={place.name} loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/fallback.jpg'; }} />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
                 </div>
                 <div className="p-5">
@@ -321,9 +330,38 @@ const ExploreCTA = ({ parentState }) => (
 /* ═══════════════════════════════════════════════════════
    PAGE COMPOSITION
    ═══════════════════════════════════════════════════════ */
+import React from 'react';
+
 const DestinationDetailsPage = () => {
   const { destSlug } = useParams();
-  const dest = destinations.find((d) => d.id === destSlug);
+  
+  const [dest, setDest] = React.useState(null);
+  const [allDests, setAllDests] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    fetch('http://localhost:5000/api/v1/admin/destinations')
+      .then(r => r.json())
+      .then(res => {
+         const data = res.data || [];
+         setAllDests(data);
+         const found = data.find(d => d.id === destSlug);
+         setDest(found);
+         setLoading(false);
+      })
+      .catch(err => {
+         console.error('API Fetch Error:', err);
+         setLoading(false);
+      });
+  }, [destSlug]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-950">
+        <div className="w-10 h-10 border-4 border-india-orange/30 border-t-india-orange rounded-full animate-spin"></div>
+      </div>
+    );
+  }
 
   if (!dest) return <DestNotFound slug={destSlug} />;
 
@@ -334,7 +372,7 @@ const DestinationDetailsPage = () => {
       <HeroBanner dest={dest} parentState={parentState} />
       <Overview dest={dest} parentState={parentState} />
       <ItineraryHints dest={dest} />
-      <NearbyPlaces dest={dest} parentState={parentState} />
+      <NearbyPlaces dest={dest} parentState={parentState} allDests={allDests} />
       <TravelTips dest={dest} parentState={parentState} />
       <MapSection dest={dest} parentState={parentState} />
       <ExploreCTA parentState={parentState} />

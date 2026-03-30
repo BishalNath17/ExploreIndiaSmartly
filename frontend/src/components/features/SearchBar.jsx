@@ -4,7 +4,6 @@ import { Search, X, Loader2 } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import { statesData as states } from '../../data/statesData';
-import { destinationsData as destinations } from '../../data/destinationsData';
 import { hiddenGemsData as hiddenGems } from '../../data/hiddenGemsData';
 
 /* ═══════════════════════════════════════════════════════
@@ -38,27 +37,16 @@ const STATE_ITEMS = states.map((s) => ({
   badgeColor: 'text-blue-400 bg-blue-400/10',
 }));
 
-const DESTINATION_ITEMS = destinations.map((d) => ({
-  id: `dest-${d.id}`,
-  type: 'destination',
-  label: d.name,
-  sub: d.description,
-  path: `/destination/${d.id}`,
-  badgeColor: 'text-emerald-400 bg-emerald-400/10',
-}));
-
 const GEM_ITEMS = hiddenGems.map((g) => ({
   id: `gem-${g.id}`,
   type: 'hidden gem',
   label: g.name,
   sub: g.description,
-  path: destinations.find(d => d.id === g.id) 
-    ? `/destination/${g.id}` 
-    : `/hidden-gems`,
+  path: `/destination/${g.id}`,
   badgeColor: 'text-pink-400 bg-pink-400/10',
 }));
 
-const ALL_SEARCH_ITEMS = [...STATE_ITEMS, ...DESTINATION_ITEMS, ...GEM_ITEMS];
+const STATIC_SEARCH_ITEMS = [...STATE_ITEMS, ...GEM_ITEMS];
 
 /* ═══════════════════════════════════════════════════════
    SEARCH BAR COMPONENT
@@ -76,6 +64,28 @@ const SearchBar = ({ onClose, onSearchActive }) => {
   const navigate = useNavigate();
 
   const debouncedQuery = useDebounce(query, 300);
+
+  // Dynamically fetch and store real destinations natively inside the component
+  const [dynamicSearchItems, setDynamicSearchItems] = useState(STATIC_SEARCH_ITEMS);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/api/v1/admin/destinations')
+      .then(r => r.json())
+      .then(res => {
+         if (res.success && res.data) {
+           const destItems = res.data.map((d) => ({
+             id: `dest-${d.id}`,
+             type: 'destination',
+             label: d.name,
+             sub: d.description || '',
+             path: `/destination/${d.id}`,
+             badgeColor: 'text-emerald-400 bg-emerald-400/10',
+           }));
+           setDynamicSearchItems([...STATIC_SEARCH_ITEMS, ...destItems]);
+         }
+      })
+      .catch(err => console.error('SearchBar fetched destinations err:', err));
+  }, []);
 
   // Close on outside click functionality
   useEffect(() => {
@@ -101,7 +111,7 @@ const SearchBar = ({ onClose, onSearchActive }) => {
     // Simulate slight API-like network delay for smoother perception
     // and demonstrate loading spinner state correctly.
     const timer = setTimeout(() => {
-      const filtered = ALL_SEARCH_ITEMS.filter(
+      const filtered = dynamicSearchItems.filter(
         (item) =>
           item.label.toLowerCase().includes(lowerQuery) ||
           item.sub.toLowerCase().includes(lowerQuery)

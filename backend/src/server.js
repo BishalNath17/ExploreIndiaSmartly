@@ -1,13 +1,23 @@
 require('dotenv').config();
 const http = require('http');
 const app = require('./app');
+const mongoose = require('mongoose');
 
 const PORT = process.env.PORT || 5000;
+
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log('✅ MongoDB Connected');
+  })
+  .catch((err) => {
+    console.log('❌ MongoDB Error:', err.message);
+  });
 
 const server = http.createServer(app);
 
 server.listen(PORT, () => {
-  console.log(`[Explore India Smartly] Backend Server is running!`);
+  console.log('[Explore India Smartly] Backend Server is running!');
   console.log(`- Port: ${PORT}`);
   console.log(`- Environment: ${process.env.NODE_ENV}`);
 });

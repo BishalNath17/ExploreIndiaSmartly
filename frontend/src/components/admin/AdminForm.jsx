@@ -6,6 +6,8 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
   const [formData, setFormData] = useState({});
   const [imageFile, setImageFile] = useState(null);
   const [statesList, setStatesList] = useState([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   useEffect(() => {
     if (initialData) {
@@ -55,8 +57,78 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
     setFormData(newFormData);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // ─── CUSTOM FORMDATA REST ROUTING (Destinations -> MongoDB) ───
+    if (category === 'destinations') {
+      setIsSubmitting(true);
+      setSubmitStatus(null);
+      
+      try {
+        const isEdit = !!initialData;
+        const method = isEdit ? 'PUT' : 'POST';
+        const url = isEdit 
+          ? `http://localhost:5000/api/v1/admin/destinations/${formData.id}`
+          : 'http://localhost:5000/api/v1/admin/destinations';
+
+        // Reverting to FormData exclusively to support native image payloads across MongoDB integration
+        const destinationData = new FormData();
+        Object.keys(formData).forEach(key => {
+          let value = formData[key];
+          if (key === 'mapEmbedUrl' && typeof value === 'string') {
+            const srcMatch = value.match(/src=["']([^"']+)["']/);
+            if (srcMatch && srcMatch[1]) value = srcMatch[1];
+          }
+          destinationData.append(key, value);
+        });
+
+        // Specific named field 'image' expected by our Multer config `uploadDest.single('image')`
+        if (imageFile) {
+          destinationData.append('image', imageFile);
+        }
+
+        const token = localStorage.getItem('adminToken') || 'dummy-admin-token';
+
+        const response = await fetch(url, {
+          method,
+          // DO NOT explicitly set 'Content-Type' when uploading files, Fetch handles multi-part boundary dynamically!
+          headers: {
+            'Authorization': `Bearer ${token}`
+          },
+          body: destinationData
+        });
+
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.message || 'Error saving destination');
+
+        // Render Success Banner
+        setSubmitStatus({ 
+          type: 'success', 
+          message: `Destination ${isEdit ? 'updated' : 'added'} successfully!` 
+        });
+        
+        // Purge memory
+        if (!isEdit) {
+          setFormData({ id: '', name: '', state: '' });
+          setImageFile(null);
+        }
+        
+        // Auto-refresh the DOM 1.5s after success notification
+        setTimeout(() => {
+          window.location.reload(); 
+        }, 1500);
+
+      } catch (err) {
+        console.error('Submission error:', err);
+        setSubmitStatus({ type: 'error', message: err.message });
+      } finally {
+        setIsSubmitting(false);
+      }
+      return; 
+    }
+
+    // Default legacy execution logic for standard file-based datasets (FormData)
     const submitData = new FormData();
     Object.keys(formData).forEach(key => {
       let value = formData[key];
@@ -175,6 +247,17 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
           {initialData ? 'Edit' : 'Add New'} {category}
         </h3>
 
+        {/* Global Loading / Status Messages Bubble */}
+        {submitStatus && (
+          <div className={`p-4 mb-6 border rounded-xl font-medium text-sm flex items-center gap-2 transition-all ${
+            submitStatus.type === 'success' 
+              ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400' 
+              : 'bg-red-500/10 border-red-500/30 text-red-400'
+          }`}>
+            {submitStatus.message}
+          </div>
+        )}
+
         <div className="space-y-4">
           {renderFields()}
           
@@ -185,13 +268,31 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
               <Upload className="mx-auto h-8 w-8 text-gray-400 mb-2" />
               <p className="text-sm text-gray-300">{imageFile ? imageFile.name : 'Drag and drop or click to upload new image'}</p>
             </div>
-            {initialData?.image && !imageFile && <p className="text-xs text-green-400 mt-2">Current Image: {initialData.image}</p>}
+            {/* Interactive ObjectURL preview requested via spec requirement */}
+            {imageFile && (
+              <div className="mt-4 border border-white/10 p-2 rounded-lg bg-black/30 inline-block">
+                <p className="text-xs text-green-400 mb-2 font-medium">New Image Preview:</p>
+                <img src={URL.createObjectURL(imageFile)} alt="Preview" className="h-32 rounded-lg object-cover shadow-lg" />
+              </div>
+            )}
+            {initialData?.image && !imageFile && (
+              <div className="mt-2 text-xs text-blue-400 flex items-center gap-2">
+                <span>Current Image Attached:</span> 
+                <span className="font-mono bg-blue-500/10 px-2 py-1 rounded">{initialData.image}</span>
+              </div>
+            )}
           </div>
         </div>
 
         <div className="mt-8 flex justify-end gap-4">
-          <button type="button" onClick={onCancel} className="px-6 py-2 rounded-xl border border-gray-600 text-gray-300 hover:bg-gray-800 transition-colors">Cancel</button>
-          <button type="submit" className="px-6 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors">Save Changes</button>
+          <button type="button" onClick={onCancel} className="px-6 py-2 rounded-xl border border-gray-600 text-gray-300 hover:bg-gray-800 transition-colors" disabled={isSubmitting}>
+            Cancel
+          </button>
+          <button type="submit" disabled={isSubmitting} className="px-6 py-2 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-medium transition-colors flex items-center gap-2">
+            {isSubmitting ? (
+              <><div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div> Processing...</>
+            ) : 'Save Changes'}
+          </button>
         </div>
       </form>
     </div>
