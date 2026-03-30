@@ -32,7 +32,7 @@ exports.addItem = (req, res, next) => {
     
     if (req.file) {
       // e.g. /images/destinations/id-1612...jpg
-      const folder = category === 'states' ? 'states' : 'destinations';
+      const folder = category === 'states' ? 'states' : (category === 'heroImages' ? 'heroes' : 'destinations');
       newItem.image = `/images/${folder}/${req.file.filename}`;
     }
 
@@ -75,7 +75,7 @@ exports.updateItem = (req, res, next) => {
 
     // File
     if (req.file) {
-      const folder = category === 'states' ? 'states' : 'destinations';
+      const folder = category === 'states' ? 'states' : (category === 'heroImages' ? 'heroes' : 'destinations');
       updatedItem.image = `/images/${folder}/${req.file.filename}`;
     }
 
@@ -95,6 +95,11 @@ exports.updateItem = (req, res, next) => {
 exports.deleteItem = (req, res, next) => {
   try {
     const { category, id } = req.params;
+    
+    if (category === 'heroImages') {
+      return res.status(403).json({ success: false, message: 'Deleting core hero image slots is not permitted. Please use reset instead.' });
+    }
+
     const jsonPath = getJsonPath(category);
     if (!fs.existsSync(jsonPath)) {
       return res.status(404).json({ success: false, message: 'Category not found' });

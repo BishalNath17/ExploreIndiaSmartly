@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowRight,
   MapPin,
@@ -13,6 +13,7 @@ import { fadeUp, scaleIn } from '../utils/animations';
 import { destinationsData as destinations } from '../data/destinationsData';
 import { statesData as states } from '../data/statesData';
 import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
+import heroImagesData from '../data/json/heroImages.json';
 import safetyTips from '../data/safetyTips';
 import DestinationCard from '../components/cards/DestinationCard';
 import StateCard from '../components/cards/StateCard';
@@ -25,14 +26,27 @@ import SearchBar from '../components/features/SearchBar';
 /* ═══════════════════════════════════════════════════════
    1. HERO
    ═══════════════════════════════════════════════════════ */
-const Hero = () => (
-  <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
+const getHeroImage = (id, fallback) => {
+  const item = heroImagesData.find(img => img.id === id);
+  return item && item.image ? item.image : fallback;
+};
+
+const Hero = () => {
+  const [isSearchActive, setIsSearchActive] = useState(false);
+
+  return (
+    <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
     {/* Background image + overlay */}
     <div className="absolute inset-0 z-0">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/70 to-slate-900/90 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-navy/60 to-navy-dark/60 z-10" />
       <img
-        src="/images/heroes/main-hero.jpg"
-        alt="Taj Mahal in India"
+        src={getHeroImage('main-hero', '/images/heroes/main-hero.jpg')}
+        onError={(e) => { 
+          if (!e.currentTarget.src.includes('/images/heroes/main-hero.jpg')) {
+            e.currentTarget.src = '/images/heroes/main-hero.jpg'; 
+          }
+        }}
+        alt="Explore India Hero"
         className="w-full h-full object-cover object-top"
       />
     </div>
@@ -47,8 +61,13 @@ const Hero = () => (
         className="absolute left-[5%] top-[25%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
       >
         <img
-          src="/images/heroes/trek-hero.jpg"
-          alt="Snow mountain trek"
+          src={getHeroImage('left-card', '/images/heroes/trek-hero.jpg')}
+          onError={(e) => { 
+            if (!e.currentTarget.src.includes('/images/heroes/trek-hero.jpg')) {
+              e.currentTarget.src = '/images/heroes/trek-hero.jpg'; 
+            }
+          }}
+          alt="Adventure Trek"
           className="w-64 h-48 object-cover rounded-lg"
         />
       </motion.div>
@@ -61,8 +80,13 @@ const Hero = () => (
         className="absolute right-[5%] bottom-[15%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
       >
         <img
-          src="/images/heroes/kerala-hero.jpg"
-          alt="Kerala Houseboat"
+          src={getHeroImage('right-card', '/images/heroes/kerala-hero.jpg')}
+          onError={(e) => { 
+            if (!e.currentTarget.src.includes('/images/heroes/kerala-hero.jpg')) {
+              e.currentTarget.src = '/images/heroes/kerala-hero.jpg'; 
+            }
+          }}
+          alt="Culture and Beauty"
           className="w-64 h-48 object-cover rounded-lg"
         />
       </motion.div>
@@ -108,9 +132,9 @@ const Hero = () => (
         initial="hidden"
         animate="visible"
         custom={0.45}
-        className="max-w-xl mx-auto mb-8 relative z-30 pointer-events-auto"
+        className="max-w-xl mx-auto mb-8 relative z-50 pointer-events-auto"
       >
-        <SearchBar />
+        <SearchBar onSearchActive={setIsSearchActive} />
       </motion.div>
 
       {/* CTAs */}
@@ -119,7 +143,11 @@ const Hero = () => (
         initial="hidden"
         animate="visible"
         custom={0.6}
-        className="flex flex-col sm:flex-row gap-4 justify-center relative z-30 pointer-events-auto"
+        className={`flex flex-col sm:flex-row gap-4 justify-center relative transition-all duration-300 ${
+          isSearchActive 
+            ? 'opacity-0 invisible z-0 translate-y-4 pointer-events-none' 
+            : 'opacity-100 visible z-10 translate-y-0 pointer-events-auto'
+        }`}
       >
         <Link
           to="/states"
@@ -135,8 +163,12 @@ const Hero = () => (
         </Link>
       </motion.div>
     </div>
+
+    {/* Seamless Single-Gradient Transition */}
+    <div className="absolute bottom-0 left-0 w-full h-56 sm:h-80 bg-gradient-to-t from-[#061224] to-transparent z-10 pointer-events-none" />
   </section>
-);
+  );
+};
 
 /* ═══════════════════════════════════════════════════════
    2. FEATURED STATES
@@ -145,7 +177,7 @@ const FeaturedStates = () => {
   const featured = states.slice(0, 6);
 
   return (
-    <section className="py-16 sm:py-24 section-padding bg-navy-dark/50">
+    <section className="pt-8 sm:pt-16 pb-16 sm:pb-24 section-padding bg-navy-dark/50 relative">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           title="Explore by State"

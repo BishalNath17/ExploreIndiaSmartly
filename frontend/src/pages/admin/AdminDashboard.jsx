@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { fetchData, addItem, updateItem, deleteItem } from '../../services/adminService';
 import AdminForm from '../../components/admin/AdminForm';
-import { LogOut, Plus, Edit2, Trash2, Map, MapPin, Sparkles, Search, Compass } from 'lucide-react';
+import { LogOut, Plus, Edit2, Trash2, Map, MapPin, Sparkles, Search, Compass, Image, RotateCcw } from 'lucide-react';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('destinations'); // 'states', 'uts', 'destinations', 'hiddenGems'
-  const [allData, setAllData] = useState({ destinations: [], states: [], uts: [], hiddenGems: [] });
+  const [allData, setAllData] = useState({ destinations: [], states: [], uts: [], hiddenGems: [], heroImages: [] });
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [editingItem, setEditingItem] = useState(null);
@@ -25,17 +25,19 @@ const AdminDashboard = () => {
   const loadAllData = async () => {
     setLoading(true);
     try {
-      const [destsRes, statesRes, gemsRes] = await Promise.all([
+      const [destsRes, statesRes, gemsRes, heroRes] = await Promise.all([
         fetchData('destinations'),
         fetchData('states'),
-        fetchData('hiddenGems')
+        fetchData('hiddenGems'),
+        fetchData('heroImages')
       ]);
       const st = statesRes.success ? statesRes.data : [];
       setAllData({
         destinations: destsRes.success ? destsRes.data : [],
         states: st.filter(s => s.type !== 'ut'),
         uts: st.filter(s => s.type === 'ut'),
-        hiddenGems: gemsRes.success ? gemsRes.data : []
+        hiddenGems: gemsRes.success ? gemsRes.data : [],
+        heroImages: heroRes.success ? heroRes.data : []
       });
     } catch (err) {
       console.error('Failed to load data', err);
@@ -86,11 +88,35 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleResetHeroImage = async (item) => {
+    if (window.confirm(`Are you sure you want to reset "${item.name}" to its default image?`)) {
+      try {
+        const formData = new FormData();
+        formData.append('id', item.id);
+        formData.append('name', item.name);
+        
+        // Define standard defaults
+        let defaultImage = '';
+        if (item.id === 'main-hero') defaultImage = '/images/heroes/main-hero.jpg';
+        if (item.id === 'left-card') defaultImage = '/images/heroes/trek-hero.jpg';
+        if (item.id === 'right-card') defaultImage = '/images/heroes/kerala-hero.jpg';
+        
+        formData.append('image', defaultImage); 
+
+        await updateItem('heroImages', item.id, formData);
+        loadAllData();
+      } catch (err) {
+        alert('Error resetting image');
+      }
+    }
+  };
+
   const tabs = [
     { id: 'destinations', label: 'All Destinations', icon: MapPin },
     { id: 'states', label: 'States', icon: Map },
     { id: 'uts', label: 'Union Territories', icon: Compass },
-    { id: 'hiddenGems', label: 'Hidden Gems', icon: Sparkles }
+    { id: 'hiddenGems', label: 'Hidden Gems', icon: Sparkles },
+    { id: 'heroImages', label: 'Home Hero Images', icon: Image }
   ];
 
   const getDisplayData = () => {
@@ -104,6 +130,7 @@ const AdminDashboard = () => {
         ...allData.states.filter(match).map(d => ({ ...d, _cat: 'states' })),
         ...allData.uts.filter(match).map(d => ({ ...d, _cat: 'uts' })),
         ...allData.hiddenGems.filter(match).map(d => ({ ...d, _cat: 'hiddenGems' })),
+        ...allData.heroImages.filter(match).map(d => ({ ...d, _cat: 'heroImages' })),
       ];
     }
     return allData[activeTab].map(d => ({ ...d, _cat: activeTab }));
@@ -176,7 +203,7 @@ const AdminDashboard = () => {
               : `Showing ${displayData.length} ${tabs.find(t=>t.id===activeTab).label}`
             }
           </p>
-          {!searchQuery && (
+          {!searchQuery && activeTab !== 'heroImages' && (
             <button 
               onClick={() => { setEditingItem(null); setShowForm(true); }}
               className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 rounded-lg transition-colors border border-emerald-500/20 font-medium"
@@ -215,15 +242,27 @@ const AdminDashboard = () => {
                       <button 
                         onClick={() => { setActiveTab(item._cat); setEditingItem(item); setShowForm(true); }}
                         className="p-2 bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 rounded-lg transition-colors"
+                        title="Edit / Replace Image"
                       >
                         <Edit2 size={16} />
                       </button>
-                      <button 
-                        onClick={() => handleDelete(item.id, item._cat)}
-                        className="p-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg transition-colors"
-                      >
-                        <Trash2 size={16} />
-                      </button>
+                      {item._cat === 'heroImages' ? (
+                        <button 
+                          onClick={() => handleResetHeroImage(item)}
+                          className="p-2 bg-yellow-500/10 hover:bg-yellow-500/20 text-yellow-400 rounded-lg transition-colors"
+                          title="Reset to Default"
+                        >
+                          <RotateCcw size={16} />
+                        </button>
+                      ) : (
+                        <button 
+                          onClick={() => handleDelete(item.id, item._cat)}
+                          className="p-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg transition-colors"
+                          title="Delete"
+                        >
+                          <Trash2 size={16} />
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>

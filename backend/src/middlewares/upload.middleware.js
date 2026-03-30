@@ -11,6 +11,8 @@ const storage = multer.diskStorage({
       folder = 'states';
     } else if (req.params.category === 'hiddenGems') {
       folder = 'destinations'; // For now, hidden gems use destination images
+    } else if (req.params.category === 'heroImages') {
+      folder = 'heroes';
     }
 
     const uploadPath = path.resolve(__dirname, '../../../frontend/public/images', folder);

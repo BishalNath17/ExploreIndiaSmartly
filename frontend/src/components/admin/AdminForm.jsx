@@ -106,7 +106,13 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
       </div>
     );
 
-    if (category === 'states' || category === 'uts') {
+    if (category === 'heroImages') {
+      return (
+        <div className="space-y-4">
+          {commonFields}
+        </div>
+      );
+    } else if (category === 'states' || category === 'uts') {
       return (
         <div className="space-y-4">
           {commonFields}

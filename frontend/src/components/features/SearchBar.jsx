@@ -128,7 +128,7 @@ const SearchBar = ({ onClose, onSearchActive }) => {
   // Sync manual typing with loading overlay
   useEffect(() => {
     const hasQuery = query.trim() !== '';
-    if (onSearchActive) onSearchActive(hasQuery);
+    if (onSearchActive) onSearchActive(isFocused || hasQuery);
 
     if (query !== debouncedQuery && hasQuery) {
       setIsLoading(true);
@@ -136,7 +136,7 @@ const SearchBar = ({ onClose, onSearchActive }) => {
       setIsLoading(false);
       setResults([]);
     }
-  }, [query, debouncedQuery, onSearchActive]);
+  }, [query, debouncedQuery, isFocused, onSearchActive]);
 
   // Keyboard navigation
   const handleKeyDown = (e) => {
