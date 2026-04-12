@@ -18,10 +18,11 @@ import {
   Sun,
   Mountain,
   X,
+  Search,
+  Sparkles,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
 import { statesData as states, stateMapEmbeds } from '../data/statesData';
-import { destinationImages } from '../data/destinationsData'; // Preserved just for KB mapping fallbacks
 import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 import { getStateKnowledge } from '../data/knowledgeBase';
 
@@ -537,34 +538,10 @@ const FALLBACK_IMG = 'data:image/svg+xml,' + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1B2A4E"/><stop offset="100%" stop-color="#0A192F"/></linearGradient></defs><rect fill="url(#g)" width="400" height="200"/><text x="200" y="108" text-anchor="middle" fill="#F97316" font-family="sans-serif" font-size="14" opacity="0.6">Image Coming Soon</text></svg>'
 );
 
-/**
- * Try multiple strategies to resolve an image for a KB destination:
- * 1. Exact slug tail match  (e.g. "old-goa" → destinationImages["old-goa"])
- * 2. Any key that the slug contains  (e.g. "tirupati-tirumala" contains "tirupati")
- * 3. Slugified name match  (e.g. "Visakhapatnam" → "visakhapatnam")
- * 4. State image path fallback (e.g. /images/states/goa.jpg)
- */
 const toSlug = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-const imgKeys = Object.keys(destinationImages);
 
 const resolveDestImage = (dest, stateId) => {
-  if (dest.slug) {
-    const segments = dest.slug.split('/').filter(Boolean);
-    const tail = segments[segments.length - 1];
-    // Strategy 1: exact match
-    if (destinationImages[tail]) return destinationImages[tail];
-    // Strategy 2: key contained in tail or tail contains key
-    const partialMatch = imgKeys.find(k => tail.includes(k) || k.includes(tail));
-    if (partialMatch) return destinationImages[partialMatch];
-  }
-  // Strategy 3: name-based slug
-  if (dest.name) {
-    const nameSlug = toSlug(dest.name);
-    if (destinationImages[nameSlug]) return destinationImages[nameSlug];
-    const nameMatch = imgKeys.find(k => nameSlug.includes(k) || k.includes(nameSlug));
-    if (nameMatch) return destinationImages[nameMatch];
-  }
-  // Strategy 4: state hero image as fallback
+  // Strategy: state hero image as fallback
   const stateObj = states.find(s => s.id === stateId);
   if (stateObj?.image) return stateObj.image;
   return null;
@@ -761,39 +738,121 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
 const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
   const [showAll, setShowAll] = React.useState(false);
   const [selectedDest, setSelectedDest] = React.useState(null);
+  const [searchQuery, setSearchQuery] = React.useState('');
+  const [isFocused, setIsFocused] = React.useState(false);
+  const [highlightIdx, setHighlightIdx] = React.useState(-1);
+  const inputRef = React.useRef(null);
+  const dropdownRef = React.useRef(null);
 
   const kbDests = data?.topDestinations || [];
-  
+
   // Deduplicate against KB top destinations safely
   const kbNames = new Set(kbDests.map(d => toSlug(d.name || '')));
   const uniqueAdditional = additionalDestinations.filter(d => !kbNames.has(toSlug(d.name || '')));
-  
+
   const allDests = [...kbDests, ...uniqueAdditional];
 
   if (!allDests.length) return null;
-  
-  const dests = showAll ? allDests : allDests.slice(0, 6);
+
+  // Search filter logic
+  const isSearching = searchQuery.trim().length > 0;
+  const q = searchQuery.toLowerCase().trim();
+  const filteredDests = isSearching
+    ? allDests.filter(d =>
+        (d.name || '').toLowerCase().includes(q) ||
+        (d.description || '').toLowerCase().includes(q) ||
+        (d.location || '').toLowerCase().includes(q) ||
+        (d.district || '').toLowerCase().includes(q) ||
+        (d.whyFamous || '').toLowerCase().includes(q) ||
+        (d.category || '').toLowerCase().includes(q)
+      )
+    : allDests;
+
+  // Suggestion list (top 5 name matches for dropdown)
+  const suggestions = isSearching
+    ? allDests
+        .filter(d => (d.name || '').toLowerCase().includes(q))
+        .slice(0, 5)
+    : [];
+
+  // Popular picks (shown when focused but not typing)
+  const popularPicks = allDests
+    .filter(d => d.rating >= 4 || d.whyFamous)
+    .slice(0, 4);
+
+  const showDropdown = isFocused && (suggestions.length > 0 || (!isSearching && popularPicks.length > 0));
+
+  // When searching, show all results; when not, respect showAll toggle
+  const dests = isSearching ? filteredDests : (showAll ? allDests : allDests.slice(0, 6));
+
+  // Keyboard navigation
+  const dropdownItems = isSearching ? suggestions : popularPicks;
+  const handleKeyDown = (e) => {
+    if (!showDropdown) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setHighlightIdx(prev => (prev < dropdownItems.length - 1 ? prev + 1 : 0));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setHighlightIdx(prev => (prev > 0 ? prev - 1 : dropdownItems.length - 1));
+    } else if (e.key === 'Enter' && highlightIdx >= 0 && highlightIdx < dropdownItems.length) {
+      e.preventDefault();
+      setSearchQuery(dropdownItems[highlightIdx].name);
+      setIsFocused(false);
+      setHighlightIdx(-1);
+      inputRef.current?.blur();
+    } else if (e.key === 'Escape') {
+      setIsFocused(false);
+      setHighlightIdx(-1);
+      inputRef.current?.blur();
+    }
+  };
+
+  // Close dropdown on outside click
+  React.useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsFocused(false);
+        setHighlightIdx(-1);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Reset highlight when query changes
+  React.useEffect(() => { setHighlightIdx(-1); }, [searchQuery]);
+
+  const selectSuggestion = (name) => {
+    setSearchQuery(name);
+    setIsFocused(false);
+    setHighlightIdx(-1);
+  };
 
   return (
     <section className="py-12 sm:py-16 section-padding bg-navy-dark/50">
       <div className="max-w-5xl mx-auto">
         {selectedDest && (
-          <KBDestinationDetailModal 
-            dest={selectedDest} 
-            stateId={stateId} 
-            onClose={() => setSelectedDest(null)} 
+          <KBDestinationDetailModal
+            dest={selectedDest}
+            stateId={stateId}
+            onClose={() => setSelectedDest(null)}
           />
         )}
         <ScrollReveal>
-          <div className="flex items-center justify-between mb-6">
+          {/* Section Header */}
+          <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl bg-india-orange/15 flex items-center justify-center">
                 <Mountain size={18} className="text-india-orange" />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold">Places to Explore</h3>
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold leading-tight">Places to Explore</h3>
+                <p className="text-xs text-gray-500 mt-0.5">{allDests.length} destinations in this state</p>
+              </div>
             </div>
-            {allDests.length > 6 && showAll && (
-              <button 
+            {!isSearching && allDests.length > 6 && showAll && (
+              <button
                 onClick={() => setShowAll(false)}
                 className="text-sm font-semibold text-india-orange hover:text-white transition-colors"
               >
@@ -801,38 +860,181 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
               </button>
             )}
           </div>
-          
-          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <AnimatePresence>
-              {dests.map((d, idx) => (
-                <motion.div
-                  key={d.name}
-                  layout
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.95 }}
-                  transition={{ duration: 0.4, delay: idx >= 6 ? (idx - 6) * 0.05 : 0 }}
-                >
-                  <KBDestinationCard d={d} stateId={stateId} onClick={() => setSelectedDest(d)} />
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </motion.div>
 
-          {allDests.length > 6 && !showAll && (
-            <motion.div 
-              initial={{ opacity: 0 }} 
-              animate={{ opacity: 1 }} 
-              className="mt-8 text-center flex justify-center"
+          {/* ── Premium Destination Search ── */}
+          <div className="mb-10 max-w-lg" ref={dropdownRef}>
+            <div className={`relative transition-all duration-300 ${
+              isFocused
+                ? 'ring-1 ring-india-orange/30 shadow-[0_0_20px_rgba(249,115,22,0.08)]'
+                : ''
+            } rounded-2xl`}>
+              {/* Glow accent */}
+              {isFocused && (
+                <div className="absolute -inset-px rounded-2xl bg-gradient-to-r from-india-orange/20 via-transparent to-india-orange/10 blur-sm pointer-events-none" />
+              )}
+
+              <div className="relative flex items-center">
+                {/* Search icon */}
+                <div className={`absolute left-4 transition-colors duration-200 ${
+                  isFocused ? 'text-india-orange' : 'text-gray-500'
+                }`}>
+                  <Search size={18} />
+                </div>
+
+                <input
+                  ref={inputRef}
+                  type="text"
+                  placeholder="Search temples, lakes, waterfalls..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setIsFocused(true)}
+                  onKeyDown={handleKeyDown}
+                  className="w-full bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-2xl py-3.5 pl-12 pr-12 text-white text-sm placeholder-gray-500/80 focus:outline-none focus:bg-white/[0.07] focus:border-transparent transition-all duration-300 font-medium tracking-wide"
+                />
+
+                {/* Clear / result count */}
+                <div className="absolute right-3 flex items-center gap-2">
+                  {isSearching && (
+                    <span className="text-[10px] font-bold tracking-wider uppercase text-india-orange/70 bg-india-orange/10 px-2 py-0.5 rounded-full whitespace-nowrap">
+                      {filteredDests.length} found
+                    </span>
+                  )}
+                  {searchQuery && (
+                    <button
+                      onClick={() => { setSearchQuery(''); inputRef.current?.focus(); }}
+                      className="w-7 h-7 flex items-center justify-center rounded-full text-gray-500 hover:text-white hover:bg-white/10 transition-all duration-200"
+                    >
+                      <X size={14} />
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* ── Dropdown ── */}
+              <AnimatePresence>
+                {showDropdown && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -4 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute left-0 right-0 top-full mt-2 z-40 bg-[#0d1b2a]/95 backdrop-blur-2xl border border-white/[0.08] rounded-2xl shadow-2xl shadow-black/40 overflow-hidden"
+                  >
+                    {/* Dropdown header */}
+                    <div className="px-4 pt-3 pb-2 border-b border-white/5">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 flex items-center gap-1.5">
+                        {isSearching ? (
+                          <><Search size={10} /> Suggestions</>
+                        ) : (
+                          <><Sparkles size={10} className="text-india-orange/60" /> Popular in this state</>
+                        )}
+                      </p>
+                    </div>
+
+                    {/* Dropdown items */}
+                    <div className="py-1 max-h-64 overflow-y-auto custom-scrollbar">
+                      {dropdownItems.map((d, idx) => (
+                        <button
+                          key={d.name}
+                          onMouseDown={(e) => e.preventDefault()}
+                          onClick={() => selectSuggestion(d.name)}
+                          onMouseEnter={() => setHighlightIdx(idx)}
+                          className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-all duration-150 ${
+                            highlightIdx === idx
+                              ? 'bg-india-orange/10'
+                              : 'hover:bg-white/[0.04]'
+                          }`}
+                        >
+                          <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
+                            highlightIdx === idx
+                              ? 'bg-india-orange/20 text-india-orange'
+                              : 'bg-white/5 text-gray-500'
+                          } transition-colors`}>
+                            <MapPin size={14} />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <p className={`text-sm font-medium truncate transition-colors ${
+                              highlightIdx === idx ? 'text-white' : 'text-gray-300'
+                            }`}>
+                              {d.name}
+                            </p>
+                            <p className="text-[11px] text-gray-600 truncate">
+                              {d.district || d.location || 'Destination'}
+                            </p>
+                          </div>
+                          {highlightIdx === idx && (
+                            <ChevronRight size={14} className="text-india-orange/60 shrink-0" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+
+                    {/* Keyboard hint */}
+                    <div className="px-4 py-2 border-t border-white/5 flex items-center gap-3">
+                      <span className="text-[10px] text-gray-600">↑↓ navigate</span>
+                      <span className="text-[10px] text-gray-600">↵ select</span>
+                      <span className="text-[10px] text-gray-600">esc close</span>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* ── Results / Empty State ── */}
+          {isSearching && filteredDests.length === 0 ? (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-20 rounded-3xl bg-gradient-to-b from-white/[0.02] to-transparent border border-white/5"
             >
-              <button 
-                onClick={() => setShowAll(true)}
-                className="btn-outline inline-flex items-center gap-2 text-sm text-india-white group"
-              >
-                View More Destinations 
-                <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </button>
+              <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-5">
+                <Search size={28} className="text-gray-600" />
+              </div>
+              <h4 className="text-lg font-semibold text-gray-300 mb-2">No destinations found</h4>
+              <p className="text-gray-500 text-sm max-w-sm mx-auto leading-relaxed">
+                We couldn't find any places matching "<span className="text-gray-300 font-medium">{searchQuery}</span>".
+                Try a broader keyword or{' '}
+                <button onClick={() => setSearchQuery('')} className="text-india-orange hover:underline font-medium">
+                  browse all destinations
+                </button>.
+              </p>
             </motion.div>
+          ) : (
+            <>
+              <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <AnimatePresence>
+                  {dests.map((d, idx) => (
+                    <motion.div
+                      key={d.name}
+                      layout
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.4, delay: idx >= 6 ? (idx - 6) * 0.05 : 0 }}
+                    >
+                      <KBDestinationCard d={d} stateId={stateId} onClick={() => setSelectedDest(d)} />
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </motion.div>
+
+              {!isSearching && allDests.length > 6 && !showAll && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="mt-8 text-center flex justify-center"
+                >
+                  <button
+                    onClick={() => setShowAll(true)}
+                    className="btn-outline inline-flex items-center gap-2 text-sm text-india-white group"
+                  >
+                    View More Destinations
+                    <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </motion.div>
+              )}
+            </>
           )}
         </ScrollReveal>
       </div>
