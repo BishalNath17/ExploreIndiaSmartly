@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -159,16 +159,74 @@ const Hero = () => {
    ═══════════════════════════════════════════════════════ */
 const FeaturedStates = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [exactSelection, setExactSelection] = useState(null);
+  const [isFocused, setIsFocused] = useState(false);
+  const [highlightIdx, setHighlightIdx] = useState(-1);
+  const inputRef = useRef(null);
+  const dropdownRef = useRef(null);
 
   const q = searchQuery.toLowerCase().trim();
   const isSearching = q.length > 0;
 
   const displayStates = isSearching
-    ? states.filter(s =>
-        (s.name || '').toLowerCase().includes(q) ||
-        (s.tagline || '').toLowerCase().includes(q)
+    ? (exactSelection
+        ? states.filter(s => s.name === exactSelection)
+        : states.filter(s =>
+            (s.name || '').toLowerCase().includes(q) ||
+            (s.tagline || '').toLowerCase().includes(q)
+          )
       )
     : states.slice(0, 10);
+
+  const suggestions = isSearching
+    ? states
+        .filter(s => (s.name || '').toLowerCase().includes(q))
+        .slice(0, 5)
+    : [];
+
+  const showDropdown = isFocused && suggestions.length > 0;
+
+  const handleKeyDown = (e) => {
+    if (!showDropdown) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setHighlightIdx(prev => (prev < suggestions.length - 1 ? prev + 1 : 0));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setHighlightIdx(prev => (prev > 0 ? prev - 1 : suggestions.length - 1));
+    } else if (e.key === 'Enter' && highlightIdx >= 0 && highlightIdx < suggestions.length) {
+      e.preventDefault();
+      setSearchQuery(suggestions[highlightIdx].name);
+      setExactSelection(suggestions[highlightIdx].name);
+      setIsFocused(false);
+      setHighlightIdx(-1);
+      inputRef.current?.blur();
+    } else if (e.key === 'Escape') {
+      setIsFocused(false);
+      setHighlightIdx(-1);
+      inputRef.current?.blur();
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setIsFocused(false);
+        setHighlightIdx(-1);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => { setHighlightIdx(-1); }, [searchQuery]);
+
+  const selectSuggestion = (name) => {
+    setSearchQuery(name);
+    setExactSelection(name);
+    setIsFocused(false);
+    setHighlightIdx(-1);
+  };
 
   return (
     <section className="pt-8 sm:pt-12 pb-14 sm:pb-16 section-padding relative bg-gradient-to-b from-navy-dark/60 via-navy-dark/40 to-transparent">
@@ -179,25 +237,85 @@ const FeaturedStates = () => {
         />
 
         {/* Local Search */}
-        <div className="max-w-md mx-auto mb-10 relative">
+        <div className="max-w-md mx-auto mb-10 relative" ref={dropdownRef}>
           <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">
             <Search size={18} />
           </div>
           <input
+            ref={inputRef}
             type="text"
             placeholder="Search states..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setExactSelection(null);
+            }}
+            onFocus={() => setIsFocused(true)}
+            onKeyDown={handleKeyDown}
             className="w-full bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-2xl py-3.5 pl-12 pr-12 text-white text-sm placeholder-gray-500/80 focus:outline-none focus:border-india-orange/60 focus:bg-white/[0.07] transition-all duration-300 shadow-xl shadow-black/20"
           />
           {searchQuery && (
             <button
-              onClick={() => setSearchQuery('')}
+              onClick={() => {
+                setSearchQuery('');
+                setExactSelection(null);
+                inputRef.current?.focus();
+              }}
               className="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full text-gray-500 hover:bg-white/10 hover:text-white transition-colors"
             >
               <X size={14} />
             </button>
           )}
+
+          {/* Suggestion Dropdown */}
+          <AnimatePresence>
+            {showDropdown && (
+              <motion.div
+                initial={{ opacity: 0, y: -4 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -4 }}
+                transition={{ duration: 0.2 }}
+                className="absolute left-0 right-0 top-full mt-2 z-40 bg-[#0d1b2a]/95 backdrop-blur-2xl border border-white/[0.08] rounded-2xl shadow-2xl shadow-black/40 overflow-hidden"
+              >
+                <div className="py-1 max-h-64 overflow-y-auto custom-scrollbar">
+                  {suggestions.map((s, idx) => (
+                    <button
+                      key={s.id}
+                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => selectSuggestion(s.name)}
+                      onMouseEnter={() => setHighlightIdx(idx)}
+                      className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-all duration-150 ${
+                        highlightIdx === idx
+                          ? 'bg-india-orange/10'
+                          : 'hover:bg-white/[0.04]'
+                      }`}
+                    >
+                      <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
+                        highlightIdx === idx
+                          ? 'bg-india-orange/20 text-india-orange'
+                          : 'bg-white/5 text-gray-500'
+                      } transition-colors`}>
+                        <MapPin size={14} />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className={`text-sm font-medium truncate transition-colors ${
+                          highlightIdx === idx ? 'text-white' : 'text-gray-300'
+                        }`}>
+                          {s.name}
+                        </p>
+                        <p className="text-[11px] text-gray-600 truncate">
+                          {s.tagline || 'State in India'}
+                        </p>
+                      </div>
+                      {highlightIdx === idx && (
+                        <ChevronRight size={14} className="text-india-orange/60 shrink-0" />
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Grid Layout */}
