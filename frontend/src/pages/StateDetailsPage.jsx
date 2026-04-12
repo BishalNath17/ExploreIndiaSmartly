@@ -566,7 +566,7 @@ const KBDestinationCard = ({ d, stateId, onClick }) => {
     const fresh = resolveDisplayImage(d.image) || resolveDestImage(d, stateId) || FALLBACK_IMG;
     setImgSrc(fresh);
     setHasError(false);
-  }, [d.image, d.name]);
+  }, [d, stateId]);
 
   const handleError = () => {
     if (!hasError && stateImg && imgSrc !== stateImg) {
@@ -580,10 +580,10 @@ const KBDestinationCard = ({ d, stateId, onClick }) => {
   return (
     <div 
       onClick={onClick}
-      className={`glass rounded-xl overflow-hidden group ${onClick ? 'cursor-pointer hover:border-india-orange/30 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-india-orange/10' : ''}`}
+      className={`glass rounded-xl overflow-hidden group flex flex-col h-full ${onClick ? 'cursor-pointer hover:border-india-orange/30 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-india-orange/10' : ''}`}
     >
       {/* Image */}
-      <div className="relative h-36 overflow-hidden">
+      <div className="relative h-36 overflow-hidden shrink-0">
         <img
           src={imgSrc}
           alt={d.name}
@@ -598,9 +598,9 @@ const KBDestinationCard = ({ d, stateId, onClick }) => {
         )}
       </div>
       {/* Text */}
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-1">
         <h4 className="font-bold text-sm mb-1">{d.name}</h4>
-        <p className="text-gray-500 text-[11px] mb-2">{d.location}</p>
+        <p className="text-gray-500 text-[11px] mb-2">{d.location || d.district || ''}</p>
         <p className="text-gray-400 text-xs leading-relaxed line-clamp-3">{d.description}</p>
       </div>
     </div>
@@ -752,8 +752,6 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
 
   const allDests = [...kbDests, ...uniqueAdditional];
 
-  if (!allDests.length) return null;
-
   // Search filter logic
   const isSearching = searchQuery.trim().length > 0;
   const q = searchQuery.toLowerCase().trim();
@@ -764,7 +762,7 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
         (d.location || '').toLowerCase().includes(q) ||
         (d.district || '').toLowerCase().includes(q) ||
         (d.whyFamous || '').toLowerCase().includes(q) ||
-        (d.category || '').toLowerCase().includes(q)
+        String(d.category || '').toLowerCase().includes(q)
       )
     : allDests;
 
@@ -828,6 +826,8 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
     setIsFocused(false);
     setHighlightIdx(-1);
   };
+
+  if (!allDests.length) return null;
 
   return (
     <section className="py-12 sm:py-16 section-padding bg-navy-dark/50">
@@ -933,11 +933,13 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
 
                     {/* Dropdown items */}
                     <div className="py-1 max-h-64 overflow-y-auto custom-scrollbar">
-                      {dropdownItems.map((d, idx) => (
-                        <button
-                          key={d.name}
-                          onMouseDown={(e) => e.preventDefault()}
-                          onClick={() => selectSuggestion(d.name)}
+                      {dropdownItems.map((d, idx) => {
+                        const uniqueKey = d._id || d.id || `${d.name}-${idx}`;
+                        return (
+                          <button
+                            key={uniqueKey}
+                            onMouseDown={(e) => e.preventDefault()}
+                            onClick={() => selectSuggestion(d.name)}
                           onMouseEnter={() => setHighlightIdx(idx)}
                           className={`w-full text-left px-4 py-3 flex items-center gap-3 transition-all duration-150 ${
                             highlightIdx === idx
@@ -966,7 +968,8 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
                             <ChevronRight size={14} className="text-india-orange/60 shrink-0" />
                           )}
                         </button>
-                      ))}
+                      );
+                    })}
                     </div>
 
                     {/* Keyboard hint */}
@@ -1004,18 +1007,21 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
             <>
               <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <AnimatePresence>
-                  {dests.map((d, idx) => (
-                    <motion.div
-                      key={d.name}
-                      layout
+                  {dests.map((d, idx) => {
+                    const uniqueKey = d._id || d.id || `${d.name}-${idx}`;
+                    return (
+                      <motion.div
+                        key={uniqueKey}
+                        layout
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, scale: 0.95 }}
                       transition={{ duration: 0.4, delay: idx >= 6 ? (idx - 6) * 0.05 : 0 }}
                     >
-                      <KBDestinationCard d={d} stateId={stateId} onClick={() => setSelectedDest(d)} />
-                    </motion.div>
-                  ))}
+                        <KBDestinationCard d={d} stateId={stateId} onClick={() => setSelectedDest(d)} />
+                      </motion.div>
+                    );
+                  })}
                 </AnimatePresence>
               </motion.div>
 
