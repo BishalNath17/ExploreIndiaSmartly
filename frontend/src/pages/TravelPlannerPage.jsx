@@ -14,7 +14,7 @@ import {
   Navigation,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
-import { statesData as states } from '../data/statesData';
+const states = []; // Temporary fallback replacing deleted static data
 import { generateItinerary, formatINR, STYLE_OPTIONS } from '../services/api';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';

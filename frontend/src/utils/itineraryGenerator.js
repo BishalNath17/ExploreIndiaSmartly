@@ -1,4 +1,4 @@
-import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
+const hiddenGems = []; // Temporary fallback replacing deleted static data
 import { calculateBudget } from './budgetCalculator';
 import { API_URL } from '../config/api';
 

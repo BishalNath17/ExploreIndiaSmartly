@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, MapPin, ChevronDown } from 'lucide-react';
-import { statesData as states } from '../../data/statesData';
+const states = []; // Temporary fallback replacing deleted static data
 
 const StateSelect = ({ value, onChange, label = "Destination", placeholder = "Search and select a state or UT" }) => {
   const [isOpen, setIsOpen] = useState(false);

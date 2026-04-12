@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { Search, X, Loader2 } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
-import { statesData as states } from '../../data/statesData';
-import { hiddenGemsData as hiddenGems } from '../../data/hiddenGemsData';
+const states = []; // Temporary fallback replacing deleted static data
+const hiddenGems = []; // Temporary fallback replacing deleted static data
 import { API_URL } from '../../config/api';
 
 /* ═══════════════════════════════════════════════════════

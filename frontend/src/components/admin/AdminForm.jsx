@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Upload } from 'lucide-react';
-import { statesData } from '../../data/statesData';
+const statesData = []; // Temporary fallback replacing deleted static data
 import { API_URL } from '../../config/api';
 
 const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {

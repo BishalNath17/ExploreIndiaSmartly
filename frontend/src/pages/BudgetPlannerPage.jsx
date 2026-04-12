@@ -22,7 +22,7 @@ import {
   STYLE_OPTIONS,
   formatINR,
 } from '../services/api';
-import { statesData as states } from '../data/statesData';
+const states = []; // Temporary fallback replacing deleted static data
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import StateSelect from '../components/features/StateSelect';
