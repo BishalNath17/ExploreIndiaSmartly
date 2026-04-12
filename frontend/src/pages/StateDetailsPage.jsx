@@ -739,6 +739,7 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
   const [showAll, setShowAll] = React.useState(false);
   const [selectedDest, setSelectedDest] = React.useState(null);
   const [searchQuery, setSearchQuery] = React.useState('');
+  const [exactSelection, setExactSelection] = React.useState(null);
   const [isFocused, setIsFocused] = React.useState(false);
   const [highlightIdx, setHighlightIdx] = React.useState(-1);
   const inputRef = React.useRef(null);
@@ -756,13 +757,16 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
   const isSearching = searchQuery.trim().length > 0;
   const q = searchQuery.toLowerCase().trim();
   const filteredDests = isSearching
-    ? allDests.filter(d =>
-        (d.name || '').toLowerCase().includes(q) ||
-        (d.description || '').toLowerCase().includes(q) ||
-        (d.location || '').toLowerCase().includes(q) ||
-        (d.district || '').toLowerCase().includes(q) ||
-        (d.whyFamous || '').toLowerCase().includes(q) ||
-        String(d.category || '').toLowerCase().includes(q)
+    ? (exactSelection
+        ? allDests.filter(d => d.name === exactSelection)
+        : allDests.filter(d =>
+            (d.name || '').toLowerCase().includes(q) ||
+            (d.description || '').toLowerCase().includes(q) ||
+            (d.location || '').toLowerCase().includes(q) ||
+            (d.district || '').toLowerCase().includes(q) ||
+            (d.whyFamous || '').toLowerCase().includes(q) ||
+            String(d.category || '').toLowerCase().includes(q)
+          )
       )
     : allDests;
 
@@ -796,6 +800,7 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
     } else if (e.key === 'Enter' && highlightIdx >= 0 && highlightIdx < dropdownItems.length) {
       e.preventDefault();
       setSearchQuery(dropdownItems[highlightIdx].name);
+      setExactSelection(dropdownItems[highlightIdx].name);
       setIsFocused(false);
       setHighlightIdx(-1);
       inputRef.current?.blur();
@@ -823,6 +828,7 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
 
   const selectSuggestion = (name) => {
     setSearchQuery(name);
+    setExactSelection(name);
     setIsFocused(false);
     setHighlightIdx(-1);
   };
@@ -886,7 +892,10 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
                   type="text"
                   placeholder="Search temples, lakes, waterfalls..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setExactSelection(null);
+                  }}
                   onFocus={() => setIsFocused(true)}
                   onKeyDown={handleKeyDown}
                   className="w-full bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-2xl py-3.5 pl-12 pr-12 text-white text-sm placeholder-gray-500/80 focus:outline-none focus:bg-white/[0.07] focus:border-transparent transition-all duration-300 font-medium tracking-wide"
@@ -901,7 +910,11 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
                   )}
                   {searchQuery && (
                     <button
-                      onClick={() => { setSearchQuery(''); inputRef.current?.focus(); }}
+                      onClick={() => { 
+                        setSearchQuery(''); 
+                        setExactSelection(null);
+                        inputRef.current?.focus(); 
+                      }}
                       className="w-7 h-7 flex items-center justify-center rounded-full text-gray-500 hover:text-white hover:bg-white/10 transition-all duration-200"
                     >
                       <X size={14} />
