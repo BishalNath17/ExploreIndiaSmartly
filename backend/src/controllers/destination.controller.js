@@ -2,9 +2,28 @@ const Destination = require('../models/Destination');
 
 exports.getDestinations = async (req, res, next) => {
   try {
-    const destinations = await Destination.find().sort({ createdAt: -1 });
+    const { state } = req.query;
+    const filter = state ? { state: state.toLowerCase() } : {};
+    const destinations = await Destination.find(filter).sort({ createdAt: -1 });
     console.log("Total destinations:", destinations.length);
     res.json({ success: true, message: 'Destinations retrieved successfully', data: destinations });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.getDestinationById = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    // Try slug-based id first, then MongoDB ObjectId
+    let dest = await Destination.findOne({ id });
+    if (!dest && id.match(/^[0-9a-fA-F]{24}$/)) {
+      dest = await Destination.findById(id);
+    }
+    if (!dest) {
+      return res.status(404).json({ success: false, message: 'Destination not found' });
+    }
+    res.json({ success: true, data: dest });
   } catch (error) {
     next(error);
   }
@@ -87,35 +106,47 @@ exports.importTripura = async (req, res, next) => {
     const fs = require('fs');
     const path = require('path');
     
-    const possiblePaths = [
-      path.resolve(process.cwd(), '../tripura_destinations.json'), // From backend running inside backend/
-      path.resolve(process.cwd(), 'tripura_destinations.json') // From backend running at root
-    ];
-    let filePath = null;
-    for (const p of possiblePaths) {
-      if (fs.existsSync(p)) { filePath = p; break; }
+    // Read from the bundled data directory inside backend/
+    const filePath = path.resolve(__dirname, '../../data/tripura_destinations.json');
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).json({ success: false, message: 'Tripura JSON file not found in backend/data/' });
     }
-    if (!filePath) return res.status(404).json({ success: false, message: 'JSON file not found' });
     
     const rawData = fs.readFileSync(filePath, 'utf8');
     const destinations = JSON.parse(rawData);
     const toSlug = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     
-    const formattedDestinations = destinations.map((dest) => ({
-      id: `${toSlug(dest.name)}-tripura`,
-      name: dest.name,
-      state: 'tripura',
-      district: dest.district || '',
-      description: dest.description || '',
-      whyFamous: Array.isArray(dest.highlights) ? dest.highlights.join(' | ') : '',
-      location: dest.district ? `${dest.district}, Tripura` : 'Tripura',
-      rating: 4.5,
-    }));
+    let inserted = 0;
+    let updated = 0;
+
+    for (const dest of destinations) {
+      const id = `${toSlug(dest.name)}-tripura`;
+      const doc = {
+        id,
+        name: dest.name,
+        state: 'tripura',
+        district: dest.district || '',
+        description: dest.description || '',
+        whyFamous: Array.isArray(dest.highlights) ? dest.highlights.join(' | ') : '',
+        location: dest.district ? `${dest.district}, Tripura` : 'Tripura',
+        rating: 4.5,
+      };
+
+      const result = await Destination.findOneAndUpdate(
+        { id },
+        { $set: doc },
+        { upsert: true, new: true }
+      );
+
+      if (result.createdAt && result.updatedAt &&
+          result.createdAt.getTime() === result.updatedAt.getTime()) {
+        inserted++;
+      } else {
+        updated++;
+      }
+    }
     
-    await Destination.deleteMany({ state: 'tripura' });
-    const inserted = await Destination.insertMany(formattedDestinations);
-    
-    res.json({ success: true, count: inserted.length, message: 'Imported successfully' });
+    res.json({ success: true, count: destinations.length, inserted, updated, message: 'Imported successfully' });
   } catch (error) {
     next(error);
   }

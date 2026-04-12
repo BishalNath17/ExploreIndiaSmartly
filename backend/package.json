@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "node --watch src/server.js"
+    "dev": "node --watch src/server.js",
+    "import:tripura": "node scripts/importTripura.js"
   },
   "keywords": [],
   "author": "",

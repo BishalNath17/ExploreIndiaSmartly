@@ -1,8 +1,18 @@
 const fs = require('fs');
 const path = require('path');
 
+/**
+ * Admin Controller — Explore India Smartly
+ * 
+ * Serves static reference data (states, hiddenGems, heroImages) from
+ * bundled JSON files inside backend/data/.
+ * 
+ * Destinations CRUD is handled by destination.controller.js (MongoDB).
+ * These categories are READ-ONLY reference data for the admin panel.
+ */
+
 const getJsonPath = (category) => {
-  return path.resolve(__dirname, '../../../frontend/src/data/json', `${category}.json`);
+  return path.resolve(__dirname, '../../data', `${category}.json`);
 };
 
 exports.getData = (req, res, next) => {
@@ -10,7 +20,7 @@ exports.getData = (req, res, next) => {
     const { category } = req.params;
     const jsonPath = getJsonPath(category);
     if (!fs.existsSync(jsonPath)) {
-      return res.status(404).json({ success: false, message: 'Category not found' });
+      return res.status(404).json({ success: false, message: `Category '${category}' not found` });
     }
     const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
     res.json({ success: true, count: data.length, data });
@@ -31,7 +41,6 @@ exports.addItem = (req, res, next) => {
     const newItem = req.body;
     
     if (req.file) {
-      // e.g. /images/destinations/id-1612...jpg
       const folder = category === 'states' ? 'states' : (category === 'heroImages' ? 'heroes' : 'destinations');
       newItem.image = `/images/${folder}/${req.file.filename}`;
     }
