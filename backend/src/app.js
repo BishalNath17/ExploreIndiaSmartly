@@ -1,17 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
-const mongoSanitize = require('express-mongo-sanitize');
 const indexRoutes = require('./routes/index');
 const path = require('path');
 
 const app = express();
 
-// Security Middlewares (Production)
-app.use(helmet()); 
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" })); // Required for Cloudinary assets if proxied natively
-app.use(mongoSanitize()); // Prevent NoSQL Injection attacks 
+// Security Middlewares
+app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
 
+// Request Logger
 app.use((req, res, next) => {
   console.log('REQ PATH:', req.method, req.originalUrl);
   next();
@@ -19,27 +18,36 @@ app.use((req, res, next) => {
 
 // CORS Configuration
 const getAllowedOrigins = () => {
-  const envUrl = process.env.CLIENT_URL || process.env.FRONTEND_URL || 'http://localhost:5173';
-  return envUrl.split(',').map(url => url.trim().replace(/\/$/, ''));
+  const envUrl =
+    process.env.CLIENT_URL ||
+    process.env.FRONTEND_URL ||
+    'http://localhost:5173';
+
+  return envUrl
+    .split(',')
+    .map((url) => url.trim().replace(/\/$/, ''))
+    .filter(Boolean);
 };
 
 const allowedOrigins = getAllowedOrigins();
 
-app.use(cors({
-  origin: function (origin, callback) {
-    // allow requests with no origin (like mobile apps, curl, or Postman)
-    if (!origin) return callback(null, true);
-    
-    // Check if the incoming origin exactly matches our whitelist
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+
+      const cleanOrigin = origin.replace(/\/$/, '');
+
+      if (allowedOrigins.includes(cleanOrigin)) {
+        return callback(null, true);
+      }
+
       console.warn(`[CORS Blocked] Origin: ${origin}`);
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
+      return callback(new Error('Not allowed by CORS'));
+    },
+    credentials: true,
+  })
+);
 
 // Body Parser Middleware
 app.use(express.json());
@@ -48,14 +56,14 @@ app.use(express.urlencoded({ extended: true }));
 // Static Files
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
-// Mount API Routes 
+// Mount API Routes
 app.use('/api/v1', indexRoutes);
 
-// Global 404 Handler - MUST be after routes
+// Global 404 Handler
 app.use((req, res) => {
   res.status(404).json({
     success: false,
-    message: 'Endpoint not found'
+    message: 'Endpoint not found',
   });
 });
 
@@ -64,7 +72,7 @@ app.use((err, req, res, next) => {
   console.error('Server Error:', err.message);
   res.status(err.status || 500).json({
     success: false,
-    message: err.message || 'Internal Server Error'
+    message: err.message || 'Internal Server Error',
   });
 });
 
