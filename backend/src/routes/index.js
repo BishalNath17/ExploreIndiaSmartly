@@ -6,26 +6,28 @@ const planningController = require('../controllers/planningController');
 const adminRoutes = require('./admin.routes');
 const destinationController = require('../controllers/destination.controller');
 
-// Base test route for /api/v1
-router.get('/', (req, res) => {
-  res.json({
+// 1. Base API Test Route
+// This matches exactly: https://exploreindiasmartly.onrender.com/api/v1
+// We use a regular expression to handle both with and without trailing slash securely
+router.get(/^\/?$/, (req, res) => {
+  res.status(200).json({
     status: 'success',
     message: 'API is working'
   });
 });
 
-// System Check
+// 2. System Check
 router.get('/health', healthController.getHealthStatus);
 
-// Public Destinations API
+// 3. Public Destinations API
 router.get('/destinations', destinationController.getDestinations);
 router.get('/destinations/import', destinationController.importTripura);
 
-// Future API Endpoints
+// 4. Future API Endpoints
 router.post('/budget/calculate', planningController.calculateBudget);
 router.post('/itinerary/generate', planningController.generateItinerary);
 
-// Admin Panel
+// 5. Admin Panel
 router.use('/admin', adminRoutes);
 
 module.exports = router;

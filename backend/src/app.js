@@ -1,54 +1,48 @@
 const express = require('express');
 const cors = require('cors');
-const routes = require('./routes');
+const indexRoutes = require('./routes/index');
+const path = require('path');
 
 const app = express();
 
-// Middlewares — CORS
-// FRONTEND_URL can be a single origin or comma-separated list
-// e.g. "https://explore-india-smartly.onrender.com,http://localhost:5173"
+// 1. CORS Configuration
 const allowedOrigins = (process.env.FRONTEND_URL || 'http://localhost:5173')
   .split(',')
   .map(origin => origin.trim());
 
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (mobile apps, curl, server-to-server)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
+    if (allowedOrigins.includes(origin)) return callback(null, true);
     return callback(new Error('Not allowed by CORS'));
   },
   credentials: true
 }));
 
-// Body parser
+// 2. Body Parser Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve Static Uploads
-const path = require('path');
+// 3. Static Files
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
-// Global Routes
-app.use('/api/v1', routes);
+// 4. Mount API Routes exactly as requested
+app.use('/api/v1', indexRoutes);
 
-// 404 Handler
-app.use((req, res, next) => {
+// 5. Global 404 Handler
+app.use((req, res) => {
   res.status(404).json({
     success: false,
-    message: 'Endpoint not found',
+    message: 'Endpoint not found'
   });
 });
 
-// Global Error Handler
+// 6. Global Error Handler
 app.use((err, req, res, next) => {
-  console.error(err.stack);
+  console.error('Server Error:', err.message);
   res.status(err.status || 500).json({
     success: false,
-    message: err.message || 'Internal Server Error',
-    ...(process.env.NODE_ENV === 'development' && { stack: err.stack }),
+    message: err.message || 'Internal Server Error'
   });
 });
 
