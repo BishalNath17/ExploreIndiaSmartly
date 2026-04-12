@@ -9,8 +9,8 @@ const destinationController = require('../controllers/destination.controller');
 // Base test route for /api/v1
 router.get('/', (req, res) => {
   res.json({
-    success: true,
-    message: 'Welcome to Explore India API v1'
+    status: 'success',
+    message: 'API is working'
   });
 });
 
