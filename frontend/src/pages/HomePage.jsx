@@ -8,6 +8,8 @@ import {
   Shield,
   Calculator,
   ChevronRight,
+  Search,
+  X
 } from 'lucide-react';
 import { fadeUp, scaleIn } from '../utils/animations';
 import { statesData as states } from '../data/statesData';
@@ -20,7 +22,6 @@ import HiddenGemCard from '../components/cards/HiddenGemCard';
 import SectionHeader from '../components/layout/SectionHeader';
 import Newsletter from '../components/features/Newsletter';
 import ScrollReveal from '../components/ui/ScrollReveal';
-import SearchBar from '../components/features/SearchBar';
 import { API_URL } from '../config/api';
 
 /* ═══════════════════════════════════════════════════════
@@ -32,8 +33,6 @@ const getHeroImage = (id, fallback) => {
 };
 
 const Hero = () => {
-  const [isSearchActive, setIsSearchActive] = useState(false);
-
   return (
     <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
     {/* Background image + overlay */}
@@ -126,28 +125,13 @@ const Hero = () => {
         smarter travel across every Indian state.
       </motion.p>
 
-      {/* Search */}
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        animate="visible"
-        custom={0.45}
-        className="max-w-xl mx-auto mb-8 relative z-50 pointer-events-auto"
-      >
-        <SearchBar onSearchActive={setIsSearchActive} />
-      </motion.div>
-
       {/* CTAs */}
       <motion.div
         variants={scaleIn}
         initial="hidden"
         animate="visible"
-        custom={0.6}
-        className={`flex flex-col sm:flex-row gap-4 justify-center relative transition-all duration-300 ${
-          isSearchActive 
-            ? 'opacity-0 invisible z-0 translate-y-4 pointer-events-none' 
-            : 'opacity-100 visible z-10 translate-y-0 pointer-events-auto'
-        }`}
+        custom={0.45}
+        className="flex flex-col sm:flex-row gap-4 justify-center relative pointer-events-auto z-10"
       >
         <Link
           to="/states"
@@ -174,26 +158,65 @@ const Hero = () => {
    2. FEATURED STATES
    ═══════════════════════════════════════════════════════ */
 const FeaturedStates = () => {
-  const featured = states.slice(0, 8);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const q = searchQuery.toLowerCase().trim();
+  const isSearching = q.length > 0;
+
+  const displayStates = isSearching
+    ? states.filter(s =>
+        (s.name || '').toLowerCase().includes(q) ||
+        (s.tagline || '').toLowerCase().includes(q)
+      )
+    : states.slice(0, 10);
 
   return (
-    <section className="pt-8 sm:pt-12 pb-10 sm:pb-14 section-padding relative bg-gradient-to-b from-navy-dark/60 via-navy-dark/40 to-transparent">
+    <section className="pt-8 sm:pt-12 pb-14 sm:pb-16 section-padding relative bg-gradient-to-b from-navy-dark/60 via-navy-dark/40 to-transparent">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           title="Explore by State"
           subtitle="Each state tells a different story — pick yours."
         />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {featured.map((state) => (
-            <StateCard key={state.id} state={state} variant="image" />
-          ))}
+        {/* Local Search */}
+        <div className="max-w-md mx-auto mb-10 relative">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">
+            <Search size={18} />
+          </div>
+          <input
+            type="text"
+            placeholder="Search states..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full bg-white/[0.04] backdrop-blur-xl border border-white/[0.08] rounded-2xl py-3.5 pl-12 pr-12 text-white text-sm placeholder-gray-500/80 focus:outline-none focus:border-india-orange/60 focus:bg-white/[0.07] transition-all duration-300 shadow-xl shadow-black/20"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center rounded-full text-gray-500 hover:bg-white/10 hover:text-white transition-colors"
+            >
+              <X size={14} />
+            </button>
+          )}
         </div>
 
-        <div className="flex justify-center mt-10">
+        {/* Grid Layout */}
+        {displayStates.length > 0 ? (
+          <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+            {displayStates.map((state) => (
+              <StateCard key={state.id} state={state} variant="image" />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-gray-400">No states found matching "{searchQuery}"</p>
+          </div>
+        )}
+
+        <div className="flex justify-center mt-12">
           <Link
             to="/states"
-            className="group bg-india-orange hover:bg-orange-600 text-white font-semibold flex items-center justify-center gap-2 py-3 px-8 rounded-full shadow-lg shadow-india-orange/30 transition-all text-sm sm:text-base"
+            className="group bg-india-orange hover:bg-orange-600 text-white font-semibold flex items-center justify-center gap-2 py-3.5 px-8 rounded-full shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_25px_rgba(249,115,22,0.5)] transition-all text-sm sm:text-base"
           >
             View All States & UT
             <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
