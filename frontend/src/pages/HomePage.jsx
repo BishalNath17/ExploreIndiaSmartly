@@ -174,7 +174,7 @@ const Hero = () => {
    2. FEATURED STATES
    ═══════════════════════════════════════════════════════ */
 const FeaturedStates = () => {
-  const featured = states.slice(0, 6);
+  const featured = states.slice(0, 8);
 
   return (
     <section className="pt-8 sm:pt-12 pb-10 sm:pb-14 section-padding relative bg-gradient-to-b from-navy-dark/60 via-navy-dark/40 to-transparent">
@@ -184,18 +184,19 @@ const FeaturedStates = () => {
           subtitle="Each state tells a different story — pick yours."
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {featured.map((state) => (
             <StateCard key={state.id} state={state} variant="image" />
           ))}
         </div>
 
-        <div className="text-center mt-6">
+        <div className="flex justify-center mt-10">
           <Link
             to="/states"
-            className="inline-flex items-center gap-1 text-sm text-india-orange hover:underline font-medium"
+            className="group bg-india-orange hover:bg-orange-600 text-white font-semibold flex items-center justify-center gap-2 py-3 px-8 rounded-full shadow-lg shadow-india-orange/30 transition-all text-sm sm:text-base"
           >
-            View all states <ChevronRight size={14} />
+            View All States & UT
+            <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </div>
