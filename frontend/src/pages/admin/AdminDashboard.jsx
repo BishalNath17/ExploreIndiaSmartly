@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { fetchData, addItem, updateItem, deleteItem } from '../../services/adminService';
 import AdminForm from '../../components/admin/AdminForm';
 import { LogOut, Plus, Edit2, Trash2, Map, MapPin, Sparkles, Search, Compass, Image, RotateCcw } from 'lucide-react';
+import { resolveImageUrl } from '../../config/api';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -220,11 +221,10 @@ const AdminDashboard = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {displayData.map((item) => {
               const categoryBadge = tabs.find(t => t.id === item._cat)?.label;
-              const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace('/api/v1', '');
-              const displayImage = item.image?.startsWith('/uploads/') ? `${API_BASE}${item.image}` : item.image;
+              const displayImage = resolveImageUrl(item.image) || item.image;
               
               return (
-                <div key={`${item._cat}-${item.id}`} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all group flex flex-col">
+                <div key={`${item._cat}-${item.id || item._id}`} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all group flex flex-col">
                   <div className="h-48 overflow-hidden relative">
                     <img src={displayImage} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/fallback.jpg'; }} />
                     <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
@@ -259,7 +259,7 @@ const AdminDashboard = () => {
                         </button>
                       ) : (
                         <button 
-                          onClick={() => handleDelete(item.id, item._cat)}
+                          onClick={() => handleDelete(item.id || item._id, item._cat)}
                           className="p-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg transition-colors"
                           title="Delete"
                         >

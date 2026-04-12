@@ -1,5 +1,6 @@
 import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 import { calculateBudget } from './budgetCalculator';
+import { API_URL } from '../config/api';
 
 /**
  * Shuffle an array safely.
@@ -18,7 +19,7 @@ export const generateItinerary = async ({ stateSlug, days, style }) => {
   // Fetch live destinations array dynamically mapped to the state
   let stateDestinations = [];
   try {
-    const res = await fetch('http://localhost:5000/api/v1/admin/destinations');
+    const res = await fetch(`${API_URL}/destinations`);
     const json = await res.json();
     if (json.success && json.data) {
        stateDestinations = json.data.filter(d => d.state === stateSlug || (d.state && d.state.toLowerCase().replace(/[^a-z0-9]+/g, '-') === stateSlug));

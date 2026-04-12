@@ -21,6 +21,7 @@ import SectionHeader from '../components/layout/SectionHeader';
 import Newsletter from '../components/features/Newsletter';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import SearchBar from '../components/features/SearchBar';
+import { API_URL } from '../config/api';
 
 /* ═══════════════════════════════════════════════════════
    1. HERO
@@ -214,11 +215,12 @@ const PopularDestinations = () => {
   useEffect(() => {
     const fetchDestinations = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/v1/admin/destinations');
+        const response = await fetch(`${API_URL}/destinations`);
         if (!response.ok) throw new Error('Failed to fetch destinations');
         
         const result = await response.json();
         if (result.success && Array.isArray(result.data)) {
+          console.log("Fetched:", result.data.length);
           setFetchedDestinations(result.data);
         } else {
           throw new Error('Invalid data format received');
@@ -269,28 +271,32 @@ const PopularDestinations = () => {
             <p className="text-gray-400">No destinations available at the moment.</p>
           </div>
         ) : (
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {displayedDestinations.map((dest, idx) => (
-                <motion.div
-                  key={dest.id || idx}
-                  initial={idx >= 6 ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: idx >= 6 ? (idx - 6) * 0.1 : 0 }}
-                >
-                  <DestinationCard destination={dest} />
-                </motion.div>
-              ))}
-            </div>
+          <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+            <motion.div layout className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+              <AnimatePresence>
+                {displayedDestinations.map((dest, idx) => (
+                  <motion.div
+                    key={dest.id || idx}
+                    layout
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.4, delay: idx >= 6 ? (idx - 6) * 0.05 : 0 }}
+                  >
+                    <DestinationCard destination={dest} />
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
 
-            {fetchedDestinations.length > 6 && !showAll && (
+            {fetchedDestinations.length > 6 && (
               <div className="text-center mt-8">
                 <button
-                  onClick={() => setShowAll(true)}
+                  onClick={() => setShowAll(!showAll)}
                   className="btn-outline inline-flex items-center gap-2 text-sm text-india-white group"
                 >
-                  See More Destinations
-                  <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  {showAll ? 'Hide Destinations' : 'See More Destinations'}
+                  <ChevronRight size={16} className={`transition-transform ${showAll ? '-rotate-90' : 'group-hover:translate-x-1'}`} />
                 </button>
               </div>
             )}

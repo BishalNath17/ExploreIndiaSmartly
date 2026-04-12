@@ -88,7 +88,6 @@ explore-india-smartly/
 │   ├── .gitignore
 │   ├── package.json
 │   ├── vite.config.js
-│   ├── vercel.json               # Vercel SPA routing config
 │   └── src/
 │       ├── main.jsx              # React entry point
 │       ├── App.jsx               # Root component → AppRouter

@@ -1,6 +1,6 @@
 # Managing Images in Explore India Smartly
 
-To ensure maximum performance, stability, and compatibility across deployment platforms (Vercel, GitHub Pages, etc.), this project no longer dynamically fetches images from external third-party sources (like Unsplash) via URL in the data files. 
+To ensure maximum performance, stability, and compatibility across deployment platforms (Render, GitHub Pages, etc.), this project no longer dynamically fetches images from external third-party sources (like Unsplash) via URL in the data files. 
 
 Instead, the project uses a robust **Local-First Component Architecture**.
 

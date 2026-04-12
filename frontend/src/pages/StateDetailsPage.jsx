@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft,
   MapPin,
@@ -33,6 +32,7 @@ import ScrollReveal from '../components/ui/ScrollReveal';
 import InfoCard from '../components/cards/InfoCard';
 import HiddenGemCard from '../components/cards/HiddenGemCard';
 import EmptyState from '../components/ui/EmptyState';
+import { API_URL, API_BASE, resolveImageUrl } from '../config/api';
 
 /* ═══════════════════════════════════════════════════════
    STATE NOT FOUND FALLBACK
@@ -570,12 +570,8 @@ const resolveDestImage = (dest, stateId) => {
   return null;
 };
 
-const API_BASE = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_API_URL || 'http://localhost:5000').replace('/api/v1', '');
-
 const resolveDisplayImage = (img) => {
-  if (!img) return null;
-  if (img.startsWith('/uploads/')) return `${API_BASE}${img}`;
-  return img;
+  return resolveImageUrl(img);
 };
 
 const KBDestinationCard = ({ d, stateId, onClick }) => {
@@ -583,12 +579,14 @@ const KBDestinationCard = ({ d, stateId, onClick }) => {
   // Prioritize MongoDB image field, then fall back to static JSON lookup
   const mongoImg = resolveDisplayImage(d.image);
   const defaultImg = mongoImg || resolveDestImage(d, stateId);
-  const [imgSrc, setImgSrc] = React.useState(defaultImg || stateImg || FALLBACK_IMG);
+  // Avoid aggressively repeating the identical state cover image for every destination
+  // If destination has its own image, use it. Otherwise, use the generic fallback SVG.
+  const [imgSrc, setImgSrc] = React.useState(defaultImg || FALLBACK_IMG);
   const [hasError, setHasError] = React.useState(false);
 
   // Re-sync if the destination object changes (e.g. after edit)
   React.useEffect(() => {
-    const fresh = resolveDisplayImage(d.image) || resolveDestImage(d, stateId) || stateImg || FALLBACK_IMG;
+    const fresh = resolveDisplayImage(d.image) || resolveDestImage(d, stateId) || FALLBACK_IMG;
     setImgSrc(fresh);
     setHasError(false);
   }, [d.image, d.name]);
@@ -640,7 +638,7 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
   // Prioritize MongoDB image field, then fall back to static JSON lookup
   const mongoImg = resolveDisplayImage(dest.image);
   const defaultImg = mongoImg || resolveDestImage(dest, stateId);
-  const [imgSrc, setImgSrc] = React.useState(defaultImg || stateImg || FALLBACK_IMG);
+  const [imgSrc, setImgSrc] = React.useState(defaultImg || FALLBACK_IMG);
   const [hasError, setHasError] = React.useState(false);
 
   React.useEffect(() => {
@@ -799,24 +797,42 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
                 onClick={() => setShowAll(false)}
                 className="text-sm font-semibold text-india-orange hover:text-white transition-colors"
               >
-                Show Less
+                Hide Destinations
               </button>
             )}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {dests.map((d) => (
-              <KBDestinationCard key={d.name} d={d} stateId={stateId} onClick={() => setSelectedDest(d)} />
-            ))}
-          </div>
+          
+          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <AnimatePresence>
+              {dests.map((d, idx) => (
+                <motion.div
+                  key={d.name}
+                  layout
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.4, delay: idx >= 6 ? (idx - 6) * 0.05 : 0 }}
+                >
+                  <KBDestinationCard d={d} stateId={stateId} onClick={() => setSelectedDest(d)} />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
+
           {allDests.length > 6 && !showAll && (
-            <div className="mt-8 text-center flex justify-center">
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              className="mt-8 text-center flex justify-center"
+            >
               <button 
                 onClick={() => setShowAll(true)}
-                className="bg-navy border border-gray-700 hover:border-india-orange text-white px-6 py-3 rounded-full inline-flex items-center gap-2 text-sm transition-all"
+                className="btn-outline inline-flex items-center gap-2 text-sm text-india-white group"
               >
-                View All {allDests.length} Destinations <ArrowRight size={16} />
+                View More Destinations 
+                <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
-            </div>
+            </motion.div>
           )}
         </ScrollReveal>
       </div>
@@ -898,7 +914,7 @@ const StateDetailsPage = () => {
   React.useEffect(() => {
     const fetchDests = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/v1/admin/destinations');
+        const res = await fetch(`${API_URL}/destinations`);
         const json = await res.json();
         if (json.success && json.data) {
           const match = json.data.filter(d => d.state === stateSlug || toSlug(d.state || '') === stateSlug);

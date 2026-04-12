@@ -26,9 +26,7 @@ import {
 
 import { generateItinerary as localGenerateItinerary } from '../utils/itineraryGenerator';
 
-/* ── Configuration ─────────────────────────────────── */
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api/v1';
+import { API_URL as API_BASE_URL } from '../config/api';
 
 /**
  * Feature flag: when true the async helpers will attempt real API calls.

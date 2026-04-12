@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Upload } from 'lucide-react';
 import { statesData } from '../../data/statesData';
+import { API_URL } from '../../config/api';
 
 const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
   const [formData, setFormData] = useState({});
@@ -69,8 +70,8 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
         const isEdit = !!initialData;
         const method = isEdit ? 'PUT' : 'POST';
         const url = isEdit 
-          ? `http://localhost:5000/api/v1/admin/destinations/${formData.id}`
-          : 'http://localhost:5000/api/v1/admin/destinations';
+          ? `${API_URL}/admin/destinations/${formData.id}`
+          : `${API_URL}/admin/destinations`;
 
         // Reverting to FormData exclusively to support native image payloads across MongoDB integration
         const destinationData = new FormData();

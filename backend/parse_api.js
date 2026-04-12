@@ -1,0 +1,11 @@
+const fs = require('fs');
+const d = JSON.parse(fs.readFileSync('backend/api_test.txt', 'utf8'));
+console.log('Success:', d.success);
+console.log('Total destinations in DB:', d.data.length);
+const states = {};
+d.data.forEach(x => { states[x.state] = (states[x.state] || 0) + 1; });
+console.log('By state:', JSON.stringify(states, null, 2));
+console.log('First 5 names:');
+d.data.slice(0, 5).forEach(x => console.log('  -', x.name, '[' + x.state + ']'));
+console.log('Last 3 names:');
+d.data.slice(-3).forEach(x => console.log('  -', x.name, '[' + x.state + ']'));

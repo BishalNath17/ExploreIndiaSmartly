@@ -5,6 +5,7 @@ import { Search, X, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { statesData as states } from '../../data/statesData';
 import { hiddenGemsData as hiddenGems } from '../../data/hiddenGemsData';
+import { API_URL } from '../../config/api';
 
 /* ═══════════════════════════════════════════════════════
    CUSTOM HOOK: DEBOUNCE
@@ -69,7 +70,7 @@ const SearchBar = ({ onClose, onSearchActive }) => {
   const [dynamicSearchItems, setDynamicSearchItems] = useState(STATIC_SEARCH_ITEMS);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/v1/admin/destinations')
+    fetch(`${API_URL}/destinations`)
       .then(r => r.json())
       .then(res => {
          if (res.success && res.data) {

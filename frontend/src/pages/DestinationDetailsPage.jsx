@@ -22,6 +22,7 @@ import SectionHeader from '../components/layout/SectionHeader';
 import InfoCard from '../components/cards/InfoCard';
 import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 import BackButton from '../components/ui/BackButton';
+import { API_URL, API_BASE, resolveImageUrl } from '../config/api';
 
 /* ═══════════════════════════════════════════════════════
    DESTINATION NOT FOUND
@@ -47,8 +48,7 @@ const DestNotFound = ({ slug }) => (
 const HeroBanner = ({ dest, parentState }) => {
   const stateName = parentState?.name || (typeof dest.state === 'string' ? dest.state.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : 'Unknown State');
   
-  const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace('/api/v1', '');
-  const resolvedImage = dest.image?.startsWith('/uploads/') ? `${API_BASE}${dest.image}` : dest.image;
+  const resolvedImage = resolveImageUrl(dest.image);
   const fallbackImage = parentState?.image || '/images/fallback.jpg';
 
   return (
@@ -188,7 +188,7 @@ const NearbyPlaces = ({ dest, parentState, allDests }) => {
               <Link key={place.id} to={`/destination/${place.id}`}
                 className="group glass rounded-2xl overflow-hidden block hover:bg-white/15 transition-colors">
                 <div className="relative h-48">
-                  <img src={place.image?.startsWith('/uploads/') ? `${(import.meta.env.VITE_API_URL || 'http://localhost:5000').replace('/api/v1', '')}${place.image}` : place.image} alt={place.name} loading="lazy"
+                  <img src={resolveImageUrl(place.image) || place.image} alt={place.name} loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/images/fallback.jpg'; }} />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
@@ -340,7 +340,7 @@ const DestinationDetailsPage = () => {
   const [loading, setLoading] = React.useState(true);
 
   React.useEffect(() => {
-    fetch('http://localhost:5000/api/v1/admin/destinations')
+    fetch(`${API_URL}/destinations`)
       .then(r => r.json())
       .then(res => {
          const data = res.data || [];

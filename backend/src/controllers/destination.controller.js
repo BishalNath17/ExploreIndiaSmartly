@@ -3,6 +3,7 @@ const Destination = require('../models/Destination');
 exports.getDestinations = async (req, res, next) => {
   try {
     const destinations = await Destination.find().sort({ createdAt: -1 });
+    console.log("Total destinations:", destinations.length);
     res.json({ success: true, message: 'Destinations retrieved successfully', data: destinations });
   } catch (error) {
     next(error);
@@ -76,6 +77,45 @@ exports.deleteDestination = async (req, res, next) => {
     if (!deleted) return res.status(404).json({ success: false, message: 'Destination not found' });
     
     res.json({ success: true, message: `Destination deleted successfully` });
+  } catch (error) {
+    next(error);
+  }
+};
+
+exports.importTripura = async (req, res, next) => {
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    
+    const possiblePaths = [
+      path.resolve(process.cwd(), '../tripura_destinations.json'), // From backend running inside backend/
+      path.resolve(process.cwd(), 'tripura_destinations.json') // From backend running at root
+    ];
+    let filePath = null;
+    for (const p of possiblePaths) {
+      if (fs.existsSync(p)) { filePath = p; break; }
+    }
+    if (!filePath) return res.status(404).json({ success: false, message: 'JSON file not found' });
+    
+    const rawData = fs.readFileSync(filePath, 'utf8');
+    const destinations = JSON.parse(rawData);
+    const toSlug = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    
+    const formattedDestinations = destinations.map((dest) => ({
+      id: `${toSlug(dest.name)}-tripura`,
+      name: dest.name,
+      state: 'tripura',
+      district: dest.district || '',
+      description: dest.description || '',
+      whyFamous: Array.isArray(dest.highlights) ? dest.highlights.join(' | ') : '',
+      location: dest.district ? `${dest.district}, Tripura` : 'Tripura',
+      rating: 4.5,
+    }));
+    
+    await Destination.deleteMany({ state: 'tripura' });
+    const inserted = await Destination.insertMany(formattedDestinations);
+    
+    res.json({ success: true, count: inserted.length, message: 'Imported successfully' });
   } catch (error) {
     next(error);
   }

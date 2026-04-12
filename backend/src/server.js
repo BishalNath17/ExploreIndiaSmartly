@@ -11,7 +11,8 @@ mongoose
     console.log('✅ MongoDB Connected');
   })
   .catch((err) => {
-    console.log('❌ MongoDB Error:', err.message);
+    console.error('❌ MongoDB Connection Failed:', err.message);
+    process.exit(1);
   });
 
 const server = http.createServer(app);

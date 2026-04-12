@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Star, ArrowRight } from 'lucide-react';
+import { resolveImageUrl } from '../../config/api';
 
-const FALLBACK_IMAGE = '/images/fallback.jpg';
+const FALLBACK_IMAGE = 'data:image/svg+xml,' + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1B2A4E"/><stop offset="100%" stop-color="#0A192F"/></linearGradient></defs><rect fill="url(#g)" width="400" height="400"/><text x="200" y="200" text-anchor="middle" fill="#F97316" font-family="sans-serif" font-size="20" opacity="0.6">Image Coming Soon</text><path fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.3" d="M170 230l20-20 40 40 40-40 30 30M170 230v40h100v-40" /></svg>'
+);
 
 /**
  * Reusable destination card with image, overlay, rating, and hover effect.
@@ -10,9 +13,7 @@ const FALLBACK_IMAGE = '/images/fallback.jpg';
 const DestinationCard = ({ destination, className = '' }) => {
   const { id, name, description, image, rating } = destination;
 
-  // Determine valid backend paths mapped by Multer and MongoDB natively
-  const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace('/api/v1', '');
-  const displayImage = image?.startsWith('/uploads/') ? `${API_BASE}${image}` : (image || FALLBACK_IMAGE);
+  const displayImage = resolveImageUrl(image) || FALLBACK_IMAGE;
 
   const handleImgError = (e) => {
     e.currentTarget.onerror = null;
