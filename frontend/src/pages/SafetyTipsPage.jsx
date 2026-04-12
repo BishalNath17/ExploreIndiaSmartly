@@ -1,9 +1,19 @@
 import { useState } from 'react';
-import { Shield, Phone, ChevronDown, ChevronUp } from 'lucide-react';
+import {
+  Shield, Phone, ChevronDown, ChevronUp,
+  AlertTriangle, MapPin, Wallet, Users, Heart, Wifi, Sun,
+  Droplets, Car, Camera, Lock, Compass, Clock, FileText, Gem
+} from 'lucide-react';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
-import safetyTips from '../data/safetyTips';
+import useApiData from '../hooks/useApiData';
 import PageHero from '../components/layout/PageHero';
+
+// Map icon name strings from DB to Lucide components
+const ICON_MAP = {
+  Shield, Phone, AlertTriangle, MapPin, Wallet, Users, Heart, Wifi, Sun,
+  Droplets, Car, Camera, Lock, Compass, Clock, FileText, Gem
+};
 
 
 /* ═══════════════════════════════════════════════════════
@@ -50,7 +60,7 @@ const EmergencyCard = () => (
    ═══════════════════════════════════════════════════════ */
 const CategorySection = ({ category, index }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const CategoryIcon = category.categoryIcon;
+  const CategoryIcon = ICON_MAP[category.categoryIcon] || Shield;
 
   return (
     <ScrollReveal delay={index * 0.08}>
@@ -80,7 +90,7 @@ const CategorySection = ({ category, index }) => {
         {isOpen && (
           <div className="px-6 sm:px-8 pb-6 sm:pb-8 space-y-3">
             {category.tips.map((tip, i) => {
-              const TipIcon = tip.icon;
+              const TipIcon = ICON_MAP[tip.icon] || Shield;
               return (
                 <div
                   key={i}
@@ -106,43 +116,53 @@ const CategorySection = ({ category, index }) => {
 /* ═══════════════════════════════════════════════════════
    PAGE COMPOSITION
    ═══════════════════════════════════════════════════════ */
-const SafetyTipsPage = () => (
-  <>
-    <PageHero
-      badge={{ text: 'Travel Smart', icon: Shield }}
-      badgeColor="red-400"
-      title="Safety Tips & Advice"
-      highlightWord="Tips"
-      subtitle="India is an incredible destination, but smart preparation makes every trip safer. Bookmark this page before you go."
-      gradientFrom="from-red-900/15"
-    />
-    <EmergencyCard />
+const SafetyTipsPage = () => {
+  const { data: safetyTips, loading } = useApiData('/safety-tips');
 
-    <section className="py-12 sm:py-16 section-padding">
-      <div className="max-w-5xl mx-auto space-y-6">
-        {safetyTips.map((category, i) => (
-          <CategorySection key={category.category} category={category} index={i} />
-        ))}
-      </div>
-    </section>
+  return (
+    <>
+      <PageHero
+        badge={{ text: 'Travel Smart', icon: Shield }}
+        badgeColor="red-400"
+        title="Safety Tips & Advice"
+        highlightWord="Tips"
+        subtitle="India is an incredible destination, but smart preparation makes every trip safer. Bookmark this page before you go."
+        gradientFrom="from-red-900/15"
+      />
+      <EmergencyCard />
 
-    {/* Bottom CTA */}
-    <section className="pb-16 sm:pb-20 section-padding">
-      <div className="max-w-3xl mx-auto">
-        <ScrollReveal>
-          <div className="glass rounded-3xl p-8 sm:p-12 text-center">
-            <Shield size={32} className="text-india-orange mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-3">Travel Insurance Reminder</h3>
-            <p className="text-gray-400 text-sm max-w-lg mx-auto">
-              No matter how well you prepare, accidents can happen. Always carry comprehensive
-              travel insurance that covers medical emergencies, theft, and trip cancellations.
-              It&apos;s a small investment for invaluable peace of mind.
-            </p>
-          </div>
-        </ScrollReveal>
-      </div>
-    </section>
-  </>
-);
+      <section className="py-12 sm:py-16 section-padding">
+        <div className="max-w-5xl mx-auto space-y-6">
+          {loading ? (
+            [...Array(3)].map((_, i) => (
+              <div key={i} className="glass rounded-3xl h-40 animate-pulse" />
+            ))
+          ) : (
+            (safetyTips || []).map((category, i) => (
+              <CategorySection key={category.category || i} category={category} index={i} />
+            ))
+          )}
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="pb-16 sm:pb-20 section-padding">
+        <div className="max-w-3xl mx-auto">
+          <ScrollReveal>
+            <div className="glass rounded-3xl p-8 sm:p-12 text-center">
+              <Shield size={32} className="text-india-orange mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-3">Travel Insurance Reminder</h3>
+              <p className="text-gray-400 text-sm max-w-lg mx-auto">
+                No matter how well you prepare, accidents can happen. Always carry comprehensive
+                travel insurance that covers medical emergencies, theft, and trip cancellations.
+                It&apos;s a small investment for invaluable peace of mind.
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default SafetyTipsPage;

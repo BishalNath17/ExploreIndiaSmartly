@@ -11,41 +11,57 @@ export const adminLogin = async (username, password) => {
 
 const getAuthHeaders = () => {
   const token = localStorage.getItem('adminToken');
-  return {
-    'Authorization': `Bearer ${token}`
-  };
+  return { 'Authorization': `Bearer ${token}` };
 };
 
+/**
+ * Fetch data for any collection.
+ * All collections now use MongoDB-backed endpoints.
+ */
 export const fetchData = async (category) => {
-  const endpoint = category === 'destinations' 
-    ? `${API_URL}/admin/destinations` 
-    : `${API_URL}/admin/data/${category}`;
-
-  const response = await fetch(endpoint, {
-    headers: getAuthHeaders()
-  });
+  const endpointMap = {
+    destinations: '/admin/destinations',
+    states: '/admin/states',
+    'hidden-gems': '/admin/hidden-gems',
+    'safety-tips': '/admin/safety-tips',
+    'hero-images': '/admin/hero-images',
+    blogs: '/admin/blogs',
+    contact: '/admin/contact',
+  };
+  const endpoint = endpointMap[category] || `/admin/${category}`;
+  const response = await fetch(`${API_URL}${endpoint}`, { headers: getAuthHeaders() });
   return response.json();
 };
 
 export const addItem = async (category, formData) => {
-  const endpoint = category === 'destinations' 
-    ? `${API_URL}/admin/destinations` 
-    : `${API_URL}/admin/data/${category}`;
-
-  const response = await fetch(endpoint, {
+  const endpointMap = {
+    destinations: '/admin/destinations',
+    states: '/admin/states',
+    'hidden-gems': '/admin/hidden-gems',
+    'safety-tips': '/admin/safety-tips',
+    blogs: '/admin/blogs',
+  };
+  const endpoint = endpointMap[category] || `/admin/${category}`;
+  const response = await fetch(`${API_URL}${endpoint}`, {
     method: 'POST',
     headers: getAuthHeaders(),
-    body: formData // using FormData because we need to upload images
+    body: formData
   });
   return response.json();
 };
 
 export const updateItem = async (category, id, formData) => {
-  const endpoint = category === 'destinations' 
-    ? `${API_URL}/admin/destinations/${id}` 
-    : `${API_URL}/admin/data/${category}/${id}`;
-
-  const response = await fetch(endpoint, {
+  const endpointMap = {
+    destinations: `/admin/destinations/${id}`,
+    states: `/admin/states/${id}`,
+    'hidden-gems': `/admin/hidden-gems/${id}`,
+    'safety-tips': `/admin/safety-tips/${id}`,
+    'hero-images': `/admin/hero-images/${id}`,
+    blogs: `/admin/blogs/${id}`,
+    contact: `/admin/contact/${id}/read`,
+  };
+  const endpoint = endpointMap[category] || `/admin/${category}/${id}`;
+  const response = await fetch(`${API_URL}${endpoint}`, {
     method: 'PUT',
     headers: getAuthHeaders(),
     body: formData
@@ -54,11 +70,16 @@ export const updateItem = async (category, id, formData) => {
 };
 
 export const deleteItem = async (category, id) => {
-  const endpoint = category === 'destinations' 
-    ? `${API_URL}/admin/destinations/${id}` 
-    : `${API_URL}/admin/data/${category}/${id}`;
-
-  const response = await fetch(endpoint, {
+  const endpointMap = {
+    destinations: `/admin/destinations/${id}`,
+    states: `/admin/states/${id}`,
+    'hidden-gems': `/admin/hidden-gems/${id}`,
+    'safety-tips': `/admin/safety-tips/${id}`,
+    blogs: `/admin/blogs/${id}`,
+    contact: `/admin/contact/${id}`,
+  };
+  const endpoint = endpointMap[category] || `/admin/${category}/${id}`;
+  const response = await fetch(`${API_URL}${endpoint}`, {
     method: 'DELETE',
     headers: getAuthHeaders()
   });

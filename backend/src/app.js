@@ -1,9 +1,16 @@
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
+const mongoSanitize = require('express-mongo-sanitize');
 const indexRoutes = require('./routes/index');
 const path = require('path');
 
 const app = express();
+
+// Security Middlewares (Production)
+app.use(helmet()); 
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" })); // Required for Cloudinary assets if proxied natively
+app.use(mongoSanitize()); // Prevent NoSQL Injection attacks 
 
 app.use((req, res, next) => {
   console.log('REQ PATH:', req.method, req.originalUrl);

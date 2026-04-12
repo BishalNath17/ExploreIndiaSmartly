@@ -16,13 +16,12 @@ import {
   Gem,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
-import { statesData as states } from '../data/statesData';
+import useApiData from '../hooks/useApiData';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import SectionHeader from '../components/layout/SectionHeader';
 import InfoCard from '../components/cards/InfoCard';
-import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
 import BackButton from '../components/ui/BackButton';
-import { API_URL, API_BASE, resolveImageUrl } from '../config/api';
+import { resolveImageUrl } from '../config/api';
 
 /* ═══════════════════════════════════════════════════════
    DESTINATION NOT FOUND
@@ -169,11 +168,15 @@ const ItineraryHints = ({ dest }) => {
 /* ═══════════════════════════════════════════════════════
    4. NEARBY PLACES
    ═══════════════════════════════════════════════════════ */
-const NearbyPlaces = ({ dest, parentState, allDests }) => {
+const NearbyPlaces = ({ dest, parentState, allDests, hiddenGems }) => {
+  const getSlug = (s) => typeof s === 'object' ? (s?.slug || s?.id || s?._id) : s;
+  const targetState = getSlug(dest.state);
+  const destId = dest.id || dest._id;
+
   // Show other destinations in the same state (excluding current) from live DB
-  const nearby = allDests.filter(d => d.state === dest.state && d.id !== dest.id);
+  const nearby = (allDests || []).filter(d => getSlug(d.state) === targetState && (d.id || d._id) !== destId);
   // Also check hidden gems
-  const nearbyGems = hiddenGems.filter(g => g.state === dest.state && g.id !== dest.id);
+  const nearbyGems = (hiddenGems || []).filter(g => getSlug(g.state) === targetState && (g.id || g._id) !== destId);
 
   if (nearby.length === 0 && nearbyGems.length === 0) return null;
   const stateName = parentState?.name || dest.state;
@@ -185,7 +188,7 @@ const NearbyPlaces = ({ dest, parentState, allDests }) => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {nearby.slice(0, 3).map((place) => (
-              <Link key={place.id} to={`/destination/${place.id}`}
+              <Link key={place.id || place._id} to={`/destination/${place.slug || place.id || place._id}`}
                 className="group glass rounded-2xl overflow-hidden block hover:bg-white/15 transition-colors">
                 <div className="relative h-48">
                   <img src={resolveImageUrl(place.image) || place.image} alt={place.name} loading="lazy"
@@ -201,20 +204,20 @@ const NearbyPlaces = ({ dest, parentState, allDests }) => {
           ))}
 
           {nearbyGems.slice(0, 3 - nearby.slice(0, 3).length).map((gem) => (
-              <div key={gem.id} className="glass rounded-2xl overflow-hidden hover:bg-white/15 transition-colors">
+              <Link key={gem.id || gem._id} to={`/destination/${gem.slug || gem.id || gem._id}`} className="group glass rounded-2xl overflow-hidden block hover:bg-white/15 transition-colors">
                 <div className="relative h-48">
                   <img src={gem.image} alt={gem.name} loading="lazy"
-                    className="w-full h-full object-cover" />
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
                   <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-india-orange bg-navy/80 px-2 py-0.5 rounded-full flex items-center gap-1">
                     <Gem size={10} /> Hidden Gem
                   </span>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-bold mb-1">{gem.name}</h3>
+                  <h3 className="font-bold mb-1 group-hover:text-india-orange transition-colors">{gem.name}</h3>
                   <p className="text-gray-400 text-xs line-clamp-2">{gem.description}</p>
                 </div>
-              </div>
+              </Link>
           ))}
         </div>
       </div>
@@ -335,25 +338,11 @@ import React from 'react';
 const DestinationDetailsPage = () => {
   const { destSlug } = useParams();
   
-  const [dest, setDest] = React.useState(null);
-  const [allDests, setAllDests] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
+  const { data: allDests, loading: destsLoading } = useApiData('/destinations');
+  const { data: states, loading: statesLoading } = useApiData('/states');
+  const { data: hiddenGems, loading: gemsLoading } = useApiData('/hidden-gems');
 
-  React.useEffect(() => {
-    fetch(`${API_URL}/destinations`)
-      .then(r => r.json())
-      .then(res => {
-         const data = res.data || [];
-         setAllDests(data);
-         const found = data.find(d => d.id === destSlug);
-         setDest(found);
-         setLoading(false);
-      })
-      .catch(err => {
-         console.error('API Fetch Error:', err);
-         setLoading(false);
-      });
-  }, [destSlug]);
+  const loading = destsLoading || statesLoading || gemsLoading;
 
   if (loading) {
     return (
@@ -363,16 +352,18 @@ const DestinationDetailsPage = () => {
     );
   }
 
+  const dest = (allDests || []).find(d => d.id === destSlug);
+
   if (!dest) return <DestNotFound slug={destSlug} />;
 
-  const parentState = states.find((s) => s.id === dest.state) || null;
+  const parentState = (states || []).find((s) => s.id === dest.state) || null;
 
   return (
     <>
       <HeroBanner dest={dest} parentState={parentState} />
       <Overview dest={dest} parentState={parentState} />
       <ItineraryHints dest={dest} />
-      <NearbyPlaces dest={dest} parentState={parentState} allDests={allDests} />
+      <NearbyPlaces dest={dest} parentState={parentState} allDests={allDests} hiddenGems={hiddenGems} />
       <TravelTips dest={dest} parentState={parentState} />
       <MapSection dest={dest} parentState={parentState} />
       <ExploreCTA parentState={parentState} />

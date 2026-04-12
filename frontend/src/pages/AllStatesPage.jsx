@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
 import SectionHeader from '../components/layout/SectionHeader';
 import StateCard from '../components/cards/StateCard';
 import BackButton from '../components/ui/BackButton';
-import { statesData } from '../data/statesData';
+import useApiData from '../hooks/useApiData';
 
 const AllStatesPage = () => {
-  const onlyStates = statesData.filter((s) => s.type === 'state');
-  const onlyUTs = statesData.filter((s) => s.type === 'ut');
+  const { data: statesData, loading } = useApiData('/states');
+  const allStates = statesData || [];
+  const onlyStates = allStates.filter((s) => s.type === 'state');
+  const onlyUTs = allStates.filter((s) => s.type === 'ut');
 
   return (
     <section className="pt-24 pb-16 sm:pt-32 sm:pb-24 section-padding">
@@ -17,25 +18,35 @@ const AllStatesPage = () => {
           subtitle="Discover the unique charm each Indian state has to offer."
         />
 
-        {/* 28 States Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-india-white">28 States</h2>
+        {loading ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {onlyStates.map((state) => (
-              <StateCard key={state.id} state={state} variant="compact" />
+            {[...Array(9)].map((_, i) => (
+              <div key={i} className="rounded-2xl h-32 bg-white/5 animate-pulse" />
             ))}
           </div>
-        </div>
+        ) : (
+          <>
+            {/* 28 States Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-6 text-india-white">28 States</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {onlyStates.map((state) => (
+                  <StateCard key={state.id} state={state} variant="compact" />
+                ))}
+              </div>
+            </div>
 
-        {/* Union Territories Section */}
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-6 text-india-white">Union Territories</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {onlyUTs.map((state) => (
-              <StateCard key={state.id} state={state} variant="compact" />
-            ))}
-          </div>
-        </div>
+            {/* Union Territories Section */}
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold mb-6 text-india-white">Union Territories</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {onlyUTs.map((state) => (
+                  <StateCard key={state.id} state={state} variant="compact" />
+                ))}
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </section>
   );

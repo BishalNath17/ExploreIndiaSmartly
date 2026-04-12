@@ -13,7 +13,8 @@ const FALLBACK_IMAGE =
  */
 const HiddenGemCard = ({ gem, linkToState = false, showExplore = false }) => {
   const Wrapper = linkToState ? Link : 'div';
-  const wrapperProps = linkToState ? { to: `/state/${gem.state}` } : {};
+  const stateSlug = typeof gem.state === 'object' ? (gem.state.slug || gem.state.id || gem.state._id) : gem.state;
+  const wrapperProps = linkToState ? { to: `/state/${stateSlug}` } : {};
 
   const handleImgError = (e) => {
     e.currentTarget.onerror = null;

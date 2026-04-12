@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { Gem, MapPin, Filter, Search, ArrowRight } from 'lucide-react';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
-import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
-import { statesData as states } from '../data/statesData';
+import useApiData from '../hooks/useApiData';
 import PageHero from '../components/layout/PageHero';
 import HiddenGemCard from '../components/cards/HiddenGemCard';
 import EmptyState from '../components/ui/EmptyState';
@@ -75,11 +74,12 @@ const FilterBar = ({ activeRegion, setActiveRegion, searchQuery, setSearchQuery 
    PAGE COMPOSITION
    ═══════════════════════════════════════════════════════ */
 const HiddenGemsPage = () => {
+  const { data: hiddenGems, loading } = useApiData('/hidden-gems');
   const [activeRegion, setActiveRegion] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   const filteredGems = useMemo(() => {
-    let gems = hiddenGems;
+    let gems = hiddenGems || [];
 
     // Region filter
     if (activeRegion !== 'all') {
@@ -99,7 +99,7 @@ const HiddenGemsPage = () => {
     }
 
     return gems;
-  }, [activeRegion, searchQuery]);
+  }, [activeRegion, searchQuery, hiddenGems]);
 
   return (
     <>

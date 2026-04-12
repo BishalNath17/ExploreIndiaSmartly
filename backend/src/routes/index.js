@@ -5,6 +5,12 @@ const healthController = require('../controllers/healthController');
 const planningController = require('../controllers/planningController');
 const adminRoutes = require('./admin.routes');
 const destinationController = require('../controllers/destination.controller');
+const stateController = require('../controllers/state.controller');
+const hiddenGemController = require('../controllers/hiddenGem.controller');
+const safetyTipController = require('../controllers/safetyTip.controller');
+const heroImageController = require('../controllers/heroImage.controller');
+const blogController = require('../controllers/blog.controller');
+const contactController = require('../controllers/contact.controller');
 
 router.get('/', (req, res) => {
   return res.status(200).json({
@@ -16,11 +22,35 @@ router.get('/', (req, res) => {
 // System Check
 router.get('/health', healthController.getHealthStatus);
 
-// Public Destinations API
+// ── Public API Endpoints ──
+
+// States
+router.get('/states', stateController.getStates);
+router.get('/states/:id', stateController.getStateById);
+
+// Destinations (existing)
 router.get('/destinations', destinationController.getDestinations);
 router.get('/destinations/import', destinationController.importTripura);
+router.get('/destinations/:id', destinationController.getDestinationById);
 
-// Future API Endpoints
+// Hidden Gems
+router.get('/hidden-gems', hiddenGemController.getHiddenGems);
+router.get('/hidden-gems/:id', hiddenGemController.getHiddenGemById);
+
+// Safety Tips
+router.get('/safety-tips', safetyTipController.getSafetyTips);
+
+// Hero Images
+router.get('/hero-images', heroImageController.getHeroImages);
+
+// Blogs
+router.get('/blogs', blogController.getBlogs);
+router.get('/blogs/:slug', blogController.getBlogBySlug);
+
+// Contact
+router.post('/contact', contactController.submitContact);
+
+// Planning (existing)
 router.post('/budget/calculate', planningController.calculateBudget);
 router.post('/itinerary/generate', planningController.generateItinerary);
 

@@ -9,13 +9,24 @@ import {
   Calculator,
   ChevronRight,
   Search,
-  X
+  X,
+  AlertTriangle,
+  Phone,
+  FileText,
+  Users,
+  Clock,
+  Lock,
+  Droplets,
+  Sun,
+  Heart,
+  Wifi,
+  Car,
+  Compass,
+  Wallet,
+  Camera
 } from 'lucide-react';
 import { fadeUp, scaleIn } from '../utils/animations';
-import { statesData as states } from '../data/statesData';
-import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
-import heroImagesData from '../data/json/heroImages.json';
-import safetyTips from '../data/safetyTips';
+import useApiData from '../hooks/useApiData';
 import DestinationCard from '../components/cards/DestinationCard';
 import StateCard from '../components/cards/StateCard';
 import HiddenGemCard from '../components/cards/HiddenGemCard';
@@ -24,22 +35,30 @@ import Newsletter from '../components/features/Newsletter';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import { API_URL } from '../config/api';
 
+// Map icon name strings from DB to Lucide components
+const ICON_MAP = {
+  Shield, Phone, AlertTriangle, MapPin, Wallet, Users, Heart, Wifi, Sun,
+  Droplets, Car, Camera, Lock, Compass, Clock, FileText, Gem, Calculator
+};
+
 /* ═══════════════════════════════════════════════════════
    1. HERO
    ═══════════════════════════════════════════════════════ */
-const getHeroImage = (id, fallback) => {
-  const item = heroImagesData.find(img => img.id === id);
+const getHeroImage = (heroImages, id, fallback) => {
+  const item = (heroImages || []).find(img => img.slotId === id);
   return item && item.image ? item.image : fallback;
 };
 
 const Hero = () => {
+  const { data: heroImages } = useApiData('/hero-images');
+
   return (
     <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
     {/* Background image + overlay */}
     <div className="absolute inset-0 z-0">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-navy/60 to-navy-dark/60 z-10" />
       <img
-        src={getHeroImage('main-hero', '/images/heroes/main-hero.jpg')}
+        src={getHeroImage(heroImages, 'main-hero', '/images/heroes/main-hero.jpg')}
         onError={(e) => { 
           if (!e.currentTarget.src.includes('/images/heroes/main-hero.jpg')) {
             e.currentTarget.src = '/images/heroes/main-hero.jpg'; 
@@ -60,7 +79,7 @@ const Hero = () => {
         className="absolute left-[5%] top-[25%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
       >
         <img
-          src={getHeroImage('left-card', '/images/heroes/trek-hero.jpg')}
+          src={getHeroImage(heroImages, 'left-card', '/images/heroes/trek-hero.jpg')}
           onError={(e) => { 
             if (!e.currentTarget.src.includes('/images/heroes/trek-hero.jpg')) {
               e.currentTarget.src = '/images/heroes/trek-hero.jpg'; 
@@ -79,7 +98,7 @@ const Hero = () => {
         className="absolute right-[5%] bottom-[15%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
       >
         <img
-          src={getHeroImage('right-card', '/images/heroes/kerala-hero.jpg')}
+          src={getHeroImage(heroImages, 'right-card', '/images/heroes/kerala-hero.jpg')}
           onError={(e) => { 
             if (!e.currentTarget.src.includes('/images/heroes/kerala-hero.jpg')) {
               e.currentTarget.src = '/images/heroes/kerala-hero.jpg'; 
@@ -158,6 +177,8 @@ const Hero = () => {
    2. FEATURED STATES
    ═══════════════════════════════════════════════════════ */
 const FeaturedStates = () => {
+  const { data: allStates, loading: statesLoading } = useApiData('/states');
+  const states = allStates || [];
   const [searchQuery, setSearchQuery] = useState('');
   const [exactSelection, setExactSelection] = useState(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -318,11 +339,24 @@ const FeaturedStates = () => {
           </AnimatePresence>
         </div>
 
-        {/* Grid Layout */}
-        {displayStates.length > 0 ? (
+        {statesLoading ? (
+          <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+             {[...Array(10)].map((_, i) => (
+                <div key={i} className="rounded-2xl shrink-0 h-40 sm:h-48 overflow-hidden bg-white/5 border border-white/5 animate-pulse">
+                  <div className="w-full h-full relative">
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent z-10" />
+                    <div className="absolute bottom-0 left-0 w-full p-4 z-20 space-y-2">
+                       <div className="h-4 w-3/4 bg-white/10 rounded-full" />
+                       <div className="h-3 w-1/2 bg-white/10 rounded-full" />
+                    </div>
+                  </div>
+                </div>
+             ))}
+          </div>
+        ) : displayStates.length > 0 ? (
           <div className="grid grid-cols-1 min-[500px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
             {displayStates.map((state) => (
-              <StateCard key={state.id} state={state} variant="image" />
+              <StateCard key={state.id || state._id} state={state} variant="image" />
             ))}
           </div>
         ) : (
@@ -349,34 +383,9 @@ const FeaturedStates = () => {
    3. POPULAR DESTINATIONS
    ═══════════════════════════════════════════════════════ */
 const PopularDestinations = () => {
-  const [fetchedDestinations, setFetchedDestinations] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { data: destData, loading: isLoading, error } = useApiData('/destinations');
+  const fetchedDestinations = destData || [];
   const [showAll, setShowAll] = useState(false);
-
-  useEffect(() => {
-    const fetchDestinations = async () => {
-      try {
-        const response = await fetch(`${API_URL}/destinations`);
-        if (!response.ok) throw new Error('Failed to fetch destinations');
-        
-        const result = await response.json();
-        if (result.success && Array.isArray(result.data)) {
-          console.log("Fetched:", result.data.length);
-          setFetchedDestinations(result.data);
-        } else {
-          throw new Error('Invalid data format received');
-        }
-      } catch (err) {
-        console.error('Error fetching destinations:', err);
-        setError(err.message);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchDestinations();
-  }, []);
 
   const displayedDestinations = showAll ? fetchedDestinations : fetchedDestinations.slice(0, 6);
 
@@ -453,7 +462,8 @@ const PopularDestinations = () => {
    4. HIDDEN GEMS PREVIEW
    ═══════════════════════════════════════════════════════ */
 const HiddenGemsPreview = () => {
-  const preview = hiddenGems.slice(0, 3);
+  const { data: hiddenGems, loading } = useApiData('/hidden-gems');
+  const preview = (hiddenGems || []).slice(0, 3);
 
   return (
     <section className="py-10 sm:py-14 section-padding relative bg-gradient-to-b from-navy-dark/50 via-navy-dark/30 to-transparent">
@@ -463,11 +473,19 @@ const HiddenGemsPreview = () => {
           subtitle="Offbeat destinations most tourists miss — but shouldn't."
         />
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {preview.map((gem) => (
-            <HiddenGemCard key={gem.id} gem={gem} />
-          ))}
-        </div>
+        {loading ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className="rounded-2xl aspect-[3/4] bg-white/5 animate-pulse" />
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {preview.map((gem) => (
+              <HiddenGemCard key={gem.id} gem={gem} />
+            ))}
+          </div>
+        )}
 
         <div className="text-center mt-6">
           <Link
@@ -486,8 +504,8 @@ const HiddenGemsPreview = () => {
    5. SAFETY TIPS PREVIEW
    ═══════════════════════════════════════════════════════ */
 const SafetyTipsPreview = () => {
-  // Flatten the nested categories array into a single array of tips, then take 3
-  const preview = safetyTips.flatMap(category => category.tips).slice(0, 3);
+  const { data: safetyTips } = useApiData('/safety-tips');
+  const preview = (safetyTips || []).flatMap(category => category.tips).slice(0, 3);
 
   return (
     <section className="py-10 sm:py-14 section-padding relative">
@@ -500,7 +518,7 @@ const SafetyTipsPreview = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {preview.map((tip) => {
-            const TipIcon = tip.icon;
+            const TipIcon = ICON_MAP[tip.icon] || Shield;
             return (
               <div key={tip.title} className="glass rounded-2xl p-6 h-full flex flex-col items-start">
                 <div className="w-10 h-10 rounded-xl bg-india-orange/15 flex items-center justify-center mb-4">

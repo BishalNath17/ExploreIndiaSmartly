@@ -22,9 +22,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
-import { statesData as states, stateMapEmbeds } from '../data/statesData';
-import { hiddenGemsData as hiddenGems } from '../data/hiddenGemsData';
-import { getStateKnowledge } from '../data/knowledgeBase';
+import useApiData from '../hooks/useApiData';
 
 import BackButton from '../components/ui/BackButton';
 import DestinationCard from '../components/cards/DestinationCard';
@@ -58,7 +56,7 @@ const StateNotFound = ({ slug }) => (
    1. HERO BANNER  —  State Image + State Map side-by-side
    ═══════════════════════════════════════════════════════ */
 const HeroBanner = ({ state }) => {
-  const mapUrl = stateMapEmbeds[state.id] || '';
+  const mapUrl = state?.mapEmbedUrl || '';
 
   return (
     <section className="relative pt-24 pb-10 sm:pt-32 sm:pb-14 overflow-hidden">
@@ -538,41 +536,30 @@ const FALLBACK_IMG = 'data:image/svg+xml,' + encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1B2A4E"/><stop offset="100%" stop-color="#0A192F"/></linearGradient></defs><rect fill="url(#g)" width="400" height="200"/><text x="200" y="108" text-anchor="middle" fill="#F97316" font-family="sans-serif" font-size="14" opacity="0.6">Image Coming Soon</text></svg>'
 );
 
-const toSlug = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-
-const resolveDestImage = (dest, stateId) => {
-  // Strategy: state hero image as fallback
-  const stateObj = states.find(s => s.id === stateId);
-  if (stateObj?.image) return stateObj.image;
-  return null;
-};
+const toSlug = (str) => str ? String(str).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : '';
 
 const resolveDisplayImage = (img) => {
   return resolveImageUrl(img);
 };
 
 const KBDestinationCard = ({ d, stateId, onClick }) => {
-  const stateImg = states.find(s => s.id === stateId)?.image;
-  // Prioritize MongoDB image field, then fall back to static JSON lookup
+  // Prioritize MongoDB image field, then fall back to static generic image
   const mongoImg = resolveDisplayImage(d.image);
-  const defaultImg = mongoImg || resolveDestImage(d, stateId);
-  // Avoid aggressively repeating the identical state cover image for every destination
-  // If destination has its own image, use it. Otherwise, use the generic fallback SVG.
-  const [imgSrc, setImgSrc] = React.useState(defaultImg || FALLBACK_IMG);
+  const defaultImg = mongoImg || FALLBACK_IMG;
+
+  const [imgSrc, setImgSrc] = React.useState(defaultImg);
   const [hasError, setHasError] = React.useState(false);
 
   // Re-sync if the destination object changes (e.g. after edit)
   React.useEffect(() => {
-    const fresh = resolveDisplayImage(d.image) || resolveDestImage(d, stateId) || FALLBACK_IMG;
+    const fresh = resolveDisplayImage(d.image) || FALLBACK_IMG;
     setImgSrc(fresh);
     setHasError(false);
-  }, [d, stateId]);
+  }, [d]);
 
   const handleError = () => {
-    if (!hasError && stateImg && imgSrc !== stateImg) {
+    if (!hasError) {
       setHasError(true);
-      setImgSrc(stateImg);
-    } else {
       setImgSrc(FALLBACK_IMG);
     }
   };
@@ -1067,7 +1054,10 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
    4. HIDDEN GEMS
    ═══════════════════════════════════════════════════════ */
 const HiddenGemsSection = ({ stateSlug, stateName }) => {
-  const gems = hiddenGems.filter((g) => g.state === stateSlug || (g.state ? toSlug(g.state) === stateSlug : false));
+  const { data: hiddenGems } = useApiData('/hidden-gems');
+  
+  const toSlug = (str) => String(str).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const gems = (hiddenGems || []).filter((g) => g.state === stateSlug || (g.state ? toSlug(g.state) === stateSlug : false));
 
   if (gems.length === 0) return null;
 
@@ -1127,35 +1117,33 @@ const ExploreMoreCTA = () => (
    ═══════════════════════════════════════════════════════ */
 const StateDetailsPage = () => {
   const { stateSlug } = useParams();
-  const state = states.find((s) => s.id === stateSlug);
-  const kb = getStateKnowledge(stateSlug);
+  const { data: state, loading: stateLoading } = useApiData(`/states/${stateSlug}`);
+  const { data: allDests } = useApiData('/destinations');
+  
+  const toSlug = (str) => String(str).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const dbDestinations = (allDests || []).filter(d => 
+    d.state === stateSlug || (d.state ? toSlug(d.state) === stateSlug : false)
+  );
 
-  const [dbDestinations, setDbDestinations] = useState([]);
-
-  React.useEffect(() => {
-    const fetchDests = async () => {
-      try {
-        const res = await fetch(`${API_URL}/destinations`);
-        const json = await res.json();
-        if (json.success && json.data) {
-          const match = json.data.filter(d => d.state === stateSlug || toSlug(d.state || '') === stateSlug);
-          setDbDestinations(match);
-        }
-      } catch (err) {
-        console.error('Failed fetching DB destinations:', err);
-      }
-    };
-    fetchDests();
-  }, [stateSlug]);
+  if (stateLoading) {
+    return (
+      <div className="min-h-screen pt-32 pb-14 section-padding text-center">
+        <div className="w-12 h-12 border-4 border-india-orange/30 border-t-india-orange rounded-full animate-spin mx-auto mb-6"></div>
+        <p className="text-gray-400">Loading state details...</p>
+      </div>
+    );
+  }
 
   if (!state) return <StateNotFound slug={stateSlug} />;
+
+  const kb = state; // Unified API document
 
   return (
     <>
       <HeroBanner state={state} />
       <Overview state={state} data={kb} />
-      <KBTopDestinations data={kb} stateId={state.id} additionalDestinations={dbDestinations} />
-      <HiddenGemsSection stateSlug={state.id} stateName={state.name} />
+      <KBTopDestinations data={kb} stateId={state.id || state.slug || stateSlug} additionalDestinations={dbDestinations} />
+      <HiddenGemsSection stateSlug={state.id || state.slug || stateSlug} stateName={state.name} />
       <KBFood data={kb} />
       <KBStayOptions data={kb} />
       <KBActivities data={kb} />

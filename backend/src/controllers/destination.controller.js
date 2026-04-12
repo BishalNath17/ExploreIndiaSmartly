@@ -33,9 +33,9 @@ exports.createDestination = async (req, res, next) => {
   try {
     const destData = { ...req.body };
     
-    // Save image path strictly bridging Multer payload
+    // Save Cloudinary URL from multer-storage-cloudinary
     if (req.file) {
-      destData.image = `/uploads/${req.file.filename}`;
+      destData.image = req.file.path;
     }
 
     // Fail-safe slug gen logic if id wasn't populated from frontend
@@ -58,9 +58,9 @@ exports.updateDestination = async (req, res, next) => {
     const { id } = req.params;
     const updateData = { ...req.body };
     
-    // Replace mapped image only if new payload is passed
+    // Replace with new Cloudinary URL if uploaded
     if (req.file) {
-      updateData.image = `/uploads/${req.file.filename}`;
+      updateData.image = req.file.path;
     }
 
     // Usually frontend ID is the string 'id' (slug), not Mongo ObjectID '_id'.

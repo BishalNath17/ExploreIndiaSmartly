@@ -22,7 +22,7 @@ const DestinationCard = ({ destination, className = '' }) => {
 
   return (
     <Link
-      to={`/destination/${id}`}
+      to={`/destination/${destination.slug || id || destination._id}`}
       className={`group relative block overflow-hidden rounded-2xl aspect-[3/4] ${className}`}
     >
       {/* Gradient overlay */}

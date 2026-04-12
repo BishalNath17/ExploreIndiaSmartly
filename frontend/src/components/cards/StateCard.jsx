@@ -19,7 +19,7 @@ const StateCard = ({ state, variant = 'compact' }) => {
   if (variant === 'image') {
     return (
       <Link
-        to={`/state/${state.id}`}
+        to={`/state/${state.slug || state.id || state._id}`}
         className="group relative block rounded-2xl overflow-hidden aspect-[3/4]"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent z-10 group-hover:from-navy/90 transition-all duration-300" />
@@ -45,7 +45,7 @@ const StateCard = ({ state, variant = 'compact' }) => {
   // compact (default)
   return (
     <Link
-      to={`/state/${state.id}`}
+      to={`/state/${state.slug || state.id || state._id}`}
       className="group relative block rounded-2xl overflow-hidden h-40 sm:h-48"
     >
       {/* Background Image & Overlay */}
