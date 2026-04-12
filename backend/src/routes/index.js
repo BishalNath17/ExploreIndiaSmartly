@@ -10,7 +10,7 @@ const destinationController = require('../controllers/destination.controller');
 // This matches exactly: https://exploreindiasmartly.onrender.com/api/v1
 // We use a regular expression to handle both with and without trailing slash securely
 router.get(/^\/?$/, (req, res) => {
-  res.status(200).json({
+  return res.status(200).json({
     status: 'success',
     message: 'API is working'
   });
