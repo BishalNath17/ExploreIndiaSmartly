@@ -5,7 +5,12 @@ const path = require('path');
 
 const app = express();
 
-// 1. CORS Configuration
+app.use((req, res, next) => {
+  console.log('REQ PATH:', req.method, req.originalUrl);
+  next();
+});
+
+// CORS Configuration
 const allowedOrigins = (process.env.FRONTEND_URL || 'http://localhost:5173')
   .split(',')
   .map(origin => origin.trim());
@@ -19,17 +24,17 @@ app.use(cors({
   credentials: true
 }));
 
-// 2. Body Parser Middleware
+// Body Parser Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// 3. Static Files
+// Static Files
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
-// 4. Mount API Routes exactly as requested
+// Mount API Routes 
 app.use('/api/v1', indexRoutes);
 
-// 5. Global 404 Handler
+// Global 404 Handler - MUST be after routes
 app.use((req, res) => {
   res.status(404).json({
     success: false,
@@ -37,7 +42,7 @@ app.use((req, res) => {
   });
 });
 
-// 6. Global Error Handler
+// Global Error Handler
 app.use((err, req, res, next) => {
   console.error('Server Error:', err.message);
   res.status(err.status || 500).json({
