@@ -1,9 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, MapPin, ChevronDown } from 'lucide-react';
-const states = []; // Temporary fallback replacing deleted static data
-
-const StateSelect = ({ value, onChange, label = "Destination", placeholder = "Search and select a state or UT" }) => {
+const StateSelect = ({ states = [], value, onChange, label = "Destination", placeholder = "Search and select a state or UT" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [search, setSearch] = useState('');
   const dropdownRef = useRef(null);
@@ -18,8 +16,14 @@ const StateSelect = ({ value, onChange, label = "Destination", placeholder = "Se
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  const filteredStates = states.filter(s => s.name.toLowerCase().includes(search.toLowerCase()));
-  const selectedState = states.find(s => s.id === value);
+  const filteredStates = states.filter(s => {
+    const term = search.toLowerCase();
+    return (s?.name || '').toLowerCase().includes(term) ||
+           (s?.id || '').toLowerCase().includes(term) ||
+           (s?.slug || '').toLowerCase().includes(term);
+  });
+  
+  const selectedState = states.find(s => s.id === value || s._id === value || s.slug === value);
 
   return (
     <div ref={dropdownRef} className="relative">
@@ -60,26 +64,29 @@ const StateSelect = ({ value, onChange, label = "Destination", placeholder = "Se
             </div>
             <ul className="max-h-60 overflow-y-auto custom-scrollbar p-1">
               {filteredStates.length > 0 ? (
-                filteredStates.map((s) => (
-                  <li key={s.id}>
+                filteredStates.map((s) => {
+                  const sId = s.slug || s.id || s._id;
+                  return (
+                  <li key={sId}>
                     <button
                       type="button"
                       onClick={() => {
-                        onChange(s.id);
+                        onChange(sId);
                         setIsOpen(false);
                         setSearch('');
                       }}
                       className={`w-full text-left px-3 py-2.5 rounded-lg text-sm transition-colors flex items-center justify-between
-                        ${value === s.id ? 'bg-india-orange/20 text-india-orange font-bold' : 'text-gray-200 hover:bg-white/10 hover:text-white'}`}
+                        ${value === sId ? 'bg-india-orange/20 text-india-orange font-bold' : 'text-gray-200 hover:bg-white/10 hover:text-white'}`}
                     >
                       {s.name}
-                      {value === s.id && <Sparkles size={14} className="shrink-0" />}
+                      {value === sId && <Sparkles size={14} className="shrink-0" />}
                     </button>
                   </li>
-                ))
+                  );
+                })
               ) : (
                 <li className="px-3 py-4 text-center text-sm text-gray-500">
-                  No destinations found.
+                  {states.length === 0 ? "Loading states..." : "No destinations found."}
                 </li>
               )}
             </ul>

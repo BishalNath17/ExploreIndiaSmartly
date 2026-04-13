@@ -586,9 +586,13 @@ const KBDestinationCard = ({ d, stateId, onClick }) => {
       </div>
       {/* Text */}
       <div className="p-4 flex flex-col flex-1">
-        <h4 className="font-bold text-sm mb-1">{d.name}</h4>
-        <p className="text-gray-500 text-[11px] mb-2">{d.location || d.district || ''}</p>
-        <p className="text-gray-400 text-xs leading-relaxed line-clamp-3">{d.description}</p>
+        <h4 className="font-bold text-sm mb-1 line-clamp-1">{typeof d?.name === 'string' ? d.name : 'Destination'}</h4>
+        <p className="text-gray-500 text-[11px] mb-2 line-clamp-1">
+          {typeof d?.location === 'string' ? d.location : (typeof d?.district === 'string' ? d.district : '')}
+        </p>
+        <p className="text-gray-400 text-xs leading-relaxed line-clamp-3">
+          {typeof d?.description === 'string' ? d.description : ''}
+        </p>
       </div>
     </div>
   );
@@ -597,13 +601,21 @@ const KBDestinationCard = ({ d, stateId, onClick }) => {
 /* ═══════════════════════════════════════════════════════
    KB — DESTINATION DETAIL MODAL
    ═══════════════════════════════════════════════════════ */
-const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
-  const stateImg = states.find(s => s.id === stateId)?.image;
-  // Prioritize MongoDB image field, then fall back to static JSON lookup
-  const mongoImg = resolveDisplayImage(dest.image);
-  const defaultImg = mongoImg || resolveDestImage(dest, stateId);
-  const [imgSrc, setImgSrc] = React.useState(defaultImg || FALLBACK_IMG);
+const KBDestinationDetailModal = ({ dest, stateId, stateImg, onClose }) => {
+  if (!dest) return null;
+
+  // Prioritize MongoDB image field, then fall back to static image
+  const mongoImg = resolveDisplayImage(dest?.image);
+  const defaultImg = mongoImg || FALLBACK_IMG;
+  const [imgSrc, setImgSrc] = React.useState(defaultImg);
   const [hasError, setHasError] = React.useState(false);
+
+  // Reset image when a different destination is clicked
+  React.useEffect(() => {
+    const freshImg = resolveDisplayImage(dest?.image) || FALLBACK_IMG;
+    setImgSrc(freshImg);
+    setHasError(false);
+  }, [dest]);
 
   React.useEffect(() => {
     const handleEsc = (e) => {
@@ -616,7 +628,7 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
   const handleError = () => {
     if (!hasError && stateImg && imgSrc !== stateImg) {
       setHasError(true);
-      setImgSrc(stateImg);
+      setImgSrc(stateImg || FALLBACK_IMG);
     } else {
       setImgSrc(FALLBACK_IMG);
     }
@@ -641,51 +653,58 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
               {/* Destination Image */}
               <div className="relative w-full h-56 sm:h-64 lg:h-72 rounded-2xl overflow-hidden mb-6 border border-white/5 shrink-0 bg-navy-dark/50">
                 <img
-                  src={imgSrc}
-                  alt={dest.name}
+                  src={imgSrc || FALLBACK_IMG}
+                  alt={dest?.name || 'Destination'}
                   className="w-full h-full object-cover"
                   onError={handleError}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
-                {imgSrc === FALLBACK_IMG && (
+                {(!imgSrc || imgSrc === FALLBACK_IMG) && (
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <Mountain size={48} className="text-india-orange/30" />
                   </div>
                 )}
                 
                 {/* Category Badge overlay on image */}
-                {dest.category && (
+                {typeof dest?.category === 'string' && (
                   <div className="absolute top-4 left-4 z-10">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-white bg-india-orange/80 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg border border-white/20">
-                      {dest.category.replace('_', ' & ')}
+                      {dest.category.replace(/_/g, ' & ')}
                     </span>
                   </div>
                 )}
               </div>
 
               {/* Title & Details */}
-              <h2 className="text-3xl sm:text-4xl font-bold mb-3">{dest.name || 'Unknown Destination'}</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-3 break-words">
+                {typeof dest?.name === 'string' ? dest.name : 'Unknown Destination'}
+              </h2>
               
-              {/* Enhanced Location Rendering with new fields */}
-              {(dest.location || dest.district || dest.city) && (
-                <p className="flex items-center gap-2 text-gray-400 text-sm mb-4">
+              {/* Enhanced Location Rendering with structured string coercion */}
+              {(dest?.location || dest?.district || dest?.city) && (
+                <p className="flex flex-wrap items-center gap-1 text-gray-400 text-sm mb-4">
                   <MapPin size={16} className="text-india-orange shrink-0" /> 
-                  {dest.city ? `${dest.city}` : ''}
-                  {dest.city && dest.district ? ', ' : ''}
-                  {dest.district ? `${dest.district} District` : ''}
-                  {!dest.city && !dest.district && dest.location ? dest.location : ''}
+                  <span className="line-clamp-1 break-all">
+                    {[
+                      typeof dest?.city === 'string' ? dest.city : '',
+                      typeof dest?.district === 'string' ? `${dest.district} District` : '',
+                      !dest?.city && !dest?.district && typeof dest?.location === 'string' ? dest.location : ''
+                    ].filter(Boolean).join(', ')}
+                  </span>
                 </p>
               )}
               
-              {dest.address && (
+              {typeof dest?.address === 'string' && dest.address && (
                 <p className="text-gray-400 text-sm italic mb-4">
                   <span className="font-semibold text-gray-300">Address: </span>{dest.address}
                 </p>
               )}
               
-              <p className="text-gray-300 leading-relaxed mb-6">{dest.description || 'No description available for this destination.'}</p>
+              <p className="text-gray-300 leading-relaxed mb-6 whitespace-pre-wrap">
+                {typeof dest?.description === 'string' ? dest.description : 'No description available for this destination.'}
+              </p>
               
-              {dest.whyFamous && (
+              {typeof dest?.whyFamous === 'string' && dest.whyFamous && (
                 <div className="bg-navy-dark/50 rounded-xl p-5 border-l-4 border-india-orange mb-4">
                   <h4 className="text-sm font-bold text-india-orange mb-1">Famous For</h4>
                   <p className="text-gray-300 text-sm leading-relaxed">{dest.whyFamous}</p>
@@ -695,9 +714,9 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
 
             {/* Right Map */}
             <div className="w-full bg-navy-dark rounded-2xl overflow-hidden h-64 sm:h-80 lg:h-[400px] border border-gray-800 relative flex flex-col items-center justify-center">
-              {dest.mapEmbedUrl ? (
+              {typeof dest?.mapEmbedUrl === 'string' && dest.mapEmbedUrl ? (
                 <iframe 
-                  src={typeof dest.mapEmbedUrl === 'string' && dest.mapEmbedUrl.match(/src=["']([^"']+)["']/) ? dest.mapEmbedUrl.match(/src=["']([^"']+)["']/)[1] : dest.mapEmbedUrl} 
+                  src={dest.mapEmbedUrl.match(/src=["']([^"']+)["']/) ? dest.mapEmbedUrl.match(/src=["']([^"']+)["']/)[1] : dest.mapEmbedUrl} 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
@@ -705,7 +724,7 @@ const KBDestinationDetailModal = ({ dest, stateId, onClose }) => {
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
                   className="absolute inset-0 z-0"
-                  title={`Map of ${dest.name || 'Destination'}`}
+                  title={`Map of ${typeof dest?.name === 'string' ? dest.name : 'Destination'}`}
                 ></iframe>
               ) : (
                 <div className="text-center p-6 z-10">
@@ -829,6 +848,7 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
           <KBDestinationDetailModal
             dest={selectedDest}
             stateId={stateId}
+            stateImg={data?.image}
             onClose={() => setSelectedDest(null)}
           />
         )}

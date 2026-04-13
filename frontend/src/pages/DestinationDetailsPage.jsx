@@ -68,23 +68,31 @@ const HeroBanner = ({ dest, parentState }) => {
             <ChevronRight size={14} />
             <Link to="/states" className="hover:text-india-orange transition-colors">States</Link>
             <ChevronRight size={14} />
-            <Link to={`/state/${dest.state}`} className="hover:text-india-orange transition-colors">{stateName}</Link>
-            <ChevronRight size={14} />
-            <span className="text-gray-200 font-semibold">{dest.name}</span>
+            {dest?.state && (
+              <>
+                <Link to={`/state/${typeof dest.state === 'string' ? dest.state : (dest.state?.slug || dest.state?.id || '')}`} className="hover:text-india-orange transition-colors">
+                  {stateName || 'State'}
+                </Link>
+                <ChevronRight size={14} />
+              </>
+            )}
+            <span className="text-gray-200 font-semibold">
+              {typeof dest?.name === 'string' ? dest.name : ''}
+            </span>
           </div>
         </motion.div>
 
-        {dest.category && (
+        {typeof dest?.category === 'string' && (
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.1} className="mb-3">
             <span className="text-[10px] font-bold uppercase tracking-widest text-india-orange bg-india-orange/15 px-3 py-1 rounded-full">
-              {dest.category}
+              {dest.category.replace(/_/g, ' & ')}
             </span>
           </motion.div>
         )}
 
         <motion.h1 variants={fadeUp} initial="hidden" animate="visible" custom={0.15}
-          className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-3">
-          {dest.name}
+          className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-3 break-words">
+          {typeof dest?.name === 'string' ? dest.name : 'Unknown Destination'}
         </motion.h1>
 
         <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0.25}
@@ -122,8 +130,12 @@ const Overview = ({ dest, parentState }) => {
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="glass rounded-3xl p-8 sm:p-12 mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">About {dest.name}</h2>
-            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{dest.description}</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 break-words">
+              About {typeof dest?.name === 'string' ? dest.name : 'Destination'}
+            </h2>
+            <p className="text-gray-300 leading-relaxed text-sm sm:text-base whitespace-pre-wrap">
+              {typeof dest?.description === 'string' ? dest.description : 'No description available.'}
+            </p>
           </div>
         </ScrollReveal>
 
@@ -143,8 +155,8 @@ const Overview = ({ dest, parentState }) => {
    3. ITINERARY HINTS
    ═══════════════════════════════════════════════════════ */
 const ItineraryHints = ({ dest }) => {
-  const hints = dest.itineraryHints;
-  if (!hints || hints.length === 0) return null;
+  const hints = Array.isArray(dest?.itineraryHints) ? dest.itineraryHints : [];
+  if (hints.length === 0) return null;
 
   return (
     <section className="py-16 sm:py-20 section-padding bg-navy-dark/50">
@@ -229,7 +241,7 @@ const NearbyPlaces = ({ dest, parentState, allDests, hiddenGems }) => {
    5. TRAVEL TIPS
    ═══════════════════════════════════════════════════════ */
 const TravelTips = ({ dest, parentState }) => {
-  const tips = dest.tips || [];
+  const tips = Array.isArray(dest?.tips) ? dest.tips : [];
   const stateTip = parentState?.travelNotes;
 
   if (tips.length === 0 && !stateTip) return null;
@@ -352,11 +364,11 @@ const DestinationDetailsPage = () => {
     );
   }
 
-  const dest = (allDests || []).find(d => d.id === destSlug);
+  const dest = (allDests || []).find(d => d.id === destSlug || d._id === destSlug || d.slug === destSlug);
 
   if (!dest) return <DestNotFound slug={destSlug} />;
 
-  const parentState = (states || []).find((s) => s.id === dest.state) || null;
+  const parentState = (states || []).find((s) => s.id === dest.state || s._id === dest.state || s.slug === dest.state) || null;
 
   return (
     <>

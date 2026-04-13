@@ -257,7 +257,7 @@ const BudgetPlannerPage = () => {
           {/* ── LEFT: Form ── */}
           <div className="lg:col-span-2">
             <div className="glass rounded-3xl p-6 sm:p-8 space-y-6 sticky top-24">
-              <StateSelect value={stateSlug} onChange={(v) => { setStateSlug(v); setShowResults(false); }} label="Destination" placeholder="Search and select a state or UT" />
+              <StateSelect states={states} value={stateSlug} onChange={(v) => { setStateSlug(v); setShowResults(false); }} label="Destination" placeholder="Search and select a state or UT" />
               <StyleSelector value={style} onChange={(v) => { setStyle(v); setShowResults(false); }} />
 
               <div className="grid grid-cols-2 gap-4">
