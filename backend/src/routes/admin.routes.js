@@ -19,7 +19,7 @@ router.get(['/', ''], (req, res) => {
 // ── Auth ──
 router.post('/login', (req, res) => {
   const { username, password } = req.body;
-  if (username === 'admin' && password === 'admin123') {
+  if (username === 'bishal' && password === 'bishal1717') {
     res.json({ success: true, token: 'dummy-admin-token' });
   } else {
     res.status(401).json({ success: false, message: 'Invalid credentials' });

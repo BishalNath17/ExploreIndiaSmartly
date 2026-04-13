@@ -10,14 +10,14 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://exploreindiasmartly.onrender.com',
+        target: 'http://localhost:5000',
         changeOrigin: true,
-        secure: true,
+        secure: false,
       },
       '/uploads': {
-        target: 'https://exploreindiasmartly.onrender.com',
+        target: 'http://localhost:5000',
         changeOrigin: true,
-        secure: true,
+        secure: false,
       },
       // /images NOT proxied — served locally from frontend/public/images/
     }
