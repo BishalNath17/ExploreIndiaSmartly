@@ -18,9 +18,8 @@ export default function useApiData(endpoint, options = {}) {
   const [data, setData] = useState(cache[endpoint]?.data || null);
   const [loading, setLoading] = useState(!cache[endpoint]);
   const [error, setError] = useState(null);
-  const abortRef = useRef(null);
 
-  const fetchData = async () => {
+  const fetchData = async (mounted) => {
     if (skip) return;
     
     // Return cached data immediately if available
@@ -36,8 +35,7 @@ export default function useApiData(endpoint, options = {}) {
     try {
       let promise = fetchPromises[endpoint];
       if (!promise) {
-        abortRef.current = new AbortController();
-        promise = fetch(`${API_URL}${endpoint}`, { signal: abortRef.current.signal })
+        promise = fetch(`${API_URL}${endpoint}`)
           .then(async res => {
             if (!res.ok) throw new Error(`API ${res.status}: ${res.statusText}`);
             const json = await res.json();
@@ -55,27 +53,28 @@ export default function useApiData(endpoint, options = {}) {
       }
       
       const result = await promise;
-      setData(result);
-    } catch (err) {
-      if (err.name !== 'AbortError') {
-        console.error(`[useApiData] ${endpoint}:`, err.message);
-        setError(err.message);
+      if (mounted) {
+        setData(result);
+        setLoading(false);
       }
-    } finally {
-      if (!abortRef.current?.signal.aborted) {
+    } catch (err) {
+      console.error(`[useApiData] ${endpoint}:`, err.message);
+      if (mounted) {
+        setError(err.message);
         setLoading(false);
       }
     }
   };
 
   useEffect(() => {
-    fetchData();
-    return () => abortRef.current?.abort();
+    let mounted = true;
+    fetchData(mounted);
+    return () => { mounted = false; };
   }, [endpoint, skip]);
 
   const refetch = () => {
     delete cache[endpoint];
-    fetchData();
+    fetchData(true);
   };
 
   return { data, loading, error, refetch };

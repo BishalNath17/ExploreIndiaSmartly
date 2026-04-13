@@ -33,7 +33,7 @@ import HiddenGemCard from '../components/cards/HiddenGemCard';
 import SectionHeader from '../components/layout/SectionHeader';
 import Newsletter from '../components/features/Newsletter';
 import ScrollReveal from '../components/ui/ScrollReveal';
-import { API_URL } from '../config/api';
+import { API_URL, getImageUrl } from '../config/api';
 
 // Map icon name strings from DB to Lucide components
 const ICON_MAP = {
@@ -46,7 +46,7 @@ const ICON_MAP = {
    ═══════════════════════════════════════════════════════ */
 const getHeroImage = (heroImages, id, fallback) => {
   const item = (heroImages || []).find(img => img.slotId === id);
-  return item && item.image ? item.image : fallback;
+  return item && item.image ? getImageUrl(item.image) : fallback;
 };
 
 const Hero = () => {
@@ -58,10 +58,10 @@ const Hero = () => {
     <div className="absolute inset-0 z-0">
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-navy/60 to-navy-dark/60 z-10" />
       <img
-        src={getHeroImage(heroImages, 'main-hero', '/images/heroes/main-hero.jpg')}
+        src={getHeroImage(heroImages, 'main-hero', '/images/fallback.jpg')}
         onError={(e) => { 
-          if (!e.currentTarget.src.includes('/images/heroes/main-hero.jpg')) {
-            e.currentTarget.src = '/images/heroes/main-hero.jpg'; 
+          if (!e.currentTarget.src.includes('fallback.jpg')) {
+            e.currentTarget.src = getImageUrl('/images/fallback.jpg'); 
           }
         }}
         alt="Explore India Hero"
@@ -79,10 +79,10 @@ const Hero = () => {
         className="absolute left-[5%] top-[25%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
       >
         <img
-          src={getHeroImage(heroImages, 'left-card', '/images/heroes/trek-hero.jpg')}
+          src={getHeroImage(heroImages, 'left-card', '/images/fallback.jpg')}
           onError={(e) => { 
-            if (!e.currentTarget.src.includes('/images/heroes/trek-hero.jpg')) {
-              e.currentTarget.src = '/images/heroes/trek-hero.jpg'; 
+            if (!e.currentTarget.src.includes('fallback.jpg')) {
+              e.currentTarget.src = getImageUrl('/images/fallback.jpg'); 
             }
           }}
           alt="Adventure Trek"
@@ -98,10 +98,10 @@ const Hero = () => {
         className="absolute right-[5%] bottom-[15%] p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 shadow-2xl"
       >
         <img
-          src={getHeroImage(heroImages, 'right-card', '/images/heroes/kerala-hero.jpg')}
+          src={getHeroImage(heroImages, 'right-card', '/images/fallback.jpg')}
           onError={(e) => { 
-            if (!e.currentTarget.src.includes('/images/heroes/kerala-hero.jpg')) {
-              e.currentTarget.src = '/images/heroes/kerala-hero.jpg'; 
+            if (!e.currentTarget.src.includes('fallback.jpg')) {
+              e.currentTarget.src = getImageUrl('/images/fallback.jpg'); 
             }
           }}
           alt="Culture and Beauty"

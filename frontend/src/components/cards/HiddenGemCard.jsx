@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Gem, MapPin, ArrowRight } from 'lucide-react';
+import { getImageUrl } from '../../config/api';
 
 const FALLBACK_IMAGE =
   'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=600';
@@ -31,7 +32,7 @@ const HiddenGemCard = ({ gem, linkToState = false, showExplore = false }) => {
 
       {/* Image */}
       <img
-        src={gem.image || FALLBACK_IMAGE}
+        src={gem.image ? getImageUrl(gem.image) : FALLBACK_IMAGE}
         alt={gem.name}
         loading="lazy"
         onError={handleImgError}

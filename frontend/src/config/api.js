@@ -16,11 +16,17 @@ export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/ap
 export const API_BASE = API_URL.replace('/api/v1', '');
 
 /**
- * Resolve an image path: if it starts with /uploads/, prepend the backend base URL.
- * Otherwise return as-is (it's either a full URL or a local public asset).
+ * Resolve an image path natively across deployment environments.
+ * If image path starts with /images/ or /uploads/, we proxy it to the backend base URL.
  */
-export const resolveImageUrl = (imagePath) => {
-  if (!imagePath) return null;
-  if (imagePath.startsWith('/uploads/')) return `${API_BASE}${imagePath}`;
+export const getImageUrl = (imagePath) => {
+  if (!imagePath) return '/images/fallback.jpg'; // Safe fallback
+  if (imagePath.startsWith('http')) return imagePath;
+  if (imagePath.startsWith('/images/') || imagePath.startsWith('/uploads/')) {
+    return `${API_BASE}${imagePath}`;
+  }
   return imagePath;
 };
+
+// Aliased for existing implementation compatability
+export const resolveImageUrl = getImageUrl;

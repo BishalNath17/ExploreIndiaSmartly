@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import useApiData from '../hooks/useApiData';
 import {
   Calculator,
   Users,
@@ -22,7 +23,6 @@ import {
   STYLE_OPTIONS,
   formatINR,
 } from '../services/api';
-const states = []; // Temporary fallback replacing deleted static data
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import StateSelect from '../components/features/StateSelect';
@@ -215,17 +215,17 @@ const CategoryTotals = ({ result }) => (
   </div>
 );
 
-/* ═══════════════════════════════════════════════════════
-   PAGE COMPOSITION
-   ═══════════════════════════════════════════════════════ */
 const BudgetPlannerPage = () => {
+  const { data: apiStates } = useApiData('/states');
+  const states = apiStates || [];
+  
   const [stateSlug, setStateSlug] = useState('');
   const [travelers, setTravelers] = useState(2);
   const [days, setDays] = useState(3);
   const [style, setStyle] = useState('standard');
   const [showResults, setShowResults] = useState(false);
 
-  const selectedState = states.find((s) => s.id === stateSlug);
+  const selectedState = states.find((s) => s.id === stateSlug || s._id === stateSlug);
 
   const result = useMemo(() => {
     if (!stateSlug) return null;

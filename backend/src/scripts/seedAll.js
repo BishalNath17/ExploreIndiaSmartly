@@ -18,27 +18,34 @@ const HiddenGem = require('../models/HiddenGem');
 const SafetyTip = require('../models/SafetyTip');
 const HeroImage = require('../models/HeroImage');
 
-// ── Helper: read JSON file ──
+// ── Helper: read JSON file safely ──
 const readJson = (filePath) => {
-  const abs = path.resolve(__dirname, filePath);
-  if (!fs.existsSync(abs)) {
-    console.warn(`  ⚠ File not found: ${abs}`);
+  try {
+    const abs = path.resolve(__dirname, filePath);
+    if (!fs.existsSync(abs)) {
+      console.warn(`  ⚠ [SKIP] File not found: ${abs}`);
+      return null;
+    }
+    return JSON.parse(fs.readFileSync(abs, 'utf8'));
+  } catch(e) {
+    console.error(`  ❌ Error reading JSON at ${filePath}:`, e.message);
     return null;
   }
-  return JSON.parse(fs.readFileSync(abs, 'utf8'));
 };
 
-// ── Helper: read JS module that exports an object ──
+// ── Helper: read JS module safely ──
 const readJsExport = (filePath) => {
-  const abs = path.resolve(__dirname, filePath);
-  if (!fs.existsSync(abs)) {
-    console.warn(`  ⚠ File not found: ${abs}`);
+  try {
+    const abs = path.resolve(__dirname, filePath);
+    if (!fs.existsSync(abs)) {
+      console.warn(`  ⚠ [SKIP] JS File not found: ${abs}`);
+      return null;
+    }
+    return fs.readFileSync(abs, 'utf8');
+  } catch(e) {
+    console.error(`  ❌ Error reading JS at ${filePath}:`, e.message);
     return null;
   }
-  // Read the JS file and extract the data manually
-  const content = fs.readFileSync(abs, 'utf8');
-  // For indiaTourismKnowledgeBase.js, parse the states array
-  return content;
 };
 
 // ══════════════════════════════════════════════════
@@ -47,22 +54,24 @@ const readJsExport = (filePath) => {
 async function seedStates() {
   console.log('\n📍 Seeding States...');
 
-  // Source 1: states.json (core data — 36 entries)
   const statesJson = readJson('../../data/states.json');
-  if (!statesJson) return;
+  if (!statesJson || !Array.isArray(statesJson)) {
+     console.warn('  ⚠ [SKIP] states.json is missing or invalid. Seeding skipped.');
+     return;
+  }
 
-  // Source 2: stateMapEmbeds.json (map embed URLs)
   const mapEmbeds = readJson('../../../frontend/src/data/json/stateMapEmbeds.json') || {};
 
-  // Source 3: Per-state knowledge base JSON files
   const kbDir = path.resolve(__dirname, '../../../frontend/src/data/knowledgeBase');
   const kbFiles = {};
   if (fs.existsSync(kbDir)) {
     const files = fs.readdirSync(kbDir).filter(f => f.endsWith('.json'));
     for (const file of files) {
-      const data = JSON.parse(fs.readFileSync(path.join(kbDir, file), 'utf8'));
-      if (data && data.id) {
-        kbFiles[data.id] = data;
+      try {
+        const data = JSON.parse(fs.readFileSync(path.join(kbDir, file), 'utf8'));
+        if (data && data.id) kbFiles[data.id] = data;
+      } catch(e) {
+        console.warn(`  ⚠ Failed to parse kb file ${file}`);
       }
     }
     console.log(`  Found ${Object.keys(kbFiles).length} knowledge base files`);

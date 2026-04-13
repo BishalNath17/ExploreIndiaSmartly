@@ -1,6 +1,8 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Clock, Calendar, Tag, User, BookOpen } from 'lucide-react';
 import useApiData from '../hooks/useApiData';
+import { motion } from 'framer-motion';
+import { getImageUrl } from '../config/api';
 import BackButton from '../components/ui/BackButton';
 
 const BlogPostPage = () => {
@@ -74,7 +76,7 @@ const BlogPostPage = () => {
         {/* Cover Image */}
         {post.coverImage && (
           <div className="aspect-[16/9] rounded-2xl overflow-hidden mb-10">
-            <img src={post.coverImage} alt={post.title} className="w-full h-full object-cover" />
+            <img src={getImageUrl(post.coverImage)} alt={post.title} className="w-full h-full object-cover" />
           </div>
         )}
 

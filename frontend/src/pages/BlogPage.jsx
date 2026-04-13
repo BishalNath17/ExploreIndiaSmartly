@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Clock, ArrowRight, Search, Tag } from 'lucide-react';
+import { getImageUrl } from '../config/api';
 import useApiData from '../hooks/useApiData';
 import SectionHeader from '../components/layout/SectionHeader';
 import PageHero from '../components/layout/PageHero';
@@ -26,7 +27,7 @@ const BlogCard = ({ post }) => (
       <div className="aspect-[16/9] overflow-hidden bg-white/5">
         {post.coverImage ? (
           <img
-            src={post.coverImage}
+            src={getImageUrl(post.coverImage)}
             alt={post.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             onError={(e) => { e.currentTarget.style.display = 'none'; }}

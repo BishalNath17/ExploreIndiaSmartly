@@ -37,6 +37,7 @@ export const addItem = async (category, formData) => {
   const endpointMap = {
     destinations: '/admin/destinations',
     states: '/admin/states',
+    hiddenGems: '/admin/hidden-gems',
     'hidden-gems': '/admin/hidden-gems',
     'safety-tips': '/admin/safety-tips',
     blogs: '/admin/blogs',
@@ -54,6 +55,8 @@ export const updateItem = async (category, id, formData) => {
   const endpointMap = {
     destinations: `/admin/destinations/${id}`,
     states: `/admin/states/${id}`,
+    hiddenGems: `/admin/hidden-gems/${id}`,
+    heroImages: `/admin/hero-images/${id}`,
     'hidden-gems': `/admin/hidden-gems/${id}`,
     'safety-tips': `/admin/safety-tips/${id}`,
     'hero-images': `/admin/hero-images/${id}`,

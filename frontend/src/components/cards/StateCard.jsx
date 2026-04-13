@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getImageUrl } from '../../config/api';
 
 const FALLBACK_IMAGE = '/images/fallback.jpg';
 
@@ -24,7 +25,7 @@ const StateCard = ({ state, variant = 'compact' }) => {
       >
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/30 to-transparent z-10 group-hover:from-navy/90 transition-all duration-300" />
         <img
-          src={state.image || FALLBACK_IMAGE}
+          src={state.image ? getImageUrl(state.image) : FALLBACK_IMAGE}
           alt={state.name}
           loading="lazy"
           onError={handleImgError}
@@ -51,7 +52,7 @@ const StateCard = ({ state, variant = 'compact' }) => {
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={state.image || FALLBACK_IMAGE}
+          src={state.image ? getImageUrl(state.image) : FALLBACK_IMAGE}
           alt={state.name}
           loading="lazy"
           onError={handleImgError}

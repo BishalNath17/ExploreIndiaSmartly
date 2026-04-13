@@ -29,8 +29,8 @@ const AdminDashboard = () => {
       const [destsRes, statesRes, gemsRes, heroRes] = await Promise.all([
         fetchData('destinations'),
         fetchData('states'),
-        fetchData('hiddenGems'),
-        fetchData('heroImages')
+        fetchData('hidden-gems'),
+        fetchData('hero-images')
       ]);
       const st = statesRes.success ? statesRes.data : [];
       setAllData({

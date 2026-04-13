@@ -18,15 +18,12 @@ app.use((req, res, next) => {
 
 // CORS Configuration
 const getAllowedOrigins = () => {
-  const envUrl =
-    process.env.CLIENT_URL ||
-    process.env.FRONTEND_URL ||
-    'http://localhost:5173';
-
-  return envUrl
-    .split(',')
-    .map((url) => url.trim().replace(/\/$/, ''))
-    .filter(Boolean);
+  const envUrl = process.env.CLIENT_URL || process.env.FRONTEND_URL || '';
+  const origins = envUrl.split(',').map(url => url.trim().replace(/\/$/, '')).filter(Boolean);
+  if (!origins.includes('http://localhost:5173')) {
+    origins.push('http://localhost:5173');
+  }
+  return origins;
 };
 
 const allowedOrigins = getAllowedOrigins();
@@ -37,6 +34,11 @@ app.use(
       if (!origin) return callback(null, true);
 
       const cleanOrigin = origin.replace(/\/$/, '');
+
+      // Allow any localhost origin dynamically for dev server flexibility
+      if (/^http:\/\/localhost:\d+$/.test(cleanOrigin)) {
+        return callback(null, true);
+      }
 
       if (allowedOrigins.includes(cleanOrigin)) {
         return callback(null, true);
@@ -55,6 +57,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Static Files
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+app.use('/images', express.static(path.join(__dirname, '../public/images')));
 
 // Mount API Routes
 app.use('/api/v1', indexRoutes);
