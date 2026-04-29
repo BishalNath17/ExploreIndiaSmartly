@@ -14,7 +14,7 @@ const connectDB = require('../config/db');
 
 // Models
 const State = require('../models/State');
-const HiddenGem = require('../models/HiddenGem');
+
 const SafetyTip = require('../models/SafetyTip');
 const HeroImage = require('../models/HeroImage');
 
@@ -172,33 +172,7 @@ async function seedStates() {
   console.log(`  ✅ States: ${inserted} inserted, ${updated} updated (total: ${statesJson.length})`);
 }
 
-// ══════════════════════════════════════════════════
-//  SEED HIDDEN GEMS
-// ══════════════════════════════════════════════════
-async function seedHiddenGems() {
-  console.log('\n💎 Seeding Hidden Gems...');
 
-  const gems = readJson('../../data/hiddenGems.json');
-  if (!gems) return;
-
-  let inserted = 0, updated = 0;
-
-  for (const gem of gems) {
-    const result = await HiddenGem.findOneAndUpdate(
-      { id: gem.id },
-      { $set: gem },
-      { upsert: true, new: true }
-    );
-    if (result.createdAt && result.updatedAt &&
-        result.createdAt.getTime() === result.updatedAt.getTime()) {
-      inserted++;
-    } else {
-      updated++;
-    }
-  }
-
-  console.log(`  ✅ Hidden Gems: ${inserted} inserted, ${updated} updated (total: ${gems.length})`);
-}
 
 // ══════════════════════════════════════════════════
 //  SEED SAFETY TIPS
@@ -300,7 +274,7 @@ async function main() {
   await connectDB();
 
   await seedStates();
-  await seedHiddenGems();
+
   await seedSafetyTips();
   await seedHeroImages();
 
@@ -310,7 +284,6 @@ async function main() {
   // Print collection counts
   const counts = {
     States: await State.countDocuments(),
-    HiddenGems: await HiddenGem.countDocuments(),
     SafetyTips: await SafetyTip.countDocuments(),
     HeroImages: await HeroImage.countDocuments()
   };

@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { fetchData, addItem, updateItem, deleteItem } from '../../services/adminService';
+import { fetchData, addItem, updateItem, deleteItem, approveDestination, rejectDestination, bulkApproveDestinations, bulkRejectDestinations } from '../../services/adminService';
 import AdminForm from '../../components/admin/AdminForm';
-import { LogOut, Plus, Edit2, Trash2, Map, MapPin, Sparkles, Search, Compass, Image, RotateCcw } from 'lucide-react';
+import { LogOut, Plus, Edit2, Trash2, Map, MapPin, Search, Compass, Image, RotateCcw, Mail, CheckCircle, XCircle } from 'lucide-react';
 import { resolveImageUrl } from '../../config/api';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('destinations'); // 'states', 'uts', 'destinations', 'hiddenGems'
-  const [allData, setAllData] = useState({ destinations: [], states: [], uts: [], hiddenGems: [], heroImages: [] });
+  const [activeTab, setActiveTab] = useState('destinations'); // 'states', 'uts', 'destinations'
+  const [allData, setAllData] = useState({ destinations: [], states: [], uts: [], heroImages: [], leads: [] });
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [editingItem, setEditingItem] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedReviewIds, setSelectedReviewIds] = useState([]);
 
   useEffect(() => {
     // Quick auth check
@@ -26,19 +27,19 @@ const AdminDashboard = () => {
   const loadAllData = async () => {
     setLoading(true);
     try {
-      const [destsRes, statesRes, gemsRes, heroRes] = await Promise.all([
+      const [destsRes, statesRes, heroRes, leadsRes] = await Promise.all([
         fetchData('destinations'),
         fetchData('states'),
-        fetchData('hidden-gems'),
-        fetchData('hero-images')
+        fetchData('hero-images'),
+        fetchData('leads')
       ]);
       const st = statesRes.success ? statesRes.data : [];
       setAllData({
         destinations: destsRes.success ? destsRes.data : [],
         states: st.filter(s => s.type !== 'ut'),
         uts: st.filter(s => s.type === 'ut'),
-        hiddenGems: gemsRes.success ? gemsRes.data : [],
-        heroImages: heroRes.success ? heroRes.data : []
+        heroImages: heroRes.success ? heroRes.data : [],
+        leads: leadsRes.success ? leadsRes.data : []
       });
     } catch (err) {
       console.error('Failed to load data', err);
@@ -112,12 +113,42 @@ const AdminDashboard = () => {
     }
   };
 
+  const handleApprove = async (id, isBulk = false) => {
+    try {
+      if (isBulk) {
+        await bulkApproveDestinations(selectedReviewIds);
+        setSelectedReviewIds([]);
+      } else {
+        await approveDestination(id);
+      }
+      loadAllData();
+    } catch { alert('Approval failed.'); }
+  };
+
+  const handleReject = async (id, isBulk = false) => {
+    if (!window.confirm(isBulk ? 'Reject these destinations permanently?' : 'Reject this destination permanently?')) return;
+    try {
+      if (isBulk) {
+        await bulkRejectDestinations(selectedReviewIds);
+        setSelectedReviewIds([]);
+      } else {
+        await rejectDestination(id);
+      }
+      loadAllData();
+    } catch { alert('Rejection failed.'); }
+  };
+
+  const toggleReviewSelection = (id) => {
+    setSelectedReviewIds(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
+  };
+
   const tabs = [
     { id: 'destinations', label: 'All Destinations', icon: MapPin },
     { id: 'states', label: 'States', icon: Map },
     { id: 'uts', label: 'Union Territories', icon: Compass },
-    { id: 'hiddenGems', label: 'Hidden Gems', icon: Sparkles },
-    { id: 'heroImages', label: 'Home Hero Images', icon: Image }
+    { id: 'heroImages', label: 'Home Hero Images', icon: Image },
+    { id: 'leads', label: 'Leads', icon: Mail },
+    { id: 'aiReview', label: 'AI Review (Pending)', icon: MapPin }
   ];
 
   const getDisplayData = () => {
@@ -130,9 +161,14 @@ const AdminDashboard = () => {
         ...allData.destinations.filter(match).map(d => ({ ...d, _cat: 'destinations' })),
         ...allData.states.filter(match).map(d => ({ ...d, _cat: 'states' })),
         ...allData.uts.filter(match).map(d => ({ ...d, _cat: 'uts' })),
-        ...allData.hiddenGems.filter(match).map(d => ({ ...d, _cat: 'hiddenGems' })),
         ...allData.heroImages.filter(match).map(d => ({ ...d, _cat: 'heroImages' })),
       ];
+    }
+    if (activeTab === 'aiReview') {
+       return allData.destinations.filter(d => d.status === 'pending-review').map(d => ({ ...d, _cat: 'aiReview' }));
+    }
+    if (activeTab === 'destinations') {
+       return allData.destinations.filter(d => d.status !== 'pending-review').map(d => ({ ...d, _cat: activeTab }));
     }
     return allData[activeTab].map(d => ({ ...d, _cat: activeTab }));
   };
@@ -204,7 +240,13 @@ const AdminDashboard = () => {
               : `Showing ${displayData.length} ${tabs.find(t=>t.id===activeTab).label}`
             }
           </p>
-          {!searchQuery && activeTab !== 'heroImages' && (
+          {!searchQuery && activeTab === 'aiReview' && selectedReviewIds.length > 0 && (
+             <div className="flex gap-2">
+                <button onClick={() => handleApprove(null, true)} className="px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-lg hover:bg-emerald-500/30 flex items-center gap-2"><CheckCircle size={16}/> Bulk Approve ({selectedReviewIds.length})</button>
+                <button onClick={() => handleReject(null, true)} className="px-4 py-2 bg-red-500/20 text-red-400 rounded-lg hover:bg-red-500/30 flex items-center gap-2"><XCircle size={16}/> Bulk Reject</button>
+             </div>
+          )}
+          {!searchQuery && activeTab !== 'heroImages' && activeTab !== 'leads' && activeTab !== 'aiReview' && (
             <button 
               onClick={() => { setEditingItem(null); setShowForm(true); }}
               className="flex items-center gap-2 px-4 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 rounded-lg transition-colors border border-emerald-500/20 font-medium"
@@ -217,6 +259,107 @@ const AdminDashboard = () => {
         {/* List View */}
         {loading ? (
           <div className="flex justify-center py-20"><div className="w-10 h-10 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></div></div>
+        ) : activeTab === 'leads' && !searchQuery ? (
+          /* ── Leads Table View ── */
+          <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+            <div className="p-5 border-b border-white/10 flex items-center justify-between">
+              <h2 className="text-lg font-bold text-white flex items-center gap-2">
+                <Mail size={20} className="text-orange-400" />
+                Collected Leads
+                <span className="ml-2 text-xs font-bold bg-orange-500/20 text-orange-400 px-2.5 py-1 rounded-full">
+                  {allData.leads.length}
+                </span>
+              </h2>
+            </div>
+            {allData.leads.length === 0 ? (
+              <div className="text-center py-16 text-gray-500">
+                <Mail size={40} className="mx-auto mb-3 opacity-40" />
+                <p>No leads captured yet.</p>
+                <p className="text-xs mt-1 text-gray-600">Leads will appear here when users subscribe via the homepage.</p>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm text-left">
+                  <thead className="text-xs uppercase text-gray-500 bg-white/[0.02]">
+                    <tr>
+                      <th className="px-6 py-4 font-semibold">#</th>
+                      <th className="px-6 py-4 font-semibold">Email</th>
+                      <th className="px-6 py-4 font-semibold">Date Joined</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/5">
+                    {allData.leads.map((lead, index) => (
+                      <tr key={lead._id} className="hover:bg-white/[0.03] transition-colors">
+                        <td className="px-6 py-4 text-gray-500 font-mono text-xs">{index + 1}</td>
+                        <td className="px-6 py-4 text-white font-medium">{lead.email}</td>
+                        <td className="px-6 py-4 text-gray-400">
+                          {new Date(lead.createdAt).toLocaleDateString('en-IN', {
+                            year: 'numeric', month: 'short', day: 'numeric',
+                            hour: '2-digit', minute: '2-digit'
+                          })}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        ) : activeTab === 'aiReview' && !searchQuery ? (
+          /* ── AI Moderation Table View ── */
+          <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+             <div className="overflow-x-auto">
+                <table className="w-full text-sm text-left text-gray-300">
+                   <thead className="text-xs uppercase bg-white/5 border-b border-white/10">
+                      <tr>
+                         <th className="p-4 rounded-tl-lg"><input type="checkbox" onChange={(e) => setSelectedReviewIds(e.target.checked ? displayData.map(d => d.id || d._id) : [])} checked={displayData.length > 0 && selectedReviewIds.length === displayData.length} className="accent-orange-500 w-4 h-4 rounded" /></th>
+                         <th className="p-4 font-semibold">Destination</th>
+                         <th className="p-4 font-semibold">Location</th>
+                         <th className="p-4 font-semibold">Category/Aliases</th>
+                         <th className="p-4 font-semibold"><span className="text-orange-400">Dedup Math</span></th>
+                         <th className="p-4 font-semibold">Metadata</th>
+                         <th className="p-4 font-semibold text-right">Actions</th>
+                      </tr>
+                   </thead>
+                   <tbody className="divide-y divide-white/5">
+                      {displayData.map((item) => (
+                         <tr key={item.id || item._id} className="hover:bg-white/5 transition-colors">
+                            <td className="p-4"><input type="checkbox" checked={selectedReviewIds.includes(item.id || item._id)} onChange={() => toggleReviewSelection(item.id || item._id)} className="accent-orange-500 w-4 h-4 rounded cursor-pointer" /></td>
+                            <td className="p-4">
+                               <p className="text-white font-bold">{item.name}</p>
+                               <span className="text-xs px-2 py-0.5 rounded bg-blue-500/20 text-blue-400">{item.status}</span>
+                            </td>
+                            <td className="p-4">
+                               <p>{item.city ? `${item.city}, ` : ''}{item.state}</p>
+                               {item.coordinates && <p className="text-xs text-gray-500 font-mono">[{item.coordinates.lat}, {item.coordinates.lng}]</p>}
+                            </td>
+                            <td className="p-4">
+                               <span className="text-orange-400 block whitespace-nowrap">{item.primaryCategory}</span>
+                               {item.aliases && item.aliases.length > 0 && <p className="text-xs text-gray-500 truncate max-w-[120px]">Alias: {item.aliases.join(', ')}</p>}
+                            </td>
+                            <td className="p-4">
+                               <span className={`px-2 py-1 rounded text-xs border font-bold ${
+                                 item.dedupConfidenceScore >= 90 ? 'bg-red-500/10 border-red-500/30 text-red-400' :
+                                 item.dedupConfidenceScore >= 60 ? 'bg-yellow-500/10 border-yellow-500/30 text-yellow-400' :
+                                 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
+                               }`}>
+                                 Score: {item.dedupConfidenceScore || 0}/100
+                               </span>
+                            </td>
+                            <td className="p-4 text-xs font-mono text-gray-400">
+                               Batch: {item.aiMetadata?.generationBatch || 'unknown'}<br/>
+                               Engine: {item.aiMetadata?.importScriptVersion || 'manual'}
+                            </td>
+                            <td className="p-4 flex gap-2 justify-end">
+                               <button onClick={() => handleApprove(item.id || item._id)} className="p-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 rounded transition-colors" title="Approve"><CheckCircle size={16}/></button>
+                               <button onClick={() => handleReject(item.id || item._id)} className="p-1.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded transition-colors" title="Reject"><XCircle size={16}/></button>
+                            </td>
+                         </tr>
+                      ))}
+                   </tbody>
+                </table>
+             </div>
+          </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {displayData.map((item) => {
@@ -282,7 +425,8 @@ const AdminDashboard = () => {
           category={activeTab} 
           initialData={editingItem} 
           onSubmit={handleFormSubmit} 
-          onCancel={() => setShowForm(false)} 
+          onCancel={() => setShowForm(false)}
+          statesData={[...allData.states, ...allData.uts]}
         />
       )}
     </div>

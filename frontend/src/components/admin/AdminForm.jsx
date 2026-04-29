@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { X, Upload } from 'lucide-react';
-const statesData = []; // Temporary fallback replacing deleted static data
 import { API_URL } from '../../config/api';
 
-const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
+const AdminForm = ({ category, initialData, onSubmit, onCancel, statesData = [] }) => {
   const [formData, setFormData] = useState({});
   const [imageFile, setImageFile] = useState(null);
   const [statesList, setStatesList] = useState([]);
@@ -19,11 +18,11 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
   }, [initialData]);
 
   useEffect(() => {
-    // Populate dropdown safely from the existing frontend data arrays
+    // Populate dropdown safely from the provided API payload passed from Dashboard
     if (category !== 'states' && category !== 'uts') {
-      setStatesList(statesData);
+      setStatesList(statesData || []);
     }
-  }, [category]);
+  }, [category, statesData]);
 
   const generateSlug = (text) => {
     if (!text) return '';
@@ -76,6 +75,10 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
         // Reverting to FormData exclusively to support native image payloads across MongoDB integration
         const destinationData = new FormData();
         Object.keys(formData).forEach(key => {
+          // Prevent appending the old string 'image' if we are attaching a fresh physical image file! 
+          // Multer `.single('image')` can silently choke on duplicate keys!
+          if (key === 'image' && imageFile) return;
+
           let value = formData[key];
           if (key === 'mapEmbedUrl' && typeof value === 'string') {
             const srcMatch = value.match(/src=["']([^"']+)["']/);
@@ -197,7 +200,7 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
         </div>
       );
     } else {
-      // destinations or hidden gems
+      // destinations
       return (
         <div className="space-y-4">
           {commonFields}
@@ -219,9 +222,7 @@ const AdminForm = ({ category, initialData, onSubmit, onCancel }) => {
 
           {locationDetailsFields}
 
-          {category === 'hiddenGems' && (
-            <div><label className="block text-sm text-gray-400 mb-1">Simplified Location (e.g. 'South Goa')</label><input name="location" value={formData.location || ''} onChange={handleChange} className="w-full p-2 bg-black/30 border border-white/10 rounded text-white" /></div>
-          )}
+
 
           <div><label className="block text-sm text-gray-400 mb-1">Description</label><textarea required name="description" value={formData.description || ''} onChange={handleChange} className="w-full p-2 bg-black/30 border border-white/10 rounded text-white h-24" /></div>
           

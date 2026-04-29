@@ -7,7 +7,7 @@ const fileStorage = multer.diskStorage({
   destination: function (req, file, cb) {
     let folder = 'destinations'; 
     if (req.params.category === 'states') folder = 'states';
-    else if (req.params.category === 'hiddenGems') folder = 'destinations';
+
     else if (req.params.category === 'heroImages') folder = 'heroes';
 
     const uploadPath = path.resolve(__dirname, '../../../frontend/public/images', folder);

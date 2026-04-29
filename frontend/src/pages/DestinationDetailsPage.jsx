@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import {
@@ -13,7 +13,6 @@ import {
   Map,
   AlertTriangle,
   Compass,
-  Gem,
 } from 'lucide-react';
 import { fadeUp } from '../utils/animations';
 import useApiData from '../hooks/useApiData';
@@ -45,6 +44,7 @@ const DestNotFound = ({ slug }) => (
    1. HERO BANNER
    ═══════════════════════════════════════════════════════ */
 const HeroBanner = ({ dest, parentState }) => {
+  const navigate = useNavigate();
   const stateName = parentState?.name || (typeof dest.state === 'string' ? dest.state.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : 'Unknown State');
   
   const resolvedImage = resolveImageUrl(dest.image);
@@ -105,7 +105,21 @@ const HeroBanner = ({ dest, parentState }) => {
           <span className="flex items-center gap-1">
             <MapPin size={14} className="text-india-orange" /> {stateName}
           </span>
+          <button 
+            onClick={() => navigate(`/hotels?city=${encodeURIComponent(typeof dest?.name === 'string' ? dest.name : 'Unknown')}`)}
+            className="ml-auto bg-india-orange hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-xl shadow-lg hover:shadow-orange-500/25 transition-all text-sm hidden sm:block"
+          >
+            Check Hotel Deals
+          </button>
         </motion.div>
+        
+        {/* Mobile version of the button so it wraps cleanly without breaking hero flex */}
+        <button 
+          onClick={() => navigate(`/hotels?city=${encodeURIComponent(typeof dest?.name === 'string' ? dest.name : 'Unknown')}`)}
+          className="mt-4 w-full bg-india-orange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-orange-500/25 transition-all text-sm sm:hidden"
+        >
+          Check Hotel Deals
+        </button>
       </div>
     </section>
   );
@@ -180,17 +194,15 @@ const ItineraryHints = ({ dest }) => {
 /* ═══════════════════════════════════════════════════════
    4. NEARBY PLACES
    ═══════════════════════════════════════════════════════ */
-const NearbyPlaces = ({ dest, parentState, allDests, hiddenGems }) => {
+const NearbyPlaces = ({ dest, parentState, allDests }) => {
   const getSlug = (s) => typeof s === 'object' ? (s?.slug || s?.id || s?._id) : s;
   const targetState = getSlug(dest.state);
   const destId = dest.id || dest._id;
 
   // Show other destinations in the same state (excluding current) from live DB
   const nearby = (allDests || []).filter(d => getSlug(d.state) === targetState && (d.id || d._id) !== destId);
-  // Also check hidden gems
-  const nearbyGems = (hiddenGems || []).filter(g => getSlug(g.state) === targetState && (g.id || g._id) !== destId);
 
-  if (nearby.length === 0 && nearbyGems.length === 0) return null;
+  if (nearby.length === 0) return null;
   const stateName = parentState?.name || dest.state;
 
   return (
@@ -211,23 +223,6 @@ const NearbyPlaces = ({ dest, parentState, allDests, hiddenGems }) => {
                 <div className="p-5">
                   <h3 className="font-bold group-hover:text-india-orange transition-colors mb-1">{place.name}</h3>
                   <p className="text-gray-400 text-xs line-clamp-2">{place.description}</p>
-                </div>
-              </Link>
-          ))}
-
-          {nearbyGems.slice(0, 3 - nearby.slice(0, 3).length).map((gem) => (
-              <Link key={gem.id || gem._id} to={`/destination/${gem.slug || gem.id || gem._id}`} className="group glass rounded-2xl overflow-hidden block hover:bg-white/15 transition-colors">
-                <div className="relative h-48">
-                  <img src={gem.image} alt={gem.name} loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
-                  <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-india-orange bg-navy/80 px-2 py-0.5 rounded-full flex items-center gap-1">
-                    <Gem size={10} /> Hidden Gem
-                  </span>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-bold mb-1 group-hover:text-india-orange transition-colors">{gem.name}</h3>
-                  <p className="text-gray-400 text-xs line-clamp-2">{gem.description}</p>
                 </div>
               </Link>
           ))}
@@ -324,7 +319,7 @@ const ExploreCTA = ({ parentState }) => (
       <ScrollReveal>
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Continue Exploring</h2>
         <p className="text-gray-400 text-sm sm:text-base mb-8 max-w-lg mx-auto">
-          Discover more destinations, hidden gems, and travel tips across India.
+          Discover more destinations and travel tips across India.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           {parentState && (
@@ -352,9 +347,8 @@ const DestinationDetailsPage = () => {
   
   const { data: allDests, loading: destsLoading } = useApiData('/destinations');
   const { data: states, loading: statesLoading } = useApiData('/states');
-  const { data: hiddenGems, loading: gemsLoading } = useApiData('/hidden-gems');
 
-  const loading = destsLoading || statesLoading || gemsLoading;
+  const loading = destsLoading || statesLoading;
 
   if (loading) {
     return (
@@ -375,7 +369,7 @@ const DestinationDetailsPage = () => {
       <HeroBanner dest={dest} parentState={parentState} />
       <Overview dest={dest} parentState={parentState} />
       <ItineraryHints dest={dest} />
-      <NearbyPlaces dest={dest} parentState={parentState} allDests={allDests} hiddenGems={hiddenGems} />
+      <NearbyPlaces dest={dest} parentState={parentState} allDests={allDests} />
       <TravelTips dest={dest} parentState={parentState} />
       <MapSection dest={dest} parentState={parentState} />
       <ExploreCTA parentState={parentState} />

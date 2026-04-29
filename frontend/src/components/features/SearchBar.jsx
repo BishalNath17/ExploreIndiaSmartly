@@ -4,7 +4,7 @@ import { Search, X, Loader2 } from 'lucide-react';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 const states = []; // Temporary fallback replacing deleted static data
-const hiddenGems = []; // Temporary fallback replacing deleted static data
+
 import { API_URL } from '../../config/api';
 
 /* ═══════════════════════════════════════════════════════
@@ -38,16 +38,7 @@ const STATE_ITEMS = states.map((s) => ({
   badgeColor: 'text-blue-400 bg-blue-400/10',
 }));
 
-const GEM_ITEMS = hiddenGems.map((g) => ({
-  id: `gem-${g.id}`,
-  type: 'hidden gem',
-  label: g.name,
-  sub: g.description,
-  path: `/destination/${g.id}`,
-  badgeColor: 'text-pink-400 bg-pink-400/10',
-}));
-
-const STATIC_SEARCH_ITEMS = [...STATE_ITEMS, ...GEM_ITEMS];
+const STATIC_SEARCH_ITEMS = [...STATE_ITEMS];
 
 /* ═══════════════════════════════════════════════════════
    SEARCH BAR COMPONENT
@@ -214,7 +205,7 @@ const SearchBar = ({ onClose, onSearchActive }) => {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
           onKeyDown={handleKeyDown}
-          placeholder="Search states, destinations, or hidden gems…"
+          placeholder="Search states or destinations…"
           id="homepage-search"
           role="combobox"
           aria-expanded={showDropdown}

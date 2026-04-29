@@ -5,7 +5,7 @@ import { API_URL } from '../config/api';
  * Reusable hook for fetching CMS data from the backend API.
  * Caches results in a module-level map to avoid redundant network requests.
  * 
- * @param {string} endpoint — API path (e.g. '/states', '/hidden-gems')
+ * @param {string} endpoint — API path (e.g. '/states', '/destinations')
  * @param {object} options — { skip: boolean, noCache: boolean }
  * @returns {{ data: any, loading: boolean, error: string|null, refetch: Function }}
  */

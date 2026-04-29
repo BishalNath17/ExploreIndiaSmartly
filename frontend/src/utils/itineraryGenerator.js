@@ -1,4 +1,4 @@
-const hiddenGems = []; // Temporary fallback replacing deleted static data
+
 import { calculateBudget } from './budgetCalculator';
 import { API_URL } from '../config/api';
 
@@ -28,12 +28,9 @@ export const generateItinerary = async ({ stateSlug, days, style }) => {
     console.error('Itinerary Gen destination fetch failed:', err);
   }
 
-  const stateGems = hiddenGems.filter((g) => g.state === stateSlug);
-
-  // Combine and pick at random for variety, prioritizing major destinations
+  // Randomly shuffle destinations for variety
   const mixedPlaces = [
     ...shuffleArray(stateDestinations),
-    ...shuffleArray(stateGems),
   ];
 
   // We need roughly 2 places per day max if possible

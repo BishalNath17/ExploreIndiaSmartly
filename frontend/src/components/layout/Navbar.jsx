@@ -51,7 +51,6 @@ const Navbar = () => {
       <div className="hidden md:flex items-center gap-8 text-sm font-medium">
         <NavLink to="/" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Home</NavLink>
         <NavLink to="/states" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Explore States</NavLink>
-        <NavLink to="/hidden-gems" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Hidden Gems</NavLink>
         <NavLink to="/budget-planner" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Budget Planner</NavLink>
         <NavLink to="/safety-tips" className={({ isActive }) => `transition-colors hover:text-sky-400 ${isActive ? 'text-sky-400' : 'text-gray-200'}`}>Safety</NavLink>
         <a href="#contact" onClick={handleContactClick} className="transition-colors hover:text-sky-400 text-gray-200 cursor-pointer">Contact</a>

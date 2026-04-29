@@ -14,10 +14,11 @@ const DestinationDetailsPage = lazy(() => import('../pages/DestinationDetailsPag
 const BudgetPlannerPage = lazy(() => import('../pages/BudgetPlannerPage'));
 const TravelPlannerPage = lazy(() => import('../pages/TravelPlannerPage'));
 const SafetyTipsPage = lazy(() => import('../pages/SafetyTipsPage'));
-const HiddenGemsPage = lazy(() => import('../pages/HiddenGemsPage'));
+
 const BlogPage = lazy(() => import('../pages/BlogPage'));
 const BlogPostPage = lazy(() => import('../pages/BlogPostPage'));
 const ContactPage = lazy(() => import('../pages/ContactPage'));
+const HotelSearchPage = lazy(() => import('../pages/HotelSearchPage'));
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'));
 const AdminLogin = lazy(() => import('../pages/admin/AdminLogin'));
 const AdminDashboard = lazy(() => import('../pages/admin/AdminDashboard'));
@@ -30,10 +31,11 @@ const routeConfig = [
   { path: '/budget-planner', element: <BudgetPlannerPage /> },
   { path: '/travel-planner', element: <TravelPlannerPage /> },
   { path: '/safety-tips', element: <SafetyTipsPage /> },
-  { path: '/hidden-gems', element: <HiddenGemsPage /> },
+
   { path: '/blog', element: <BlogPage /> },
   { path: '/blog/:slug', element: <BlogPostPage /> },
   { path: '/contact', element: <ContactPage /> },
+  { path: '/hotels', element: <HotelSearchPage /> },
   { path: '/admin', element: <AdminLogin /> },
   { path: '/admin/dashboard', element: <AdminDashboard /> },
   { path: '*', element: <NotFoundPage /> },

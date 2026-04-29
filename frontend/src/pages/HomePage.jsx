@@ -23,13 +23,18 @@ import {
   Car,
   Compass,
   Wallet,
-  Camera
+  Camera,
+  Building2,
+  MessageCircle,
+  Mail,
+  Sparkles,
+  CheckCircle2
 } from 'lucide-react';
 import { fadeUp, scaleIn } from '../utils/animations';
 import useApiData from '../hooks/useApiData';
 import DestinationCard from '../components/cards/DestinationCard';
 import StateCard from '../components/cards/StateCard';
-import HiddenGemCard from '../components/cards/HiddenGemCard';
+
 import SectionHeader from '../components/layout/SectionHeader';
 import Newsletter from '../components/features/Newsletter';
 import ScrollReveal from '../components/ui/ScrollReveal';
@@ -140,30 +145,54 @@ const Hero = () => {
         custom={0.3}
         className="text-sm sm:text-base lg:text-lg text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
       >
-        Discover famous destinations, hidden gems, budget stays, safety tips, and
+        Discover famous destinations, budget stays, safety tips, and
         smarter travel across every Indian state.
       </motion.p>
 
-      {/* CTAs */}
+      {/* CTAs — conversion-focused button */}
       <motion.div
         variants={scaleIn}
         initial="hidden"
         animate="visible"
         custom={0.45}
-        className="flex flex-col sm:flex-row gap-4 justify-center relative pointer-events-auto z-10"
+        className="flex justify-center relative pointer-events-auto z-10"
       >
         <Link
-          to="/states"
-          className="bg-india-orange hover:bg-orange-600 text-white font-semibold py-3.5 px-8 rounded-full shadow-lg shadow-india-orange/30 transition-all text-sm sm:text-base"
+          to="/hotels"
+          className="group bg-india-orange hover:bg-orange-600 text-white font-semibold py-3.5 px-7 rounded-full shadow-lg shadow-india-orange/30 transition-all text-sm sm:text-base inline-flex items-center justify-center gap-2"
         >
-          Explore All States
+          <Building2 size={18} /> Check Hotel Deals
         </Link>
-        <Link
-          to="/hidden-gems"
-          className="bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md text-white font-semibold py-3.5 px-8 rounded-full transition-all text-sm sm:text-base"
-        >
-          Hidden Places
-        </Link>
+      </motion.div>
+
+      {/* Supporting line */}
+      <motion.p
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        custom={0.6}
+        className="text-xs sm:text-sm text-gray-400/80 mt-6 max-w-lg mx-auto"
+      >
+        Browse destinations to unlock hotel deal links and custom trip ideas.
+      </motion.p>
+
+      {/* Trust / Value Strip */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+        custom={0.75}
+        className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mt-8"
+      >
+        {[
+          { icon: Wallet, text: 'Budget-Friendly Travel' },
+          { icon: Gem, text: 'Offbeat Destinations & Real Tips' },
+          { icon: MessageCircle, text: 'Custom Trip Planning' },
+        ].map(({ icon: Icon, text }) => (
+          <span key={text} className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs text-gray-400/90 font-medium">
+            <Icon size={13} className="text-india-orange/80" /> {text}
+          </span>
+        ))}
       </motion.div>
     </div>
 
@@ -178,7 +207,21 @@ const Hero = () => {
    ═══════════════════════════════════════════════════════ */
 const FeaturedStates = () => {
   const { data: allStates, loading: statesLoading } = useApiData('/states');
-  const states = allStates || [];
+  
+  const UT_NAMES = [
+    'andaman & nicobar islands', 'andaman and nicobar islands',
+    'chandigarh',
+    'dadra & nagar haveli and daman & diu', 'dadra and nagar haveli and daman and diu',
+    'delhi', 'nct of delhi',
+    'jammu & kashmir', 'jammu and kashmir',
+    'ladakh',
+    'lakshadweep',
+    'puducherry', 'pondicherry'
+  ];
+  
+  const rawStates = allStates || [];
+  const states = rawStates.filter(s => !UT_NAMES.includes((s.name || '').toLowerCase()));
+
   const [searchQuery, setSearchQuery] = useState('');
   const [exactSelection, setExactSelection] = useState(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -370,7 +413,7 @@ const FeaturedStates = () => {
             to="/states"
             className="group bg-india-orange hover:bg-orange-600 text-white font-semibold flex items-center justify-center gap-2 py-3.5 px-8 rounded-full shadow-[0_0_20px_rgba(249,115,22,0.3)] hover:shadow-[0_0_25px_rgba(249,115,22,0.5)] transition-all text-sm sm:text-base"
           >
-            View All States & UT
+            View All States
             <ChevronRight size={18} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -390,7 +433,7 @@ const PopularDestinations = () => {
   const displayedDestinations = showAll ? fetchedDestinations : fetchedDestinations.slice(0, 6);
 
   return (
-    <section className="py-10 sm:py-14 section-padding relative">
+    <section id="popular-destinations" className="py-10 sm:py-14 section-padding relative">
       <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-navy-dark/30 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto relative">
         <SectionHeader
@@ -458,47 +501,7 @@ const PopularDestinations = () => {
   );
 };
 
-/* ═══════════════════════════════════════════════════════
-   4. HIDDEN GEMS PREVIEW
-   ═══════════════════════════════════════════════════════ */
-const HiddenGemsPreview = () => {
-  const { data: hiddenGems, loading } = useApiData('/hidden-gems');
-  const preview = (hiddenGems || []).slice(0, 3);
 
-  return (
-    <section className="py-10 sm:py-14 section-padding relative bg-gradient-to-b from-navy-dark/50 via-navy-dark/30 to-transparent">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeader
-          title="Hidden Gems"
-          subtitle="Offbeat destinations most tourists miss — but shouldn't."
-        />
-
-        {loading ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {[...Array(3)].map((_, i) => (
-              <div key={i} className="rounded-2xl aspect-[3/4] bg-white/5 animate-pulse" />
-            ))}
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {preview.map((gem) => (
-              <HiddenGemCard key={gem.id} gem={gem} />
-            ))}
-          </div>
-        )}
-
-        <div className="text-center mt-6">
-          <Link
-            to="/hidden-gems"
-            className="inline-flex items-center gap-1 text-sm text-india-orange hover:underline font-medium"
-          >
-            View all hidden gems <ChevronRight size={14} />
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-};
 
 /* ═══════════════════════════════════════════════════════
    5. SAFETY TIPS PREVIEW
@@ -581,6 +584,53 @@ const BudgetPlannerPreview = () => (
 );
 
 /* ═══════════════════════════════════════════════════════
+   7. HOW IT WORKS
+   ═══════════════════════════════════════════════════════ */
+const HowItWorks = () => {
+  const steps = [
+    {
+      icon: Compass,
+      title: 'Explore Destinations',
+      desc: 'Browse states, cities, and offbeat destinations across India with real travel info.',
+    },
+    {
+      icon: Building2,
+      title: 'Check Hotel Deals',
+      desc: 'Every destination has a direct hotel search button — find the best stay instantly.',
+    },
+    {
+      icon: MessageCircle,
+      title: 'Get a Custom Trip Plan',
+      desc: 'Chat with us on WhatsApp or subscribe to receive a personalised travel guide.',
+    },
+  ];
+
+  return (
+    <section className="py-10 sm:py-14 section-padding relative">
+      <div className="max-w-5xl mx-auto">
+        <SectionHeader
+          title="How It Works"
+          subtitle="Three simple steps to your perfect Indian adventure."
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          {steps.map((step, i) => (
+            <ScrollReveal key={step.title} delay={i * 0.1}>
+              <div className="glass rounded-2xl p-6 sm:p-8 text-center h-full flex flex-col items-center">
+                <div className="w-14 h-14 rounded-2xl bg-india-orange/15 flex items-center justify-center mb-5">
+                  <step.icon size={26} className="text-india-orange" />
+                </div>
+                <h3 className="text-base sm:text-lg font-bold mb-2">{step.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════
    PAGE COMPOSITION
    ═══════════════════════════════════════════════════════ */
 const HomePage = () => (
@@ -588,9 +638,10 @@ const HomePage = () => (
     <Hero />
     <FeaturedStates />
     <PopularDestinations />
-    <HiddenGemsPreview />
+
     <SafetyTipsPreview />
     <BudgetPlannerPreview />
+    <HowItWorks />
     <Newsletter />
   </>
 );

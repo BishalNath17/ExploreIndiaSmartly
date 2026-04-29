@@ -29,7 +29,7 @@ import DestinationCard from '../components/cards/DestinationCard';
 import SectionHeader from '../components/layout/SectionHeader';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import InfoCard from '../components/cards/InfoCard';
-import HiddenGemCard from '../components/cards/HiddenGemCard';
+
 import EmptyState from '../components/ui/EmptyState';
 import { API_URL, API_BASE, resolveImageUrl } from '../config/api';
 
@@ -1070,34 +1070,6 @@ const KBTopDestinations = ({ data, stateId, additionalDestinations = [] }) => {
 
 
 
-/* ═══════════════════════════════════════════════════════
-   4. HIDDEN GEMS
-   ═══════════════════════════════════════════════════════ */
-const HiddenGemsSection = ({ stateSlug, stateName }) => {
-  const { data: hiddenGems } = useApiData('/hidden-gems');
-  
-  const toSlug = (str) => String(str).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  const gems = (hiddenGems || []).filter((g) => g.state === stateSlug || (g.state ? toSlug(g.state) === stateSlug : false));
-
-  if (gems.length === 0) return null;
-
-  return (
-    <section className="py-16 sm:py-20 section-padding">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeader
-          title="Hidden Gems"
-          subtitle={`Offbeat destinations in ${stateName} that most tourists miss.`}
-        />
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {gems.map((gem) => (
-            <HiddenGemCard key={gem.id} gem={gem} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 /* ═══════════════════════════════════════════════════════
    6. CTA — EXPLORE MORE
@@ -1119,12 +1091,6 @@ const ExploreMoreCTA = () => (
             className="btn-primary inline-flex items-center justify-center gap-2 text-sm"
           >
             Browse All States <ArrowRight size={16} />
-          </Link>
-          <Link
-            to="/hidden-gems"
-            className="btn-outline inline-flex items-center justify-center gap-2 text-sm"
-          >
-            Hidden Gems <Gem size={16} />
           </Link>
         </div>
       </ScrollReveal>
@@ -1163,7 +1129,7 @@ const StateDetailsPage = () => {
       <HeroBanner state={state} />
       <Overview state={state} data={kb} />
       <KBTopDestinations data={kb} stateId={state.id || state.slug || stateSlug} additionalDestinations={dbDestinations} />
-      <HiddenGemsSection stateSlug={state.id || state.slug || stateSlug} stateName={state.name} />
+
       <KBFood data={kb} />
       <KBStayOptions data={kb} />
       <KBActivities data={kb} />

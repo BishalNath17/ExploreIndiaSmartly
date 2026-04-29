@@ -19,7 +19,11 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       },
-      // /images NOT proxied — served locally from frontend/public/images/
+      '/images': {
+        target: 'http://localhost:5000',
+        changeOrigin: true,
+        secure: false,
+      },
     }
   }
 })

@@ -1,15 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const { uploadState, uploadDestination, uploadHiddenGem, uploadHero, uploadBlog } = require('../config/cloudinary');
+const { uploadState, uploadDestination, uploadHero, uploadBlog } = require('../config/cloudinary');
 
 // Controllers
 const destinationController = require('../controllers/destination.controller');
 const stateController = require('../controllers/state.controller');
-const hiddenGemController = require('../controllers/hiddenGem.controller');
+
 const safetyTipController = require('../controllers/safetyTip.controller');
 const heroImageController = require('../controllers/heroImage.controller');
 const blogController = require('../controllers/blog.controller');
 const contactController = require('../controllers/contact.controller');
+const leadController = require('../controllers/lead.controller');
 
 // Admin health check
 router.get(['/', ''], (req, res) => {
@@ -42,16 +43,19 @@ router.put('/states/:id', requireAuth, uploadState.single('image'), stateControl
 router.delete('/states/:id', requireAuth, stateController.deleteState);
 
 // ── Destinations CRUD (existing — now using Cloudinary) ──
+router.post('/destinations/import-ai', requireAuth, destinationController.importAiDestinations);
+router.put('/destinations/:id/approve', requireAuth, destinationController.approveDestination);
+router.put('/destinations/:id/reject', requireAuth, destinationController.rejectDestination);
+router.post('/destinations/bulk-approve', requireAuth, destinationController.bulkApprove);
+router.post('/destinations/bulk-reject', requireAuth, destinationController.bulkReject);
+router.post('/destinations/rollback', requireAuth, destinationController.rollbackBatch);
+
 router.get('/destinations', destinationController.getDestinations);
 router.post('/destinations', requireAuth, uploadDestination.single('image'), destinationController.createDestination);
 router.put('/destinations/:id', requireAuth, uploadDestination.single('image'), destinationController.updateDestination);
 router.delete('/destinations/:id', requireAuth, destinationController.deleteDestination);
 
-// ── Hidden Gems CRUD ──
-router.get('/hidden-gems', requireAuth, hiddenGemController.getHiddenGems);
-router.post('/hidden-gems', requireAuth, uploadHiddenGem.single('image'), hiddenGemController.createHiddenGem);
-router.put('/hidden-gems/:id', requireAuth, uploadHiddenGem.single('image'), hiddenGemController.updateHiddenGem);
-router.delete('/hidden-gems/:id', requireAuth, hiddenGemController.deleteHiddenGem);
+
 
 // ── Safety Tips CRUD ──
 router.get('/safety-tips', requireAuth, safetyTipController.getSafetyTips);
@@ -73,5 +77,8 @@ router.delete('/blogs/:slug', requireAuth, blogController.deleteBlog);
 router.get('/contact', requireAuth, contactController.getMessages);
 router.put('/contact/:id/read', requireAuth, contactController.markAsRead);
 router.delete('/contact/:id', requireAuth, contactController.deleteMessage);
+
+// ── Leads ──
+router.get('/leads', requireAuth, leadController.getAllLeads);
 
 module.exports = router;

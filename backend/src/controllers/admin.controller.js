@@ -4,7 +4,7 @@ const path = require('path');
 /**
  * Admin Controller — Explore India Smartly
  * 
- * Serves static reference data (states, hiddenGems, heroImages) from
+ * Serves static reference data (states, heroImages) from
  * bundled JSON files inside backend/data/.
  * 
  * Destinations CRUD is handled by destination.controller.js (MongoDB).

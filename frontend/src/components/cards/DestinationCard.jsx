@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Star, ArrowRight } from 'lucide-react';
 import { resolveImageUrl } from '../../config/api';
 
@@ -11,6 +11,7 @@ const FALLBACK_IMAGE = 'data:image/svg+xml,' + encodeURIComponent(
  * @param {{ destination: object, className?: string }} props
  */
 const DestinationCard = ({ destination, className = '' }) => {
+  const navigate = useNavigate();
   const { id, name, description, image, rating } = destination;
 
   const displayImage = resolveImageUrl(image) || FALLBACK_IMAGE;
@@ -51,9 +52,20 @@ const DestinationCard = ({ destination, className = '' }) => {
           {description}
         </p>
 
-        <span className="mt-3 inline-flex items-center gap-1 text-india-orange text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-          Explore More <ArrowRight size={14} />
-        </span>
+        <div className="flex items-center justify-between mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+          <span className="inline-flex items-center gap-1 text-india-orange text-sm font-medium">
+            Explore More <ArrowRight size={14} />
+          </span>
+          <button 
+            onClick={(e) => {
+              e.preventDefault();
+              navigate(`/hotels?city=${encodeURIComponent(name)}`);
+            }}
+            className="bg-india-orange hover:bg-orange-600 text-white text-xs font-bold py-1.5 px-3 rounded-lg flex items-center shadow-md hover:shadow-orange-500/30 transition-all"
+          >
+            Check Hotel Deals
+          </button>
+        </div>
       </div>
     </Link>
   );
